@@ -1,0 +1,1965 @@
+{
+  "meta": {
+    "title": "Google Gemini 模型选择指南 2026",
+    "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
+    "h1": "Google Gemini 模型选择指南",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-29 同步）",
+    "stats": [
+      {
+        "num": "52",
+        "icon": "i-models",
+        "label": "收录模型"
+      },
+      {
+        "num": "11",
+        "icon": "i-modes",
+        "label": "模型分类"
+      },
+      {
+        "num": "1M",
+        "icon": "i-ruler",
+        "label": "最大上下文"
+      }
+    ],
+    "footer_title": "Google Gemini 模型选择指南",
+    "footer_updated": "2026-08-29",
+    "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-29 同步）"
+  },
+  "sections": [
+    {
+      "id": "quick",
+      "kind": "quick",
+      "title": "快速选型",
+      "icon": "i-bolt",
+      "nav": "快速选型",
+      "desc": "按任务类型直达推荐模型",
+      "cards": [
+        {
+          "icon": "i-chat",
+          "task": "日常对话 / 写作",
+          "model": "gemini-3.7-flash"
+        },
+        {
+          "icon": "i-brain",
+          "task": "深度推理",
+          "model": "gemini-3.1-pro-preview"
+        },
+        {
+          "icon": "i-code",
+          "task": "专业编程 / Agentic",
+          "model": "gemini-3.7-flash"
+        },
+        {
+          "icon": "i-coin",
+          "task": "极致省钱",
+          "model": "gemini-3.1-flash-lite"
+        },
+        {
+          "icon": "i-image",
+          "task": "图像生成",
+          "model": "gemini-3-pro-image"
+        },
+        {
+          "icon": "i-video",
+          "task": "视频生成",
+          "model": "veo-3.1-fast-generate-preview"
+        },
+        {
+          "icon": "i-audio",
+          "task": "音乐生成",
+          "model": "lyria-3-pro-preview"
+        },
+        {
+          "icon": "i-mic",
+          "task": "实时语音对话",
+          "model": "gemini-3.1-flash-live-preview"
+        },
+        {
+          "icon": "i-doc",
+          "task": "语音转文字",
+          "model": "gemini-3.5-transcribe"
+        },
+        {
+          "icon": "i-speaker",
+          "task": "文字转语音",
+          "model": "gemini-3.1-flash-tts-preview"
+        },
+        {
+          "icon": "i-globe",
+          "task": "实时语音翻译",
+          "model": "gemini-3.5-live-translate-preview"
+        },
+        {
+          "icon": "i-search",
+          "task": "语义搜索 / RAG",
+          "model": "gemini-embedding-2-preview"
+        },
+        {
+          "icon": "i-monitor",
+          "task": "计算机操控",
+          "model": "gemini-2.5-computer-use-preview-10-2025"
+        },
+        {
+          "icon": "i-target",
+          "task": "机器人控制",
+          "model": "gemini-robotics-er-2-preview"
+        },
+        {
+          "icon": "i-home",
+          "task": "开源 / 边缘设备",
+          "model": "gemma-4"
+        }
+      ]
+    },
+    {
+      "id": "naming",
+      "kind": "table",
+      "title": "命名规律速查",
+      "icon": "i-ruler",
+      "nav": "命名规律",
+      "desc": "掌握这些规律，看到任何模型名都能秒懂其定位",
+      "table_class": "rules",
+      "columns": [
+        "命名元素",
+        "含义",
+        "示例"
+      ],
+      "row_types": [
+        "raw",
+        "plain",
+        "mono_td"
+      ],
+      "rows": [
+        [
+          "gemini-X.Y 版本号",
+          "数字越大，模型越新越强",
+          "gemini-2.0 → 2.5 → 3 → 3.1 → 3.7"
+        ],
+        [
+          "-pro",
+          "旗舰增强版，最强推理",
+          "gemini-3.1-pro-preview, gemini-2.5-pro"
+        ],
+        [
+          "-flash",
+          "速度优化均衡版",
+          "gemini-3.7-flash, gemini-2.5-flash"
+        ],
+        [
+          "-flash-lite",
+          "最省最快轻量版",
+          "gemini-3.5-flash-lite, gemini-3.1-flash-lite"
+        ],
+        [
+          "-preview",
+          "预览版（可用于生产，提前 2 周通知弃用）",
+          "gemini-3.1-pro-preview"
+        ],
+        [
+          "-latest",
+          "最新别名，随版本热替换",
+          "gemini-flash-latest"
+        ],
+        [
+          "nano-banana (🍌)",
+          "图像生成系列代号",
+          "gemini-3-pro-image (Pro), gemini-3.1-flash-image (2)"
+        ],
+        [
+          "-image",
+          "支持图像生成输出",
+          "gemini-3.1-flash-image"
+        ],
+        [
+          "-live",
+          "Live API 实时音视频对话",
+          "gemini-3.1-flash-live-preview"
+        ],
+        [
+          "-native-audio",
+          "原生音频处理（Live API）",
+          "gemini-2.5-flash-native-audio-preview-12-2025"
+        ],
+        [
+          "-live-translate",
+          "实时语音翻译",
+          "gemini-3.5-live-translate-preview"
+        ],
+        [
+          "-tts",
+          "文字转语音",
+          "gemini-3.1-flash-tts-preview"
+        ],
+        [
+          "-transcribe",
+          "语音转文字",
+          "gemini-3.5-transcribe(-live)"
+        ],
+        [
+          "omni-",
+          "视频全能：生成/编辑/补帧/延展+原生音频",
+          "gemini-omni-1.1-flash"
+        ],
+        [
+          "veo-X",
+          "视频生成系列",
+          "veo-3.1-generate-preview"
+        ],
+        [
+          "lyria-X",
+          "音乐生成系列",
+          "lyria-3-pro-preview, lyria-3-clip-preview"
+        ],
+        [
+          "robotics-er",
+          "机器人具身推理（Embodied Reasoning）",
+          "gemini-robotics-er-2-preview"
+        ],
+        [
+          "deep-research",
+          "深度研究智能体",
+          "deep-research-max-preview-04-2026"
+        ],
+        [
+          "antigravity",
+          "托管通用智能体（沙箱内自主执行）",
+          "antigravity-preview-05-2026"
+        ],
+        [
+          "-computer-use",
+          "计算机操控",
+          "gemini-2.5-computer-use-preview-10-2025"
+        ],
+        [
+          "gemma-X",
+          "开源轻量模型系列",
+          "gemma-4, gemma-3n"
+        ],
+        [
+          "-001 / -exp",
+          "正式版本号 / 实验版",
+          "gemini-embedding-001, lyria-realtime-exp"
+        ]
+      ]
+    },
+    {
+      "id": "gemini3",
+      "kind": "table",
+      "title": "Gemini 3 前沿模型",
+      "icon": "i-spark",
+      "nav": "Gemini 3",
+      "desc": "最新一代，全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-3.1-pro-preview",
+            "badges": [
+              "预览"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "当前最强推理，Agentic 与复杂编程，$2/$12"
+        ],
+        [
+          {
+            "id": "gemini-3.7-flash",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          4,
+          4,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "最新最强 Flash（Stable），复杂编程与多步执行，$0.75/$3.75"
+        ],
+        [
+          {
+            "id": "gemini-3.6-flash",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          4,
+          4,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "上代 Flash（Stable），搜索与 Grounding 增强，$0.75/$3.75"
+        ],
+        [
+          {
+            "id": "gemini-3.5-flash",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          3,
+          4,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "基础版 Flash（Stable），高吞吐常规任务，$1.5/$9"
+        ],
+        [
+          {
+            "id": "gemini-3.5-flash-lite",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "3.5 最快最省（Stable），$0.3/$2.5"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "前沿级廉价（Stable），$0.25/$1.5；已宣布 2027-05 退役"
+        ],
+        [
+          {
+            "id": "gemini-3-flash-preview",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          4,
+          4,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "早期预览版，$0.5/$3；建议迁移 gemini-3.6-flash"
+        ]
+      ]
+    },
+    {
+      "id": "gemini25",
+      "kind": "table",
+      "title": "Gemini 2.5 主力模型",
+      "icon": "i-models",
+      "nav": "Gemini 2.5",
+      "desc": "当前主力生产模型（Stable），1M 上下文，支持思考与 Function Calling；主力模型均支持 PDF 文档输入",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-2.5-pro",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "2.5 代最强，复杂任务与编程首选，$1.25/$10"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          3,
+          4,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "最佳性价比，低延迟高吞吐，$0.3/$2.5"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-lite",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          "64K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "2.5 代最省，大规模调用，$0.1/$0.4"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-image",
+            "badges": []
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          "64K",
+          "64K",
+          "32K",
+          "Nano Banana（🍌）上代图像生成，$0.3 输入；已宣布 2026-10 退役"
+        ],
+        [
+          {
+            "id": "gemini-2.5-computer-use-preview-10-2025",
+            "badges": [
+              "预览"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          2,
+          "128K",
+          "64K",
+          "128K",
+          "计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10"
+        ]
+      ]
+    },
+    {
+      "id": "audio",
+      "kind": "table",
+      "title": "音频模型（Transcribe / TTS / Live / Translate）",
+      "icon": "i-audio",
+      "nav": "音频",
+      "desc": "语音转文字、文字转语音、实时对话与实时翻译；Live 系列经 WebSocket 双向流式交互",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "类型",
+        "输入",
+        "输出",
+        "速度",
+        "特性",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "flow",
+        "mods",
+        "mods",
+        "speed",
+        "plain",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-3.5-transcribe",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          {
+            "from": "i-mic",
+            "to": "i-text",
+            "label": "语音转文字"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "说话人分离/词级时间戳",
+          "低延迟转写，$2/$12"
+        ],
+        [
+          {
+            "id": "gemini-3.5-transcribe-live",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          {
+            "from": "i-mic",
+            "to": "i-text",
+            "label": "实时转写"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "流式实时",
+          "实时流式转写，$3.5/$21"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-tts-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          "mid",
+          {
+            "from": "i-text",
+            "to": "i-speaker",
+            "label": "文字转语音"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "音频标签精细控制",
+          "最新 TTS，$1/$20"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-preview-tts",
+            "badges": [
+              "预览"
+            ]
+          },
+          "balanced",
+          "mid",
+          {
+            "from": "i-text",
+            "to": "i-speaker",
+            "label": "文字转语音"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "风格/语速可控",
+          "上代 TTS，$0.5/$10"
+        ],
+        [
+          {
+            "id": "gemini-2.5-pro-preview-tts",
+            "badges": [
+              "预览"
+            ]
+          },
+          "flagship",
+          "mid",
+          {
+            "from": "i-text",
+            "to": "i-speaker",
+            "label": "文字转语音"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "高保真",
+          "播客/有声书级，$1/$20"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-live-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "实时对话"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "Live API",
+          "实时语音对话旗舰，$0.75/$4.5"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-native-audio-preview-12-2025",
+            "badges": [
+              "预览"
+            ]
+          },
+          "balanced",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "实时对话"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "原生音频推理",
+          "Live API 上代，$0.5/$2"
+        ],
+        [
+          {
+            "id": "gemini-3.5-live-translate-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          {
+            "from": "i-mic",
+            "to": "i-speaker",
+            "label": "实时翻译"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "audio",
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "70+ 语言",
+          "语音到语音实时翻译，$3.5/$21"
+        ]
+      ]
+    },
+    {
+      "id": "image",
+      "kind": "table",
+      "title": "图像生成（Nano Banana 🍌）",
+      "icon": "i-image",
+      "nav": "图像",
+      "desc": "Nano Banana 系列为当前图像生成主力；Imagen 4 已并入并关停",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "输入",
+        "输出",
+        "速度",
+        "分辨率",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "mods",
+        "speed",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-3-pro-image",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "最高 4K",
+          "Nano Banana Pro：SOTA 图像生成与编辑，复杂排版/文字渲染，$2/$12"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-image",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "2K",
+          "Nano Banana 2：高效量产，$0.5/$3"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite-image",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "标准",
+          "Nano Banana 2 Lite：超低延迟低成本，$0.25/$1.5"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-image",
+            "badges": []
+          },
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "标准",
+          "Nano Banana 上代（🍌），$0.3 输入；已宣布 2026-10 退役"
+        ],
+        [
+          {
+            "id": "imagen-4.0-generate-001",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "2K",
+          "已于 2026-08-17 关停，迁移 Nano Banana"
+        ]
+      ]
+    },
+    {
+      "id": "video",
+      "kind": "table",
+      "title": "视频生成（Veo / Omni）",
+      "icon": "i-video",
+      "nav": "视频",
+      "desc": "按输出视频秒数计费，含同步音频；Veo 3.1 支持最高 4K，Omni 支持生成/编辑/补帧/延展",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "类型",
+        "计费",
+        "速度",
+        "分辨率",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "plain",
+        "mono",
+        "speed",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "veo-3.1-generate-preview",
+            "badges": [
+              "预览"
+            ]
+          },
+          "flagship",
+          "文生视频",
+          "$0.4-0.6/秒",
+          1,
+          "1080p-4K",
+          "电影级画质+原生同步音频"
+        ],
+        [
+          {
+            "id": "veo-3.1-fast-generate-preview",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "balanced",
+          "文生视频",
+          "$0.1-0.3/秒",
+          3,
+          "1080p-4K",
+          "快速生成，性价比首选"
+        ],
+        [
+          {
+            "id": "veo-3.1-lite-generate-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          "文生视频",
+          "$0.05-0.08/秒",
+          4,
+          "1080p",
+          "开发者友好低成本版（无 4K）"
+        ],
+        [
+          {
+            "id": "gemini-omni-1.1-flash",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          "视频生成/编辑/补帧/延展",
+          "$1.5/$9 (token)",
+          3,
+          "—",
+          "原生音频，功能最全面"
+        ],
+        [
+          {
+            "id": "veo-3.0-generate-001",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "文生视频",
+          "$0.2-0.4/秒",
+          1,
+          "1080p",
+          "已于 2026-06-30 关停，迁移 Veo 3.1"
+        ],
+        [
+          {
+            "id": "gemini-omni-flash-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "视频生成/编辑",
+          "$1.5/$9 (token)",
+          3,
+          "—",
+          "预览版，2026-09-30 退役，迁移 gemini-omni-1.1-flash"
+        ]
+      ]
+    },
+    {
+      "id": "music",
+      "kind": "table",
+      "title": "音乐生成（Lyria）",
+      "icon": "i-audio",
+      "nav": "音乐",
+      "desc": "按生成的歌曲次数计费",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "类型",
+        "计费",
+        "时长",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "plain",
+        "mono",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "lyria-3-pro-preview",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "完整歌曲",
+          "$0.08/首",
+          "完整曲目",
+          "旗舰音乐生成，复杂结构完整性"
+        ],
+        [
+          {
+            "id": "lyria-3-clip-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          "短片段/循环",
+          "$0.04/首",
+          "30 秒",
+          "片段、循环与预览生成"
+        ],
+        [
+          {
+            "id": "lyria-realtime-exp",
+            "badges": []
+          },
+          "balanced",
+          "实时流式",
+          "实验版",
+          "流式",
+          "高保真实时音乐生成，细粒度创作控制"
+        ]
+      ]
+    },
+    {
+      "id": "agents",
+      "kind": "table",
+      "title": "智能体模型（Agents）",
+      "icon": "i-target",
+      "nav": "智能体",
+      "desc": "自主规划与执行的智能体模型；预览阶段，价格以官方后续公布为准",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "用途",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "plain",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "deep-research-max-preview-04-2026",
+            "badges": [
+              "预览"
+            ]
+          },
+          "flagship",
+          null,
+          "深度研究",
+          "最强自动研究：数百来源检索与综合，生成可交互引用报告"
+        ],
+        [
+          {
+            "id": "deep-research-preview-04-2026",
+            "badges": [
+              "预览"
+            ]
+          },
+          "balanced",
+          null,
+          "深度研究",
+          "自主规划执行多步研究任务"
+        ],
+        [
+          {
+            "id": "antigravity-preview-05-2026",
+            "badges": [
+              "预览"
+            ]
+          },
+          "flagship",
+          null,
+          "通用智能体",
+          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页"
+        ]
+      ]
+    },
+    {
+      "id": "robotics",
+      "kind": "table",
+      "title": "机器人模型（Gemini Robotics）",
+      "icon": "i-target",
+      "nav": "机器人",
+      "desc": "具身推理（Embodied Reasoning）：理解物理空间、规划多步任务、多机协作",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-robotics-er-2-preview",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          4,
+          4,
+          "128K",
+          "64K",
+          "128K",
+          "最新具身推理：视频理解/空间推理/多步工具编排/多机协作，$2/$10"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.6-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          4,
+          4,
+          "128K",
+          "64K",
+          "128K",
+          "上代 ER，2026-08-31 退役，迁移 ER 2，$1/$5"
+        ]
+      ]
+    },
+    {
+      "id": "embed",
+      "kind": "table",
+      "title": "向量模型（Embedding）",
+      "icon": "i-grid",
+      "nav": "向量",
+      "desc": "语义搜索与 RAG；Embedding 2 为首个多模态向量模型（文本/图像/音频/视频/PDF 统一向量空间）",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "类型",
+        "输入",
+        "速度",
+        "特性",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "flow",
+        "mods",
+        "speed",
+        "plain",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-embedding-2-preview",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "low",
+          {
+            "from": "i-text",
+            "to": "i-grid",
+            "label": "多模态向量"
+          },
+          [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          3,
+          "文本$0.2 / 图$0.45 / 音$6.5 / 视$12",
+          "首个多模态 Embedding，统一向量空间"
+        ],
+        [
+          {
+            "id": "gemini-embedding-001",
+            "badges": []
+          },
+          "balanced",
+          "low",
+          {
+            "from": "i-text",
+            "to": "i-grid",
+            "label": "向量化"
+          },
+          [
+            "text"
+          ],
+          3,
+          "$0.15/1M",
+          "高维文本向量，2028-05-14 退役"
+        ]
+      ]
+    },
+    {
+      "id": "gemma",
+      "kind": "table",
+      "title": "Gemma 开源模型",
+      "icon": "i-share",
+      "nav": "开源",
+      "desc": "与 Gemini 同源的轻量开源模型，免费使用，可私有化部署",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemma-4",
+            "badges": [
+              "NEW",
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          3,
+          5,
+          "128K",
+          "最新开源旗舰，同源自 Gemini 技术"
+        ],
+        [
+          {
+            "id": "gemma-3",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          3,
+          5,
+          "128K",
+          "文本/图像理解/推理"
+        ],
+        [
+          {
+            "id": "gemma-3n",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          2,
+          5,
+          "32K",
+          "多模态输入，移动设备优化"
+        ],
+        [
+          {
+            "id": "gemma-2",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text"
+          ],
+          3,
+          4,
+          "8K",
+          "文本生成/摘要/提取（9B/27B）"
+        ],
+        [
+          {
+            "id": "codegemma",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "code"
+          ],
+          3,
+          4,
+          "8K",
+          "代码生成与补全（2B/7B）"
+        ],
+        [
+          {
+            "id": "ShieldGemma",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text"
+          ],
+          3,
+          4,
+          "—",
+          "安全分类与内容过滤专用"
+        ],
+        [
+          {
+            "id": "TxGemma",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text"
+          ],
+          3,
+          4,
+          "—",
+          "治疗预测/药物发现/基因组学"
+        ],
+        [
+          {
+            "id": "MedGemma",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          "—",
+          "医学影像分析（DICOM）"
+        ],
+        [
+          {
+            "id": "paligemma",
+            "badges": [
+              "开源"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>开源免费</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          "—",
+          "图像描述与视觉问答（3B）"
+        ]
+      ]
+    },
+    {
+      "id": "gemini20",
+      "kind": "table",
+      "title": "Gemini 2.0（已关停）",
+      "icon": "i-circle-off",
+      "nav": "Gemini 2.0",
+      "desc": "已于 2026-06-01 全部关停，请迁移至 Gemini 3.x 对应替代模型；均支持 PDF 文档输入",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-2.0-flash",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image",
+            "audio",
+            "pdf"
+          ],
+          3,
+          4,
+          "1M",
+          "8K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "已关停（2026-06-01），迁移 gemini-3.6-flash"
+        ],
+        [
+          {
+            "id": "gemini-2.0-flash-lite",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "cheap",
+          [
+            "text",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          "8K",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "已关停（2026-06-01），迁移 gemini-3.1-flash-lite"
+        ]
+      ]
+    },
+    {
+      "id": "deprecated",
+      "kind": "table",
+      "title": "已弃用与关停计划",
+      "icon": "i-circle-off",
+      "nav": "已弃用",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-08-29 同步）",
+      "table_class": "deprecated",
+      "columns": [
+        "模型 ID",
+        "生命周期",
+        "关停日期",
+        "替代方案",
+        "迁移建议"
+      ],
+      "row_types": [
+        "model_id",
+        "lifecycle",
+        "mono",
+        "replacement",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-2.0-flash",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-06-01",
+          "gemini-3.6-flash",
+          "已关停，直接替换"
+        ],
+        [
+          {
+            "id": "gemini-2.0-flash-lite",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-06-01",
+          "gemini-3.1-flash-lite",
+          "已关停，直接替换"
+        ],
+        [
+          {
+            "id": "imagen-4.0-generate-001",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-08-17",
+          "gemini-3.1-flash-image",
+          "已关停，迁移 Nano Banana 2"
+        ],
+        [
+          {
+            "id": "veo-3.0-generate-001",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-06-30",
+          "veo-3.1-generate-preview",
+          "已关停，直接替换"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.6-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "deprecated",
+          "2026-08-31",
+          "gemini-robotics-er-2-preview",
+          "即将退役，尽快迁移"
+        ],
+        [
+          {
+            "id": "gemini-omni-flash-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "deprecated",
+          "2026-09-30",
+          "gemini-omni-1.1-flash",
+          "预览版按期退役"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite",
+            "badges": []
+          },
+          "deprecated",
+          "2027-05-07",
+          "gemini-3.5-flash-lite",
+          "Stable 但已宣布退役，规划迁移"
+        ],
+        [
+          {
+            "id": "gemini-embedding-001",
+            "badges": []
+          },
+          "deprecated",
+          "2028-05-14",
+          "gemini-embedding-2",
+          "仍可用（至 2028），新项目建议 Embedding 2"
+        ]
+      ]
+    },
+    {
+      "id": "matrix",
+      "kind": "table",
+      "title": "能力矩阵速查",
+      "icon": "i-target",
+      "nav": "能力矩阵",
+      "desc": "根据需求快速匹配最佳模型",
+      "columns": [
+        "需求场景",
+        "推荐模型",
+        "备选模型",
+        "关键能力"
+      ],
+      "row_types": [
+        "scene",
+        "model_id",
+        "mono",
+        "raw"
+      ],
+      "rows": [
+        [
+          {
+            "icon": "i-chat",
+            "text": "日常对话 / 写作"
+          },
+          "gemini-3.7-flash",
+          "gemini-3.6-flash",
+          "<span class=\"ctx hi\">1M 上下文</span> <span class=\"plain\">$0.75/$3.75</span>"
+        ],
+        [
+          {
+            "icon": "i-brain",
+            "text": "复杂推理 / 数学"
+          },
+          "gemini-3.1-pro-preview",
+          "gemini-2.5-pro",
+          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>最强</span>"
+        ],
+        [
+          {
+            "icon": "i-code",
+            "text": "Agentic 编程工作流"
+          },
+          "gemini-3.7-flash",
+          "gemini-2.5-pro",
+          "<span class=\"tag mod-ico\" title=\"代码\"><svg class=\"ic\"><use href=\"#i-code\"/></svg></span> <span class=\"plain\">+ 多步执行</span>"
+        ],
+        [
+          {
+            "icon": "i-coin",
+            "text": "极致低成本"
+          },
+          "gemini-3.1-flash-lite",
+          "gemini-2.5-flash-lite",
+          "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-coin\"/></svg>$0.25/$1.5</span>"
+        ],
+        [
+          {
+            "icon": "i-doc",
+            "text": "超长文档处理",
+            "note": "~100万 token"
+          },
+          "gemini-2.5-pro",
+          "gemini-3.7-flash",
+          "<span class=\"ctx hi\">1M 上下文</span>"
+        ],
+        [
+          {
+            "icon": "i-eye",
+            "text": "多模态理解（图+音+视）"
+          },
+          "gemini-3.7-flash",
+          "gemini-2.5-flash",
+          "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"图像\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"音频\"><svg class=\"ic\"><use href=\"#i-audio\"/></svg></span><span class=\"tag mod-ico\" title=\"视频\"><svg class=\"ic\"><use href=\"#i-video\"/></svg></span><span class=\"tag mod-ico\" title=\"文本\"><svg class=\"ic\"><use href=\"#i-text\"/></svg></span></div>"
+        ],
+        [
+          {
+            "icon": "i-mic",
+            "text": "实时语音对话"
+          },
+          "gemini-3.1-flash-live-preview",
+          "gemini-2.5-flash-native-audio-preview-12-2025",
+          "<span class=\"mono-dim\">Live API 双向流</span>"
+        ],
+        [
+          {
+            "icon": "i-doc",
+            "text": "语音转文字"
+          },
+          "gemini-3.5-transcribe",
+          "gemini-3.5-transcribe-live",
+          "<span class=\"mono-dim\">说话人分离/词级时间戳</span>"
+        ],
+        [
+          {
+            "icon": "i-speaker",
+            "text": "文字转语音"
+          },
+          "gemini-3.1-flash-tts-preview",
+          "gemini-2.5-pro-preview-tts",
+          "<span class=\"mono-dim\">音频标签精细控制</span>"
+        ],
+        [
+          {
+            "icon": "i-globe",
+            "text": "实时语音翻译"
+          },
+          "gemini-3.5-live-translate-preview",
+          "—",
+          "<span class=\"ctx\">70+ 语言</span>"
+        ],
+        [
+          {
+            "icon": "i-brush",
+            "text": "高质量图像生成"
+          },
+          "gemini-3-pro-image",
+          "gemini-3.1-flash-image",
+          "<span class=\"ctx\">最高 4K · Nano Banana Pro</span>"
+        ],
+        [
+          {
+            "icon": "i-video",
+            "text": "视频生成"
+          },
+          "veo-3.1-fast-generate-preview",
+          "veo-3.1-generate-preview",
+          "<span class=\"ctx\">4K + 同步音频</span>"
+        ],
+        [
+          {
+            "icon": "i-audio",
+            "text": "音乐创作"
+          },
+          "lyria-3-pro-preview",
+          "lyria-3-clip-preview",
+          "<span class=\"ctx\">$0.04-0.08/首</span>"
+        ],
+        [
+          {
+            "icon": "i-search",
+            "text": "语义搜索 / RAG"
+          },
+          "gemini-embedding-2-preview",
+          "gemini-embedding-001",
+          "<span class=\"mono-dim\">多模态统一向量空间</span>"
+        ],
+        [
+          {
+            "icon": "i-monitor",
+            "text": "计算机操控自动化"
+          },
+          "gemini-2.5-computer-use-preview-10-2025",
+          "—",
+          "<span class=\"mono-dim\">看屏幕执行 UI 操作</span>"
+        ],
+        [
+          {
+            "icon": "i-target",
+            "text": "机器人控制"
+          },
+          "gemini-robotics-er-2-preview",
+          "gemini-robotics-er-1.6-preview",
+          "<span class=\"mono-dim\">具身推理 · 多机协作</span>"
+        ],
+        [
+          {
+            "icon": "i-home",
+            "text": "私有化 / 边缘部署"
+          },
+          "gemma-4",
+          "gemma-3n",
+          "<span class=\"tag t-teal\">开源免费</span>"
+        ]
+      ]
+    }
+  ]
+}

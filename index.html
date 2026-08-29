@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大模型选型与场景指南</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --bg-soft: #f4f6f8;
+    --bg-hover: #edf1f4;
+    --bg-tint: #eef4f6;
+    --border: #e6eaee;
+    --border-strong: #d3dae0;
+    --text: #10151a;
+    --text-dim: #4d5a64;
+    --text-faint: #8b98a1;
+    --accent: #0e7490;
+    --accent-bright: #0a5c73;
+    --accent-deep: #083d4d;
+    --accent-soft: rgba(14, 116, 144, 0.09);
+    --accent-border: rgba(14, 116, 144, 0.34);
+    --font-display: 'Sora', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
+    --font-sans: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  ::selection { background: var(--accent-soft); color: var(--accent-bright); }
+  ::-webkit-scrollbar { width: 10px; height: 10px; }
+  ::-webkit-scrollbar-track { background: var(--bg-soft); }
+  ::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 6px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+  body {
+    font-family: var(--font-sans);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.9;
+    z-index: 60;
+  }
+
+  .hero {
+    padding: 40px 32px 24px;
+    position: relative;
+    overflow: hidden;
+    background:
+      radial-gradient(ellipse 60% 80% at 85% -10%, rgba(14, 116, 144, 0.14), transparent 60%),
+      linear-gradient(var(--bg-tint), var(--bg) 70%);
+    border-bottom: 1px solid var(--border);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--border) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 75%);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 75%);
+    pointer-events: none;
+  }
+  .hero > * { position: relative; }
+  .hero-inner { max-width: 1400px; margin: 0 auto; }
+  .hero-top { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
+  .logo-mark { width: 26px; height: 26px; color: var(--accent-deep); flex-shrink: 0; }
+  .hero-eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--accent);
+    font-weight: 500;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 34px;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+    margin: 0 0 10px;
+  }
+  .hero-desc {
+    color: var(--text-dim);
+    font-size: 13.5px;
+    margin: 0 0 22px;
+    line-height: 1.7;
+  }
+  .stat-strip { display: flex; align-items: center; gap: 24px; }
+  .stat { display: flex; flex-direction: column; gap: 4px; }
+  .stat-num {
+    font-family: var(--font-mono);
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--accent-bright);
+    font-variant-numeric: tabular-nums;
+  }
+  .stat-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-faint);
+    letter-spacing: 0.02em;
+  }
+  .stat-label .ic { font-size: 13px; color: var(--accent); opacity: 0.8; }
+  .stat-divider { width: 1px; height: 30px; background: var(--border-strong); }
+
+  .ic {
+    width: 1em; height: 1em;
+    display: inline-block;
+    vertical-align: -0.14em;
+    flex-shrink: 0;
+  }
+
+  /* ===== Tabs ===== */
+  .tabs {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 32px;
+  }
+  .tabs-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+  }
+  .tab-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 13px 18px;
+    margin-bottom: -1px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-faint);
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+    white-space: nowrap;
+  }
+  /* 品牌 logo：略大于字号保持视觉平衡，颜色随按钮状态（currentColor） */
+  .tab-logo { font-size: 14px; }
+  .tab-btn:hover { color: var(--accent-bright); background: var(--bg-soft); }
+  .tab-btn:focus-visible { outline: 2px solid var(--accent-border); outline-offset: -2px; }
+  .tab-btn.active {
+    color: var(--accent-bright);
+    border-bottom-color: var(--accent);
+    background: var(--bg-tint);
+  }
+
+  /* 内容区吃掉剩余视口高度，页脚自然落底（替代 100vh - 186px 魔法数） */
+  .tab-panels {
+    position: relative;
+    flex: 1;
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+  }
+  .tab-panel {
+    display: none;
+    position: relative;
+    background: var(--bg-soft);
+  }
+  /* 激活面板全程 flex 布局：嵌套 flex 直接分配实高，规避 height:100% 沿链解析失败 */
+  .tab-panel.active { display: flex; flex-direction: column; flex: 1; min-height: 0; }
+  /* iframe 加载完成前的占位提示（加载后由 JS 移除） */
+  .tab-panel::after {
+    content: '加载中…';
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.32em;
+    text-indent: 0.32em;
+    color: var(--text-faint);
+    pointer-events: none;
+    z-index: 2;
+  }
+  .tab-panel.loaded::after { display: none; }
+  .tab-panel iframe {
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+    border: none;
+    display: block;
+    background: var(--bg);
+  }
+
+  @media (max-width: 720px) {
+    .hero { padding: 32px 20px 20px; }
+    .hero h1 { font-size: 26px; }
+    .stat-strip { gap: 16px; }
+    .tabs { padding: 0 16px; }
+    .tab-btn { padding: 11px 12px; font-size: 12px; }
+    .tab-panels { min-height: 68vh; }
+  }
+</style>
+</head>
+<body>
+
+<svg style="position:absolute;width:0;height:0;" aria-hidden="true">
+  <defs>
+    <symbol id="i-models" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></g></symbol>
+    <symbol id="i-modes" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></g></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M7 7h2M7 12h4M7 17h6M12 7h5M12 12h5"/></g></symbol>
+    <!-- 品牌 logo（官方单色版，fill 继承 tab 状态色：默认灰 / 悬停·激活青） -->
+    <symbol id="i-brand-openai" viewBox="0 0 24 24"><path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></symbol>
+    <symbol id="i-brand-qwen" viewBox="0 0 24 24"><path fill="currentColor" d="M23.919 14.545 20.817 9.17l1.47-2.544a.56.56 0 0 0 0-.566l-1.633-2.83a.57.57 0 0 0-.49-.283h-6.207L12.487.402a.57.57 0 0 0-.49-.284H8.732a.56.56 0 0 0-.49.284L5.139 5.775h-2.94a.56.56 0 0 0-.49.284L.077 8.887a.56.56 0 0 0 0 .567L3.18 14.83l-1.47 2.545a.56.56 0 0 0 0 .566l1.634 2.83a.57.57 0 0 0 .49.283h6.205l1.47 2.545a.57.57 0 0 0 .49.284h3.266a.57.57 0 0 0 .49-.284l3.104-5.375h2.94a.57.57 0 0 0 .49-.283l1.634-2.828a.55.55 0 0 0-.004-.568M8.733.686l1.634 2.828-1.634 2.828H21.8L20.164 9.17H7.425L5.63 6.06Zm1.306 19.801-6.205-.002 1.634-2.83h3.265L2.201 6.344h3.267q3.182 5.517 6.367 11.032zm10.124-5.66L18.53 12l-6.532 11.315-1.634-2.83c2.129-3.673 4.25-7.351 6.373-11.028h3.592l3.102 5.374z"/></symbol>
+    <symbol id="i-brand-gemini" viewBox="0 0 24 24"><path fill="currentColor" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="hero-top">
+      <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#128fa8"/>
+            <stop offset="1" stop-color="#083d4d"/>
+          </linearGradient>
+        </defs>
+        <rect x="2.5" y="2.5" width="13" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <rect x="8.5" y="8.5" width="13" height="13" rx="2.5" fill="url(#logoGrad)"/>
+      </svg>
+      <div class="hero-eyebrow">Scenario-Driven Model Guide · 2026</div>
+    </div>
+    <h1>大模型选型与场景指南</h1>
+    <p class="hero-desc">面对 OpenAI、阿里 Qwen、Google Gemini 众多模型不知如何下手？本指南从实际场景出发，帮你快速理解各模型能力边界，选对模型、用对场景。</p>
+    <div class="stat-strip">
+      <div class="stat"><span class="stat-num">262</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">3</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>厂商选型</span></span></div>
+      <div class="stat-divider"></div>
+      <div class="stat"><span class="stat-num">10M</span><span class="stat-label"><svg class="ic"><use href="#i-ruler"/></svg><span>最大上下文</span></span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs">
+  <div class="tabs-inner" role="tablist" aria-label="厂商指南切换">
+    <button class="tab-btn active" data-tab="openai" role="tab" id="tab-openai" aria-selected="true" aria-controls="panel-openai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-openai"/></svg>OpenAI</button>
+    <button class="tab-btn" data-tab="gemini" role="tab" id="tab-gemini" aria-selected="false" aria-controls="panel-gemini"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-gemini"/></svg>Google Gemini</button>
+    <button class="tab-btn" data-tab="qwen" role="tab" id="tab-qwen" aria-selected="false" aria-controls="panel-qwen"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-qwen"/></svg>阿里 Qwen</button>
+  </div>
+</nav>
+
+<div class="tab-panels">
+  <div class="tab-panel active" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai"><iframe src="openai-model-userguide.html?embed=1" title="OpenAI 模型选择指南" loading="eager"></iframe></div>
+  <div class="tab-panel" id="panel-gemini" role="tabpanel" aria-labelledby="tab-gemini"><iframe src="gemini-model-userguide.html?embed=1" title="Google Gemini 模型选择指南" loading="lazy"></iframe></div>
+  <div class="tab-panel" id="panel-qwen" role="tabpanel" aria-labelledby="tab-qwen"><iframe src="qwen-model-userguide.html?embed=1" title="通义千问模型选择指南" loading="lazy"></iframe></div>
+</div>
+
+<script>
+  document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const target = btn.dataset.tab;
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById('panel-' + target).classList.add('active');
+    });
+  });
+  // iframe 加载完成后移除"加载中"占位
+  document.querySelectorAll('.tab-panel iframe').forEach(frame => {
+    frame.addEventListener('load', () => frame.closest('.tab-panel').classList.add('loaded'));
+  });
+</script>
+
+</body>
+</html>

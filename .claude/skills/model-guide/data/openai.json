@@ -1,0 +1,2608 @@
+{
+  "meta": {
+    "title": "OpenAI 模型选择指南 2026",
+    "eyebrow": "OPENAI MODEL SELECTION GUIDE · 2026",
+    "h1": "OpenAI 模型选择指南",
+    "hero_desc": "70+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-08-28 同步）",
+    "home_href": "./index.html",
+    "home_title": "返回模型价格对比工具",
+    "home_label": "对比工具",
+    "stats": [
+      {
+        "num": "75",
+        "icon": "i-models",
+        "label": "收录模型"
+      },
+      {
+        "num": "9",
+        "icon": "i-modes",
+        "label": "模型分类"
+      },
+      {
+        "num": "1.05M",
+        "icon": "i-ruler",
+        "label": "最大上下文"
+      }
+    ],
+    "footer_title": "OpenAI 模型选择指南",
+    "footer_updated": "2026-08-28",
+    "footer_rules": "版本号越大越新 · mini = 省钱 · pro = 增强 · codex = 编程 · nano = 极速 · o 系列 = 推理 · realtime = 实时音频",
+    "footer_sources": "数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-08-28 同步）"
+  },
+  "sections": [
+    {
+      "id": "quick",
+      "title": "快速选型",
+      "icon": "i-bolt",
+      "desc": "按任务类型直达推荐模型",
+      "kind": "quick",
+      "cards": [
+        {
+          "icon": "i-chat",
+          "task": "日常对话 / 写作",
+          "model": "gpt-chat-latest"
+        },
+        {
+          "icon": "i-code",
+          "task": "专业编程",
+          "model": "gpt-5.3-codex"
+        },
+        {
+          "icon": "i-image",
+          "task": "图像生成",
+          "model": "gpt-image-2"
+        },
+        {
+          "icon": "i-video",
+          "task": "视频生成",
+          "model": "sora-2"
+        },
+        {
+          "icon": "i-mic",
+          "task": "实时语音听录",
+          "model": "gpt-live-transcribe"
+        },
+        {
+          "icon": "i-speaker",
+          "task": "文字转语音",
+          "model": "tts-1-hd"
+        },
+        {
+          "icon": "i-audio",
+          "task": "实时语音对话",
+          "model": "gpt-realtime-2.1"
+        },
+        {
+          "icon": "i-search",
+          "task": "深度研究 / 复杂推理",
+          "model": "o3-pro"
+        },
+        {
+          "icon": "i-brain",
+          "task": "最强推理",
+          "model": "gpt-5.4-pro"
+        },
+        {
+          "icon": "i-coin",
+          "task": "极致省钱",
+          "model": "gpt-5.4-nano"
+        },
+        {
+          "icon": "i-doc",
+          "task": "超长文档处理",
+          "model": "gpt-5.6-sol"
+        },
+        {
+          "icon": "i-home",
+          "task": "私有化部署",
+          "model": "gpt-oss-120b"
+        }
+      ],
+      "nav": "快速选型"
+    },
+    {
+      "id": "naming",
+      "title": "命名规律速查",
+      "icon": "i-ruler",
+      "desc": "掌握这些规律，看到任何模型名都能秒懂其定位",
+      "kind": "table",
+      "columns": [
+        "命名元素",
+        "含义",
+        "示例"
+      ],
+      "row_types": [
+        "raw",
+        "plain",
+        "mono_td"
+      ],
+      "rows": [
+        [
+          "版本号 (4→5→5.6)",
+          "数字越大，模型越新越强",
+          "gpt-4 → gpt-5 → gpt-5.6"
+        ],
+        [
+          "代号 (-sol/-terra/-luna)",
+          "同代模型的变体代号（如 GPT-5.6 系列）",
+          "gpt-5.6-sol, gpt-5.6-cyber"
+        ],
+        [
+          "-mini",
+          "中等规模，平衡性能与成本",
+          "gpt-5-mini, o4-mini"
+        ],
+        [
+          "-nano",
+          "最小规模，极致省钱快速",
+          "gpt-5-nano, gpt-4.1-nano"
+        ],
+        [
+          "-pro",
+          "增强版，更多算力更精准",
+          "gpt-5.2-pro, o3-pro"
+        ],
+        [
+          "-codex",
+          "编程专用，代码能力强化",
+          "gpt-5.2-codex"
+        ],
+        [
+          "-max",
+          "长任务优化版",
+          "gpt-5.1-codex-max"
+        ],
+        [
+          "-turbo",
+          "速度优化版本",
+          "gpt-4-turbo"
+        ],
+        [
+          "-hd",
+          "高清 / 高质量版本",
+          "tts-1-hd"
+        ],
+        [
+          "-oss-XXb",
+          "开源版，XX = 参数量（十亿）",
+          "gpt-oss-120b"
+        ],
+        [
+          "o1 / o3 / o4",
+          "推理模型系列（深度思考型）",
+          "o3, o4-mini"
+        ],
+        [
+          "-deep-research",
+          "深度研究专用，超长推理",
+          "o3-deep-research"
+        ],
+        [
+          "-preview / -latest",
+          "预览版 / 最新版（自动更新）",
+          "computer-use-preview, gpt-chat-latest"
+        ],
+        [
+          "-transcribe / -tts",
+          "语音转文字 / 文字转语音",
+          "gpt-transcribe, gpt-4o-mini-tts"
+        ],
+        [
+          "-realtime / -live",
+          "实时双向音频 / 实时听录",
+          "gpt-realtime-2.1, gpt-live-transcribe"
+        ]
+      ],
+      "table_class": "rules",
+      "nav": "命名规律"
+    },
+    {
+      "id": "frontier",
+      "title": "Frontier 前沿模型",
+      "icon": "i-spark",
+      "desc": "OpenAI 最先进的模型，推荐用于大多数任务。GPT-5.6 系列为当前最新一代（2026-07 发布），支持多智能体编排（预览）与计算机使用；其工具调用请通过 <span class=\"mono\">Responses API</span>（Chat Completions 与函数工具不能同时使用，除非 <span class=\"mono\">reasoning_effort=none</span>）",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-5.6-sol",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-5.6 系列（代号 Sol），支持多智能体编排(预览)"
+        ],
+        [
+          {
+            "id": "gpt-5.6-terra",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-5.6 系列（代号 Terra），支持多智能体编排(预览)"
+        ],
+        [
+          {
+            "id": "gpt-5.6-luna",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-5.6 系列（代号 Luna），支持多智能体编排(预览)"
+        ],
+        [
+          {
+            "id": "gpt-5.6-cyber",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-5.6 系列（代号 Cyber），$12.5/$75"
+        ],
+        [
+          {
+            "id": "gpt-chat-latest",
+            "badges": [
+              "NEW",
+              "预览"
+            ]
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          2,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "持续更新的对话模型（即 GPT-5.5 Instant），固定推理强度不可配置"
+        ],
+        [
+          {
+            "id": "gpt-5.5",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "Responses API 有效预算约 922K token"
+        ],
+        [
+          {
+            "id": "gpt-5.4",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          3,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "支持计算机使用，编程和智能代理任务佳选"
+        ],
+        [
+          {
+            "id": "gpt-5.4-pro",
+            "badges": [
+              "PRO"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "推理增强版，Responses API 专用，无上限算力"
+        ],
+        [
+          {
+            "id": "gpt-5.4-mini",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "轻量版，支持计算机使用"
+        ],
+        [
+          {
+            "id": "gpt-5.4-nano",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "最快最省钱的 GPT-5.4"
+        ],
+        [
+          {
+            "id": "gpt-5.3-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          4,
+          "128K",
+          "111.6K",
+          "16K",
+          "快照已退役（2026-06-29），请换用 <span class=\"mono-dim\">gpt-chat-latest</span>"
+        ],
+        [
+          {
+            "id": "gpt-5.2",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "上一代旗舰，稳定可靠"
+        ],
+        [
+          {
+            "id": "gpt-5.2-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          4,
+          "128K",
+          "111.6K",
+          "16K",
+          "快照已退役，请换用 <span class=\"mono-dim\">gpt-chat-latest</span>"
+        ],
+        [
+          {
+            "id": "gpt-5.2-pro",
+            "badges": [
+              "PRO"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          "400K",
+          "272K",
+          "128K",
+          "GPT-5.2 推理增强版，无上限算力"
+        ],
+        [
+          {
+            "id": "gpt-5.1",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "<span class=\"mono-dim\">reasoning_effort</span> 默认 <span class=\"mono-dim\">none</span>，需显式开启推理"
+        ],
+        [
+          {
+            "id": "gpt-5.1-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          2,
+          4,
+          "128K",
+          "111.6K",
+          "16K",
+          "快照已退役，请换用 <span class=\"mono-dim\">gpt-chat-latest</span>；内置推理，不支持 <span class=\"mono-dim\">temperature</span> 参数"
+        ],
+        [
+          {
+            "id": "gpt-5",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "支持强化微调（RFT，受限开放）"
+        ],
+        [
+          {
+            "id": "gpt-5-pro",
+            "badges": [
+              "PRO"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          "400K",
+          "272K",
+          "128K",
+          "推理增强版，响应更精准"
+        ],
+        [
+          {
+            "id": "gpt-5-mini",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "更快更省钱，无需注册"
+        ],
+        [
+          {
+            "id": "gpt-5-nano",
+            "badges": []
+          },
+          "budget",
+          "cheap",
+          [
+            "text",
+            "image"
+          ],
+          2,
+          5,
+          "400K",
+          "272K",
+          "128K",
+          "最快最省钱的 GPT-5，无需注册"
+        ],
+        [
+          {
+            "id": "gpt-5-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          4,
+          "128K",
+          "111.6K",
+          "16K",
+          "快照已退役，请换用持续更新的 <span class=\"mono-dim\">gpt-chat-latest</span>"
+        ],
+        [
+          {
+            "id": "gpt-4.1",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          3,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "1M",
+          "32K",
+          "最聪明的非推理模型，支持微调"
+        ],
+        [
+          {
+            "id": "gpt-4.1-mini",
+            "badges": []
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          4,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "1M",
+          "32K",
+          "小型快速版，支持微调"
+        ],
+        [
+          {
+            "id": "gpt-4.1-nano",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text"
+          ],
+          1,
+          5,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "1M",
+          "32K",
+          "最快最省钱的 GPT-4.1"
+        ]
+      ],
+      "nav": "Frontier"
+    },
+    {
+      "id": "codex",
+      "title": "Codex 编程模型",
+      "icon": "i-code",
+      "desc": "专为代码生成和编程任务优化，适合 Agentic 工作流，针对 Codex CLI 和 Codex VS Code 扩展优化",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-5.3-codex",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "code",
+            "image"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "最新 Codex 模型（2026-02），Responses API 专用"
+        ],
+        [
+          {
+            "id": "gpt-5.2-codex",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "code",
+            "image"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "最智能编程模型，Codex CLI 优化"
+        ],
+        [
+          {
+            "id": "gpt-5.1-codex",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "code",
+            "image"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "Responses API 专用，Codex CLI 优化"
+        ],
+        [
+          {
+            "id": "gpt-5.1-codex-max",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "code"
+          ],
+          4,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "支持 <span class=\"mono-dim\">reasoning_effort=xhigh</span>"
+        ],
+        [
+          {
+            "id": "gpt-5.1-codex-mini",
+            "badges": []
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "code"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "轻量版 Codex"
+        ],
+        [
+          {
+            "id": "gpt-5-codex",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "code"
+          ],
+          4,
+          3,
+          "400K",
+          "272K",
+          "128K",
+          "Responses API 专用，Codex CLI 优化"
+        ],
+        [
+          {
+            "id": "codex-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "code",
+            "image"
+          ],
+          3,
+          3,
+          "200K",
+          "200K",
+          "100K",
+          "微调版 o4-mini；已宣布弃用，2026-11-15 退役"
+        ]
+      ],
+      "nav": "Codex"
+    },
+    {
+      "id": "reasoning",
+      "title": "o 系列推理模型",
+      "icon": "i-brain",
+      "desc": "专注深度思考和复杂推理，支持可配置推理强度 <span class=\"mono\">reasoning_effort: low/medium/high</span>",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "o1-pro",
+            "badges": []
+          },
+          "flagship",
+          "sky",
+          [
+            "text"
+          ],
+          4,
+          1,
+          "200K",
+          "200K",
+          "100K",
+          "最强推理，无上限算力"
+        ],
+        [
+          {
+            "id": "o3-deep-research",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "flagship",
+          "sky",
+          [
+            "text"
+          ],
+          5,
+          1,
+          "200K",
+          "200K",
+          "100K",
+          "最强深度研究，超长推理链（Azure 侧仅经 Foundry 代理服务提供）"
+        ],
+        [
+          {
+            "id": "o3-pro",
+            "badges": [
+              "PRO"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          "200K",
+          "200K",
+          "100K",
+          "更多算力更精准"
+        ],
+        [
+          {
+            "id": "o1",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          1,
+          "200K",
+          "200K",
+          "100K",
+          "已宣布弃用，2026-10-21 退役，官方推荐 <span class=\"mono-dim\">gpt-5.6-sol</span>"
+        ],
+        [
+          {
+            "id": "o3",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          "200K",
+          "200K",
+          "100K",
+          "复杂任务推理模型"
+        ],
+        [
+          {
+            "id": "o4-mini-deep-research",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "200K",
+          "200K",
+          "100K",
+          "更快更便宜的深度研究"
+        ],
+        [
+          {
+            "id": "o4-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          3,
+          "200K",
+          "200K",
+          "100K",
+          "已宣布弃用，2026-10-16 退役"
+        ],
+        [
+          {
+            "id": "o3-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "mid",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "200K",
+          "200K",
+          "100K",
+          "已宣布弃用，2026-10-01 退役，替代 <span class=\"mono-dim\">o4-mini</span>"
+        ]
+      ],
+      "nav": "o 系列"
+    },
+    {
+      "id": "media",
+      "title": "图像 & 视频生成",
+      "icon": "i-image",
+      "desc": "从文本或图像生成高质量视觉内容",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "输入",
+        "输出",
+        "速度",
+        "分辨率",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "mods",
+        "speed",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-image-2",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "最高 4K",
+          "最新一代图像生成模型"
+        ],
+        [
+          {
+            "id": "gpt-image-1.5",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "最高 4K",
+          "最先进的图像生成模型"
+        ],
+        [
+          {
+            "id": "gpt-image-1",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          1,
+          "最高 2K",
+          "上一代图像生成"
+        ],
+        [
+          {
+            "id": "gpt-image-1-mini",
+            "badges": []
+          },
+          "budget",
+          "high",
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          1,
+          "最高 1K",
+          "性价比图像生成"
+        ],
+        [
+          {
+            "id": "sora-2-pro",
+            "badges": [
+              "PRO"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "video",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          1,
+          "最高 4K 60fps",
+          "最先进视频生成，同步音频"
+        ],
+        [
+          {
+            "id": "sora-2",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "flagship",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "video",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          2,
+          "最高 1080p",
+          "旗舰视频生成"
+        ]
+      ],
+      "nav": "图像·视频"
+    },
+    {
+      "id": "audio",
+      "title": "语音 & 音频模型",
+      "icon": "i-audio",
+      "desc": "语音转文字、文字转语音、实时对话与音频理解。<span class=\"mono\">gpt-realtime-translate</span>、<span class=\"mono\">gpt-realtime-whisper</span>、<span class=\"mono\">gpt-live-transcribe</span> 按使用时长计费，其余实时模型按 token 计费",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "价格",
+        "类型",
+        "输入",
+        "输出",
+        "速度",
+        "特性",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "price",
+        "flow",
+        "mods",
+        "mods",
+        "speed",
+        "raw",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-live-transcribe",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "low",
+          {
+            "label": "实时听录",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          {
+            "t": "plain",
+            "v": "按时长计费"
+          },
+          "实时听录场景的当前推荐模型（2026-07）"
+        ],
+        [
+          {
+            "id": "gpt-realtime-whisper",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "low",
+          {
+            "label": "实时听录",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          {
+            "t": "plain",
+            "v": "按时长计费"
+          },
+          "实时低延迟听录（2026-05）"
+        ],
+        [
+          {
+            "id": "gpt-realtime-translate",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "mid",
+          {
+            "label": "实时翻译",
+            "from": "i-mic",
+            "to": "i-speaker"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "plain",
+            "v": "按时长计费"
+          },
+          "实时多语言翻译，输出译文语音和文本（2026-05）"
+        ],
+        [
+          {
+            "id": "gpt-transcribe",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "low",
+          {
+            "label": "语音转文字",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "plain",
+            "v": "25MB 文件"
+          },
+          "离线文件转写（/v1/audio/transcriptions），支持语言提示"
+        ],
+        [
+          {
+            "id": "whisper-1",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "语音转文字",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "plain",
+            "v": "99 种语言"
+          },
+          "通用语音识别，支持翻译"
+        ],
+        [
+          {
+            "id": "gpt-4o-transcribe",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "语音转文字",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "plain",
+            "v": "高精度"
+          },
+          "GPT-4o 驱动转写"
+        ],
+        [
+          {
+            "id": "gpt-4o-transcribe-diarize",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "语音转文字",
+            "from": "i-mic",
+            "to": "i-text"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "plain",
+            "v": "说话人识别"
+          },
+          "可区分多个说话人"
+        ],
+        [
+          {
+            "id": "gpt-realtime-2.1",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "high",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "最新实时对话（2026-07），静音和噪声处理改进"
+        ],
+        [
+          {
+            "id": "gpt-realtime-2.1-mini",
+            "badges": [
+              "NEW",
+              "预览"
+            ]
+          },
+          "mid",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "轻量版实时对话"
+        ],
+        [
+          {
+            "id": "gpt-realtime-2",
+            "badges": []
+          },
+          "high",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "第二代实时音频（2026-05）"
+        ],
+        [
+          {
+            "id": "gpt-realtime-1.5",
+            "badges": []
+          },
+          "high",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "实时音频处理（2026-02）"
+        ],
+        [
+          {
+            "id": "gpt-realtime",
+            "badges": [
+              "GA"
+            ]
+          },
+          "high",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "首个正式版实时双向音频（2025-08）"
+        ],
+        [
+          {
+            "id": "gpt-realtime-mini",
+            "badges": []
+          },
+          "mid",
+          {
+            "label": "实时对话",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          {
+            "t": "ctx",
+            "v": "32K/4K"
+          },
+          "轻量版实时音频"
+        ],
+        [
+          {
+            "id": "gpt-audio-1.5",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "high",
+          {
+            "label": "音频理解",
+            "icon": "i-audio"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "ctx",
+            "v": "128K/16K"
+          },
+          "最新音频理解模型（2026-02）"
+        ],
+        [
+          {
+            "id": "gpt-audio",
+            "badges": []
+          },
+          "high",
+          {
+            "label": "音频理解",
+            "icon": "i-audio"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "ctx",
+            "v": "128K/16K"
+          },
+          "Chat Completions 音频支持"
+        ],
+        [
+          {
+            "id": "gpt-audio-mini",
+            "badges": []
+          },
+          "mid",
+          {
+            "label": "音频理解",
+            "icon": "i-audio"
+          },
+          [
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          {
+            "t": "ctx",
+            "v": "128K/16K"
+          },
+          "轻量版音频处理"
+        ],
+        [
+          {
+            "id": "tts-1-hd",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "mid",
+          {
+            "label": "文字转语音",
+            "from": "i-text",
+            "to": "i-speaker"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          {
+            "t": "plain",
+            "v": "高质量"
+          },
+          "高保真文字转语音"
+        ],
+        [
+          {
+            "id": "tts-1",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "文字转语音",
+            "from": "i-text",
+            "to": "i-speaker"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "plain",
+            "v": "低延迟"
+          },
+          "速度优先 TTS"
+        ],
+        [
+          {
+            "id": "gpt-4o-mini-tts",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "文字转语音",
+            "from": "i-text",
+            "to": "i-speaker"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "plain",
+            "v": "风格可控"
+          },
+          "可引导语音以特定风格或语气说话"
+        ]
+      ],
+      "nav": "语音·音频"
+    },
+    {
+      "id": "oss",
+      "title": "开源模型（Apache 2.0）",
+      "icon": "i-share",
+      "desc": "可自行部署，无 API 调用限制，仅需硬件成本",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "价格",
+        "参数量",
+        "模态",
+        "推理",
+        "速度",
+        "硬件需求",
+        "上下文",
+        "输入",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "price",
+        "num",
+        "mods",
+        "reasoning",
+        "speed",
+        "mono",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-oss-120b",
+            "badges": [
+              "开源"
+            ]
+          },
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+          },
+          "1200 亿",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "1x H100 80GB",
+          "131K",
+          "131K",
+          "最强开源模型，需 Foundry 部署"
+        ],
+        [
+          {
+            "id": "gpt-oss-20b",
+            "badges": [
+              "开源"
+            ]
+          },
+          {
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+          },
+          "200 亿",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "1x A100 40GB",
+          "131K",
+          "131K",
+          "支持托管计算 + Foundry Local"
+        ]
+      ],
+      "nav": "开源"
+    },
+    {
+      "id": "embed",
+      "title": "Embedding & 工具模型",
+      "icon": "i-grid",
+      "desc": "文本向量化，用于语义搜索、RAG 与推荐系统",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "价格",
+        "用途",
+        "输入",
+        "速度",
+        "维度",
+        "评分",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "price",
+        "flow",
+        "mods",
+        "speed",
+        "num",
+        "mono",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "text-embedding-3-large",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "low",
+          {
+            "label": "向量化",
+            "from": "i-text",
+            "to": "i-grid"
+          },
+          [
+            "text"
+          ],
+          2,
+          "3,072",
+          "MIRACL 54.9 / MTEB 64.6",
+          "最强嵌入模型"
+        ],
+        [
+          {
+            "id": "text-embedding-3-small",
+            "badges": []
+          },
+          "cheap",
+          {
+            "label": "向量化",
+            "from": "i-text",
+            "to": "i-grid"
+          },
+          [
+            "text"
+          ],
+          3,
+          "1,536",
+          "MIRACL 44.0 / MTEB 62.3",
+          "小型嵌入模型"
+        ],
+        [
+          {
+            "id": "text-embedding-ada-002",
+            "badges": []
+          },
+          "low",
+          {
+            "label": "向量化",
+            "from": "i-text",
+            "to": "i-grid"
+          },
+          [
+            "text"
+          ],
+          2,
+          "1,536",
+          "MIRACL 31.4 / MTEB 61.0",
+          "旧版嵌入模型"
+        ]
+      ],
+      "nav": "Embedding"
+    },
+    {
+      "id": "computer",
+      "title": "计算机操控模型",
+      "icon": "i-monitor",
+      "desc": "自动化操控计算机，执行鼠标键盘操作，需注册申请访问权限",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "价格",
+        "模态",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "功能特性"
+      ],
+      "row_types": [
+        "model_id",
+        "price",
+        "mods",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "computer-use-preview",
+            "badges": [
+              "预览"
+            ]
+          },
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          2,
+          "8K",
+          "8K",
+          "1K",
+          "<span class=\"mono-dim\">鼠标 · 键盘 · 截图分析</span>"
+        ]
+      ],
+      "nav": "电脑操控"
+    },
+    {
+      "id": "legacy",
+      "title": "GPT-4o 系列（旧版兼容）",
+      "icon": "i-doc",
+      "desc": "仍可使用，但新项目建议使用 GPT-4.1 或 GPT-5 系列",
+      "kind": "table",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-4o",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          "128K",
+          "128K",
+          "16K",
+          "2024-05/08 版本已宣布弃用（2026-10 起退役），迁移 <span class=\"mono-dim\">gpt-5.1</span>"
+        ],
+        [
+          {
+            "id": "gpt-4o-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image"
+          ],
+          4,
+          "128K",
+          "128K",
+          "16K",
+          "已宣布弃用，2027-04-14 退役，迁移 <span class=\"mono-dim\">gpt-5-mini</span>"
+        ],
+        [
+          {
+            "id": "gpt-4-turbo",
+            "badges": []
+          },
+          "balanced",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          "128K",
+          "128K",
+          "4K",
+          "较老的高智能模型"
+        ],
+        [
+          {
+            "id": "gpt-4",
+            "badges": []
+          },
+          "balanced",
+          "expensive",
+          [
+            "text"
+          ],
+          3,
+          "8K",
+          "8K",
+          "4K",
+          "经典高智能模型"
+        ],
+        [
+          {
+            "id": "gpt-3.5-turbo",
+            "badges": []
+          },
+          "budget",
+          "low",
+          [
+            "text"
+          ],
+          3,
+          "16K",
+          "16K",
+          "4K",
+          "老版 GPT，能力有限"
+        ]
+      ],
+      "nav": "GPT-4o"
+    },
+    {
+      "id": "deprecated",
+      "title": "已弃用与退役计划",
+      "icon": "i-circle-off",
+      "nav": "已弃用",
+      "desc": "以下为本页已收录模型中的弃用/退役信息，请按退役日期规划迁移，勿在新项目中使用。生命周期：Deprecated = 已宣布弃用（仍可用，按期退役）；Retired = 已退役（不可用）；Legacy = 旧版（可用，建议迁移）。",
+      "kind": "table",
+      "table_class": "deprecated",
+      "columns": [
+        "模型 ID",
+        "版本",
+        "生命周期",
+        "退役日期",
+        "替代方案",
+        "迁移建议"
+      ],
+      "row_types": [
+        "model_id",
+        "mono",
+        "lifecycle",
+        "mono",
+        "replacement",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gpt-5-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-10-03",
+          "retired",
+          "2026-05-13",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "gpt-5.2-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-12-11",
+          "retired",
+          "2026-05-13",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "gpt-5-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-08-07",
+          "retired",
+          "2026-06-29",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "gpt-5.1-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-11-13",
+          "retired",
+          "2026-06-29",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "gpt-5.2-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2026-02-10",
+          "retired",
+          "2026-06-29",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "gpt-5.3-chat",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2026-03-03",
+          "retired",
+          "2026-06-29",
+          "gpt-chat-latest",
+          "快照版本已退役，换用持续更新别名"
+        ],
+        [
+          {
+            "id": "o3-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-01-31",
+          "deprecated",
+          "2026-10-01",
+          "o4-mini",
+          "直接替换，API 兼容"
+        ],
+        [
+          {
+            "id": "gpt-4o",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2024-05-13",
+          "deprecated",
+          "2026-10-01",
+          "gpt-5.1",
+          "最早 4o 版本，尽早迁移"
+        ],
+        [
+          {
+            "id": "o4-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-04-16",
+          "deprecated",
+          "2026-10-16",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "官方未列替代，可评估 gpt-5.4-mini"
+        ],
+        [
+          {
+            "id": "o1",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2024-12-17",
+          "deprecated",
+          "2026-10-21",
+          "gpt-5.6-sol",
+          "官方推荐替代，推理更强"
+        ],
+        [
+          {
+            "id": "codex-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-05-16",
+          "deprecated",
+          "2026-11-15",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "迁移至 gpt-5.1-codex-mini"
+        ],
+        [
+          {
+            "id": "gpt-4o",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2024-08-06",
+          "deprecated",
+          "2027-04-14",
+          "gpt-5.1",
+          "计划内迁移"
+        ],
+        [
+          {
+            "id": "gpt-4o-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2024-07-18",
+          "deprecated",
+          "2027-04-14",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "迁移至 gpt-5-mini 或 gpt-5.4-mini"
+        ],
+        [
+          {
+            "id": "gpt-4o",
+            "badges": []
+          },
+          "2024-11-20",
+          "legacy",
+          "2027-04-14",
+          "gpt-5.1",
+          "仍可用，新项目建议 GPT-5.1"
+        ],
+        [
+          {
+            "id": "gpt-4.1",
+            "badges": []
+          },
+          "2025-04-14",
+          "legacy",
+          "2027-04-14",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "仍可用，新项目建议 GPT-5.4 系列"
+        ],
+        [
+          {
+            "id": "gpt-4.1-mini",
+            "badges": []
+          },
+          "2025-04-14",
+          "legacy",
+          "2027-04-14",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "仍可用，新项目建议 GPT-5.4 系列"
+        ],
+        [
+          {
+            "id": "gpt-4.1-nano",
+            "badges": []
+          },
+          "2025-04-14",
+          "legacy",
+          "2027-04-14",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "仍可用，新项目建议 GPT-5.4 系列"
+        ]
+      ]
+    },
+    {
+      "id": "matrix",
+      "title": "能力矩阵速查",
+      "icon": "i-target",
+      "desc": "根据需求快速匹配最佳模型",
+      "kind": "table",
+      "columns": [
+        "需求场景",
+        "推荐模型",
+        "备选模型",
+        "关键能力"
+      ],
+      "row_types": [
+        "scene",
+        "model_id",
+        "mono",
+        "raw"
+      ],
+      "rows": [
+        [
+          {
+            "icon": "i-doc",
+            "text": "超长文档处理",
+            "note": "~100万 token"
+          },
+          {
+            "id": "gpt-5.6-sol",
+            "badges": []
+          },
+          "gpt-5.5, gpt-4.1",
+          {
+            "t": "ctx",
+            "v": {
+              "v": "~1.05M 上下文",
+              "hi": true
+            }
+          }
+        ],
+        [
+          {
+            "icon": "i-brain",
+            "text": "复杂数学 / 逻辑推理"
+          },
+          {
+            "id": "o3-deep-research",
+            "badges": []
+          },
+          "o3-pro, gpt-5.4-pro",
+          {
+            "t": "reasoning",
+            "v": 5
+          }
+        ],
+        [
+          {
+            "icon": "i-code",
+            "text": "Agentic 编程工作流"
+          },
+          {
+            "id": "gpt-5.3-codex",
+            "badges": []
+          },
+          "gpt-5.2-codex",
+          {
+            "t": "raw",
+            "v": "<span class=\"tag mod-ico\" title=\"代码\"><svg class=\"ic\"><use href=\"#i-code\"/></svg></span> <span class=\"plain\">+ 长任务</span>"
+          }
+        ],
+        [
+          {
+            "icon": "i-eye",
+            "text": "多模态理解（图 + 音）"
+          },
+          {
+            "id": "gpt-5.6-sol",
+            "badges": []
+          },
+          "gpt-4o",
+          {
+            "t": "mods",
+            "v": [
+              "image",
+              "audio",
+              "text"
+            ]
+          }
+        ],
+        [
+          {
+            "icon": "i-mic",
+            "text": "实时语音对话"
+          },
+          {
+            "id": "gpt-realtime-2.1",
+            "badges": []
+          },
+          "gpt-realtime-2.1-mini",
+          {
+            "t": "mono",
+            "v": "WebSocket 双向流"
+          }
+        ],
+        [
+          {
+            "icon": "i-mic",
+            "text": "实时语音听录"
+          },
+          {
+            "id": "gpt-live-transcribe",
+            "badges": []
+          },
+          "gpt-realtime-whisper",
+          {
+            "t": "mono",
+            "v": "按时长计费"
+          }
+        ],
+        [
+          {
+            "icon": "i-brush",
+            "text": "高质量图像生成"
+          },
+          {
+            "id": "gpt-image-2",
+            "badges": []
+          },
+          "gpt-image-1.5",
+          {
+            "t": "ctx",
+            "v": "最高 4K 分辨率"
+          }
+        ],
+        [
+          {
+            "icon": "i-video",
+            "text": "视频生成"
+          },
+          {
+            "id": "sora-2",
+            "badges": []
+          },
+          "sora-2-pro",
+          {
+            "t": "raw",
+            "v": "<span class=\"tag mod-ico\" title=\"视频\"><svg class=\"ic\"><use href=\"#i-video\"/></svg></span> <span class=\"plain\">+ 同步音频</span>"
+          }
+        ],
+        [
+          {
+            "icon": "i-coin",
+            "text": "极致低成本"
+          },
+          {
+            "id": "gpt-5.4-nano",
+            "badges": []
+          },
+          "gpt-5-nano, gpt-4.1-nano",
+          {
+            "t": "tier",
+            "v": "budget"
+          }
+        ],
+        [
+          {
+            "icon": "i-home",
+            "text": "私有化部署"
+          },
+          {
+            "id": "gpt-oss-120b",
+            "badges": []
+          },
+          "gpt-oss-20b",
+          {
+            "t": "raw",
+            "v": "<span class=\"tag t-teal\">Apache 2.0 开源</span>"
+          }
+        ],
+        [
+          {
+            "icon": "i-search",
+            "text": "语义搜索 / RAG"
+          },
+          {
+            "id": "text-embedding-3-large",
+            "badges": []
+          },
+          "text-embedding-3-small",
+          {
+            "t": "ctx",
+            "v": "3072 维向量"
+          }
+        ],
+        [
+          {
+            "icon": "i-bolt",
+            "text": "极速响应"
+          },
+          {
+            "id": "gpt-5.4-nano",
+            "badges": []
+          },
+          "gpt-4.1-nano",
+          {
+            "t": "speed",
+            "v": 4
+          }
+        ]
+      ],
+      "nav": "能力矩阵"
+    }
+  ]
+}
