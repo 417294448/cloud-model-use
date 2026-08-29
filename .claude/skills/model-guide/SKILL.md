@@ -16,9 +16,10 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 | **OpenAI** | `openai-model-userguide.html` | `data/openai.json` | `references/providers/openai.md` | `openai/fetch_models.py` / `openai/parse_cards.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过） |
 | **阿里 Qwen** | `qwen-model-userguide.html` | `data/qwen.json` | `references/providers/qwen.md` | `qwen/fetch_docs.py` | ✅ 已沉淀（全链路验证通过） |
 | **Google Gemini** | `gemini-model-userguide.html` | `data/gemini.json` | `references/providers/gemini.md` | `gemini/fetch_docs.py` | ✅ 已沉淀（全链路验证通过） |
+| **智谱 Z.ai** | `zai-model-userguide.html` | `data/zai.json` | `references/providers/zai.md` | `scripts/zai/fetch_docs.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过） |
 | DeepSeek / 其他 | — | — | 待沉淀 | — | ⬜ 待做 |
 
-**OpenAI、Qwen、Gemini 已完成模板化全链路（官方抓取 → 数据文件 → 渲染页面）。三个独立页面通过根目录 `index.html` 以 Tab 形式聚合（iframe 切换，各页独立维护）。用户提到 DeepSeek 等页面时，通用工作流（提取/渲染/校验/设计规范）直接适用，但官方数据源方法尚未沉淀——按「新增提供商指南」补做后再大规模更新。
+**OpenAI、Qwen、Gemini、Z.ai 已完成模板化全链路（官方抓取 → 数据文件 → 渲染页面）。四个独立页面通过根目录 `index.html` 以 Tab 形式聚合（iframe 切换，各页独立维护）。用户提到 DeepSeek 等页面时，通用工作流（提取/渲染/校验/设计规范）直接适用，但官方数据源方法尚未沉淀——按「新增提供商指南」补做后再大规模更新。
 
 ## 新增提供商指南
 
@@ -112,5 +113,10 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 - `references/providers/gemini.md` — Google 数据源方法（proxy.cors.sh 通道、三页分工、关停日期语义、PDF 模态标注规则）
 - `scripts/gemini/fetch_docs.py` — 抓取 ai.google.dev 文档页转结构化文本（经 proxy.cors.sh 代理）
 
-**其他提供商**：待按「新增提供商指南」沉淀（Gemini、DeepSeek…）
+**智谱 Z.ai 专用**
+- `data/zai.json` — Z.ai 页面数据（唯一事实源；CNY 计价；官方模型 ID 为大写 GLM/CogView/Embedding 形式）
+- `references/providers/zai.md` — BigModel 数据源方法（docs.bigmodel.cn / open.bigmodel.cn 直连、价格口径、特殊计费单元处理、主题色说明）
+- `scripts/zai/fetch_docs.py` — 抓取 BigModel 模型概览（静态）与产品价格（Vue SPA，需 Playwright 渲染）转结构化文本
+
+**其他提供商**：待按「新增提供商指南」沉淀（DeepSeek…）
 
