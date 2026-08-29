@@ -73,20 +73,22 @@ def main():
         out_txt = re.sub(r'[^a-z0-9]+', '_', url.split('/')[-1].lower()) + '.txt'
     tmp_html = raw_html or '_azure_tmp.html'
 
-    if not fetch(url, tmp_html):
-        raise SystemExit(f'抓取失败: {url}')
-    text = to_text(open(tmp_html, encoding='utf-8').read())
+    try:
+        if not fetch(url, tmp_html):
+            raise SystemExit(f'抓取失败: {url}')
+        text = to_text(open(tmp_html, encoding='utf-8').read())
 
-    if section:
-        cut = cut_section(text, section)
-        if cut is None:
-            raise SystemExit(f'未找到章节: {section}')
-        text = cut
+        if section:
+            cut = cut_section(text, section)
+            if cut is None:
+                raise SystemExit(f'未找到章节: {section}')
+            text = cut
 
-    open(out_txt, 'w', encoding='utf-8').write(text)
-    print(f'fetched: {out_txt} ({len(text)} chars, {text.count("ROW:")} rows)')
-    if not raw_html and os.path.exists(tmp_html):
-        os.remove(tmp_html)
+        open(out_txt, 'w', encoding='utf-8').write(text)
+        print(f'fetched: {out_txt} ({len(text)} chars, {text.count("ROW:")} rows)')
+    finally:
+        if not raw_html and os.path.exists(tmp_html):
+            os.remove(tmp_html)
 
 
 if __name__ == '__main__':

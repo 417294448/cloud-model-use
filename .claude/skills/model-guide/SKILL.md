@@ -64,6 +64,7 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 2. **映射为页面档位**：严格按 `references/page-style.md` 的映射表——推理 5 档（官方图标格数 1:1）、速度 5 档、价格 6 档、模态图标。**官方标 Intelligence 的模型是非推理模型，归入"快速"档，不要标推理点。**
 3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；统计数字同步改；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；最后 `render_guide.py` 渲染。
 4. **校验**：渲染器自动调用 check_html.py。列结构变更（增删列/增删行类型）后重点检查结构不一致的表。
+5. **清理临时文件**：任务结束后删除本次产生的临时抓取文件（`_gemini_*.html`、`_aliyun_*.html`、`_azure_tmp.html`、`_rt*.html/json` 等）。`_model_pages/`、`_model_md/` 是可复用缓存，可保留或按需清理；所有临时/缓存路径必须已在 `.gitignore` 中声明。
 
 ## 工作流 C：局部调整
 
@@ -74,6 +75,7 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 - **样式不即兴**：所有颜色/字体/组件从 index.html 的 CSS 变量复制，不新造色值。
 - **数据可溯源**：每个模型行的关键指标（推理、速度、价格、上下文）必须能对应到官方页面；官方查不到的（如 Azure-only 的 chat 变体）沿用现有值并在总结中注明"未能验证"。
 - **改动后必校验**：`scripts/check_html.py` 全绿才算完成。
+- **任务结束清场**：skill 执行完毕后清理本次产生的临时抓取文件；缓存目录（如 `_model_pages/`、`_model_md/`）可保留但必须在 `.gitignore` 中声明，避免污染版本控制。
 
 ## 已评估暂缓事项
 

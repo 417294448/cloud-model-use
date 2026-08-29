@@ -66,18 +66,21 @@ def main():
         url = t if t.startswith('http') else f'https://ai.google.dev/gemini-api/docs/{t}'
         name = re.sub(r'[^a-z0-9]+', '_', t.lower()).strip('_') or 'page'
         tmp = f'_gemini_{name}.html'
-        if not fetch(url, tmp):
-            print(f'{t}: 抓取失败', flush=True)
-            continue
-        text = to_text(open(tmp, encoding='utf-8').read())
-        if out and len(targets) == 1 and not out.endswith('/'):
-            out_path = out
-        else:
-            os.makedirs(out or '.', exist_ok=True)
-            out_path = os.path.join(out or '.', f'{name}.txt')
-        open(out_path, 'w', encoding='utf-8').write(text)
-        print(f'{t}: {out_path} ({len(text)} chars, {text.count("ROW:")} rows)', flush=True)
-        os.remove(tmp)
+        try:
+            if not fetch(url, tmp):
+                print(f'{t}: 抓取失败', flush=True)
+                continue
+            text = to_text(open(tmp, encoding='utf-8').read())
+            if out and len(targets) == 1 and not out.endswith('/'):
+                out_path = out
+            else:
+                os.makedirs(out or '.', exist_ok=True)
+                out_path = os.path.join(out or '.', f'{name}.txt')
+            open(out_path, 'w', encoding='utf-8').write(text)
+            print(f'{t}: {out_path} ({len(text)} chars, {text.count("ROW:")} rows)', flush=True)
+        finally:
+            if os.path.exists(tmp):
+                os.remove(tmp)
 
 
 if __name__ == '__main__':
