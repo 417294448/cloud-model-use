@@ -3,16 +3,28 @@
     "title": "Z.ai 模型选择指南 2026",
     "eyebrow": "Z.AI MODEL SELECTION GUIDE · 2026",
     "h1": "Z.ai 模型选择指南",
-    "hero_desc": "智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-08-29 同步）",
+    "hero_desc": "智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-08-30 同步）",
     "stats": [
-      {"num": "50+", "icon": "i-models", "label": "收录模型"},
-      {"num": "8", "icon": "i-modes", "label": "模型分类"},
-      {"num": "1M", "icon": "i-ruler", "label": "最大上下文"}
+      {
+        "num": "69+",
+        "icon": "i-models",
+        "label": "收录模型"
+      },
+      {
+        "num": "8",
+        "icon": "i-modes",
+        "label": "模型分类"
+      },
+      {
+        "num": "1M",
+        "icon": "i-ruler",
+        "label": "最大上下文"
+      }
     ],
     "footer_title": "Z.ai 模型选择指南",
-    "footer_updated": "2026-08-29",
+    "footer_updated": "2026-08-30",
     "footer_rules": "GLM = 智谱大模型 · 数字越大越新 · 5.x = 最新一代 · Flash = 省钱快速 · Turbo = 速度优化 · Air = 轻量均衡 · V = 视觉 · Cog = 生成模型",
-    "footer_sources": "数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-08-29 同步）"
+    "footer_sources": "数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-08-30 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -34,18 +46,66 @@
       "nav": "快速选型",
       "desc": "按任务类型直达推荐模型",
       "cards": [
-        {"icon": "i-chat", "task": "日常对话 / 写作", "model": "GLM-5.3"},
-        {"icon": "i-brain", "task": "复杂推理 / 长程 Agent", "model": "GLM-5.3"},
-        {"icon": "i-code", "task": "专业编程 / 软件工程", "model": "GLM-5.3"},
-        {"icon": "i-eye", "task": "图像 / 视频理解", "model": "GLM-5.3-Flash"},
-        {"icon": "i-coin", "task": "极致省钱", "model": "GLM-4.7-Flash"},
-        {"icon": "i-doc", "task": "超长文档处理", "model": "GLM-4-Long"},
-        {"icon": "i-image", "task": "图像生成", "model": "GLM-Image"},
-        {"icon": "i-video", "task": "视频生成", "model": "CogVideoX-3"},
-        {"icon": "i-audio", "task": "实时语音对话", "model": "GLM-Realtime-Flash"},
-        {"icon": "i-mic", "task": "语音识别", "model": "GLM-ASR-2512"},
-        {"icon": "i-speaker", "task": "语音合成", "model": "GLM-TTS"},
-        {"icon": "i-search", "task": "语义搜索 / RAG", "model": "Embedding-3"}
+        {
+          "icon": "i-chat",
+          "task": "日常对话 / 写作",
+          "model": "GLM-5.3"
+        },
+        {
+          "icon": "i-brain",
+          "task": "复杂推理 / 长程 Agent",
+          "model": "GLM-5.3"
+        },
+        {
+          "icon": "i-code",
+          "task": "专业编程 / 软件工程",
+          "model": "GLM-5.3"
+        },
+        {
+          "icon": "i-eye",
+          "task": "图像 / 视频理解",
+          "model": "GLM-5.3-Flash"
+        },
+        {
+          "icon": "i-coin",
+          "task": "极致省钱",
+          "model": "GLM-4.7-Flash"
+        },
+        {
+          "icon": "i-doc",
+          "task": "超长文档处理",
+          "model": "GLM-4-Long"
+        },
+        {
+          "icon": "i-image",
+          "task": "图像生成",
+          "model": "GLM-Image"
+        },
+        {
+          "icon": "i-video",
+          "task": "视频生成",
+          "model": "CogVideoX-3"
+        },
+        {
+          "icon": "i-audio",
+          "task": "实时语音对话",
+          "model": "GLM-Realtime-Flash"
+        },
+        {
+          "icon": "i-mic",
+          "task": "语音识别",
+          "model": "GLM-ASR-2512"
+        },
+        {
+          "icon": "i-speaker",
+          "task": "语音合成",
+          "model": "GLM-TTS"
+        },
+        {
+          "icon": "i-search",
+          "task": "语义搜索 / RAG",
+          "model": "Embedding-3"
+        }
       ]
     },
     {
@@ -56,27 +116,107 @@
       "nav": "命名规律",
       "desc": "掌握这些规律，看到任何模型名都能秒懂其定位",
       "table_class": "rules",
-      "columns": ["命名元素", "含义", "示例"],
-      "row_types": ["raw", "plain", "mono_td"],
+      "columns": [
+        "命名元素",
+        "含义",
+        "示例"
+      ],
+      "row_types": [
+        "raw",
+        "plain",
+        "mono_td"
+      ],
       "rows": [
-        ["GLM 前缀", "智谱通用语言模型系列", "GLM-5.3, GLM-4.7"],
-        ["版本号 (4→5→5.3)", "数字越大，模型越新越强", "GLM-4 → GLM-5 → GLM-5.3"],
-        ["-Flash", "轻量快速，普惠省钱", "GLM-5.3-Flash, GLM-4.7-Flash"],
-        ["-FlashX", "Flash 增强高速版", "GLM-4.7-FlashX"],
-        ["-Turbo", "速度优化版", "GLM-5-Turbo, GLM-5V-Turbo"],
-        ["-Air", "轻量均衡版", "GLM-4.5-Air"],
-        ["-AirX", "极速低延迟版", "GLM-4.5-AirX"],
-        ["-Long", "超长上下文专用", "GLM-4-Long"],
-        ["-V", "视觉理解模型", "GLM-5V-Turbo, GLM-4.6V"],
-        ["-V-Thinking", "视觉推理模型", "GLM-4.1V-Thinking-FlashX"],
-        ["GLM-Realtime", "实时音视频对话", "GLM-Realtime"],
-        ["GLM-ASR", "自动语音识别", "GLM-ASR-2512"],
-        ["GLM-TTS", "文本转语音", "GLM-TTS"],
-        ["CogView", "图像生成", "CogView-4"],
-        ["CogVideoX", "视频生成", "CogVideoX-3"],
-        ["Vidu", "视频生成（合作）", "Vidu Q1"],
-        ["Embedding", "文本向量化", "Embedding-3"],
-        ["-YYYYMMDD", "日期快照", "GLM-4-Flash-250414"]
+        [
+          "GLM 前缀",
+          "智谱通用语言模型系列",
+          "GLM-5.3, GLM-4.7"
+        ],
+        [
+          "版本号 (4→5→5.3)",
+          "数字越大，模型越新越强",
+          "GLM-4 → GLM-5 → GLM-5.3"
+        ],
+        [
+          "-Flash",
+          "轻量快速，普惠省钱",
+          "GLM-5.3-Flash, GLM-4.7-Flash"
+        ],
+        [
+          "-FlashX",
+          "Flash 增强高速版",
+          "GLM-4.7-FlashX"
+        ],
+        [
+          "-Turbo",
+          "速度优化版",
+          "GLM-5-Turbo, GLM-5V-Turbo"
+        ],
+        [
+          "-Air",
+          "轻量均衡版",
+          "GLM-4.5-Air"
+        ],
+        [
+          "-AirX",
+          "极速低延迟版",
+          "GLM-4.5-AirX"
+        ],
+        [
+          "-Long",
+          "超长上下文专用",
+          "GLM-4-Long"
+        ],
+        [
+          "-V",
+          "视觉理解模型",
+          "GLM-5V-Turbo, GLM-4.6V"
+        ],
+        [
+          "-V-Thinking",
+          "视觉推理模型",
+          "GLM-4.1V-Thinking-FlashX"
+        ],
+        [
+          "GLM-Realtime",
+          "实时音视频对话",
+          "GLM-Realtime"
+        ],
+        [
+          "GLM-ASR",
+          "自动语音识别",
+          "GLM-ASR-2512"
+        ],
+        [
+          "GLM-TTS",
+          "文本转语音",
+          "GLM-TTS"
+        ],
+        [
+          "CogView",
+          "图像生成",
+          "CogView-4"
+        ],
+        [
+          "CogVideoX",
+          "视频生成",
+          "CogVideoX-3"
+        ],
+        [
+          "Vidu",
+          "视频生成（合作）",
+          "Vidu Q1"
+        ],
+        [
+          "Embedding",
+          "文本向量化",
+          "Embedding-3"
+        ],
+        [
+          "-YYYYMMDD",
+          "日期快照",
+          "GLM-4-Flash-250414"
+        ]
       ]
     },
     {
@@ -86,16 +226,163 @@
       "icon": "i-spark",
       "nav": "前沿旗舰",
       "desc": "智谱最新一代旗舰模型，推荐用于复杂推理、编程、Agent 与多模态任务",
-      "columns": ["模型 ID", "定位", "价格", "模态", "推理", "速度", "上下文", "输入", "输出", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "reasoning", "speed", "ctx", "ctx", "ctx", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
       "rows": [
-        [{"id": "GLM-5.3", "badges": ["NEW"]}, "flagship", "high", ["text"], 5, 3, {"v": "1M", "hi": true}, {"v": "1M", "hi": true}, "128K", "最新旗舰，面向复杂软件工程与长程 Agent 任务，编程体验较前代提升 50%"],
-        [{"id": "GLM-5.3-Flash", "badges": ["NEW"]}, "balanced", "low", ["text", "image", "video", "pdf"], 4, 4, {"v": "1M", "hi": true}, {"v": "1M", "hi": true}, "128K", "原生多模态普惠模型，原生理解图片/视频/文件，限时 5 折"],
-        ["GLM-5.2", "flagship", "high", ["text"], 5, 3, {"v": "1M", "hi": true}, {"v": "1M", "hi": true}, "128K", "支撑复杂长程任务稳定执行，Coding 能力大幅提升"],
-        ["GLM-5.1", "flagship", "high", ["text"], 4, 3, "200K", "200K", "128K", "Coding 能力对齐 Claude Opus 4.6，长程任务可自主工作长达 8 小时；输入 ≥32K 时 ¥8/¥28"],
-        ["GLM-5", "flagship", "high", ["text"], 4, 3, "200K", "200K", "128K", "编程能力对齐 Claude Opus 4.5，擅长 Agentic 长程规划与执行；输入 ≥32K 时 ¥6/¥22"],
-        ["GLM-5V-Turbo", "flagship", "high", ["text", "image", "video", "pdf"], 4, 4, "200K", "200K", "128K", "多模态 Coding 基座，兼顾视觉理解、推理与代码生成；输入 ≥32K 时 ¥7/¥26"],
-        ["GLM-5-Turbo", "balanced", "high", ["text"], 4, 4, "200K", "200K", "128K", "长任务核心需求专项优化，复杂长任务执行连续性好；输入 ≥32K 时 ¥7/¥26"]
+        [
+          {
+            "id": "GLM-5.3",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          5,
+          3,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "最新旗舰，面向复杂软件工程与长程 Agent 任务，编程体验较前代提升 50%"
+        ],
+        [
+          {
+            "id": "GLM-5.3-Flash",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          4,
+          4,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "原生多模态普惠模型，原生理解图片/视频/文件，限时 5 折"
+        ],
+        [
+          "GLM-5.2",
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          5,
+          3,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "支撑复杂长程任务稳定执行，Coding 能力大幅提升"
+        ],
+        [
+          "GLM-5.1",
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "Coding 能力对齐 Claude Opus 4.6，长程任务可自主工作长达 8 小时；输入 ≥32K 时 ¥8/¥28"
+        ],
+        [
+          "GLM-5",
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "编程能力对齐 Claude Opus 4.5，擅长 Agentic 长程规划与执行；输入 ≥32K 时 ¥6/¥22"
+        ],
+        [
+          "GLM-5V-Turbo",
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          4,
+          4,
+          "200K",
+          "200K",
+          "128K",
+          "多模态 Coding 基座，兼顾视觉理解、推理与代码生成；输入 ≥32K 时 ¥7/¥26"
+        ],
+        [
+          "GLM-5-Turbo",
+          "balanced",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          4,
+          "200K",
+          "200K",
+          "128K",
+          "长任务核心需求专项优化，复杂长任务执行连续性好；输入 ≥32K 时 ¥7/¥26"
+        ]
       ]
     },
     {
@@ -105,19 +392,359 @@
       "icon": "i-chat",
       "nav": "文本模型",
       "desc": "专注于自然语言理解与生成的文本模型，覆盖对话、写作、推理与代码场景",
-      "columns": ["模型 ID", "定位", "价格", "模态", "推理", "速度", "上下文", "输入", "输出", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "reasoning", "speed", "ctx", "ctx", "ctx", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
       "rows": [
-        ["GLM-4.7", "balanced", "mid", ["text"], 3, 3, "200K", "200K", "128K", "通用对话、推理与智能体能力升级；输入 &lt;32K 且输出 &lt;0.2K 时 ¥2/¥8"],
-        ["GLM-4.7-FlashX", "budget", "low", ["text"], 2, 5, "200K", "200K", "16K", "Flash 增强高速版，推理速度快，适合高并发调用场景"],
-        ["GLM-4.7-Flash", "budget", "cheap", ["text"], 2, 5, "200K", "200K", "128K", "免费文本模型，延续 GLM-4.7 基座的通用能力"],
-        ["GLM-4.6", "balanced", null, ["text"], 3, 3, "200K", "200K", "128K", "擅长高级编码、复杂推理与工具调用；按量计费价格未公开，可通过私有实例部署"],
-        ["GLM-4.5-Air", "balanced", "mid", ["text"], 3, 3, "128K", "128K", "96K", "轻量模型，推理、编码与智能体任务表现稳定"],
-        ["GLM-4.5-AirX", "budget", "mid", ["text"], 2, 4, "128K", "128K", "96K", "极速版本，适合低延迟、高响应要求的业务场景"],
-        ["GLM-4-Long", "balanced", "mid", ["text"], 3, 3, {"v": "1M", "hi": true}, {"v": "1M", "hi": true}, "4K", "专为超长文本和记忆型任务设计"],
-        ["GLM-4-FlashX-250414", "budget", "cheap", ["text"], 2, 5, "128K", "128K", "16K", "Flash 增强高速版本，适合高并发调用场景"],
-        ["GLM-4.5-Flash", "budget", "cheap", ["text"], 2, 5, "128K", "128K", "96K", "免费文本模型，支持最长 128K 上下文处理"],
-        ["GLM-4-Flash-250414", "budget", "cheap", ["text"], 2, 5, "128K", "128K", "16K", "免费文本模型"]
+        [
+          "GLM-4.7",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "通用对话、推理与智能体能力升级；输入 &lt;32K 且输出 &lt;0.2K 时 ¥2/¥8"
+        ],
+        [
+          "GLM-4.7-FlashX",
+          "budget",
+          "low",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "200K",
+          "200K",
+          "16K",
+          "Flash 增强高速版，推理速度快，适合高并发调用场景"
+        ],
+        [
+          "GLM-4.7-Flash",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "200K",
+          "200K",
+          "128K",
+          "免费文本模型，延续 GLM-4.7 基座的通用能力"
+        ],
+        [
+          "GLM-4.6",
+          "balanced",
+          null,
+          [
+            "text"
+          ],
+          3,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "擅长高级编码、复杂推理与工具调用；按量计费价格未公开，可通过私有实例部署"
+        ],
+        [
+          "GLM-4.5-Air",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "96K",
+          "轻量模型，推理、编码与智能体任务表现稳定"
+        ],
+        [
+          "GLM-4.5-AirX",
+          "budget",
+          "mid",
+          [
+            "text"
+          ],
+          2,
+          4,
+          "128K",
+          "128K",
+          "96K",
+          "极速版本，适合低延迟、高响应要求的业务场景"
+        ],
+        [
+          "GLM-4-Long",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "4K",
+          "专为超长文本和记忆型任务设计"
+        ],
+        [
+          "GLM-4-FlashX-250414",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "16K",
+          "Flash 增强高速版本，适合高并发调用场景"
+        ],
+        [
+          "GLM-4.5-Flash",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "96K",
+          "免费文本模型，支持最长 128K 上下文处理"
+        ],
+        [
+          "GLM-4-Flash-250414",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "16K",
+          "免费文本模型"
+        ],
+        [
+          "GLM-4-Plus",
+          "flagship",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "高智能旗舰，全自研第四代基座大模型，支持高级 Agent 能力"
+        ],
+        [
+          "GLM-4-Air-250414",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "GLM-4-Air 日期快照 250414，高性价比文本模型"
+        ],
+        [
+          "GLM-4-AirX",
+          "balanced",
+          "expensive",
+          [
+            "text"
+          ],
+          3,
+          4,
+          "8K",
+          "8K",
+          "8K",
+          "极速推理版本，适合低延迟高响应场景"
+        ],
+        [
+          "GLM-4-Assistant",
+          "balanced",
+          "high",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "面向智能体应用优化的文本模型"
+        ],
+        [
+          "GLM-Z1-Air",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          4,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "高性价比推理模型"
+        ],
+        [
+          "GLM-Z1-AirX",
+          "balanced",
+          "high",
+          [
+            "text"
+          ],
+          4,
+          4,
+          "32K",
+          "32K",
+          "32K",
+          "极速推理模型，兼顾推理深度与响应速度"
+        ],
+        [
+          "GLM-Z1-FlashX",
+          "budget",
+          "low",
+          [
+            "text"
+          ],
+          3,
+          5,
+          "128K",
+          "128K",
+          "16K",
+          "高速低价推理模型，适合高并发推理场景"
+        ],
+        [
+          "GLM-Z1-Flash",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          3,
+          5,
+          "128K",
+          "128K",
+          "16K",
+          "免费推理模型"
+        ],
+        [
+          "GLM-4.5",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "通用对话、推理与智能体能力"
+        ],
+        [
+          "GLM-4-Air",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "轻量均衡，高性价比"
+        ],
+        [
+          "GLM-4-Flash",
+          "budget",
+          "cheap",
+          [
+            "text"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "16K",
+          "免费文本模型"
+        ],
+        [
+          "GLM-4-9B",
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          2,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "开源 9B 文本模型"
+        ],
+        [
+          "ChatGLM3-6B",
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          2,
+          3,
+          "8K",
+          "8K",
+          "8K",
+          "开源对话模型（第三代）"
+        ]
       ]
     },
     {
@@ -127,19 +754,215 @@
       "icon": "i-eye",
       "nav": "视觉理解",
       "desc": "图像与视频理解、视觉推理及移动端智能体模型",
-      "columns": ["模型 ID", "定位", "价格", "模态", "推理", "速度", "上下文", "输入", "输出", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "reasoning", "speed", "ctx", "ctx", "ctx", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
       "rows": [
-        ["GLM-4.6V", "balanced", "mid", ["text", "image", "video", "pdf"], 3, 3, "128K", "128K", "32K", "原生支持工具调用，前端代码复刻效果更稳定；输入 &lt;32K 时 ¥1/¥3，[32,128) 时 ¥2/¥6"],
-        ["GLM-4.5V", "balanced", "mid", ["text", "image", "video", "pdf"], 3, 3, "64K", "64K", "32K", "视觉理解模型；输入 &lt;32K 时 ¥2/¥6"],
-        ["GLM-4V-Plus-0111", "balanced", "mid", ["text", "image"], 3, 3, "16K", "16K", {"t": "plain", "v": "—"}, "视觉推理模型，¥4/1M tokens"],
-        ["AutoGLM-Phone", "flagship", null, ["text", "image"], 3, 3, "20K", "20K", "2K", "手机智能助理框架，支持自然语言完成 App 操作任务"],
-        ["GLM-4.1V-Thinking-FlashX", "balanced", "mid", ["text", "image", "video"], 4, 4, "64K", "64K", "16K", "擅长复杂场景理解与多步骤分析，适合高并发视觉推理场景"],
-        ["GLM-OCR", "balanced", {"raw": "<span class=\"tag t-green\">¥0.2 / 1M tokens</span>"}, ["text", "image", "pdf"], 2, 4, "32K", "32K", {"t": "plain", "v": "—"}, "轻量图文解析模型，兼顾高精度、高效率文档理解；输入：单图 ≤10MB / PDF ≤50MB / 100页"],
-        ["GLM-4.6V-FlashX", "budget", "low", ["text", "image", "video", "pdf"], 2, 5, "128K", "128K", "32K", "高速视觉推理模型；输入 &lt;32K 时 ¥0.15/¥1.5，[32,128) 时 ¥0.3/¥3"],
-        ["GLM-4.6V-Flash", "budget", "cheap", ["text", "image", "video", "pdf"], 2, 5, "128K", "128K", "32K", "免费模型，支持视觉推理"],
-        ["GLM-4.1V-Thinking-Flash", "budget", "cheap", ["text", "image", "video"], 3, 5, "64K", "64K", "16K", "免费模型，支持视觉推理"],
-        ["GLM-4V-Flash", "budget", "cheap", ["text", "image"], 1, 5, "16K", "16K", "1K", "免费模型，支持图像理解"]
+        [
+          "GLM-4.6V",
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "32K",
+          "原生支持工具调用，前端代码复刻效果更稳定；输入 &lt;32K 时 ¥1/¥3，[32,128) 时 ¥2/¥6"
+        ],
+        [
+          "GLM-4.5V",
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          3,
+          3,
+          "64K",
+          "64K",
+          "32K",
+          "视觉理解模型；输入 &lt;32K 时 ¥2/¥6"
+        ],
+        [
+          "GLM-4V-Plus-0111",
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          3,
+          "16K",
+          "16K",
+          {
+            "t": "plain",
+            "v": "—"
+          },
+          "视觉推理模型，¥4/1M tokens"
+        ],
+        [
+          "AutoGLM-Phone",
+          "flagship",
+          null,
+          [
+            "text",
+            "image"
+          ],
+          3,
+          3,
+          "20K",
+          "20K",
+          "2K",
+          "手机智能助理框架，支持自然语言完成 App 操作任务"
+        ],
+        [
+          "GLM-4.1V-Thinking-FlashX",
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          4,
+          4,
+          "64K",
+          "64K",
+          "16K",
+          "擅长复杂场景理解与多步骤分析，适合高并发视觉推理场景"
+        ],
+        [
+          "GLM-OCR",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥0.2 / 1M tokens</span>"
+          },
+          [
+            "text",
+            "image",
+            "pdf"
+          ],
+          2,
+          4,
+          "32K",
+          "32K",
+          {
+            "t": "plain",
+            "v": "—"
+          },
+          "轻量图文解析模型，兼顾高精度、高效率文档理解；输入：单图 ≤10MB / PDF ≤50MB / 100页"
+        ],
+        [
+          "GLM-4.6V-FlashX",
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "32K",
+          "高速视觉推理模型；输入 &lt;32K 时 ¥0.15/¥1.5，[32,128) 时 ¥0.3/¥3"
+        ],
+        [
+          "GLM-4.6V-Flash",
+          "budget",
+          "cheap",
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          2,
+          5,
+          "128K",
+          "128K",
+          "32K",
+          "免费模型，支持视觉推理"
+        ],
+        [
+          "GLM-4.1V-Thinking-Flash",
+          "budget",
+          "cheap",
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          3,
+          5,
+          "64K",
+          "64K",
+          "16K",
+          "免费模型，支持视觉推理"
+        ],
+        [
+          "GLM-4V-Flash",
+          "budget",
+          "cheap",
+          [
+            "text",
+            "image"
+          ],
+          1,
+          5,
+          "16K",
+          "16K",
+          "1K",
+          "免费模型，支持图像理解"
+        ],
+        [
+          "GLM-4V",
+          "balanced",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          3,
+          "8K",
+          "8K",
+          "8K",
+          "视觉理解模型（历史版本）"
+        ]
       ]
     },
     {
@@ -149,12 +972,69 @@
       "icon": "i-image",
       "nav": "图像生成",
       "desc": "文生图与图像编辑模型，按请求次数计费",
-      "columns": ["模型 ID", "定位", "价格", "模态", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "mdesc"
+      ],
       "rows": [
-        ["GLM-Image", "flagship", {"raw": "<span class=\"tag t-green\">¥0.1 / 次</span>"}, ["text", "image"], "旗舰图像生成模型，复杂指令遵循与知识密集生成更强，文字渲染表现突出，支持多分辨率"],
-        ["CogView-4", "balanced", {"raw": "<span class=\"tag t-green\">¥0.06 / 次</span>"}, ["text", "image"], "通用图像生成模型，生成质量高，画面细节更完整，适合多类创意场景，支持多分辨率"],
-        ["CogView-3-Flash", "budget", {"raw": "<span class=\"tag t-teal\">免费</span>"}, ["text", "image"], "免费模型，适合轻量图像创作，支持多分辨率"]
+        [
+          "GLM-Image",
+          "flagship",
+          {
+            "raw": "<span class=\"tag t-green\">¥0.1 / 次</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          "旗舰图像生成模型，复杂指令遵循与知识密集生成更强，文字渲染表现突出，支持多分辨率"
+        ],
+        [
+          "CogView-4",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥0.06 / 次</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          "通用图像生成模型，生成质量高，画面细节更完整，适合多类创意场景，支持多分辨率"
+        ],
+        [
+          "CogView-3-Flash",
+          "budget",
+          {
+            "raw": "<span class=\"tag t-teal\">免费</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          "免费模型，适合轻量图像创作，支持多分辨率"
+        ],
+        [
+          "CogView-3",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥0.06 / 次</span>"
+          },
+          [
+            "text",
+            "image"
+          ],
+          "通用图像生成模型"
+        ]
       ]
     },
     {
@@ -164,18 +1044,133 @@
       "icon": "i-video",
       "nav": "视频生成",
       "desc": "文生视频、图生视频与首尾帧生成模型，按请求次数计费",
-      "columns": ["模型 ID", "定位", "价格", "模态", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "mdesc"
+      ],
       "rows": [
-        ["CogVideoX-3", "flagship", {"raw": "<span class=\"tag t-amber\">¥1 / 次</span>"}, ["text", "image", "video"], "旗舰视频模型，指令遵循与物理模拟更强，现实与 3D 场景表现提升，支持首尾帧生成"],
-        ["ViduQ1-Text", "balanced", {"raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"}, ["text", "video"], "Vidu Q1 文生视频，1080p"],
-        ["ViduQ1-Image", "balanced", {"raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"}, ["image", "video"], "Vidu Q1 图生视频，1080p"],
-        ["ViduQ1-Start-End", "balanced", {"raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"}, ["image", "video"], "Vidu Q1 首尾帧生成，1080p"],
-        ["Vidu2-Image", "balanced", {"raw": "<span class=\"tag t-green\">¥1.25 / 次</span>"}, ["image", "video"], "Vidu 2 图生视频，720p"],
-        ["Vidu2-Start-End", "balanced", {"raw": "<span class=\"tag t-green\">¥1.25 / 次</span>"}, ["image", "video"], "Vidu 2 首尾帧生成，720p"],
-        ["Vidu2-Reference", "balanced", {"raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"}, ["text", "image", "video"], "Vidu 2 参考生视频，720p"],
-        ["CogVideoX-2", "balanced", {"raw": "<span class=\"tag t-green\">¥0.5 / 次</span>"}, ["text", "image", "video"], "通用视频生成模型，支持多分辨率"],
-        ["CogVideoX-Flash", "budget", {"raw": "<span class=\"tag t-teal\">免费</span>"}, ["text", "image", "video"], "免费视频生成模型，支持图像、文本输入"]
+        [
+          "CogVideoX-3",
+          "flagship",
+          {
+            "raw": "<span class=\"tag t-amber\">¥1 / 次</span>"
+          },
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          "旗舰视频模型，指令遵循与物理模拟更强，现实与 3D 场景表现提升，支持首尾帧生成"
+        ],
+        [
+          "ViduQ1-Text",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"
+          },
+          [
+            "text",
+            "video"
+          ],
+          "Vidu Q1 文生视频，1080p"
+        ],
+        [
+          "ViduQ1-Image",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"
+          },
+          [
+            "image",
+            "video"
+          ],
+          "Vidu Q1 图生视频，1080p"
+        ],
+        [
+          "ViduQ1-Start-End",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"
+          },
+          [
+            "image",
+            "video"
+          ],
+          "Vidu Q1 首尾帧生成，1080p"
+        ],
+        [
+          "Vidu2-Image",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥1.25 / 次</span>"
+          },
+          [
+            "image",
+            "video"
+          ],
+          "Vidu 2 图生视频，720p"
+        ],
+        [
+          "Vidu2-Start-End",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥1.25 / 次</span>"
+          },
+          [
+            "image",
+            "video"
+          ],
+          "Vidu 2 首尾帧生成，720p"
+        ],
+        [
+          "Vidu2-Reference",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">¥2.5 / 次</span>"
+          },
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          "Vidu 2 参考生视频，720p"
+        ],
+        [
+          "CogVideoX-2",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥0.5 / 次</span>"
+          },
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          "通用视频生成模型，支持多分辨率"
+        ],
+        [
+          "CogVideoX-Flash",
+          "budget",
+          {
+            "raw": "<span class=\"tag t-teal\">免费</span>"
+          },
+          [
+            "text",
+            "image",
+            "video"
+          ],
+          "免费视频生成模型，支持图像、文本输入"
+        ]
       ]
     },
     {
@@ -185,15 +1180,94 @@
       "icon": "i-audio",
       "nav": "音视频",
       "desc": "语音识别、语音合成、实时语音/视频对话与音色克隆模型，计费单位各异",
-      "columns": ["模型 ID", "定位", "价格", "模态", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "mdesc"
+      ],
       "rows": [
-        ["GLM-Realtime-Flash", "flagship", {"raw": "<span class=\"tag t-green\">音频 ¥0.18/分钟 · 视频 ¥1.2/分钟</span>"}, ["text", "audio", "video"], "实时音视频模型，低延迟版本，支持视频、音频、文本多模态输入"],
-        ["GLM-Realtime-Air", "balanced", {"raw": "<span class=\"tag t-amber\">音频 ¥0.3/分钟 · 视频 ¥2.1/分钟</span>"}, ["text", "audio", "video"], "实时音视频模型，轻量均衡版本，支持视频、音频、文本多模态输入"],
-        ["GLM-4-Voice", "balanced", {"raw": "<span class=\"tag t-orange\">¥80 / 1M tokens</span>"}, ["text", "audio"], "实时语音对话模型，支持文本、音频；音频 token 单价，不可与文本档直接比较"],
-        ["GLM-TTS-Clone", "balanced", {"raw": "<span class=\"tag t-amber\">¥6 / 次</span>"}, ["text", "audio"], "音色克隆模型，3 秒音频即可快速生成相似音色"],
-        ["GLM-TTS", "balanced", {"raw": "<span class=\"tag t-green\">¥2 / 万字符</span>"}, ["text", "audio"], "语音合成模型，支持超拟人语音生成与情感表达，提供非流式与流式接口"],
-        ["GLM-ASR-2512", "balanced", {"raw": "<span class=\"tag t-green\">输入 ¥16/1M tokens（约 ¥0.0002/秒），输出免费</span>"}, ["audio"], "高精度语音识别模型，字符错误率低，支持自定义词汇，覆盖多种主流语言与方言场景"]
+        [
+          "GLM-Realtime-Flash",
+          "flagship",
+          {
+            "raw": "<span class=\"tag t-green\">音频 ¥0.18/分钟 · 视频 ¥1.2/分钟</span>"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          "实时音视频模型，低延迟版本，支持视频、音频、文本多模态输入"
+        ],
+        [
+          "GLM-Realtime-Air",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">音频 ¥0.3/分钟 · 视频 ¥2.1/分钟</span>"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          "实时音视频模型，轻量均衡版本，支持视频、音频、文本多模态输入"
+        ],
+        [
+          "GLM-4-Voice",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-orange\">¥80 / 1M tokens</span>"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          "实时语音对话模型，支持文本、音频；音频 token 单价，不可与文本档直接比较"
+        ],
+        [
+          "GLM-TTS-Clone",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-amber\">¥6 / 次</span>"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          "音色克隆模型，3 秒音频即可快速生成相似音色"
+        ],
+        [
+          "GLM-TTS",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">¥2 / 万字符</span>"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          "语音合成模型，支持超拟人语音生成与情感表达，提供非流式与流式接口"
+        ],
+        [
+          "GLM-ASR-2512",
+          "balanced",
+          {
+            "raw": "<span class=\"tag t-green\">输入 ¥16/1M tokens（约 ¥0.0002/秒），输出免费</span>"
+          },
+          [
+            "audio"
+          ],
+          "高精度语音识别模型，字符错误率低，支持自定义词汇，覆盖多种主流语言与方言场景"
+        ]
       ]
     },
     {
@@ -203,15 +1277,169 @@
       "icon": "i-grid",
       "nav": "向量与其他",
       "desc": "向量检索、重排序、角色扮演、心理陪伴与代码补全等专用模型",
-      "columns": ["模型 ID", "定位", "价格", "模态", "上下文", "输出", "说明"],
-      "row_types": ["model_id", "tier", "price", "mods", "ctx", "ctx", "mdesc"],
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "上下文",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
       "rows": [
-        ["Embedding-3", "balanced", "low", ["text"], "8K", "—", "第三代文本向量化模型（V3），适用于语义检索、聚类、主题建模与分类等场景"],
-        ["Embedding-2", "balanced", "low", ["text"], "8K", "—", "第二代文本向量化模型（V2）"],
-        ["Rerank", "balanced", "low", ["text"], "4K", "—", "文本重排序模型"],
-        ["CodeGeeX-4", "balanced", "cheap", ["text", "code"], "128K", "32K", "代码补全模型"],
-        ["CharGLM-4", "balanced", "mid", ["text"], "8K", "4K", "拟人对话模型"],
-        ["Emohaa", "balanced", "expensive", ["text"], "8K", "4K", "心理情感支持模型"]
+        [
+          "Embedding-3",
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          "8K",
+          "—",
+          "第三代文本向量化模型（V3），适用于语义检索、聚类、主题建模与分类等场景"
+        ],
+        [
+          "Embedding-2",
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          "8K",
+          "—",
+          "第二代文本向量化模型（V2）"
+        ],
+        [
+          "Rerank",
+          "balanced",
+          "low",
+          [
+            "text"
+          ],
+          "4K",
+          "—",
+          "文本重排序模型"
+        ],
+        [
+          "CodeGeeX-4",
+          "balanced",
+          "cheap",
+          [
+            "text",
+            "code"
+          ],
+          "128K",
+          "32K",
+          "代码补全模型"
+        ],
+        [
+          "CharGLM-4",
+          "balanced",
+          "mid",
+          [
+            "text"
+          ],
+          "8K",
+          "4K",
+          "拟人对话模型"
+        ],
+        [
+          "Emohaa",
+          "balanced",
+          "expensive",
+          [
+            "text"
+          ],
+          "8K",
+          "4K",
+          "心理情感支持模型"
+        ]
+      ]
+    },
+    {
+      "id": "historical",
+      "kind": "table",
+      "title": "历史模型",
+      "icon": "i-circle-off",
+      "nav": "历史模型",
+      "desc": "已停止推荐或进入维护期的旧版模型，仅作兼容参考",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          "GLM-4-0520",
+          "balanced",
+          "high",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "GLM-4 0520 历史版本"
+        ],
+        [
+          "GLM-4V-Plus",
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image"
+          ],
+          3,
+          3,
+          "8K",
+          "8K",
+          "8K",
+          "GLM-4V Plus 历史版本"
+        ],
+        [
+          "GLM-4",
+          "balanced",
+          "sky",
+          [
+            "text"
+          ],
+          3,
+          3,
+          "128K",
+          "128K",
+          "128K",
+          "GLM-4 基础历史版本"
+        ]
       ]
     },
     {
@@ -221,19 +1449,109 @@
       "icon": "i-modes",
       "nav": "能力矩阵",
       "desc": "按典型场景快速找到首选与备选模型",
-      "columns": ["场景", "推荐模型", "备选模型", "关键能力"],
-      "row_types": ["scene", "mono", "mono", "raw"],
+      "columns": [
+        "场景",
+        "推荐模型",
+        "备选模型",
+        "关键能力"
+      ],
+      "row_types": [
+        "scene",
+        "mono",
+        "mono",
+        "raw"
+      ],
       "rows": [
-        [{"icon": "i-code", "text": "复杂编程 / 软件工程"}, "GLM-5.3", "GLM-5.2", "<span class=\"tag t-teal\">推理</span> <span class=\"tag t-green\">长上下文</span> <span class=\"mono-dim\">Agent</span>"],
-        [{"icon": "i-brain", "text": "深度推理 / 数学推导"}, "GLM-5.3", "GLM-5.1", "<span class=\"tag t-teal\">最强推理</span> <span class=\"tag t-green\">128K 输出</span>"],
-        [{"icon": "i-doc", "text": "超长文档处理"}, "GLM-4-Long", "GLM-5.3", "<span class=\"tag t-green\">1M 上下文</span> <span class=\"mono-dim\">低成本</span>"],
-        [{"icon": "i-eye", "text": "图像 / 视频理解"}, "GLM-5.3-Flash", "GLM-4.6V", "<span class=\"tag t-teal\">原生多模态</span> <span class=\"tag t-green\">视频理解</span>"],
-        [{"icon": "i-image", "text": "图像生成"}, "GLM-Image", "CogView-4", "<span class=\"tag t-teal\">文字渲染</span> <span class=\"tag t-green\">多分辨率</span>"],
-        [{"icon": "i-video", "text": "视频生成"}, "CogVideoX-3", "ViduQ1-Text", "<span class=\"tag t-teal\">首尾帧</span> <span class=\"tag t-green\">物理模拟</span>"],
-        [{"icon": "i-audio", "text": "实时语音对话"}, "GLM-Realtime-Flash", "GLM-4-Voice", "<span class=\"tag t-teal\">实时</span> <span class=\"tag t-green\">音视频</span>"],
-        [{"icon": "i-mic", "text": "语音识别"}, "GLM-ASR-2512", "—", "<span class=\"tag t-teal\">高精度</span> <span class=\"tag t-green\">方言</span>"],
-        [{"icon": "i-search", "text": "语义搜索 / RAG"}, "Embedding-3", "Embedding-2", "<span class=\"tag t-teal\">8K 上下文</span> <span class=\"tag t-green\">语义检索</span>"],
-        [{"icon": "i-coin", "text": "极致省钱"}, "GLM-4.7-Flash", "GLM-4-Flash-250414", "<span class=\"tag t-teal\">免费</span> <span class=\"tag t-green\">200K 上下文</span>"]
+        [
+          {
+            "icon": "i-code",
+            "text": "复杂编程 / 软件工程"
+          },
+          "GLM-5.3",
+          "GLM-5.2",
+          "<span class=\"tag t-teal\">推理</span> <span class=\"tag t-green\">长上下文</span> <span class=\"mono-dim\">Agent</span>"
+        ],
+        [
+          {
+            "icon": "i-brain",
+            "text": "深度推理 / 数学推导"
+          },
+          "GLM-5.3",
+          "GLM-5.1",
+          "<span class=\"tag t-teal\">最强推理</span> <span class=\"tag t-green\">128K 输出</span>"
+        ],
+        [
+          {
+            "icon": "i-doc",
+            "text": "超长文档处理"
+          },
+          "GLM-4-Long",
+          "GLM-5.3",
+          "<span class=\"tag t-green\">1M 上下文</span> <span class=\"mono-dim\">低成本</span>"
+        ],
+        [
+          {
+            "icon": "i-eye",
+            "text": "图像 / 视频理解"
+          },
+          "GLM-5.3-Flash",
+          "GLM-4.6V",
+          "<span class=\"tag t-teal\">原生多模态</span> <span class=\"tag t-green\">视频理解</span>"
+        ],
+        [
+          {
+            "icon": "i-image",
+            "text": "图像生成"
+          },
+          "GLM-Image",
+          "CogView-4",
+          "<span class=\"tag t-teal\">文字渲染</span> <span class=\"tag t-green\">多分辨率</span>"
+        ],
+        [
+          {
+            "icon": "i-video",
+            "text": "视频生成"
+          },
+          "CogVideoX-3",
+          "ViduQ1-Text",
+          "<span class=\"tag t-teal\">首尾帧</span> <span class=\"tag t-green\">物理模拟</span>"
+        ],
+        [
+          {
+            "icon": "i-audio",
+            "text": "实时语音对话"
+          },
+          "GLM-Realtime-Flash",
+          "GLM-4-Voice",
+          "<span class=\"tag t-teal\">实时</span> <span class=\"tag t-green\">音视频</span>"
+        ],
+        [
+          {
+            "icon": "i-mic",
+            "text": "语音识别"
+          },
+          "GLM-ASR-2512",
+          "—",
+          "<span class=\"tag t-teal\">高精度</span> <span class=\"tag t-green\">方言</span>"
+        ],
+        [
+          {
+            "icon": "i-search",
+            "text": "语义搜索 / RAG"
+          },
+          "Embedding-3",
+          "Embedding-2",
+          "<span class=\"tag t-teal\">8K 上下文</span> <span class=\"tag t-green\">语义检索</span>"
+        ],
+        [
+          {
+            "icon": "i-coin",
+            "text": "极致省钱"
+          },
+          "GLM-4.7-Flash",
+          "GLM-4-Flash-250414",
+          "<span class=\"tag t-teal\">免费</span> <span class=\"tag t-green\">200K 上下文</span>"
+        ]
       ]
     }
   ]

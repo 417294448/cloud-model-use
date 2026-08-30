@@ -14,18 +14,18 @@
     --bg-elevated: #ffffff;
     --bg-soft: #f4f6f8;
     --bg-hover: #edf1f4;
-    --bg-tint: #eff6ff;
+    --bg-tint: #eef4f6;
     --border: #e6eaee;
     --border-strong: #d3dae0;
     --text: #10151a;
     --text-dim: #4d5a64;
     --text-faint: #8b98a1;
-    --accent: #2563eb;
-    --accent-bright: #1d4ed8;
-    --accent-deep: #1e40af;
-    --accent-soft: rgba(37, 99, 235, 0.09);
-    --accent-border: rgba(37, 99, 235, 0.34);
-    --accent-glow: rgba(37, 99, 235, 0.14);
+    --accent: #0e7490;
+    --accent-bright: #0a5c73;
+    --accent-deep: #083d4d;
+    --accent-soft: rgba(14, 116, 144, 0.09);
+    --accent-border: rgba(14, 116, 144, 0.34);
+    --accent-glow: rgba(14, 116, 144, 0.14);
     --best: #0d9463;
     --best-bg: rgba(13, 148, 99, 0.09);
     --best-border: rgba(13, 148, 99, 0.3);
@@ -216,6 +216,7 @@
   body:has(#video:target) .nav a[href="#video"],
   body:has(#audio:target) .nav a[href="#audio"],
   body:has(#embed:target) .nav a[href="#embed"],
+  body:has(#historical:target) .nav a[href="#historical"],
   body:has(#matrix:target) .nav a[href="#matrix"] {
     color: var(--accent-bright);
     border-bottom-color: var(--accent);
@@ -574,8 +575,8 @@
       <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
         <defs>
           <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#3b82f6"/>
-            <stop offset="1" stop-color="#1e40af"/>
+            <stop offset="0" stop-color="#128fa8"/>
+            <stop offset="1" stop-color="#083d4d"/>
           </linearGradient>
         </defs>
         <rect x="2.5" y="2.5" width="13" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
@@ -584,8 +585,8 @@
       <div class="hero-eyebrow">Z.AI MODEL SELECTION GUIDE · 2026</div>
     </div>
     <h1>Z.ai 模型选择指南</h1>
-    <p class="hero-desc">智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-29 同步）</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">50+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+    <p class="hero-desc">智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-30 同步）</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">69+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">8</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>模型分类</span></span></div>
       <div class="stat-divider"></div>
@@ -608,7 +609,7 @@
 
 <!-- ===== 锚点导航 ===== -->
 <nav class="nav">
-  <div class="nav-inner"><a href="#quick">快速选型</a><a href="#naming">命名规律</a><a href="#frontier">前沿旗舰</a><a href="#text">文本模型</a><a href="#vision">视觉理解</a><a href="#image">图像生成</a><a href="#video">视频生成</a><a href="#audio">音视频</a><a href="#embed">向量与其他</a><a href="#matrix">能力矩阵</a></div>
+  <div class="nav-inner"><a href="#quick">快速选型</a><a href="#naming">命名规律</a><a href="#frontier">前沿旗舰</a><a href="#text">文本模型</a><a href="#vision">视觉理解</a><a href="#image">图像生成</a><a href="#video">视频生成</a><a href="#audio">音视频</a><a href="#embed">向量与其他</a><a href="#historical">历史模型</a><a href="#matrix">能力矩阵</a></div>
 </nav>
 
 <div class="wrap">
@@ -958,6 +959,162 @@
 <td><span class="ctx">16K</span></td>
 <td class="mdesc">免费文本模型</td>
 </tr>
+<tr>
+<td><span class="model-id">GLM-4-Plus</span></td>
+<td><span class="tier-tag t-flag">旗舰</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>深度</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">高智能旗舰，全自研第四代基座大模型，支持高级 Agent 能力</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-Air-250414</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GLM-4-Air 日期快照 250414，高性价比文本模型</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-AirX</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-orange price-ico" title="昂贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>快速</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td class="mdesc">极速推理版本，适合低延迟高响应场景</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-Assistant</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">面向智能体应用优化的文本模型</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-Z1-Air</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>深度</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">高性价比推理模型</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-Z1-AirX</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span>深度</span></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>快速</span></td>
+<td><span class="ctx">32K</span></td>
+<td><span class="ctx">32K</span></td>
+<td><span class="ctx">32K</span></td>
+<td class="mdesc">极速推理模型，兼顾推理深度与响应速度</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-Z1-FlashX</span></td>
+<td><span class="tier-tag t-bud">经济</span></td>
+<td><span class="tag t-green price-ico" title="实惠"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag t-green"><svg class="ic"><use href="#i-bolt"/></svg>极速</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">16K</span></td>
+<td class="mdesc">高速低价推理模型，适合高并发推理场景</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-Z1-Flash</span></td>
+<td><span class="tier-tag t-bud">经济</span></td>
+<td><span class="tag t-teal price-ico" title="白菜价"><span class="bars"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag t-green"><svg class="ic"><use href="#i-bolt"/></svg>极速</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">16K</span></td>
+<td class="mdesc">免费推理模型</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4.5</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">通用对话、推理与智能体能力</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-Air</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">轻量均衡，高性价比</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-Flash</span></td>
+<td><span class="tier-tag t-bud">经济</span></td>
+<td><span class="tag t-teal price-ico" title="白菜价"><span class="bars"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>基础</span></td>
+<td><span class="tag t-green"><svg class="ic"><use href="#i-bolt"/></svg>极速</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">16K</span></td>
+<td class="mdesc">免费文本模型</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4-9B</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-green price-ico" title="实惠"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>基础</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">开源 9B 文本模型</td>
+</tr>
+<tr>
+<td><span class="model-id">ChatGLM3-6B</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-green price-ico" title="实惠"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span>基础</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td class="mdesc">开源对话模型（第三代）</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1093,6 +1250,18 @@
 <td><span class="ctx">1K</span></td>
 <td class="mdesc">免费模型，支持图像理解</td>
 </tr>
+<tr>
+<td><span class="model-id">GLM-4V</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td class="mdesc">视觉理解模型（历史版本）</td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -1128,6 +1297,13 @@
 <td><span class="tag t-teal">免费</span></td>
 <td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
 <td class="mdesc">免费模型，适合轻量图像创作，支持多分辨率</td>
+</tr>
+<tr>
+<td><span class="model-id">CogView-3</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-green">¥0.06 / 次</span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td class="mdesc">通用图像生成模型</td>
 </tr>
 </tbody>
 </table>
@@ -1338,6 +1514,57 @@
 </div>
 </section>
 
+<!-- ===== 历史模型 ===== -->
+<section class="sec" id="historical">
+<div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">历史模型</h2></div>
+<p class="sec-desc">已停止推荐或进入维护期的旧版模型，仅作兼容参考</p>
+<div class="table-panel">
+<table>
+<thead>
+<tr><th>模型 ID</th><th>定位</th><th>价格</th><th>模态</th><th>推理</th><th>速度</th><th>上下文</th><th>输入</th><th>输出</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="model-id">GLM-4-0520</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GLM-4 0520 历史版本</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4V-Plus</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td><span class="ctx">8K</span></td>
+<td class="mdesc">GLM-4V Plus 历史版本</td>
+</tr>
+<tr>
+<td><span class="model-id">GLM-4</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag t-red price-ico" title="天价"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>标准</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GLM-4 基础历史版本</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
 <!-- ===== 场景能力矩阵 ===== -->
 <section class="sec" id="matrix">
 <div class="sec-head"><svg class="ic"><use href="#i-modes"/></svg><h2 class="sec-title">场景能力矩阵</h2></div>
@@ -1416,9 +1643,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Z.ai 模型选择指南</b> · 最后更新 2026-08-29</p>
+  <p><b>Z.ai 模型选择指南</b> · 最后更新 2026-08-30</p>
   <p class="rules">GLM = 智谱大模型 · 数字越大越新 · 5.x = 最新一代 · Flash = 省钱快速 · Turbo = 速度优化 · Air = 轻量均衡 · V = 视觉 · Cog = 生成模型</p>
-  <p>数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-29 同步）</p>
+  <p>数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-30 同步）</p>
 </footer>
 
 <script>

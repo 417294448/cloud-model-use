@@ -106,21 +106,27 @@ def table_to_rows(html):
 
 
 def section_cards(html):
-    """提取价格页中卡片式模型信息（非表格部分）"""
+    """提取价格页中卡片式模型信息（非表格部分）。
+
+    pricing 页面除表格外，部分区域以卡片/列表展示模型，本函数作为表格补充。
+    识别策略：在 <section> 或 <div> 块内，若连续出现"模型名称/Model"与"价格/Pricing"
+    等标签，则把键值对提取为 CARD。
+    """
     cards = []
-    # 每个模型卡片通常由 Model/Description/Context/Pricing 等字段组成
-    # 这里按连续出现的 <div>...<span>Label</span>...Value...</div> 模式提取
-    chunks = re.split(r'<h[1-6][^>]*>.*?</h[1-6]>', html, flags=re.S | re.I)
+    # 按语义块切分（section / 大卡片容器 / 独立 div）
+    chunks = re.split(r'</(?:section|article|main)>', html, flags=re.S | re.I)
     for chunk in chunks:
-        labels = re.findall(r'<(?:div|span|p)[^>]*>([^<]{2,40}?)</(?:div|span|p)>', chunk, flags=re.S)
-        values = re.findall(r'<(?:div|span|p)[^>]*>([^<]{1,80}?)</(?:div|span|p)>', chunk, flags=re.S)
-        # 简单过滤：出现 Model + Pricing 的块视为模型卡片
-        if 'Model' in labels and 'Pricing' in labels:
-            pairs = []
-            for lab, val in zip(labels, values):
-                pairs.append(f'{lab.strip()}: {val.strip()}')
-            if pairs:
-                cards.append('CARD: ' + ' · '.join(pairs[:8]))
+        # 只保留包含模型相关标签的块
+        if not re.search(r'(模型名称|Model|模型 ID|模型ID|价格|Pricing|单价)', chunk, re.I):
+            continue
+        # 提取键值对：标签在一对标签内，值在下一对标签内
+        pairs = []
+        for m in re.finditer(r'<(?:div|span|p|label)[^>]*>([^<]{1,40}?)</(?:div|span|p|label)>\s*<(?:div|span|p)[^>]*>([^<]{1,120}?)</(?:div|span|p|label)>', chunk, flags=re.S | re.I):
+            lab, val = m.group(1).strip(), m.group(2).strip()
+            if lab and val and lab not in ('', '—', '-'):
+                pairs.append(f'{lab}: {val}')
+        if len(pairs) >= 2:
+            cards.append('CARD: ' + ' · '.join(pairs[:10]))
     return cards
 
 

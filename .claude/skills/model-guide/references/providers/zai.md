@@ -72,7 +72,8 @@ Z.ai 价格为 **元 CNY / 1M tokens**（华北区原价），映射到页面 6 
 
 ## 数据注意点
 
-- **模型 ID 大小写**：Z.ai 官方模型 ID 为大写 `GLM-...`、`CogView-...`、`Embedding-...`、`Vidu...` 等形式，`check_data.py` 会报形式警告，但应保持官方写法（品牌标识），可忽略警告
+- **模型 ID 大小写**：Z.ai 官方模型 ID 为大写 `GLM-...`、`CogView-...`、`Embedding-...`、`Vidu...` 等形式，应保持官方写法（品牌标识）；`check_data.py` 已兼容大写字母，不再报形式警告
+- **历史模型区**：Z.ai 页面使用 `historical` 区存放已停止推荐但未在主表出现过的旧版模型（如 `GLM-4`、`GLM-4-0520`、`GLM-4V-Plus`），与 OpenAI 页面 `deprecated` 区（模型必须先存在于主表）语义不同
 - **推理档位**：max/旗舰 = 5、plus/Turbo = 4、标准版 = 3、Flash/Air = 2、轻量免费 = 1（编辑性映射，官方无格数）
 - **速度档位**：FlashX/Flash/AirX = 4-5 快速/极速、Turbo = 4、Air/标准 = 3、旗舰/max = 2-3（编辑性估计）
 - **定位**：同代旗舰版（GLM-5.3/5.2/5.1/5）= 旗舰；Flash/Air/平衡版 = 均衡；免费/轻量 = 经济
@@ -99,3 +100,4 @@ Z.ai 价格为 **元 CNY / 1M tokens**（华北区原价），映射到页面 6 
 | 2026-08-29 | `GLM-OCR` 上下文改为 32K，价格改为 ¥0.2/1M tokens | pricing 页面 |
 | 2026-08-29 | 新增 `GLM-4V-Plus-0111` | pricing 页面 |
 | 2026-08-30 | 自动同步上下文/最大输出/价格字段 | update_data.py |
+| 2026-08-30 | 补录 pricing 页面缺失的 18 个模型；新增 `historical` 区存放 `GLM-4-0520` / `GLM-4V-Plus` / `GLM-4` | pricing 页面旗舰模型/模型推理区 |

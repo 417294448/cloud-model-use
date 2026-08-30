@@ -117,6 +117,8 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 - `data/zai.json` — Z.ai 页面数据（唯一事实源；CNY 计价；官方模型 ID 为大写 GLM/CogView/Embedding 形式）
 - `references/providers/zai.md` — BigModel 数据源方法（docs.bigmodel.cn / open.bigmodel.cn 直连、价格口径、特殊计费单元处理、主题色说明）
 - `scripts/zai/fetch_docs.py` — 抓取 BigModel 模型概览（静态）与产品价格（Vue SPA，需 Playwright 渲染）转结构化文本
+- `scripts/zai/update_data.py` — 自动对比 overview/pricing 与 `data/zai.json`，生成差异报告并自动应用上下文/输出/价格字段变更
+- `scripts/zai/patch_zai_data.py` — 根据 pricing 缺失模型清单批量补充新模型，并自动插入 `historical` 历史模型区（与 OpenAI 的 `deprecated` 退役计划表语义不同， historical 区模型无需在主表存在）
 
 **其他提供商**：待按「新增提供商指南」沉淀（DeepSeek…）
 

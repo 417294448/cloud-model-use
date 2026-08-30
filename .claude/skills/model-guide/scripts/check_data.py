@@ -78,7 +78,7 @@ def check(data):
                             errors.append(f'{sid} 行{r_i + 1}: 非法模态 "{m}"')
                 elif t == 'model_id':
                     mid = v['id'] if isinstance(v, dict) else v
-                    if sid != 'deprecated' and not re.match(r'^[a-z0-9.*-]+( / [a-z0-9.*-]+)*( \([^)]+\))?$', mid):
+                    if sid != 'deprecated' and not re.match(r'^[A-Za-z0-9.*-]+( / [A-Za-z0-9.*-]+)*( \([^)]+\))?$', mid):
                         warnings.append(f'{sid} 行{r_i + 1}: 模型 ID 形式可疑 "{mid}"')
 
         # 弃用表收录规则
