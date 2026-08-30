@@ -16,6 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[5]
 DATA_JSON = ROOT / '.claude' / 'skills' / 'model-guide' / 'data' / 'zai.json'
+DIFF_DIR = ROOT / 'diff'
 
 
 def load_json(path):
@@ -26,6 +27,32 @@ def load_json(path):
 def save_json(path, data):
     with open(path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def write_diff(date_str, inserted, skipped, model_count, old_count):
+    """将本次补丁变更追加到 diff/YYYY-MM-DD.md（只记录模型数据变更）"""
+    DIFF_DIR.mkdir(exist_ok=True)
+    diff_path = DIFF_DIR / f'{date_str}.md'
+    provider = 'Z.ai（补丁）'
+
+    section_lines = [f'## {provider}\n\n']
+    section_lines.append('### 模型数据变更\n')
+    for sec_id, model_id in inserted:
+        section_lines.append(f'- 新增 {model_id}（{sec_id}）\n')
+    section_text = ''.join(section_lines)
+
+    if diff_path.exists():
+        content = open(diff_path, encoding='utf-8').read()
+        if any(line.strip() == f'## {provider}' for line in content.splitlines()):
+            print(f'警告: {diff_path} 中已存在 {provider} 记录，未重复写入')
+            return diff_path
+        content = content.rstrip() + '\n\n' + section_text
+    else:
+        content = f'# {date_str} 模型指南更新记录\n\n' + section_text
+
+    with open(diff_path, 'w', encoding='utf-8') as f:
+        f.write(content)
+    return diff_path
 
 
 def find_section(data, sec_id):
@@ -156,7 +183,13 @@ def patch_data(data, write=False):
 def main():
     write = '--write' in sys.argv
     data = load_json(DATA_JSON)
+    old_count = sum(
+        len(sec.get('rows', []))
+        for sec in data['sections']
+        if sec.get('kind') == 'table' and sec.get('id') not in ('naming', 'matrix')
+    )
     inserted, skipped, model_count = patch_data(data, write=write)
+    date_str = datetime.now().strftime('%Y-%m-%d')
 
     print(f'可插入模型: {len(inserted)} 个')
     for sec_id, model_id in inserted:
@@ -169,7 +202,9 @@ def main():
 
     if write:
         save_json(DATA_JSON, data)
+        diff_path = write_diff(date_str, inserted, skipped, model_count, old_count)
         print(f'\n已写入: {DATA_JSON}')
+        print(f'变更记录：{diff_path}')
     else:
         print(f'\n预览模式，未写入。使用 --write 应用变更。')
 

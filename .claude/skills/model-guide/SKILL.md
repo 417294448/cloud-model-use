@@ -63,7 +63,7 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
    - 抓完 OpenAI 详情页后用 `scripts/openai/parse_cards.py` 解析为 JSON。
    - 模型详情页追加 `.md` 可拿到 Markdown 版本（含价格表、上下文/输入/输出 token 数），比解析 HTML 更可靠。
 2. **映射为页面档位**：严格按 `references/page-style.md` 的映射表——推理 5 档（官方图标格数 1:1）、速度 5 档、价格 6 档、模态图标。**官方标 Intelligence 的模型是非推理模型，归入"快速"档，不要标推理点。**
-3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；统计数字同步改；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；最后 `render_guide.py` 渲染。
+3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；统计数字同步改；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；**每次更新必须在 `diff/` 目录生成日期命名（如 `diff/2026-08-30.md`）的变更记录，同一天所有提供商的变更写入同一文件，按 `## 提供商` 分节**，且只记录模型数据变更（新增/删除/字段变更），每行一条；最后 `render_guide.py` 渲染。
 4. **校验**：渲染器自动调用 check_html.py。列结构变更（增删列/增删行类型）后重点检查结构不一致的表。
 5. **清理临时文件**：任务结束后删除本次产生的临时抓取文件（`_gemini_*.html`、`_aliyun_*.html`、`_azure_tmp.html`、`_rt*.html/json` 等）。`_model_pages/`、`_model_md/` 是可复用缓存，可保留或按需清理；所有临时/缓存路径必须已在 `.gitignore` 中声明。
 
@@ -118,7 +118,7 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 - `references/providers/zai.md` — BigModel 数据源方法（docs.bigmodel.cn / open.bigmodel.cn 直连、价格口径、特殊计费单元处理、主题色说明）
 - `scripts/zai/fetch_docs.py` — 抓取 BigModel 模型概览（静态）与产品价格（Vue SPA，需 Playwright 渲染）转结构化文本
 - `scripts/zai/update_data.py` — 自动对比 overview/pricing 与 `data/zai.json`，生成差异报告并自动应用上下文/输出/价格字段变更
-- `scripts/zai/patch_zai_data.py` — 根据 pricing 缺失模型清单批量补充新模型，并自动插入 `historical` 历史模型区（与 OpenAI 的 `deprecated` 退役计划表语义不同， historical 区模型无需在主表存在）
+- `scripts/zai/patch_zai_data.py` — 根据 pricing 缺失模型清单批量补充新模型，并自动插入 `historical` 历史模型区；变更记录默认追加到 `diff/YYYY-MM-DD.md` 的 `## Z.ai（补丁）` 分节
 
 **其他提供商**：待按「新增提供商指南」沉淀（DeepSeek…）
 

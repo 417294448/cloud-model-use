@@ -23,6 +23,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[5]  # .claude/skills/model-guide/scripts/zai -> project root
 DATA_JSON = ROOT / '.claude' / 'skills' / 'model-guide' / 'data' / 'zai.json'
 PROVIDER_MD = ROOT / '.claude' / 'skills' / 'model-guide' / 'references' / 'providers' / 'zai.md'
+DIFF_DIR = ROOT / 'diff'
 WORK_DIR = ROOT / '_g_zai'
 OVERVIEW_TXT = WORK_DIR / 'overview.txt'
 PRICING_TXT = WORK_DIR / 'pricing.txt'
@@ -659,43 +660,56 @@ def apply_changes(data, changes):
     return applied
 
 
-def write_diff_report(changes, path, applied=False):
-    """生成差异报告"""
-    lines = ['# Z.ai 数据核对报告\n', f'生成时间：{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n']
+def _format_diff_body(changes, applied=False):
+    """生成差异报告正文（不含顶层标题）：只体现模型数据变更"""
+    lines = []
     if applied:
         lines.append('状态：已应用 --apply\n')
     else:
-        lines.append('状态：仅生成报告，未修改 zai.json\n')
-    lines.append('\n## 概览\n')
-    types = {}
+        lines.append('状态：仅生成报告，未修改数据\n')
+    lines.append('\n### 模型数据变更\n')
     for ch in changes:
-        types[ch['type']] = types.get(ch['type'], 0) + 1
-    for t, n in sorted(types.items()):
-        lines.append(f'- {t}: {n}\n')
-    lines.append('\n## 详细变更\n')
-    for ch in changes:
-        if ch['type'] == 'ctx':
-            lines.append(f"- **上下文变更** `{ch['model']}` ({ch['section']}): {ch['old']} → {ch['new']}\n")
+        if ch['type'] == 'new_model':
+            sec = ch.get('suggested_section') or '?'
+            lines.append(f"- 新增 {ch['model']}（{sec}）\n")
+        elif ch['type'] == 'ctx':
+            lines.append(f"- 变更 {ch['model']} 上下文：{ch['old']} → {ch['new']}\n")
         elif ch['type'] == 'output':
-            lines.append(f"- **最大输出变更** `{ch['model']}` ({ch['section']}): {ch['old']} → {ch['new']}\n")
+            lines.append(f"- 变更 {ch['model']} 最大输出：{ch['old']} → {ch['new']}\n")
         elif ch['type'] == 'missing_in_source':
-            lines.append(f"- **可能下架** `{ch['model']}` ({ch['section']}): {ch['message']}\n")
-        elif ch['type'] == 'new_model':
-            lines.append(f"- **新增模型** `{ch['model']}`: {ch['message']}\n")
-            lines.append(f"  - overview: {ch['overview']}\n")
-            lines.append(f"  - pricing: {ch['pricing']}\n")
-            if ch.get('suggested_section') and ch.get('suggested_row'):
-                lines.append(f"  - 建议 section: `{ch['suggested_section']}`\n")
-                lines.append(f"  - 建议 row_types: `{ch['suggested_row_types']}`\n")
-                lines.append(f"  - 建议 row: `{json.dumps(ch['suggested_row'], ensure_ascii=False)}`\n")
-    lines.append('\n## 下一步\n')
-    if applied:
-        lines.append('- 请人工复核已应用的 ctx/output 变更\n')
-        lines.append('- 对新增/下架模型，手动调整 zai.json 分类与页面结构\n')
-    else:
-        lines.append('- 复核无误后运行 `python scripts/zai/update_data.py --apply` 应用 ctx/output 变更\n')
-        lines.append('- 对新增/下架模型，手动调整 zai.json 分类与页面结构\n')
+            lines.append(f"- 可能下架 {ch['model']}（{ch['section']}）\n")
+    return lines
+
+
+def write_diff_report(changes, path, applied=False):
+    """生成独立的 Z.ai 差异报告（保留 -o 覆盖用途）"""
+    lines = ['# Z.ai 数据核对报告\n', f'生成时间：{datetime.now().strftime("%Y-%m-%d %H:%M:%S")}\n']
+    lines.extend(_format_diff_body(changes, applied))
     open(path, 'w', encoding='utf-8').writelines(lines)
+
+
+def write_daily_diff(changes, provider='Z.ai', applied=False, diff_path=None):
+    """将本次变更追加到 diff/YYYY-MM-DD.md；同一天多提供商会按 ## 提供商 分节记录"""
+    date_str = datetime.now().strftime('%Y-%m-%d')
+    if diff_path is None:
+        DIFF_DIR.mkdir(exist_ok=True)
+        diff_path = DIFF_DIR / f'{date_str}.md'
+
+    body = _format_diff_body(changes, applied)
+    section_lines = [f'## {provider}\n', '\n'] + body
+    section_text = ''.join(section_lines)
+
+    if diff_path.exists():
+        content = open(diff_path, encoding='utf-8').read()
+        if any(line.strip() == f'## {provider}' for line in content.splitlines()):
+            print(f'警告: {diff_path} 中已存在 {provider} 记录，未重复写入')
+            return diff_path
+        content = content.rstrip() + '\n\n' + section_text
+    else:
+        content = f'# {date_str} 模型指南更新记录\n\n' + section_text
+
+    open(diff_path, 'w', encoding='utf-8').write(content)
+    return diff_path
 
 
 def update_provider_doc(date_str):
@@ -763,7 +777,11 @@ def main():
     else:
         print(f'发现 {len(changes)} 条差异，未应用。使用 --apply 应用。', flush=True)
 
-    if out_report:
+    # 默认将差异报告追加到 diff/YYYY-MM-DD.md（所有提供商共用一个日期文件）
+    if not out_report:
+        diff_path = write_daily_diff(changes, provider='Z.ai', applied=do_apply)
+        print(f'差异报告：{diff_path}', flush=True)
+    else:
         write_diff_report(changes, out_report, applied=do_apply)
         print(f'差异报告：{out_report}', flush=True)
 
