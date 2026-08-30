@@ -113,6 +113,7 @@ CSS 规范：
 | 表格 | `.table-panel > table` | 灰底表头、细边框、行 hover accent 竖条 |
 | 说明列 | `td.mdesc` | 可换行、12.5px dim，内嵌参数名用 `.mono-dim` |
 | 等级点阵 | `.dots > i`（i.on 实心） | 推理等共用色相时的等级区分 |
+| 语言切换器 | `.lang-switch` + `.lang-opt`（.on 高亮） | 页头右上角 中/EN 静态互链，胶囊边框；嵌入模式随页头隐藏 |
 
 ## 数据档位映射表
 

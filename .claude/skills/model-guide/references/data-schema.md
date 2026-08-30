@@ -46,6 +46,10 @@ data/<厂商>.json 是页面的唯一事实源：`render_guide.py` 把它和 `as
 }
 ```
 
+可选双语字段（OpenAI 试点，见 SKILL.md「中英文切换」）：
+- `"lang": "zh" | "en"` — 页面语言（决定 `<html lang>` 与切换器高亮；渲染 `--lang` 参数优先）
+- `"lang_switch": {"zh": {"href": "…", "label": "中"}, "en": {"href": "…-en.html", "label": "EN"}}` — 声明后在页头右上角生成 中/EN 静态互链；不声明则切换器不渲染（输出与旧版一致）
+
 ## sections（通用字段）
 
 每个 section：

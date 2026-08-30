@@ -28,51 +28,70 @@ def ic(name):
 
 
 # ===== 档位映射（与 references/page-style.md 一致，改档位只改这里）=====
+#
+# 双语支持：档位/推理/速度/模态/徽章标签按语言分表（LABELS[lang]），
+# 由渲染时的全局 LANG 选取。CSS class 与档位排序（格数、点数）语言中立，
+# 只放中文表一次即可，英文表复用同一 class/格数——见 _tiers()/_reasoning() 等取值函数。
+# 默认 lang='zh'，其取值须与历史硬编码逐字节一致（回归验证依赖）。
 
-PRICE_TIERS = {
-    'sky':       ('t-red', 6, '天价'),
-    'expensive': ('t-orange', 5, '昂贵'),
-    'high':      ('t-amber', 4, '较贵'),
-    'mid':       ('', 3, '适中'),
-    'low':       ('t-green', 2, '实惠'),
-    'cheap':     ('t-teal', 1, '白菜价'),
+LANG = 'zh'   # 渲染前由 render(..., lang=) 设置
+
+# CSS class + 格数（语言中立，两种语言共用）
+PRICE_CLASS = {
+    'sky': ('t-red', 6), 'expensive': ('t-orange', 5), 'high': ('t-amber', 4),
+    'mid': ('', 3), 'low': ('t-green', 2), 'cheap': ('t-teal', 1),
 }
-
-TIER_LEVELS = {
-    'flagship': ('t-flag', '旗舰'),
-    'balanced': ('t-bal', '均衡'),
-    'budget':   ('t-bud', '经济'),
+TIER_CLASS = {'flagship': 't-flag', 'balanced': 't-bal', 'budget': 't-bud'}
+SPEED_CLASS = {5: 't-green', 4: 't-teal', 3: '', 2: 't-amber', 1: 't-red'}
+MODALITY_ICON = {
+    'text': 'i-text', 'image': 'i-image', 'audio': 'i-audio',
+    'video': 'i-video', 'code': 'i-code', 'pdf': 'i-doc',
 }
-
-REASONING_NAMES = {5: '最强', 4: '深度', 3: '标准', 2: '基础', 1: '快速'}
-SPEED_LEVELS = {
-    5: ('t-green', '极速'),
-    4: ('t-teal', '快速'),
-    3: ('', '标准'),
-    2: ('t-amber', '较慢'),
-    1: ('t-red', '很慢'),
-}
-
-MODALITIES = {
-    'text': ('i-text', '文本'),
-    'image': ('i-image', '图像'),
-    'audio': ('i-audio', '音频'),
-    'video': ('i-video', '视频'),
-    'code': ('i-code', '代码'),
-    'pdf': ('i-doc', 'PDF'),
-}
-
 BADGE_CLS = {
     'NEW': 'b-new', '推荐': 'b-rec', 'PRO': 'b-pro',
     '预览': 'b-prev', '开源': 'b-oss', '弃用': 'b-dep', 'GA': 'b-rec', '正式版': 'b-rec',
+    # 英文数据文件里徽章文案可能用英文写法，映射到同一色板
+    'Rec': 'b-rec', 'Preview': 'b-prev', 'OSS': 'b-oss', 'Deprecated': 'b-dep',
 }
 
-# 生命周期（退役计划表）：deprecated=已宣布弃用、retired=已退役、legacy=旧版计划退役
-LIFECYCLE = {
-    'deprecated': ('t-red', 'Deprecated'),
-    'retired': ('t-red', 'Retired'),
-    'legacy': ('t-amber', 'Legacy'),
+# 逐语言标签文案
+LABELS = {
+    'zh': {
+        'price': {'sky': '天价', 'expensive': '昂贵', 'high': '较贵',
+                  'mid': '适中', 'low': '实惠', 'cheap': '白菜价'},
+        'tier': {'flagship': '旗舰', 'balanced': '均衡', 'budget': '经济'},
+        'reasoning': {5: '最强', 4: '深度', 3: '标准', 2: '基础', 1: '快速'},
+        'speed': {5: '极速', 4: '快速', 3: '标准', 2: '较慢', 1: '很慢'},
+        'modality': {'text': '文本', 'image': '图像', 'audio': '音频',
+                     'video': '视频', 'code': '代码', 'pdf': 'PDF'},
+        'lifecycle': {'deprecated': 'Deprecated', 'retired': 'Retired', 'legacy': 'Legacy'},
+        # 图例标题与默认价格单位说明
+        'legend_titles': {'tier': '定位', 'speed': '响应速度',
+                          'modality': '模态能力', 'reasoning': '推理强度', 'price': '价格档位'},
+        'price_note': '单位：USD / 1M tokens（输入 / 输出）',
+        'updated_label': '最后更新',
+    },
+    'en': {
+        'price': {'sky': 'Premium', 'expensive': 'Expensive', 'high': 'Costly',
+                  'mid': 'Moderate', 'low': 'Affordable', 'cheap': 'Cheapest'},
+        'tier': {'flagship': 'Flagship', 'balanced': 'Balanced', 'budget': 'Budget'},
+        'reasoning': {5: 'Best', 4: 'Deep', 3: 'Standard', 2: 'Basic', 1: 'Fast'},
+        'speed': {5: 'Fastest', 4: 'Fast', 3: 'Standard', 2: 'Slow', 1: 'Slowest'},
+        'modality': {'text': 'Text', 'image': 'Image', 'audio': 'Audio',
+                     'video': 'Video', 'code': 'Code', 'pdf': 'PDF'},
+        'lifecycle': {'deprecated': 'Deprecated', 'retired': 'Retired', 'legacy': 'Legacy'},
+        'legend_titles': {'tier': 'Tier', 'speed': 'Speed',
+                          'modality': 'Modality', 'reasoning': 'Reasoning', 'price': 'Price'},
+        'price_note': 'Unit: USD / 1M tokens (input / output)',
+        'updated_label': 'Last updated',
+    },
 }
+
+
+def _L(group, key):
+    """按当前 LANG 取标签文案，缺失时回退中文（新语言漏翻不至崩溃）"""
+    table = LABELS.get(LANG, LABELS['zh'])[group]
+    return table.get(key, LABELS['zh'][group].get(key, str(key)))
 
 
 def tag(cls, inner):
@@ -109,15 +128,16 @@ def cell_price(value):
         return '<span class="mono-dim">—</span>'
     if isinstance(value, dict):
         return value['raw']
-    cls, level, name = PRICE_TIERS[value]
+    cls, level = PRICE_CLASS[value]
+    name = _L('price', value)
     return (f'<span class="tag{(" " + cls) if cls else ""} price-ico" '
             f'title="{name}">{bars(level)}</span>')
 
 
 def cell_tier(value):
     """定位列轻标记：圆点 + 着色文字（无底无框），与价格列底色药丸拉开视觉通道"""
-    cls, name = TIER_LEVELS[value]
-    return f'<span class="tier-tag {cls}">{name}</span>'
+    cls = TIER_CLASS[value]
+    return f'<span class="tier-tag {cls}">{_L("tier", value)}</span>'
 
 
 def cell_mods(mods):
@@ -127,20 +147,20 @@ def cell_mods(mods):
         cls, mods = mods.get('cls', ''), mods['items']
     parts = []
     for m in mods:
-        icon, label = MODALITIES[m]
+        icon, label = MODALITY_ICON[m], _L('modality', m)
         parts.append(f'<span class="tag{(" " + cls) if cls else ""} mod-ico" title="{label}">{ic(icon)}</span>')
     return '<div class="mods">' + ''.join(parts) + '</div>'
 
 
 def cell_reasoning(level):
-    name = REASONING_NAMES[level]
+    name = _L('reasoning', level)
     cls = 't-teal' if level >= 2 else ''
     return tag(cls, BRAIN + dots(level) + name)
 
 
 def cell_speed(level):
-    cls, name = SPEED_LEVELS[level]
-    return tag(cls, BOLT + name)
+    cls = SPEED_CLASS[level]
+    return tag(cls, BOLT + _L('speed', level))
 
 
 def cell_ctx(value):
@@ -184,7 +204,7 @@ CELL_RENDERERS = {
     'plain': lambda v: v,
     'mdesc': lambda v: v,          # 内容即 HTML（可内嵌 mono-dim 等）
     'replacement': lambda v: f'<span class="arrow-sep">→</span><span class="mono-dim">{v}</span>',
-    'lifecycle': lambda v: tag(*LIFECYCLE[v]),
+    'lifecycle': lambda v: tag('t-amber' if v == 'legacy' else 't-red', _L('lifecycle', v)),
     'raw': lambda v: v,            # 原样输出（逃生口）
 }
 
@@ -252,42 +272,70 @@ def render_legend(groups):
 
 def default_legend(ranges=None, note=None, modalities=None):
     """默认图例（与 page-style.md 的档位定义同步，覆盖大多数页面）。
-    ranges/note/modalities 可按提供商覆盖（如 Qwen 用 CNY、Gemini 模态含 PDF）。"""
+    ranges/note/modalities 可按提供商覆盖（如 Qwen 用 CNY、Gemini 模态含 PDF）。
+    档名/标题按当前 LANG 取；ranges/note 属数据层内容（含货币口径），不翻译，
+    需英文口径时经 legend_overrides 覆盖。"""
     def r(n):
-        return tag('t-teal' if n >= 2 else '', BRAIN + dots(n) + REASONING_NAMES[n])
+        return tag('t-teal' if n >= 2 else '', BRAIN + dots(n) + _L('reasoning', n))
     def s(n):
-        cls, name = SPEED_LEVELS[n]
-        return tag(cls, BOLT + name)
+        return tag(SPEED_CLASS[n], BOLT + _L('speed', n))
     def t(k):
-        cls, name = TIER_LEVELS[k]
-        return f'<span class="tier-tag {cls}">{name}</span>'
+        return f'<span class="tier-tag {TIER_CLASS[k]}">{_L("tier", k)}</span>'
     def m(k):
-        icon, label = MODALITIES[k]
-        return tag('', f'{ic(icon)}{label}')
+        return tag('', f'{ic(MODALITY_ICON[k])}{_L("modality", k)}')
+    titles = LABELS.get(LANG, LABELS['zh'])['legend_titles']
     if ranges is None:
         ranges = {'sky': '$100+ / $500+', 'expensive': '$10-100 / $50-500', 'high': '$2-10 / $8-50',
                   'mid': '$0.5-2 / $2-8', 'low': '$0.1-0.5 / $0.4-2', 'cheap': '&lt;$0.1 / &lt;$0.4'}
     if note is None:
-        note = '单位：USD / 1M tokens（输入 / 输出）'
+        note = LABELS.get(LANG, LABELS['zh'])['price_note']
     if modalities is None:
         modalities = ['text', 'image', 'audio', 'video', 'code']
     price_items = []
     for k in ('sky', 'expensive', 'high', 'mid', 'low', 'cheap'):
-        cls, lv, name = PRICE_TIERS[k]
-        price_items.append(tag(cls, bars(lv) + name + f'<span class="legend-range">{ranges[k]}</span>'))
+        cls, lv = PRICE_CLASS[k]
+        price_items.append(tag(cls, bars(lv) + _L('price', k) + f'<span class="legend-range">{ranges[k]}</span>'))
     return [
-        {'title': '定位', 'items_html': t('flagship') + t('balanced') + t('budget')},
-        {'title': '响应速度', 'items_html': ''.join(s(n) for n in (5, 4, 3, 2, 1))},
-        {'title': '模态能力', 'items_html': ''.join(m(k) for k in modalities)},
-        {'title': '推理强度', 'items_html': ''.join(r(n) for n in (5, 4, 3, 2, 1))},
-        {'title': '价格档位', 'wide': True,
+        {'title': titles['tier'], 'items_html': t('flagship') + t('balanced') + t('budget')},
+        {'title': titles['speed'], 'items_html': ''.join(s(n) for n in (5, 4, 3, 2, 1))},
+        {'title': titles['modality'], 'items_html': ''.join(m(k) for k in modalities)},
+        {'title': titles['reasoning'], 'items_html': ''.join(r(n) for n in (5, 4, 3, 2, 1))},
+        {'title': titles['price'], 'wide': True,
          'items_html': ''.join(price_items) + f'<span class="legend-note">{note}</span>'},
     ]
 
 
-def render(data, template_path=DEFAULT_TEMPLATE):
+def build_lang_switch(meta, lang):
+    """页头右上角语言切换器。数据未声明 meta.lang_switch 时返回空串，
+    这样未双语化的页面渲染结果与历史逐字节一致（{{LANG_SWITCH}} → ''）。
+
+    meta.lang_switch = {"zh": {"href": "x.html", "label": "中"},
+                        "en": {"href": "x-en.html", "label": "EN"}}
+    当前语言项高亮（.on），其余为跳转链接；链接末尾的 ?embed=1 由页内脚本补齐，
+    保证在 index.html 的 iframe 里切换语言不丢嵌入态。"""
+    ls = meta.get('lang_switch')
+    if not ls:
+        return ''
+    order = [k for k in ('zh', 'en') if k in ls] + [k for k in ls if k not in ('zh', 'en')]
+    parts = []
+    for k in order:
+        item = ls[k]
+        if k == lang:
+            parts.append(f'<span class="lang-opt on" aria-current="true">{item["label"]}</span>')
+        else:
+            parts.append(f'<a class="lang-opt" href="{item["href"]}" '
+                         f'data-lang-href="{item["href"]}">{item["label"]}</a>')
+    return '<div class="lang-switch" role="group" aria-label="language">' + ''.join(parts) + '</div>'
+
+
+def render(data, template_path=DEFAULT_TEMPLATE, lang='zh'):
+    global LANG
+    LANG = lang if lang in LABELS else 'zh'
     tpl = open(template_path, encoding='utf-8').read()
     meta = data['meta']
+
+    # 数据文件可显式声明 lang；否则用参数。仅用于 <html lang> 与切换器高亮
+    page_lang = meta.get('lang', LANG)
 
     stats = []
     for i, s in enumerate(meta['stats']):
@@ -315,6 +363,7 @@ def render(data, template_path=DEFAULT_TEMPLATE):
         sections.append(render_section(sec))
 
     repl = {
+        'HTML_LANG': 'zh-CN' if page_lang == 'zh' else 'en',
         'TITLE': meta['title'],
         'EYEBROW': meta['eyebrow'],
         'H1': meta['h1'],
@@ -322,12 +371,14 @@ def render(data, template_path=DEFAULT_TEMPLATE):
         'HOME_HREF': meta.get('home_href', './index.html'),
         'HOME_TITLE': meta.get('home_title', '返回模型价格对比工具'),
         'HOME_LABEL': meta.get('home_label', '对比工具'),
+        'LANG_SWITCH': build_lang_switch(meta, page_lang),
         'STATS': '\n      '.join(stats),
         'NAV': nav,
         'NAV_SPY_CSS': nav_spy_css,
         'SECTIONS': '\n\n'.join(sections),
         'FOOTER_TITLE': meta['footer_title'],
         'FOOTER_UPDATED': meta['footer_updated'],
+        'FOOTER_UPDATE_LABEL': LABELS.get(LANG, LABELS['zh'])['updated_label'],
         'FOOTER_RULES': meta['footer_rules'],
         'FOOTER_SOURCES': meta['footer_sources'],
     }
@@ -339,31 +390,53 @@ def render(data, template_path=DEFAULT_TEMPLATE):
     return tpl
 
 
+def _render_one(data_path, out_path, template_path, lang):
+    """渲染单页并跑结构校验；校验失败退出"""
+    data = json.load(open(data_path, encoding='utf-8'))
+    html = render(data, template_path, lang=lang)
+    open(out_path, 'w', encoding='utf-8').write(html)
+    print(f'rendered: {out_path} ({len(html)} bytes, lang={lang})')
+    checker = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'check_html.py')
+    r = os.system(f'{sys.executable} "{checker}" "{out_path}"')
+    if r != 0:
+        sys.exit(1)
+
+
 def main():
     data_path = sys.argv[1]
     out_path = None
     template_path = DEFAULT_TEMPLATE
-    args = sys.argv[2:]
+    lang = 'zh'
+    zh_only = '--zh-only' in sys.argv
+    args = [a for a in sys.argv[2:] if a != '--zh-only']
     i = 0
     while i < len(args):
         if args[i] == '-o':
             out_path = args[i + 1]; i += 2
         elif args[i] == '-t':
             template_path = args[i + 1]; i += 2
+        elif args[i] == '--lang':
+            lang = args[i + 1]; i += 2
         else:
             i += 1
     if not out_path:
         out_path = os.path.splitext(os.path.basename(data_path))[0] + '.html'
 
-    data = json.load(open(data_path, encoding='utf-8'))
-    html = render(data, template_path)
-    open(out_path, 'w', encoding='utf-8').write(html)
-    print(f'rendered: {out_path} ({len(html)} bytes)')
+    _render_one(data_path, out_path, template_path, lang)
 
-    checker = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'check_html.py')
-    r = os.system(f'{sys.executable} "{checker}" "{out_path}"')
-    if r != 0:
-        sys.exit(1)
+    # 双语同步（默认开启）：渲染 zh 数据且同目录存在 <厂商>-en.json 时，自动一并渲染英文页，
+    # 保证更新中文数据后英文版不遗漏；只需渲染英文页时用 --lang en 指定 en 数据即可。
+    if lang == 'zh' and not zh_only:
+        base = os.path.splitext(data_path)[0]
+        en_data = base + '-en.json'
+        if os.path.exists(en_data):
+            en_out = out_path[:-5] + '-en.html' if out_path.endswith('.html') else out_path + '-en.html'
+            _render_one(en_data, en_out, template_path, 'en')
+            # 中英文语义一致性校验（结构镜像 / 语言中立值 / 模型 ID 集合 / en 无中文残留）
+            bilingual = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'check_bilingual.py')
+            r = os.system(f'{sys.executable} "{bilingual}" "{data_path}" "{en_data}"')
+            if r != 0:
+                sys.exit(1)
 
 
 if __name__ == '__main__':

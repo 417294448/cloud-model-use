@@ -1,6 +1,31 @@
 {
   "meta": {
-    "lang": "zh",
+    "title": "Tongyi Qwen Model Selection Guide 2026",
+    "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
+    "h1": "Tongyi Qwen Model Selection Guide",
+    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-29)",
+    "stats": [
+      {
+        "num": "135",
+        "icon": "i-models",
+        "label": "Models"
+      },
+      {
+        "num": "12",
+        "icon": "i-modes",
+        "label": "Categories"
+      },
+      {
+        "num": "10M",
+        "icon": "i-ruler",
+        "label": "Max context"
+      }
+    ],
+    "footer_title": "Tongyi Qwen Model Selection Guide",
+    "footer_updated": "2026-08-29",
+    "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
+    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-29)",
+    "lang": "en",
     "lang_switch": {
       "zh": {
         "href": "qwen-model-userguide.html",
@@ -10,32 +35,7 @@
         "href": "qwen-model-userguide-en.html",
         "label": "EN"
       }
-    },
-    "title": "通义千问模型选择指南 2026",
-    "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
-    "h1": "通义千问模型选择指南",
-    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-08-29 同步）",
-    "stats": [
-      {
-        "num": "135",
-        "icon": "i-models",
-        "label": "收录模型"
-      },
-      {
-        "num": "12",
-        "icon": "i-modes",
-        "label": "模型分类"
-      },
-      {
-        "num": "10M",
-        "icon": "i-ruler",
-        "label": "最大上下文"
-      }
-    ],
-    "footer_title": "通义千问模型选择指南",
-    "footer_updated": "2026-08-29",
-    "footer_rules": "max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时",
-    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-08-29 同步）"
+    }
   },
   "legend_overrides": {
     "ranges": {
@@ -46,90 +46,90 @@
       "low": "¥0.1-0.5 / ¥0.4-2",
       "cheap": "&lt;¥0.1 / &lt;¥0.4"
     },
-    "note": "单位：元 CNY / 1M tokens（输入 / 输出），华北2（北京）原价"
+    "note": "Unit: CNY / 1M tokens (input / output), North China 2 (Beijing) list price"
   },
   "sections": [
     {
       "id": "quick",
       "kind": "quick",
-      "title": "快速选型",
+      "title": "Quick Picks",
       "icon": "i-bolt",
-      "nav": "快速选型",
-      "desc": "按任务类型直达推荐模型",
+      "nav": "Quick Picks",
+      "desc": "Direct recommendation by task type",
       "cards": [
         {
           "icon": "i-chat",
-          "task": "日常对话 / 写作",
+          "task": "Chat / Writing",
           "model": "qwen3.7-plus"
         },
         {
           "icon": "i-brain",
-          "task": "深度思考 / 推理",
+          "task": "Deep thinking / reasoning",
           "model": "qwen3.8-max"
         },
         {
           "icon": "i-spark",
-          "task": "最强旗舰",
+          "task": "Top flagship",
           "model": "qwen3.8-max-prime"
         },
         {
           "icon": "i-coin",
-          "task": "极致省钱",
+          "task": "Cheapest",
           "model": "qwen3.7-flash"
         },
         {
           "icon": "i-code",
-          "task": "专业编程",
+          "task": "Expert coding",
           "model": "qwen3-coder-plus"
         },
         {
           "icon": "i-doc",
-          "task": "超长文档处理",
+          "task": "Long-document processing",
           "model": "qwen-long"
         },
         {
           "icon": "i-eye",
-          "task": "图像 / 视频理解",
+          "task": "Image / video understanding",
           "model": "qwen3-vl-plus"
         },
         {
           "icon": "i-modes",
-          "task": "全模态对话",
+          "task": "Omni-modal chat",
           "model": "qwen3.5-omni-plus"
         },
         {
           "icon": "i-audio",
-          "task": "实时语音对话",
+          "task": "Realtime voice chat",
           "model": "qwen-audio-3.0-realtime-plus"
         },
         {
           "icon": "i-mic",
-          "task": "语音听录",
+          "task": "Speech transcription",
           "model": "qwen-audio-3.0-asr-flash-filetrans"
         },
         {
           "icon": "i-speaker",
-          "task": "语音合成",
+          "task": "Speech synthesis",
           "model": "qwen-audio-3.0-tts-plus"
         },
         {
           "icon": "i-image",
-          "task": "图像生成",
+          "task": "Image generation",
           "model": "qwen-image-3.0-pro"
         },
         {
           "icon": "i-video",
-          "task": "视频生成",
+          "task": "Video generation",
           "model": "happyhorse-1.1-t2v"
         },
         {
           "icon": "i-search",
-          "task": "语义搜索 / RAG",
+          "task": "Semantic search / RAG",
           "model": "text-embedding-v4"
         },
         {
           "icon": "i-globe",
-          "task": "实时语音翻译",
+          "task": "Realtime speech translation",
           "model": "qwen3.5-livetranslate-flash-realtime"
         }
       ]
@@ -137,15 +137,15 @@
     {
       "id": "naming",
       "kind": "table",
-      "title": "命名规律速查",
+      "title": "Naming Conventions",
       "icon": "i-ruler",
-      "nav": "命名规律",
-      "desc": "掌握这些规律，看到任何模型名都能秒懂其定位",
+      "nav": "Naming",
+      "desc": "Master these patterns and instantly know any model name",
       "table_class": "rules",
       "columns": [
-        "命名元素",
-        "含义",
-        "示例"
+        "Suffix",
+        "Meaning",
+        "Example"
       ],
       "row_types": [
         "raw",
@@ -154,118 +154,118 @@
       ],
       "rows": [
         [
-          "qwen3.X 版本号",
-          "数字越大，模型越新越强",
+          "qwen3.X version number",
+          "Higher number = newer and stronger",
           "qwen3 → qwen3.5 → qwen3.8"
         ],
         [
           "-max",
-          "旗舰版，最强能力",
+          "Flagship, strongest capability",
           "qwen3.8-max"
         ],
         [
           "-prime",
-          "优速模式，更快更强更贵",
+          "Prime mode, faster, stronger and pricier",
           "qwen3.8-max-prime"
         ],
         [
           "-plus",
-          "均衡增强版",
+          "Balanced enhanced",
           "qwen3.7-plus"
         ],
         [
           "-flash",
-          "轻量快速，极致省钱",
+          "Lightweight and fast, cheapest",
           "qwen3.7-flash"
         ],
         [
           "-turbo",
-          "速度优化版（旧代）",
+          "Speed-optimized (legacy)",
           "qwen-turbo"
         ],
         [
           "qwq-",
-          "深度思考专用（仅思考模式）",
+          "Deep thinking only (thinking mode)",
           "qwq-plus"
         ],
         [
           "-coder",
-          "编程专用",
+          "Coding",
           "qwen3-coder-plus"
         ],
         [
           "-long",
-          "超长文本专用",
+          "Ultra-long text only",
           "qwen-long"
         ],
         [
           "-vl",
-          "视觉语言模型",
+          "Vision-language model",
           "qwen3-vl-plus"
         ],
         [
           "-omni",
-          "全模态（文/图/音/视频）",
+          "Omni-modal (text/image/audio/video)",
           "qwen3.5-omni-plus"
         ],
         [
           "-ocr",
-          "文档文字提取",
+          "Document text extraction",
           "qwen3.5-ocr"
         ],
         [
           "-asr / -tts",
-          "语音识别 / 语音合成",
+          "Speech recognition / synthesis",
           "qwen-audio-3.0-asr-flash"
         ],
         [
           "-realtime",
-          "WebSocket 实时版",
+          "WebSocket realtime",
           "qwen3.5-omni-plus-realtime"
         ],
         [
           "-filetrans / -streaming",
-          "文件转写 / 流式实时",
+          "File transcription / streaming realtime",
           "qwen-audio-3.0-asr-flash-filetrans"
         ],
         [
           "-livetranslate",
-          "实时语音翻译",
+          "Realtime speech translation",
           "qwen3.5-livetranslate-flash"
         ],
         [
           "-instruct / -vc / -vd",
-          "指令控制 / 声音复刻 / 声音设计",
+          "Instruct / voice clone / voice design",
           "qwen3-tts-instruct-flash"
         ],
         [
           "-embedding / -rerank",
-          "向量化 / 重排序",
+          "Embedding / reranking",
           "text-embedding-v4, qwen3-rerank"
         ],
         [
           "wan2.X-",
-          "万相视觉生成（图像/视频）",
+          "Wanxiang visual generation (image/video)",
           "wan2.7-image, wan2.6-t2v"
         ],
         [
           "-t2i/-t2v/-i2v/-r2v/-s2v",
-          "文生图/文生视频/图生视频/参考视频/声生视频",
+          "T2I/T2V/I2V/reference-to-video/audio-to-video",
           "wan2.6-t2i, wan2.6-r2v"
         ],
         [
           "-latest / -YYYYMMDD",
-          "最新快照 / 日期快照",
+          "Latest snapshot / dated snapshot",
           "qwen3.7-plus-2026-05-26"
         ],
         [
           "cosyvoice- / fun-asr-",
-          "语音合成 / 语音识别系列",
+          "Speech synthesis / recognition series",
           "cosyvoice-v3.5-plus, fun-asr"
         ],
         [
           "z-image- / happyhorse-",
-          "快速图像 / 第三方视频生成",
+          "Fast image / third-party video generation",
           "z-image-turbo, happyhorse-1.1-t2v"
         ]
       ]
@@ -273,20 +273,20 @@
     {
       "id": "text",
       "kind": "table",
-      "title": "文本生成模型",
+      "title": "Text Generation Models",
       "icon": "i-text",
-      "nav": "文本",
-      "desc": "千问主力文本模型，全系支持混合思考模式（<span class=\"mono\">enable_thinking</span> 开关）与 1M 上下文；视觉输入能力见「视觉理解」章节",
+      "nav": "Text",
+      "desc": "Qwen's core text models; the whole family supports hybrid thinking mode (the <span class=\"mono\">enable_thinking</span> switch) and 1M context; vision input is covered in the \"Vision Understanding\" section",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "模态",
-        "思考",
-        "速度",
-        "上下文",
-        "最大输出",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Modality",
+        "Thinking",
+        "Speed",
+        "Context",
+        "Max output",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -321,7 +321,7 @@
             "hi": true
           },
           "64k",
-          "优速模式（Prime），当前最强，¥24/¥72"
+          "Prime mode, currently the strongest, ¥24/¥72"
         ],
         [
           {
@@ -344,7 +344,7 @@
             "hi": true
           },
           "64k",
-          "最新旗舰，混合思考默认开启，¥12/¥36"
+          "Latest flagship, hybrid thinking on by default, ¥12/¥36"
         ],
         [
           {
@@ -365,13 +365,13 @@
             "hi": true
           },
           "64k",
-          "上代旗舰，限时 5 折"
+          "Previous-gen flagship, 50% off for a limited time"
         ],
         [
           {
             "id": "qwen3.7-plus",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "balanced",
@@ -388,7 +388,7 @@
             "hi": true
           },
           "64k",
-          "旗舰平衡之选，¥2/¥8，内置工具+联网"
+          "Flagship balanced choice, ¥2/¥8, built-in tools + web"
         ],
         [
           {
@@ -411,7 +411,7 @@
             "hi": true
           },
           "64k",
-          "稠密 27B 版（1M 上下文），¥3/¥12"
+          "Dense 27B (1M context), ¥3/¥12"
         ],
         [
           {
@@ -432,7 +432,7 @@
             "hi": true
           },
           "64k",
-          "上代均衡版"
+          "Previous-gen balanced"
         ],
         [
           {
@@ -453,7 +453,7 @@
             "hi": true
           },
           "64k",
-          "上代轻量版，¥0.2 起"
+          "Previous-gen lightweight, from ¥0.2"
         ],
         [
           {
@@ -474,7 +474,7 @@
             "hi": true
           },
           "64k",
-          "成熟稳定"
+          "Mature and stable"
         ],
         [
           {
@@ -497,13 +497,13 @@
             "hi": true
           },
           "64k",
-          "最新轻量版，混合思考默认开启，¥0.8/¥2.7"
+          "Latest lightweight, hybrid thinking on by default, ¥0.8/¥2.7"
         ],
         [
           {
             "id": "qwen3.7-flash",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "budget",
@@ -520,7 +520,7 @@
             "hi": true
           },
           "64k",
-          "极致省钱，¥0.2/¥0.8"
+          "Cheapest, ¥0.2/¥0.8"
         ],
         [
           {
@@ -541,7 +541,7 @@
             "hi": true
           },
           "64k",
-          "上代轻量版"
+          "Previous-gen lightweight"
         ],
         [
           {
@@ -561,7 +561,7 @@
             "hi": true
           },
           "64k",
-          "编程专用，Agentic 编程优化，¥4/¥16"
+          "Coding-specialized, agentic coding optimized, ¥4/¥16"
         ],
         [
           {
@@ -580,7 +580,7 @@
             "hi": true
           },
           "8k",
-          "超长文本专用（千万字级），¥0.5/¥2"
+          "Ultra-long text (tens of millions of chars), ¥0.5/¥2"
         ],
         [
           {
@@ -596,7 +596,7 @@
           4,
           "—",
           "—",
-          "机器翻译专用，多语言互译"
+          "Machine translation, multilingual"
         ],
         [
           {
@@ -614,27 +614,27 @@
           2,
           "128K",
           "32k",
-          "Qwen3 代旗舰（旧代），¥2.5 起"
+          "Qwen3-generation flagship (legacy), from ¥2.5"
         ]
       ]
     },
     {
       "id": "qwq",
       "kind": "table",
-      "title": "QwQ 深度思考模型",
+      "title": "QwQ Deep Thinking Models",
       "icon": "i-brain",
       "nav": "QwQ",
-      "desc": "仅思考模式（始终先推理再回答，不可关闭）；若需可控开关，请用文本生成模型的混合思考模式",
+      "desc": "Thinking-only mode (always reasons before answering; cannot be disabled); for a controllable switch, use the hybrid thinking mode of text generation models",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "模态",
-        "思考",
-        "速度",
-        "上下文",
-        "最大输出",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Modality",
+        "Thinking",
+        "Speed",
+        "Context",
+        "Max output",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -652,7 +652,7 @@
           {
             "id": "qwq-plus",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "balanced",
@@ -664,27 +664,27 @@
           2,
           "128K",
           "32k",
-          "仅思考模式，逻辑/数学推理专用，¥1.6/¥4"
+          "Thinking-only mode, for logic/math reasoning, ¥1.6/¥4"
         ]
       ]
     },
     {
       "id": "omni",
       "kind": "table",
-      "title": "全模态模型（Omni）",
+      "title": "Omni-Modal Models (Omni)",
       "icon": "i-modes",
-      "nav": "全模态",
-      "desc": "同时理解文本、音频、图片、视频，输出文本和语音；实时语音对话见「实时语音对话」行",
+      "nav": "Omni-modal",
+      "desc": "Understands text, audio, images and video at once; outputs text and speech; for realtime voice chat see the \"Realtime voice chat\" row",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "输入",
-        "输出",
+        "Model ID",
+        "Tier",
+        "Price",
+        "Input",
+        "Output",
         "API",
-        "思考",
-        "特性",
-        "说明"
+        "Thinking",
+        "Features",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -720,8 +720,8 @@
           },
           "HTTP",
           1,
-          "FC+联网",
-          "全模态旗舰，音频 3 小时 / 视频 1 小时"
+          "FC+web",
+          "Omni-modal flagship, 3h audio / 1h video"
         ],
         [
           {
@@ -745,8 +745,8 @@
           },
           "WebSocket",
           1,
-          "FC+联网",
-          "实时音视频对话"
+          "FC+web",
+          "Realtime audio/video chat"
         ],
         [
           {
@@ -770,8 +770,8 @@
           },
           "HTTP",
           1,
-          "FC+联网",
-          "轻量全模态，¥2.2 起"
+          "FC+web",
+          "Lightweight omni-modal, from ¥2.2"
         ],
         [
           {
@@ -795,8 +795,8 @@
           },
           "WebSocket",
           1,
-          "FC+联网",
-          "实时版"
+          "FC+web",
+          "Realtime"
         ],
         [
           {
@@ -820,7 +820,7 @@
           "HTTP",
           3,
           "FC",
-          "支持思考模式，单次输入限 150 秒"
+          "Supports thinking mode; single input limited to 150s"
         ],
         [
           {
@@ -845,7 +845,7 @@
           "WebSocket",
           1,
           "—",
-          "实时版，不支持 FC/联网/思考"
+          "Realtime; no FC/web/thinking"
         ],
         [
           {
@@ -869,8 +869,8 @@
           },
           "WebSocket",
           1,
-          "语义VAD+FC",
-          "S2S 语音对话旗舰，无意义附和声不打断"
+          "Semantic VAD+FC",
+          "S2S voice chat flagship; meaningless backchannels won't interrupt"
         ],
         [
           {
@@ -894,8 +894,8 @@
           },
           "WebSocket",
           1,
-          "语义VAD+FC",
-          "成本敏感版语音对话"
+          "Semantic VAD+FC",
+          "Cost-sensitive voice chat"
         ],
         [
           {
@@ -919,25 +919,25 @@
           "HTTP",
           1,
           "—",
-          "旧版全模态，建议迁移 qwen3.5-omni"
+          "Legacy omni-modal; migrate to qwen3.5-omni"
         ]
       ]
     },
     {
       "id": "livetranslate",
       "kind": "table",
-      "title": "实时语音翻译（Livetranslate）",
+      "title": "Realtime Speech Translation (Livetranslate)",
       "icon": "i-globe",
-      "nav": "翻译",
-      "desc": "语音同传约 3 秒延迟，开箱即用；文件模式支持音视频文件翻译",
+      "nav": "Translation",
+      "desc": "~3s-latency simultaneous interpretation, works out of the box; file mode translates audio/video files",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "输入",
+        "Model ID",
+        "Tier",
+        "Price",
+        "Input",
         "API",
-        "语言数",
-        "说明"
+        "Languages",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -954,19 +954,19 @@
             "id": "qwen3.5-livetranslate-flash-realtime",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "balanced",
           {
-            "raw": "<span class=\"mono-dim\">音频 ¥40/1M</span>"
+            "raw": "<span class=\"mono-dim\">Audio ¥40/1M</span>"
           },
           [
             "audio"
           ],
           "WebSocket",
           "60",
-          "实时同传首选，29 种语音+31 种文本输出"
+          "Top choice for realtime interpreting; 29 speech + 31 text outputs"
         ],
         [
           {
@@ -975,7 +975,7 @@
           },
           "balanced",
           {
-            "raw": "<span class=\"mono-dim\">音频 ¥40/1M</span>"
+            "raw": "<span class=\"mono-dim\">Audio ¥40/1M</span>"
           },
           [
             "audio",
@@ -983,7 +983,7 @@
           ],
           "HTTP",
           "60",
-          "音视频文件翻译"
+          "Audio/video file translation"
         ],
         [
           {
@@ -992,14 +992,14 @@
           },
           "budget",
           {
-            "raw": "<span class=\"mono-dim\">音频 ¥64/1M</span>"
+            "raw": "<span class=\"mono-dim\">Audio ¥64/1M</span>"
           },
           [
             "audio"
           ],
           "WebSocket",
           "18",
-          "上代实时版，含 5 种中文方言"
+          "Previous-gen realtime, incl. 5 Chinese dialects"
         ],
         [
           {
@@ -1008,7 +1008,7 @@
           },
           "budget",
           {
-            "raw": "<span class=\"mono-dim\">音频 ¥64/1M</span>"
+            "raw": "<span class=\"mono-dim\">Audio ¥64/1M</span>"
           },
           [
             "audio",
@@ -1016,28 +1016,28 @@
           ],
           "HTTP",
           "18",
-          "文件模式，视频上下文感知"
+          "File mode, video-context aware"
         ]
       ]
     },
     {
       "id": "vl",
       "kind": "table",
-      "title": "视觉理解模型（VL / OCR）",
+      "title": "Vision Understanding Models (VL / OCR)",
       "icon": "i-eye",
-      "nav": "视觉",
-      "desc": "图像分析、视频理解、OCR 文档提取。注：文本生成章节中的 qwen3.8/3.7/3.6/3.5 全系同样支持视觉输入（1M 上下文、最长 2 小时视频），VL 系列为视觉专用增强",
+      "nav": "Vision",
+      "desc": "Image analysis, video understanding, OCR document extraction. Note: all qwen3.8/3.7/3.6/3.5 models in the Text Generation section also support vision input (1M context, up to 2h video); the VL series adds vision-specialized enhancements",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "模态",
-        "思考",
-        "速度",
-        "上下文",
-        "最大输出",
-        "特性",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Modality",
+        "Thinking",
+        "Speed",
+        "Context",
+        "Max output",
+        "Features",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -1056,7 +1056,7 @@
           {
             "id": "qwen3-vl-plus",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
@@ -1070,8 +1070,8 @@
           3,
           "256K",
           "64k",
-          "视频 1 小时",
-          "视觉旗舰，¥1/¥10 起"
+          "1h video",
+          "Vision flagship, from ¥1/¥10"
         ],
         [
           {
@@ -1089,8 +1089,8 @@
           4,
           "256K",
           "64k",
-          "视频 1 小时",
-          "轻量视觉版"
+          "1h video",
+          "Lightweight vision"
         ],
         [
           {
@@ -1107,8 +1107,8 @@
           3,
           "—",
           "—",
-          "文档/表格/手写",
-          "OCR 专用，文字提取精度优化"
+          "Docs/tables/handwriting",
+          "OCR-specialized, optimized text extraction accuracy"
         ],
         [
           {
@@ -1126,7 +1126,7 @@
           "—",
           "—",
           "—",
-          "旧版 OCR，建议迁移 qwen3.5-ocr"
+          "Legacy OCR; migrate to qwen3.5-ocr"
         ],
         [
           {
@@ -1143,8 +1143,8 @@
           2,
           "—",
           "—",
-          "视觉推理",
-          "旧版视觉推理，能力已并入 Qwen3-VL"
+          "Visual reasoning",
+          "Legacy visual reasoning; capability merged into Qwen3-VL"
         ],
         [
           {
@@ -1161,8 +1161,8 @@
           2,
           "—",
           "—",
-          "视觉推理",
-          "旧版视觉推理"
+          "Visual reasoning",
+          "Legacy visual reasoning"
         ],
         [
           {
@@ -1180,7 +1180,7 @@
           "—",
           "—",
           "—",
-          "旧版 VL"
+          "Legacy VL"
         ],
         [
           {
@@ -1198,26 +1198,26 @@
           "—",
           "—",
           "—",
-          "旧版 VL"
+          "Legacy VL"
         ]
       ]
     },
     {
       "id": "image",
       "kind": "table",
-      "title": "图像生成模型",
+      "title": "Image Generation Models",
       "icon": "i-image",
-      "nav": "图像",
-      "desc": "文生图与图片编辑；qwen-image-3.0 系列支持 agent prompt 智能改写与中文文字渲染",
+      "nav": "Image",
+      "desc": "Text-to-image and image editing; the qwen-image-3.0 family supports agent prompt rewriting and Chinese text rendering",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "文生图",
-        "编辑",
-        "最大输出",
-        "最大分辨率",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Text-to-image",
+        "Editing",
+        "Max output",
+        "Max resolution",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -1235,16 +1235,16 @@
             "id": "qwen-image-3.0-pro",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
           "high",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "6",
           "2048x2048",
-          "图像 3.0 旗舰，agent prompt 改写，小字/多语言渲染"
+          "Image 3.0 flagship, agent prompt rewriting, small-text/multilingual rendering"
         ],
         [
           {
@@ -1255,11 +1255,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "6",
           "2048x2048",
-          "同上，生成速度更快"
+          "Same as above, faster generation"
         ],
         [
           {
@@ -1270,11 +1270,11 @@
           },
           "flagship",
           "high",
-          "支持",
-          "支持",
-          "4（连续12）",
+          "Yes",
+          "Yes",
+          "4 (12 consecutive)",
           "4096x4096",
-          "品牌色调色盘、多图参考（9 张）、角色一致性"
+          "Brand color palette, multi-image reference (9 images), character consistency"
         ],
         [
           {
@@ -1285,11 +1285,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
-          "4（连续12）",
+          "Yes",
+          "Yes",
+          "4 (12 consecutive)",
           "2048x2048",
-          "同上，生成速度更快"
+          "Same as above, faster generation"
         ],
         [
           {
@@ -1298,11 +1298,11 @@
           },
           "budget",
           "low",
-          "支持",
-          "不支持",
+          "Yes",
+          "No",
           "1",
           "2048x2048",
-          "快 10 倍、价格约 1/5，写实人像/产品图"
+          "10x faster, ~1/5 the price, photorealistic portraits/product shots"
         ],
         [
           {
@@ -1311,11 +1311,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "6",
           "2048x2048",
-          "上代专业版"
+          "Previous-gen pro"
         ],
         [
           {
@@ -1324,11 +1324,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "6",
           "2048x2048",
-          "上代标准版"
+          "Previous-gen standard"
         ],
         [
           {
@@ -1337,11 +1337,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "不支持",
+          "Yes",
+          "No",
           "1",
           "1664x928",
-          "旧版旗舰"
+          "Legacy flagship"
         ],
         [
           {
@@ -1350,11 +1350,11 @@
           },
           "budget",
           "low",
-          "支持",
-          "不支持",
+          "Yes",
+          "No",
           "1",
           "1664x928",
-          "旧版均衡"
+          "Legacy balanced"
         ],
         [
           {
@@ -1363,11 +1363,11 @@
           },
           "balanced",
           "mid",
-          "不支持",
-          "支持",
+          "No",
+          "Yes",
           "6",
           "2048x2048",
-          "图片编辑专用"
+          "Image editing only"
         ],
         [
           {
@@ -1376,11 +1376,11 @@
           },
           "budget",
           "low",
-          "不支持",
-          "支持",
+          "No",
+          "Yes",
           "6",
           "2048x2048",
-          "图片编辑轻量版"
+          "Lightweight image editing"
         ],
         [
           {
@@ -1389,11 +1389,11 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "4",
           "1440x1440",
-          "万相文生图"
+          "Wanxiang text-to-image"
         ],
         [
           {
@@ -1402,28 +1402,28 @@
           },
           "balanced",
           "mid",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "4",
           "1440x1440",
-          "万相图像生成与编辑"
+          "Wanxiang image generation & editing"
         ]
       ]
     },
     {
       "id": "video",
       "kind": "table",
-      "title": "视频生成模型（万相 / HappyHorse）",
+      "title": "Video Generation Models (Wanxiang / HappyHorse)",
       "icon": "i-video",
-      "nav": "视频",
-      "desc": "按输出视频秒数计费（输入不计费），部分模型按分辨率分档定价",
+      "nav": "Video",
+      "desc": "Billed by output video seconds (input free); some models tiered by resolution",
       "columns": [
-        "模型 ID",
-        "定位",
-        "类型",
-        "计费",
-        "分辨率",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Type",
+        "Billing",
+        "Resolution",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -1439,14 +1439,14 @@
             "id": "wan3.0-video-prime",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
-          "文生视频",
-          "0.45-1.8元/秒",
+          "Text-to-video",
+          "¥0.45-1.8/sec",
           "1080P",
-          "最新万相视频旗舰"
+          "Latest Wanxiang video flagship"
         ],
         [
           {
@@ -1456,10 +1456,10 @@
             ]
           },
           "flagship",
-          "文生视频",
-          "0.3-1.2元/秒",
+          "Text-to-video",
+          "¥0.3-1.2/sec",
           "1080P",
-          "限时 7 折"
+          "30% off for a limited time"
         ],
         [
           {
@@ -1469,8 +1469,8 @@
             ]
           },
           "flagship",
-          "文生视频",
-          "0.6-1元/秒",
+          "Text-to-video",
+          "¥0.6-1/sec",
           "1080P",
           ""
         ],
@@ -1482,8 +1482,8 @@
             ]
           },
           "flagship",
-          "图生视频（有声）",
-          "0.6-1元/秒",
+          "Image-to-video (with audio)",
+          "¥0.6-1/sec",
           "1080P",
           ""
         ],
@@ -1495,8 +1495,8 @@
             ]
           },
           "flagship",
-          "参考生视频（有声）",
-          "0.6-1元/秒",
+          "Reference-to-video (with audio)",
+          "¥0.6-1/sec",
           "1080P",
           ""
         ],
@@ -1505,14 +1505,14 @@
             "id": "happyhorse-1.1-t2v",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
-          "文生视频",
-          "0.45-1.2元/秒",
+          "Text-to-video",
+          "¥0.45-1.2/sec",
           "1080P",
-          "限时 6 折，最新第三方视频生成"
+          "60% off for a limited time, latest third-party video generation"
         ],
         [
           {
@@ -1522,10 +1522,10 @@
             ]
           },
           "flagship",
-          "图生视频",
-          "按秒计费",
+          "Image-to-video",
+          "Per-second billing",
           "1080P",
-          "图片驱动视频"
+          "Image-driven video"
         ],
         [
           {
@@ -1535,10 +1535,10 @@
             ]
           },
           "flagship",
-          "参考生视频",
-          "按秒计费",
+          "Reference-to-video",
+          "Per-second billing",
           "1080P",
-          "参考图/角色驱动"
+          "Reference image/character driven"
         ],
         [
           {
@@ -1546,10 +1546,10 @@
             "badges": []
           },
           "flagship",
-          "文生视频",
-          "按秒计费",
+          "Text-to-video",
+          "Per-second billing",
           "1080P",
-          "万相文生视频"
+          "Wanxiang text-to-video"
         ],
         [
           {
@@ -1557,10 +1557,10 @@
             "badges": []
           },
           "flagship",
-          "图生视频",
-          "按秒计费",
+          "Image-to-video",
+          "Per-second billing",
           "1080P",
-          "万相图生视频"
+          "Wanxiang image-to-video"
         ],
         [
           {
@@ -1568,10 +1568,10 @@
             "badges": []
           },
           "flagship",
-          "参考生视频",
-          "按秒计费",
+          "Reference-to-video",
+          "Per-second billing",
           "1080P",
-          "万相参考生视频"
+          "Wanxiang reference-to-video"
         ],
         [
           {
@@ -1579,10 +1579,10 @@
             "badges": []
           },
           "balanced",
-          "文生视频",
-          "按秒计费",
+          "Text-to-video",
+          "Per-second billing",
           "1080P",
-          "上代专业版"
+          "Previous-gen pro"
         ],
         [
           {
@@ -1590,10 +1590,10 @@
             "badges": []
           },
           "balanced",
-          "图生视频",
-          "按秒计费",
+          "Image-to-video",
+          "Per-second billing",
           "1080P",
-          "上代专业版"
+          "Previous-gen pro"
         ],
         [
           {
@@ -1601,10 +1601,10 @@
             "badges": []
           },
           "balanced",
-          "首尾帧视频",
-          "按秒计费",
+          "First/last-frame video",
+          "Per-second billing",
           "720P",
-          "首帧+尾帧插值生成"
+          "Generated by interpolating first + last frames"
         ],
         [
           {
@@ -1612,10 +1612,10 @@
             "badges": []
           },
           "balanced",
-          "声生视频",
-          "按秒计费",
+          "Audio-to-video",
+          "Per-second billing",
           "720P",
-          "音频驱动数字人/动画"
+          "Audio-driven digital human/animation"
         ],
         [
           {
@@ -1623,10 +1623,10 @@
             "badges": []
           },
           "balanced",
-          "动作迁移",
-          "按秒计费",
+          "Motion transfer",
+          "Per-second billing",
           "720P",
-          "将视频动作迁移到图片角色"
+          "Transfers video motion to an image character"
         ],
         [
           {
@@ -1634,10 +1634,10 @@
             "badges": []
           },
           "balanced",
-          "角色替换",
-          "按秒计费",
+          "Character swap",
+          "Per-second billing",
           "720P",
-          "视频中角色替换/混合"
+          "Character replacement/swap in video"
         ],
         [
           {
@@ -1645,10 +1645,10 @@
             "badges": []
           },
           "budget",
-          "文生视频",
-          "按秒计费",
+          "Text-to-video",
+          "Per-second billing",
           "720P",
-          "经济版"
+          "Economy"
         ],
         [
           {
@@ -1656,10 +1656,10 @@
             "badges": []
           },
           "budget",
-          "图生视频",
-          "按秒计费",
+          "Image-to-video",
+          "Per-second billing",
           "720P",
-          "经济版"
+          "Economy"
         ],
         [
           {
@@ -1667,10 +1667,10 @@
             "badges": []
           },
           "budget",
-          "首尾帧视频",
-          "按秒计费",
+          "First/last-frame video",
+          "Per-second billing",
           "720P",
-          "经济版"
+          "Economy"
         ],
         [
           {
@@ -1678,29 +1678,29 @@
             "badges": []
           },
           "budget",
-          "视频编辑",
-          "按秒计费",
+          "Video editing",
+          "Per-second billing",
           "720P",
-          "万相视频编辑"
+          "Wanxiang video editing"
         ]
       ]
     },
     {
       "id": "asr",
       "kind": "table",
-      "title": "语音识别模型（ASR）",
+      "title": "Speech Recognition Models (ASR)",
       "icon": "i-mic",
       "nav": "ASR",
-      "desc": "实时（WebSocket 流式）与非实时（HTTP 文件转写）两大路线；Qwen-Audio-3.0 系列支持热词与 Prompt 上下文注入",
+      "desc": "Two paths: realtime (WebSocket streaming) and non-realtime (HTTP file transcription); the Qwen-Audio-3.0 family supports hotwords and Prompt context injection",
       "columns": [
-        "模型 ID",
-        "定位",
-        "模式",
+        "Model ID",
+        "Tier",
+        "Mode",
         "API",
-        "精度增强",
-        "说话人分离",
-        "时长/大小",
-        "说明"
+        "Accuracy boost",
+        "Speaker diarization",
+        "Duration/Size",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -1718,32 +1718,32 @@
             "id": "qwen-audio-3.0-asr-flash-streaming",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
-          "实时",
+          "Realtime",
           "WebSocket",
-          "热词+Prompt",
+          "Hotwords+Prompt",
           "—",
-          "无限制",
-          "实时识别旗舰，多语种及方言"
+          "Unlimited",
+          "Realtime recognition flagship, multilingual incl. dialects"
         ],
         [
           {
             "id": "qwen-audio-3.0-asr-flash-filetrans",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
-          "非实时",
+          "Non-realtime",
           "HTTP",
-          "热词+Prompt",
-          "支持",
-          "12小时/2GB",
-          "文件转写旗舰，支持说话人分离"
+          "Hotwords+Prompt",
+          "Yes",
+          "12h/2GB",
+          "File transcription flagship, speaker diarization"
         ],
         [
           {
@@ -1753,12 +1753,12 @@
             ]
           },
           "balanced",
-          "非实时",
+          "Non-realtime",
           "HTTP",
-          "热词+Prompt",
+          "Hotwords+Prompt",
           "—",
-          "5分钟/2GB",
-          "短音频快速转写"
+          "5 min/2GB",
+          "Fast short-audio transcription"
         ],
         [
           {
@@ -1766,12 +1766,12 @@
             "badges": []
           },
           "balanced",
-          "实时",
+          "Realtime",
           "WebSocket",
-          "热词",
+          "Hotwords",
           "—",
-          "无限制",
-          "FunASR 实时版"
+          "Unlimited",
+          "FunASR realtime"
         ],
         [
           {
@@ -1779,12 +1779,12 @@
             "badges": []
           },
           "balanced",
-          "实时",
+          "Realtime",
           "WebSocket",
-          "热词",
+          "Hotwords",
           "—",
-          "无限制",
-          "FunASR 多语种实时版"
+          "Unlimited",
+          "FunASR multilingual realtime"
         ],
         [
           {
@@ -1792,12 +1792,12 @@
             "badges": []
           },
           "balanced",
-          "非实时",
+          "Non-realtime",
           "HTTP",
-          "热词",
-          "支持",
-          "12小时/2GB",
-          "FunASR 文件版，支持说话人分离"
+          "Hotwords",
+          "Yes",
+          "12h/2GB",
+          "FunASR file version, speaker diarization"
         ],
         [
           {
@@ -1805,12 +1805,12 @@
             "badges": []
           },
           "balanced",
-          "非实时",
+          "Non-realtime",
           "HTTP",
-          "热词",
-          "支持",
-          "12小时/2GB",
-          "FunASR 多语种版"
+          "Hotwords",
+          "Yes",
+          "12h/2GB",
+          "FunASR multilingual"
         ],
         [
           {
@@ -1818,12 +1818,12 @@
             "badges": []
           },
           "balanced",
-          "实时",
+          "Realtime",
           "WebSocket",
           "—",
           "—",
-          "无限制",
-          "支持情感识别"
+          "Unlimited",
+          "Supports emotion recognition"
         ],
         [
           {
@@ -1831,12 +1831,12 @@
             "badges": []
           },
           "balanced",
-          "非实时",
+          "Non-realtime",
           "HTTP",
           "—",
           "—",
-          "12小时/2GB",
-          "支持情感识别"
+          "12h/2GB",
+          "Supports emotion recognition"
         ],
         [
           {
@@ -1844,12 +1844,12 @@
             "badges": []
           },
           "budget",
-          "非实时",
-          "HTTP(OpenAI兼容)",
+          "Non-realtime",
+          "HTTP (OpenAI-compatible)",
           "—",
           "—",
-          "5分钟/10MB",
-          "支持情感识别"
+          "5 min/10MB",
+          "Supports emotion recognition"
         ],
         [
           {
@@ -1857,12 +1857,12 @@
             "badges": []
           },
           "budget",
-          "实时",
+          "Realtime",
           "WebSocket",
           "—",
           "—",
           "—",
-          "旧版，建议迁移 Fun-ASR / Qwen-ASR"
+          "Legacy; migrate to Fun-ASR / Qwen-ASR"
         ],
         [
           {
@@ -1870,77 +1870,77 @@
             "badges": []
           },
           "budget",
-          "非实时",
+          "Non-realtime",
           "HTTP",
           "—",
-          "支持",
+          "Yes",
           "—",
-          "旧版"
+          "Legacy"
         ],
         [
           {
             "id": "sensevoice-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "budget",
-          "非实时",
+          "Non-realtime",
           "HTTP",
           "—",
           "—",
           "—",
-          "即将下线，尽快迁移"
+          "Retiring soon; migrate ASAP"
         ],
         [
           {
             "id": "gummy-realtime-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "budget",
-          "实时",
+          "Realtime",
           "WebSocket",
           "—",
           "—",
           "—",
-          "即将下线，尽快迁移"
+          "Retiring soon; migrate ASAP"
         ],
         [
           {
             "id": "gummy-chat-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "budget",
-          "实时",
+          "Realtime",
           "WebSocket",
           "—",
           "—",
-          "1分钟",
-          "即将下线，尽快迁移"
+          "1 min",
+          "Retiring soon; migrate ASAP"
         ]
       ]
     },
     {
       "id": "tts",
       "kind": "table",
-      "title": "语音合成模型（TTS）",
+      "title": "Speech Synthesis Models (TTS)",
       "icon": "i-speaker",
       "nav": "TTS",
-      "desc": "标准合成 / 声音复刻（音频样本克隆）/ 声音设计（文字描述创建）；指令控制可用自然语言调整语气、情绪、语速",
+      "desc": "Standard synthesis / voice cloning (audio sample cloning) / voice design (created from text description); instruct mode tunes tone, emotion and speaking rate in natural language",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "系列",
+        "Model ID",
+        "Tier",
+        "Price",
+        "Series",
         "API",
-        "声音复刻",
-        "声音设计",
-        "指令控制",
-        "说明"
+        "Voice clone",
+        "Voice design",
+        "Instruct",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -1959,17 +1959,17 @@
             "id": "qwen-audio-3.0-tts-plus",
             "badges": [
               "NEW",
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
           "high",
           "Qwen-Audio-TTS",
           "WS / HTTP",
-          "支持",
-          "支持",
-          "支持",
-          "最新 TTS 旗舰，全能力"
+          "Yes",
+          "Yes",
+          "Yes",
+          "Latest TTS flagship, full capability"
         ],
         [
           {
@@ -1982,10 +1982,10 @@
           "mid",
           "Qwen-Audio-TTS",
           "WS / HTTP",
-          "支持",
-          "支持",
-          "支持",
-          "轻量版"
+          "Yes",
+          "Yes",
+          "Yes",
+          "Lightweight"
         ],
         [
           {
@@ -1996,10 +1996,10 @@
           "mid",
           "CosyVoice",
           "WS / HTTP",
-          "支持",
-          "支持",
-          "支持",
-          "支持 SSML 与 LaTeX 公式朗读"
+          "Yes",
+          "Yes",
+          "Yes",
+          "Supports SSML and LaTeX formula reading"
         ],
         [
           {
@@ -2010,10 +2010,10 @@
           "low",
           "CosyVoice",
           "WS / HTTP",
-          "支持",
-          "支持",
-          "支持",
-          "轻量版"
+          "Yes",
+          "Yes",
+          "Yes",
+          "Lightweight"
         ],
         [
           {
@@ -2024,10 +2024,10 @@
           "low",
           "CosyVoice",
           "WS / HTTP",
-          "支持",
-          "支持",
-          "支持",
-          "轻量版，1元/万字符"
+          "Yes",
+          "Yes",
+          "Yes",
+          "Lightweight, ¥1/10K chars"
         ],
         [
           {
@@ -2038,10 +2038,10 @@
           "low",
           "CosyVoice",
           "WS / HTTP",
-          "支持",
-          "支持",
+          "Yes",
+          "Yes",
           "—",
-          "上代专业版"
+          "Previous-gen pro"
         ],
         [
           {
@@ -2052,10 +2052,10 @@
           "mid",
           "MiniMax",
           "HTTP",
-          "支持",
+          "Yes",
           "—",
           "—",
-          "第三方高保真音色"
+          "Third-party high-fidelity voices"
         ],
         [
           {
@@ -2069,7 +2069,7 @@
           "—",
           "—",
           "—",
-          "标准合成经济版"
+          "Economy standard synthesis"
         ],
         [
           {
@@ -2082,8 +2082,8 @@
           "HTTP",
           "—",
           "—",
-          "支持",
-          "指令控制语气/情绪/风格"
+          "Yes",
+          "Instructs tone/emotion/style"
         ],
         [
           {
@@ -2094,10 +2094,10 @@
           "low",
           "Qwen3-TTS-VC",
           "WS / HTTP",
-          "支持",
+          "Yes",
           "—",
           "—",
-          "声音复刻专用"
+          "Voice cloning only"
         ],
         [
           {
@@ -2109,9 +2109,9 @@
           "Qwen3-TTS-VD",
           "WS / HTTP",
           "—",
-          "支持",
+          "Yes",
           "—",
-          "声音设计专用"
+          "Voice design only"
         ],
         [
           {
@@ -2120,12 +2120,12 @@
           },
           "budget",
           "low",
-          "Qwen-TTS（旧版）",
+          "Qwen-TTS (Legacy)",
           "HTTP / WS",
           "—",
           "—",
           "—",
-          "按 Token 计费旧版，建议迁移 Qwen3-TTS"
+          "Legacy token-billed version; migrate to Qwen3-TTS"
         ],
         [
           {
@@ -2134,14 +2134,14 @@
           },
           "balanced",
           {
-            "raw": "<span class=\"mono-dim\">0.01元/音色</span>"
+            "raw": "<span class=\"mono-dim\">¥0.01/voice</span>"
           },
-          "音色管理",
+          "Voice management",
           "—",
           "—",
           "—",
           "—",
-          "音色注册与管理（声音复刻前置）"
+          "Voice registration and management (prerequisite for voice cloning)"
         ],
         [
           {
@@ -2150,32 +2150,32 @@
           },
           "balanced",
           {
-            "raw": "<span class=\"mono-dim\">0.2元/音色</span>"
+            "raw": "<span class=\"mono-dim\">¥0.2/voice</span>"
           },
-          "声音设计服务",
+          "Voice design service",
           "—",
           "—",
           "—",
           "—",
-          "文字描述创建新音色，按个计费"
+          "Creates new voices from text descriptions, billed per voice"
         ]
       ]
     },
     {
       "id": "embed",
       "kind": "table",
-      "title": "向量与重排序模型",
+      "title": "Embedding & Rerank Models",
       "icon": "i-grid",
-      "nav": "向量",
-      "desc": "语义搜索、RAG 检索与精度提升；重排序建议在 Embedding 检索后对 Top-N 结果二次排序",
+      "nav": "Vector",
+      "desc": "Semantic search, RAG retrieval and accuracy; rerank is recommended after Embedding retrieval to re-rank Top-N results",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "类型",
-        "向量维度",
-        "最大 Token",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Type",
+        "Dimensions",
+        "Max tokens",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -2191,15 +2191,15 @@
           {
             "id": "text-embedding-v4",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
           "mid",
-          "文本 Embedding",
+          "Text embedding",
           "64~2048",
           "8,192",
-          "最新文本向量，维度兼容 v3，MTEB 领先"
+          "Latest text embedding, v3-compatible dimensions, MTEB leader"
         ],
         [
           {
@@ -2210,10 +2210,10 @@
           },
           "flagship",
           "mid",
-          "文本 Embedding",
+          "Text embedding",
           "64~2048",
           "8,192",
-          "新一代文本向量（Qwen3.7 代），¥0.5"
+          "New-gen text embedding (Qwen3.7), ¥0.5"
         ],
         [
           {
@@ -2222,10 +2222,10 @@
           },
           "budget",
           "mid",
-          "文本 Embedding",
+          "Text embedding",
           "512~1024",
           "8,192",
-          "已有 v3 索引迁移"
+          "Migrate existing v3 indexes"
         ],
         [
           {
@@ -2234,10 +2234,10 @@
           },
           "balanced",
           "mid",
-          "多模态 Embedding",
+          "Multimodal embedding",
           "256~2560",
           "32,000",
-          "图文混合检索（融合+独立向量）"
+          "Image-text hybrid retrieval (fused + independent vectors)"
         ],
         [
           {
@@ -2246,10 +2246,10 @@
           },
           "balanced",
           "mid",
-          "多模态 Embedding",
+          "Multimodal embedding",
           "64~1152",
           "1,024",
-          "跨模态搜索（独立向量）"
+          "Cross-modal search (independent vectors)"
         ],
         [
           {
@@ -2258,24 +2258,24 @@
           },
           "budget",
           "low",
-          "多模态 Embedding",
+          "Multimodal embedding",
           "64~768",
           "1,024",
-          "低成本跨模态"
+          "Low-cost cross-modal"
         ],
         [
           {
             "id": "qwen3-rerank",
             "badges": [
-              "推荐"
+              "Rec"
             ]
           },
           "flagship",
           "mid",
-          "重排序",
+          "Rerank",
           "—",
-          "4,000/条",
-          "100+ 语言，最多 500 文档"
+          "4,000/passage",
+          "100+ languages, up to 500 docs"
         ],
         [
           {
@@ -2284,10 +2284,10 @@
           },
           "balanced",
           "mid",
-          "多模态重排序",
+          "Multimodal rerank",
           "—",
-          "8,000/条",
-          "文本/图片/视频混合排序"
+          "8,000/passage",
+          "Text/image/video hybrid ranking"
         ],
         [
           {
@@ -2296,26 +2296,26 @@
           },
           "budget",
           "mid",
-          "重排序",
+          "Rerank",
           "—",
-          "4,000/条",
-          "文本语义检索"
+          "4,000/passage",
+          "Text semantic retrieval"
         ]
       ]
     },
     {
       "id": "special",
       "kind": "table",
-      "title": "专用模型",
+      "title": "Specialized Models",
       "icon": "i-target",
-      "nav": "专用",
-      "desc": "翻译、文档解析、深度研究与文本分析等垂直场景专用模型",
+      "nav": "Specialized",
+      "desc": "Vertical-use models for translation, document parsing, deep research and text analysis",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "用途",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Use",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -2332,8 +2332,8 @@
           },
           "balanced",
           "mid",
-          "机器翻译",
-          "多语言互译专用，支持术语注入"
+          "Machine translation",
+          "Multilingual translation, with terminology injection"
         ],
         [
           {
@@ -2342,8 +2342,8 @@
           },
           "balanced",
           "mid",
-          "文档解析",
-          "文档内容提取与结构化"
+          "Document parsing",
+          "Document content extraction and structuring"
         ],
         [
           {
@@ -2352,26 +2352,28 @@
           },
           "flagship",
           "high",
-          "深度研究",
-          "联网检索 + 多步推理 + 长文报告，¥54/¥163"
+          "Deep research",
+          "Web search + multi-step reasoning + long reports, ¥54/¥163"
         ],
         [
           {
-            "id": "tongyi-xiaomi-analysis-pro"
+            "id": "tongyi-xiaomi-analysis-pro",
+            "badges": []
           },
           "balanced",
           "mid",
-          "对话分析",
-          "通义晓蜜专业版，¥1.0/¥2.7"
+          "Conversation analysis",
+          "Tongyi Xiaomi Pro, ¥1.0/¥2.7"
         ],
         [
           {
-            "id": "tongyi-xiaomi-analysis-flash"
+            "id": "tongyi-xiaomi-analysis-flash",
+            "badges": []
           },
           "budget",
           "low",
-          "对话分析",
-          "通义晓蜜轻量版，¥0.2/¥0.4"
+          "Conversation analysis",
+          "Tongyi Xiaomi Lite, ¥0.2/¥0.4"
         ],
         [
           {
@@ -2380,8 +2382,8 @@
           },
           "flagship",
           "high",
-          "数学推理",
-          "数学/竞赛题求解专用，¥4/¥12"
+          "Math reasoning",
+          "Math/contest problem solving, ¥4/¥12"
         ],
         [
           {
@@ -2390,8 +2392,8 @@
           },
           "balanced",
           "high",
-          "数学推理",
-          "数学推理轻量版，¥2/¥6"
+          "Math reasoning",
+          "Lightweight math reasoning, ¥2/¥6"
         ],
         [
           {
@@ -2400,8 +2402,8 @@
           },
           "budget",
           "mid",
-          "机器翻译",
-          "轻量版，¥0.7/¥1.95"
+          "Machine translation",
+          "Lightweight, ¥0.7/¥1.95"
         ],
         [
           {
@@ -2410,8 +2412,8 @@
           },
           "budget",
           "mid",
-          "机器翻译",
-          "经济版，¥0.6/¥1.6"
+          "Machine translation",
+          "Economy, ¥0.6/¥1.6"
         ],
         [
           {
@@ -2420,8 +2422,8 @@
           },
           "budget",
           "mid",
-          "机器翻译",
-          "速度优化版，¥0.7/¥1.95"
+          "Machine translation",
+          "Speed-optimized, ¥0.7/¥1.95"
         ],
         [
           {
@@ -2430,8 +2432,8 @@
           },
           "balanced",
           "mid",
-          "图像翻译",
-          "图片中文字翻译为多国语言，0.004元/张"
+          "Image translation",
+          "Translates text in images into multiple languages, ¥0.004/image"
         ],
         [
           {
@@ -2440,27 +2442,27 @@
           },
           "budget",
           {
-            "raw": "<span class=\"mono-dim\">0.002元/秒</span>"
+            "raw": "<span class=\"mono-dim\">¥0.002/sec</span>"
           },
-          "音乐生成",
-          "按歌词/提示词生成音乐，按秒计费"
+          "Music generation",
+          "Generates music from lyrics/prompts, billed per second"
         ]
       ]
     },
     {
       "id": "opensource",
       "kind": "table",
-      "title": "开源模型（可私有化部署）",
+      "title": "Open-Source Models (Self-Deployable)",
       "icon": "i-share",
-      "nav": "开源",
-      "desc": "开源权重，可自行部署，无 API 调用限制，仅需硬件成本；百炼同时提供开源版托管调用",
+      "nav": "OSS",
+      "desc": "Open weights, self-deployable, no API call limits, only hardware costs; Bailian also offers hosted calling of the open-source versions",
       "columns": [
-        "模型 ID",
-        "定位",
-        "价格",
-        "思考",
-        "上下文",
-        "说明"
+        "Model ID",
+        "Tier",
+        "Price",
+        "Thinking",
+        "Context",
+        "Notes"
       ],
       "row_types": [
         "model_id",
@@ -2476,211 +2478,211 @@
             "id": "qwen3.8-2.4t-a95b",
             "badges": [
               "NEW",
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           5,
           "—",
-          "最新开源旗舰，混合思考默认开启"
+          "Latest open-source flagship, hybrid thinking on by default"
         ],
         [
           {
             "id": "qwen3.6-35b-a3b",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "balanced",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           4,
           "256K",
-          "开源均衡版（MoE 35B-A3B）"
+          "Open-source balanced (MoE 35B-A3B)"
         ],
         [
           {
             "id": "qwen3.5-397b-a17b",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           4,
           "32K",
-          "开源旗舰（MoE 397B-A17B）"
+          "Open-source flagship (MoE 397B-A17B)"
         ],
         [
           {
             "id": "qwen3.5-122b-a10b",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "balanced",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           3,
           "32K",
-          "开源中杯（MoE 122B-A10B）"
+          "Open-source mid-size (MoE 122B-A10B)"
         ],
         [
           {
             "id": "qwen3.5-35b-a3b",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "budget",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           3,
           "32K",
-          "开源小杯（MoE 35B-A3B）"
+          "Open-source small (MoE 35B-A3B)"
         ],
         [
           {
             "id": "qwen3.5-27b",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "budget",
           {
-            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>自托管</span>"
+            "raw": "<span class=\"tag t-green\"><svg class=\"ic\"><use href=\"#i-home\"/></svg>Self-hosted</span>"
           },
           3,
           "32K",
-          "开源稠密版 27B"
+          "Open-source dense 27B"
         ],
         [
           {
             "id": "qwen3-next-80b-a3b-instruct",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           1,
           "256K",
-          "Qwen3-Next 新一代开源 MoE 80B-A3B，¥1/¥4"
+          "Qwen3-Next new-gen open-source MoE 80B-A3B, ¥1/¥4"
         ],
         [
           {
             "id": "qwen3-next-80b-a3b-thinking",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           4,
           "256K",
-          "Qwen3-Next 思考版（仅思考），¥1/¥10"
+          "Qwen3-Next thinking edition (thinking-only), ¥1/¥10"
         ],
         [
           {
             "id": "qwen3-coder-next",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           1,
           "256K",
-          "开源编程新版，¥1/¥4"
+          "New open-source coding model, ¥1/¥4"
         ],
         [
           {
             "id": "qwen3-235b-a22b-instruct-2507",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           1,
           "256K",
-          "Qwen3 开源旗舰 MoE 235B-A22B"
+          "Qwen3 open-source flagship MoE 235B-A22B"
         ],
         [
           {
             "id": "qwen3-235b-a22b-thinking-2507",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           4,
           "256K",
-          "Qwen3 开源思考旗舰，¥2/¥20"
+          "Qwen3 open-source thinking flagship, ¥2/¥20"
         ],
         [
           {
             "id": "qwen3-vl-235b-a22b-instruct",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           1,
           "256K",
-          "开源视觉旗舰 MoE 235B-A22B"
+          "Open-source vision flagship MoE 235B-A22B"
         ],
         [
           {
             "id": "qwen3-vl-235b-a22b-thinking",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "flagship",
           "mid",
           4,
           "256K",
-          "开源视觉思考旗舰"
+          "Open-source vision thinking flagship"
         ],
         [
           {
             "id": "qwen3-omni-30b-a3b-captioner",
             "badges": [
-              "开源"
+              "OSS"
             ]
           },
           "balanced",
           "mid",
           1,
           "—",
-          "开源全模态视频字幕/描述"
+          "Open-source omni-modal video captioning/description"
         ]
       ]
     },
     {
       "id": "deprecated",
       "kind": "table",
-      "title": "旧版与即将下线模型",
+      "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
-      "nav": "旧版",
-      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-08-29 同步）",
+      "nav": "Legacy",
+      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-08-29)",
       "table_class": "deprecated",
       "columns": [
-        "模型 ID",
-        "生命周期",
-        "替代方案",
-        "迁移建议"
+        "Model ID",
+        "Lifecycle",
+        "Replacement",
+        "Migration advice"
       ],
       "row_types": [
         "model_id",
@@ -2693,34 +2695,34 @@
           {
             "id": "sensevoice-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "deprecated",
           "fun-asr",
-          "即将下线，尽快迁移 Fun-ASR / Qwen-ASR"
+          "Retiring soon; migrate to Fun-ASR / Qwen-ASR"
         ],
         [
           {
             "id": "gummy-realtime-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "deprecated",
           "fun-asr-realtime",
-          "即将下线，尽快迁移"
+          "Retiring soon; migrate ASAP"
         ],
         [
           {
             "id": "gummy-chat-v1",
             "badges": [
-              "弃用"
+              "Deprecated"
             ]
           },
           "deprecated",
           "fun-asr-realtime",
-          "即将下线，尽快迁移"
+          "Retiring soon; migrate ASAP"
         ],
         [
           {
@@ -2729,7 +2731,7 @@
           },
           "legacy",
           "qwen3.5-omni-plus",
-          "旧版全模态，能力已全面升级"
+          "Legacy omni-modal; capabilities fully upgraded"
         ],
         [
           {
@@ -2738,7 +2740,7 @@
           },
           "legacy",
           "qwen3-tts-flash / qwen-audio-3.0-tts-plus",
-          "按 Token 计费旧版 TTS"
+          "Legacy token-billed TTS"
         ],
         [
           {
@@ -2747,7 +2749,7 @@
           },
           "legacy",
           "fun-asr-realtime / qwen3-asr-flash-realtime",
-          "旧代 ASR，建议迁移"
+          "Legacy ASR, migration advised"
         ],
         [
           {
@@ -2756,7 +2758,7 @@
           },
           "legacy",
           "fun-asr / qwen3-asr-flash-filetrans",
-          "旧代 ASR"
+          "Legacy ASR"
         ],
         [
           {
@@ -2765,7 +2767,7 @@
           },
           "legacy",
           "qwen3.5-ocr",
-          "旧版 OCR"
+          "Legacy OCR"
         ],
         [
           {
@@ -2774,7 +2776,7 @@
           },
           "legacy",
           "qwen3-vl-plus",
-          "视觉推理能力已并入 Qwen3-VL"
+          "Visual reasoning merged into Qwen3-VL"
         ],
         [
           {
@@ -2783,7 +2785,7 @@
           },
           "legacy",
           "qwen3-vl-flash",
-          "旧版视觉推理"
+          "Legacy visual reasoning"
         ],
         [
           {
@@ -2792,7 +2794,7 @@
           },
           "legacy",
           "qwen3-vl-plus",
-          "旧版 VL"
+          "Legacy VL"
         ],
         [
           {
@@ -2801,22 +2803,22 @@
           },
           "legacy",
           "qwen3-vl-flash",
-          "旧版 VL"
+          "Legacy VL"
         ]
       ]
     },
     {
       "id": "matrix",
       "kind": "table",
-      "title": "能力矩阵速查",
+      "title": "Capability Matrix",
       "icon": "i-target",
-      "nav": "能力矩阵",
-      "desc": "根据需求快速匹配最佳模型",
+      "nav": "Capability Matrix",
+      "desc": "Quickly match the best model to your needs",
       "columns": [
-        "需求场景",
-        "推荐模型",
-        "备选模型",
-        "关键能力"
+        "Scenario",
+        "Recommended",
+        "Alternatives",
+        "Key capability"
       ],
       "row_types": [
         "scene",
@@ -2828,34 +2830,34 @@
         [
           {
             "icon": "i-chat",
-            "text": "日常对话 / 写作"
+            "text": "Chat / Writing"
           },
           "qwen3.7-plus",
           "qwen3.6-plus",
-          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i></i></span>深度</span> <span class=\"plain\">+ 1M 上下文</span>"
+          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i></i></span>Deep</span> <span class=\"plain\">+ 1M context</span>"
         ],
         [
           {
             "icon": "i-brain",
-            "text": "深度思考 / 推理"
+            "text": "Deep thinking / reasoning"
           },
           "qwen3.8-max",
           "qwq-plus",
-          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>最强</span> <span class=\"plain\">混合思考</span>"
+          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>Best</span> <span class=\"plain\">Hybrid thinking</span>"
         ],
         [
           {
             "icon": "i-spark",
-            "text": "最强旗舰"
+            "text": "Top flagship"
           },
           "qwen3.8-max-prime",
           "qwen3.8-max",
-          "<span class=\"ctx\">¥24/¥72</span> <span class=\"plain\">优速模式</span>"
+          "<span class=\"ctx\">¥24/¥72</span> <span class=\"plain\">Prime mode</span>"
         ],
         [
           {
             "icon": "i-coin",
-            "text": "极致低成本"
+            "text": "Ultra-low cost"
           },
           "qwen3.7-flash",
           "qwen3.8-flash",
@@ -2864,80 +2866,80 @@
         [
           {
             "icon": "i-code",
-            "text": "Agentic 编程工作流"
+            "text": "Agentic coding workflows"
           },
           "qwen3-coder-plus",
           "qwen3.7-plus",
-          "<span class=\"tag mod-ico\" title=\"代码\"><svg class=\"ic\"><use href=\"#i-code\"/></svg></span> <span class=\"plain\">+ 1M 上下文</span>"
+          "<span class=\"tag mod-ico\" title=\"Code\"><svg class=\"ic\"><use href=\"#i-code\"/></svg></span> <span class=\"plain\">+ 1M context</span>"
         ],
         [
           {
             "icon": "i-doc",
-            "text": "超长文档处理",
-            "note": "千万字级"
+            "text": "Long-document processing",
+            "note": "Tens of millions of chars"
           },
           "qwen-long",
           "qwen3.7-plus",
-          "<span class=\"ctx hi\">10M 上下文</span>"
+          "<span class=\"ctx hi\">10M context</span>"
         ],
         [
           {
             "icon": "i-eye",
-            "text": "图像 / 视频理解"
+            "text": "Image / video understanding"
           },
           "qwen3-vl-plus",
           "qwen3.7-plus",
-          "<span class=\"ctx\">2 小时视频 · 1M 上下文</span>"
+          "<span class=\"ctx\">2h video · 1M context</span>"
         ],
         [
           {
             "icon": "i-modes",
-            "text": "全模态理解（图+音+视）"
+            "text": "Omni-modal understanding (image+audio+video)"
           },
           "qwen3.5-omni-plus",
           "qwen3-omni-flash",
-          "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"文本\"><svg class=\"ic\"><use href=\"#i-text\"/></svg></span><span class=\"tag mod-ico\" title=\"图像\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"音频\"><svg class=\"ic\"><use href=\"#i-audio\"/></svg></span><span class=\"tag mod-ico\" title=\"视频\"><svg class=\"ic\"><use href=\"#i-video\"/></svg></span></div>"
+          "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"Text\"><svg class=\"ic\"><use href=\"#i-text\"/></svg></span><span class=\"tag mod-ico\" title=\"Image\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"Audio\"><svg class=\"ic\"><use href=\"#i-audio\"/></svg></span><span class=\"tag mod-ico\" title=\"Video\"><svg class=\"ic\"><use href=\"#i-video\"/></svg></span></div>"
         ],
         [
           {
             "icon": "i-audio",
-            "text": "实时语音对话"
+            "text": "Realtime voice chat"
           },
           "qwen-audio-3.0-realtime-plus",
           "qwen3.5-omni-plus-realtime",
-          "<span class=\"mono-dim\">语义 VAD + WebSocket</span>"
+          "<span class=\"mono-dim\">Semantic VAD + WebSocket</span>"
         ],
         [
           {
             "icon": "i-mic",
-            "text": "语音听录 / 转写"
+            "text": "Speech transcription / dictation"
           },
           "qwen-audio-3.0-asr-flash-filetrans",
           "fun-asr",
-          "<span class=\"mono-dim\">12 小时 + 说话人分离</span>"
+          "<span class=\"mono-dim\">12h + speaker diarization</span>"
         ],
         [
           {
             "icon": "i-speaker",
-            "text": "语音合成"
+            "text": "Speech synthesis"
           },
           "qwen-audio-3.0-tts-plus",
           "cosyvoice-v3.5-plus",
-          "<span class=\"mono-dim\">复刻 / 设计 / 指令控制</span>"
+          "<span class=\"mono-dim\">Clone / Design / Instruct</span>"
         ],
         [
           {
             "icon": "i-globe",
-            "text": "实时语音翻译"
+            "text": "Realtime speech translation"
           },
           "qwen3.5-livetranslate-flash-realtime",
           "qwen3-livetranslate-flash-realtime",
-          "<span class=\"ctx\">60 语言 · 3 秒延迟</span>"
+          "<span class=\"ctx\">60 languages · 3s latency</span>"
         ],
         [
           {
             "icon": "i-brush",
-            "text": "高质量图像生成"
+            "text": "High-quality image generation"
           },
           "qwen-image-3.0-pro",
           "wan2.7-image-pro",
@@ -2946,29 +2948,29 @@
         [
           {
             "icon": "i-video",
-            "text": "视频生成"
+            "text": "Video generation"
           },
           "happyhorse-1.1-t2v",
           "wan2.6-t2v",
-          "<span class=\"ctx\">1080P · 按秒计费</span>"
+          "<span class=\"ctx\">1080P · per-second billing</span>"
         ],
         [
           {
             "icon": "i-search",
-            "text": "语义搜索 / RAG"
+            "text": "Semantic search / RAG"
           },
           "text-embedding-v4",
           "qwen3-vl-embedding",
-          "<span class=\"ctx\">2048 维 + qwen3-rerank</span>"
+          "<span class=\"ctx\">2048-dim + qwen3-rerank</span>"
         ],
         [
           {
             "icon": "i-home",
-            "text": "私有化部署"
+            "text": "Self-hosted deployment"
           },
           "qwen3.8-2.4t-a95b",
           "qwen3.6-35b-a3b",
-          "<span class=\"tag t-teal\">开源权重</span>"
+          "<span class=\"tag t-teal\">Open weights</span>"
         ]
       ]
     }

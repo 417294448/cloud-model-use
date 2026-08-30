@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="{{HTML_LANG}}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -126,6 +126,39 @@
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
+  }
+  /* 语言切换器：页头右上角 中 / EN 静态互链（嵌入模式下页头隐藏，随页头一起不出现） */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elevated);
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .lang-opt {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: var(--text-faint);
+    text-decoration: none;
+    padding: 5px 9px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+  a.lang-opt:hover { color: var(--accent-bright); background: var(--bg-hover); }
+  .lang-opt.on {
+    color: #fff;
+    background: var(--accent);
+    pointer-events: none;
+  }
+  @media (max-width: 900px) {
+    .lang-switch { margin-left: 8px; }
   }
   .hero h1 {
     font-family: var(--font-display);
@@ -569,7 +602,7 @@
         <rect x="2.5" y="2.5" width="13" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <rect x="8.5" y="8.5" width="13" height="13" rx="2.5" fill="url(#logoGrad)"/>
       </svg>
-      <div class="hero-eyebrow">{{EYEBROW}}</div>
+      <div class="hero-eyebrow">{{EYEBROW}}</div>{{LANG_SWITCH}}
     </div>
     <h1>{{H1}}</h1>
     <p class="hero-desc">{{HERO_DESC}}</p>
@@ -601,13 +634,20 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>{{FOOTER_TITLE}}</b> · 最后更新 {{FOOTER_UPDATED}}</p>
+  <p><b>{{FOOTER_TITLE}}</b> · {{FOOTER_UPDATE_LABEL}} {{FOOTER_UPDATED}}</p>
   <p class="rules">{{FOOTER_RULES}}</p>
   <p>{{FOOTER_SOURCES}}</p>
 </footer>
 
 <script>
 (function () {
+  // 语言切换链接：保持 ?embed=1 嵌入态（iframe 内切换语言不跳出嵌入模式）
+  var q = location.search;
+  document.querySelectorAll('a[data-lang-href]').forEach(function (a) {
+    if (q) {
+      a.href = a.getAttribute('data-lang-href') + q;
+    }
+  });
   // 滚动跟随高亮：渐进增强，无 JS 时纯 CSS :target 规则仍生效（嵌入检测见 head，须在首帧前执行）
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
   if (!links.length) return;

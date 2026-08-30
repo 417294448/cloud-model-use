@@ -9,23 +9,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    /* Google Gemini 风格：白底 + 靛蓝 accent，传递多模态与科技感 */
+    /* 默认深青蓝 accent；实际页面按厂商替换为对应主题色，见 references/page-style.md */
     --bg: #ffffff;
     --bg-elevated: #ffffff;
     --bg-soft: #f4f6f8;
     --bg-hover: #edf1f4;
-    --bg-tint: #eef2ff;
+    --bg-tint: #eef4f6;
     --border: #e6eaee;
     --border-strong: #d3dae0;
     --text: #10151a;
     --text-dim: #4d5a64;
     --text-faint: #8b98a1;
-    --accent: #4f46e5;
-    --accent-bright: #4338ca;
-    --accent-deep: #3730a3;
-    --accent-soft: rgba(79, 70, 229, 0.09);
-    --accent-border: rgba(79, 70, 229, 0.34);
-    --accent-glow: rgba(79, 70, 229, 0.14);
+    --accent: #0e7490;
+    --accent-bright: #0a5c73;
+    --accent-deep: #083d4d;
+    --accent-soft: rgba(14, 116, 144, 0.09);
+    --accent-border: rgba(14, 116, 144, 0.34);
+    --accent-glow: rgba(14, 116, 144, 0.14);
     --best: #0d9463;
     --best-bg: rgba(13, 148, 99, 0.09);
     --best-border: rgba(13, 148, 99, 0.3);
@@ -38,7 +38,7 @@
     --danger: #c2493d;
     --danger-bg: rgba(194, 73, 61, 0.09);
     --danger-border: rgba(194, 73, 61, 0.3);
-    --shadow-color: 245, 50%, 50%;
+    --shadow-color: 200, 30%, 40%;
     --font-display: 'Sora', 'Noto Sans SC', 'PingFang SC', system-ui, sans-serif;
     --font-mono: 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
     --font-sans: 'Manrope', 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
@@ -126,6 +126,39 @@
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 500;
+  }
+  /* 语言切换器：页头右上角 中 / EN 静态互链（嵌入模式下页头隐藏，随页头一起不出现） */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elevated);
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .lang-opt {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: var(--text-faint);
+    text-decoration: none;
+    padding: 5px 9px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+  a.lang-opt:hover { color: var(--accent-bright); background: var(--bg-hover); }
+  .lang-opt.on {
+    color: #fff;
+    background: var(--accent);
+    pointer-events: none;
+  }
+  @media (max-width: 900px) {
+    .lang-switch { margin-left: 8px; }
   }
   .hero h1 {
     font-family: var(--font-display);
@@ -579,14 +612,14 @@
       <svg class="logo-mark" viewBox="0 0 24 24" aria-hidden="true">
         <defs>
           <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#818cf8"/>
-            <stop offset="1" stop-color="#3730a3"/>
+            <stop offset="0" stop-color="#128fa8"/>
+            <stop offset="1" stop-color="#083d4d"/>
           </linearGradient>
         </defs>
         <rect x="2.5" y="2.5" width="13" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <rect x="8.5" y="8.5" width="13" height="13" rx="2.5" fill="url(#logoGrad)"/>
       </svg>
-      <div class="hero-eyebrow">GOOGLE GEMINI MODEL SELECTION GUIDE · 2026</div>
+      <div class="hero-eyebrow">GOOGLE GEMINI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="gemini-model-userguide-en.html" data-lang-href="gemini-model-userguide-en.html">EN</a></div>
     </div>
     <h1>Google Gemini 模型选择指南</h1>
     <p class="hero-desc">Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-08-29 同步）</p>
@@ -598,9 +631,15 @@
   </div>
   <svg class="hero-ornament" viewBox="0 0 400 400" aria-hidden="true">
     <g fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round">
-      <path d="M200 50 L200 130 M200 270 L200 350 M50 200 L130 200 M270 200 L350 200 M90 90 L140 140 M260 260 L310 310 M90 310 L140 260 M260 140 L310 90"/>
-      <circle cx="200" cy="200" r="55"/>
-      <circle cx="200" cy="200" r="95"/>
+      <circle cx="90" cy="110" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="200" cy="70" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="310" cy="110" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="130" cy="200" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="270" cy="200" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="90" cy="290" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="200" cy="330" r="5" fill="currentColor" stroke="none"/>
+      <circle cx="310" cy="290" r="5" fill="currentColor" stroke="none"/>
+      <path d="M90 110 L200 70 M200 70 L310 110 M90 110 L130 200 M310 110 L270 200 M130 200 L270 200 M130 200 L90 290 M130 200 L200 330 M270 200 L310 290 M270 200 L200 330 M90 290 L200 330 M200 330 L310 290"/>
     </g>
   </svg>
 </header>
@@ -1650,6 +1689,13 @@
 
 <script>
 (function () {
+  // 语言切换链接：保持 ?embed=1 嵌入态（iframe 内切换语言不跳出嵌入模式）
+  var q = location.search;
+  document.querySelectorAll('a[data-lang-href]').forEach(function (a) {
+    if (q) {
+      a.href = a.getAttribute('data-lang-href') + q;
+    }
+  });
   // 滚动跟随高亮：渐进增强，无 JS 时纯 CSS :target 规则仍生效（嵌入检测见 head，须在首帧前执行）
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
   if (!links.length) return;

@@ -127,6 +127,39 @@
     color: var(--accent);
     font-weight: 500;
   }
+  /* 语言切换器：页头右上角 中 / EN 静态互链（嵌入模式下页头隐藏，随页头一起不出现） */
+  .lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: auto;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg-elevated);
+    padding: 2px;
+    flex-shrink: 0;
+  }
+  .lang-opt {
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: var(--text-faint);
+    text-decoration: none;
+    padding: 5px 9px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+  }
+  a.lang-opt:hover { color: var(--accent-bright); background: var(--bg-hover); }
+  .lang-opt.on {
+    color: #fff;
+    background: var(--accent);
+    pointer-events: none;
+  }
+  @media (max-width: 900px) {
+    .lang-switch { margin-left: 8px; }
+  }
   .hero h1 {
     font-family: var(--font-display);
     font-weight: 600;
@@ -582,7 +615,7 @@
         <rect x="2.5" y="2.5" width="13" height="13" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <rect x="8.5" y="8.5" width="13" height="13" rx="2.5" fill="url(#logoGrad)"/>
       </svg>
-      <div class="hero-eyebrow">Z.AI MODEL SELECTION GUIDE · 2026</div>
+      <div class="hero-eyebrow">Z.AI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="zai-model-userguide-en.html" data-lang-href="zai-model-userguide-en.html">EN</a></div>
     </div>
     <h1>Z.ai 模型选择指南</h1>
     <p class="hero-desc">智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-30 同步）</p>
@@ -1650,6 +1683,13 @@
 
 <script>
 (function () {
+  // 语言切换链接：保持 ?embed=1 嵌入态（iframe 内切换语言不跳出嵌入模式）
+  var q = location.search;
+  document.querySelectorAll('a[data-lang-href]').forEach(function (a) {
+    if (q) {
+      a.href = a.getAttribute('data-lang-href') + q;
+    }
+  });
   // 滚动跟随高亮：渐进增强，无 JS 时纯 CSS :target 规则仍生效（嵌入检测见 head，须在首帧前执行）
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav a[href^="#"]'));
   if (!links.length) return;

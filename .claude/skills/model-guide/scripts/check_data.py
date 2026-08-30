@@ -16,7 +16,15 @@ check_data 管"数据源内容正确"——改 data JSON 后两个都应跑。
 import json, re, sys, os
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from render_guide import PRICE_TIERS, TIER_LEVELS, REASONING_NAMES, SPEED_LEVELS, LIFECYCLE, MODALITIES
+from render_guide import (PRICE_CLASS, TIER_CLASS, SPEED_CLASS, MODALITY_ICON, LABELS)
+
+# 枚举合法性校验基于中文标签表（键集合两种语言相同）
+PRICE_TIERS = PRICE_CLASS
+TIER_LEVELS = TIER_CLASS
+REASONING_NAMES = LABELS['zh']['reasoning']
+SPEED_LEVELS = SPEED_CLASS
+LIFECYCLE = LABELS['zh']['lifecycle']
+MODALITIES = MODALITY_ICON
 
 META_REQUIRED = ['title', 'eyebrow', 'h1', 'hero_desc', 'stats',
                  'footer_title', 'footer_updated', 'footer_rules', 'footer_sources']
