@@ -49,6 +49,8 @@ curl -sL --max-time 40 --tlsv1.2 -A "Mozilla/5.0" \
 
 代理对源站约 70% 概率返回 52x 错误（响应体 16 字节 `error code: 52x`），**必须重试 6-8 次**，成功标志是响应 >100KB（正常页面约 300-420KB）。其他代理（codetabs 522、corsproxy 要 key、r.jina.ai 不通、wayback 超时）在本项目网络下均不可用，不必再试。
 
+**备用通道（2026-08-30 实测）**：代理通道可能**整体失效**（`api.allorigins.win` 全部 52x 时 `fetch_models.py` 无法产出有效页），此时可用 IDE 的 **WebFetch 工具直连 `developers.openai.com` 详情页**（`/api/docs/models/<slug>`，实测直连成功），逐页核对指标卡与价格；配合 Azure 文档（直连）核对 token 数与退役计划。直连页面结构同「两种指标卡 DOM 结构」，`.md` Markdown 版本同样适用。
+
 模型 slug 与 API 模型 ID 一致（`gpt-5.4`、`gpt-5.2-codex`、`o3-pro`、`gpt-realtime-2.1` 等）。索引页 `/api/docs/models` 可列出当前全部有效 slug——**发现新模型的途径**（本会话中发现了 gpt-5.6-cyber、daybreak-red/blue-latest）。
 
 ## 模型详情页的两种指标卡 DOM 结构
@@ -80,6 +82,8 @@ https://api.allorigins.win/raw?url=developers.openai.com/api/docs/models/gpt-5.6
 
 - 全部 `-chat` 变体（gpt-5-chat、gpt-5.1/5.2/5.3-chat）、gpt-chat-latest
 - 部分老模型与工具模型（whisper、tts-1 系列、computer-use-preview、codex-mini 等，视官网当期收录而定）
+
+**token 口径注意（2026-08-30 实测）**：`gpt-realtime` 系列官网上下文为 128K/32K，而 Azure 清单为 32K/4K，两者存在差异——页面既有口径沿用 Azure（32K/4K），官网与 Azure 冲突时先对齐 Azure 再人工确认，勿直接套官网值。
 
 ## 批量抓取脚本用法
 

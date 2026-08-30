@@ -58,12 +58,12 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 
 ## 工作流 B：更新数据
 
-1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。OpenAI 侧要点：
+1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。**各厂商脚本的代理通道可能整体失效**（实测 2026-08-30：OpenAI 的 `api.allorigins.win` 全部 52x、Gemini 的 `proxy.cors.sh`/`corsproxy.org` 全部失效）——此时用 IDE 的 **WebFetch 工具直连官方页面兜底**（实测 `developers.openai.com`、`ai.google.dev` 直连成功），再按 providers 文档的解析规则人工解析；数据以官方页面为准，代理与直连结果矛盾时以直连核对。OpenAI 侧要点：
    - Azure 文档（模型清单、退役计划）用 `scripts/openai/fetch_azure_docs.py` 直连抓取，可 `--section "Azure OpenAI"` 只取所需章节；`developers.openai.com` / `platform.openai.com` 被 Cloudflare 拦截，须用 `scripts/openai/fetch_models.py`（走 `api.allorigins.win` 代理 + 重试，失败率约 70%，每页重试 6-8 次）。
    - 抓完 OpenAI 详情页后用 `scripts/openai/parse_cards.py` 解析为 JSON。
    - 模型详情页追加 `.md` 可拿到 Markdown 版本（含价格表、上下文/输入/输出 token 数），比解析 HTML 更可靠。
 2. **映射为页面档位**：严格按 `references/page-style.md` 的映射表——推理 5 档（官方图标格数 1:1）、速度 5 档、价格 6 档、模态图标。**官方标 Intelligence 的模型是非推理模型，归入"快速"档，不要标推理点。**
-3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；统计数字同步改；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；**每次更新必须在 `diff/` 目录生成日期命名（如 `diff/2026-08-30.md`）的变更记录，同一天所有提供商的变更写入同一文件，按 `## 提供商` 分节**，且只记录模型数据变更（新增/删除/字段变更），每行一条。
+3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；**统计数字同步改——`meta.stats` 首个数字「收录模型」= 各模型表行数之和（排除 `naming`/`matrix` 等辅助表与 `deprecated`/`historical` 区；Z.ai 的 `69+` 含 historical 为既有口径），更新后应核对与页面实际一致**；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；**每次更新必须在 `diff/` 目录生成日期命名（如 `diff/2026-08-30.md`）的变更记录，同一天所有提供商的变更写入同一文件，按 `## 提供商` 分节**，且只记录模型数据变更（新增/删除/字段变更），每行一条。
 4. **双语同步（必做）**：`<厂商>.json` 改完后必须同步英文数据与页面——先跑对应 `make_<厂商>_en.py`（新中文文案会漏翻告警，补翻译表后重跑，直至输出「全部中文已翻译」），再 `render_guide.py` 渲染。渲染器会自动检测同目录的 `<厂商>-en.json` 并**一并渲染英文页 + 自动跑 `check_bilingual.py` 中英文语义一致性校验**（结构镜像 / 语言中立档位值 / 模型 ID 集合 / en 无中文残留），任一项不一致即失败退出；只需中文页时加 `--zh-only`。
 5. **校验**：渲染器自动调用 check_html.py（zh/en 两页都会跑）。列结构变更（增删列/增删行类型）后重点检查结构不一致的表。
 6. **清理临时文件**：任务结束后删除本次产生的临时抓取文件（`_gemini_*.html`、`_aliyun_*.html`、`_azure_tmp.html`、`_rt*.html/json` 等）。`_model_pages/`、`_model_md/` 是可复用缓存，可保留或按需清理；所有临时/缓存路径必须已在 `.gitignore` 中声明。

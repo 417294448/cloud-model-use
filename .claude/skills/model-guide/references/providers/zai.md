@@ -101,6 +101,7 @@ Z.ai 价格为 **元 CNY / 1M tokens**（华北区原价），映射到页面 6 
 | 2026-08-29 | 新增 `GLM-4V-Plus-0111` | pricing 页面 |
 | 2026-08-30 | 自动同步上下文/最大输出/价格字段 | update_data.py |
 | 2026-08-30 | 补录 pricing 页面缺失的 18 个模型；新增 `historical` 区存放 `GLM-4-0520` / `GLM-4V-Plus` / `GLM-4` | pricing 页面旗舰模型/模型推理区 |
+| 2026-08-30 | `update_data.py` 修复：`parse_rows`/`parse_overview` 把抓取文件末尾的 `CARD:`/`CARDS:` 标记块误当表格续行（曾把 Rerank 最大输出误改为 `CARDS:`），已排除 CARD 前缀行 | 全量更新时发现并修复 |
 | 2026-08-30 | 按定价修正档位：`GLM-5.3-Flash`→mid（原价 ¥0.8）、`GLM-4V-Plus-0111`→high、`GLM-4-Air-250414`/`GLM-Z1-Air`→low、`GLM-Z1-FlashX`→cheap、`Rerank`→mid | pricing 页面单价（输入原价定档） |
 | 2026-08-30 | `GLM-4V` / `GLM-4-Air` / `GLM-4-Flash` 移入 `historical`（官方定价页历史模型区）；`GLM-4.5` / `CogView-3` 按量 API 已下架（仅微调/私有化）移入 `historical` | pricing 页面历史模型区/模型推理区 |
 | 2026-08-30 | 历史区价格按官方更新：`GLM-4-0520`/`GLM-4`→sky(¥100)、`GLM-4V`→sky(¥50)、`GLM-4V-Plus`→high(¥4)、`GLM-4-Air`→low(¥0.5) | pricing 页面历史模型区单价 |

@@ -36,6 +36,8 @@
 
 公共代理均有**速率限制**（连续调用几次后会限流），`scripts/gemini/fetch_docs.py` 已固化**多代理轮询重试**机制（cors.sh → corsproxy.org → allorigins 循环，最多 6 次）。备用方案：若全部失效，`GET https://generativelanguage.googleapis.com/v1beta/models`（需 API key）可列模型清单。
 
+**备用通道（2026-08-30 实测）**：代理通道可能**全部失效**（cors.sh 400/302、corsproxy.org 广告页、corsproxy.io 401、allorigins 522，`fetch_docs.py` 输出为广告垃圾页需弃用），此时可用 IDE 的 **WebFetch 工具直连 `ai.google.dev/gemini-api/docs/{models,pricing,deprecations}`**（实测直连成功，三页均含 Last updated 日期），再按本文件解析规则人工解析。
+
 ## 各页面内容与用途
 
 | 页面 | 提供的关键字段 |

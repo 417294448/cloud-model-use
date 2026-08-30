@@ -71,8 +71,8 @@ def parse_rows(text):
             if current is not None:
                 rows.append(current)
             current = [c.strip() for c in line[4:].split('|')]
-        elif current is not None and line and not line.startswith('H'):
-            # 续行：按 | 分割后追加到当前行
+        elif current is not None and line and not line.startswith('H') and not line.startswith('CARD'):
+            # 续行：按 | 分割后追加到当前行（排除 CARD/CARDS 标记块，防止被误并入表格行）
             cells = [c.strip() for c in line.split('|')]
             current.extend(cells)
     if current is not None:
@@ -121,8 +121,8 @@ def parse_overview(path):
                 if current is not None:
                     rows.append(current)
                 current = [c.strip() for c in line[4:].split('|')]
-            elif current is not None and line and not line.startswith('H'):
-                # 过滤跨段落的说明文字，防止合并到上一表格行
+            elif current is not None and line and not line.startswith('H') and not line.startswith('CARD'):
+                # 过滤跨段落的说明文字，防止合并到上一表格行；CARD/CARDS 标记块不算续行
                 if not is_row_continuation(line):
                     continue
                 cells = [c.strip() for c in line.split('|')]
