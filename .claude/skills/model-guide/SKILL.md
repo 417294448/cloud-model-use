@@ -67,6 +67,64 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 4. **校验**：渲染器自动调用 check_html.py。列结构变更（增删列/增删行类型）后重点检查结构不一致的表。
 5. **清理临时文件**：任务结束后删除本次产生的临时抓取文件（`_gemini_*.html`、`_aliyun_*.html`、`_azure_tmp.html`、`_rt*.html/json` 等）。`_model_pages/`、`_model_md/` 是可复用缓存，可保留或按需清理；所有临时/缓存路径必须已在 `.gitignore` 中声明。
 
+## 按提供商独立更新
+
+四个已沉淀厂商在数据、脚本、页面上**完全独立**：
+- 各厂商有独立的 `data/<厂商>.json` 事实源；
+- 各厂商有独立的官方数据源方法、抓取/解析脚本；
+- 渲染生成独立的 `<厂商>-model-userguide.html`；
+- 根目录 `index.html` 只通过 iframe Tab 聚合四个页面，不依赖页面内容，仅在**总收录模型数**变化时才需要更新其统计数字。
+
+因此可以**单独更新任一厂商**，也可以**批量更新全部厂商**，互不影响。
+
+### 单独更新某一厂商
+按「提供商索引」找到对应厂商脚本，执行该厂商工作流后渲染即可：
+
+```bash
+# 示例：仅更新 Z.ai
+python scripts/zai/update_data.py --fetch --apply
+python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
+```
+
+```bash
+# 示例：仅更新 OpenAI
+python scripts/openai/fetch_models.py
+python scripts/openai/parse_cards.py
+python scripts/fill_objective_fields.py .claude/skills/model-guide/data/openai.json _openai_cards.json --write
+python scripts/sync_dates.py --write .claude/skills/model-guide/data/openai.json
+python scripts/render_guide.py .claude/skills/model-guide/data/openai.json -o openai-model-userguide.html
+```
+
+### 批量更新全部厂商
+```bash
+# 1. 并行抓取各厂商官方数据
+python scripts/openai/fetch_models.py
+python scripts/gemini/fetch_docs.py
+python scripts/qwen/fetch_docs.py
+python scripts/zai/fetch_docs.py overview pricing -o _g_zai/
+
+# 2. 各厂商分别回填/审补并渲染（OpenAI 用 fill_objective_fields，其余按各自工作流）
+python scripts/fill_objective_fields.py .claude/skills/model-guide/data/openai.json _openai_cards.json --write
+python scripts/render_guide.py .claude/skills/model-guide/data/openai.json -o openai-model-userguide.html
+
+python scripts/render_guide.py .claude/skills/model-guide/data/gemini.json -o gemini-model-userguide.html
+python scripts/render_guide.py .claude/skills/model-guide/data/qwen.json -o qwen-model-userguide.html
+
+python scripts/zai/update_data.py --apply
+python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
+
+# 3. 统一同步日期
+python scripts/sync_dates.py --write \
+  .claude/skills/model-guide/data/openai.json \
+  .claude/skills/model-guide/data/gemini.json \
+  .claude/skills/model-guide/data/qwen.json \
+  .claude/skills/model-guide/data/zai.json
+
+# 4. 如总收录模型数变化，更新 index.html 统计数字
+```
+
+无论单独还是批量更新，模型数据变更都按日期写入同一个 `diff/YYYY-MM-DD.md` 文件，以 `## 提供商` 分节追加。
+
 ## 工作流 C：局部调整
 
 改 data JSON 或渲染器，但遵守 `references/page-style.md` 的既有约定（如模态列用纯图标 + title、推理用点阵、价格用阶梯信号条、徽章实心白字、定位列在价格列前）。新增展示维度时先想"与官方哪个字段对应"，保持页面数据可溯源。新增单元格类型时在渲染器 CELL_RENDERERS 注册，并同步提取器 parse_cell。
