@@ -1,9 +1,37 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>大模型选型与场景指南</title>
+<title>LLM Selection &amp; Scenario Guide</title>
+<!-- SEO：description 随语言切换动态更新（data-i18n-content），keywords 中英合并覆盖百度等仍读取 keywords 的引擎 -->
+<meta name="description" content="Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare model capabilities, context windows and pricing by real-world scenario." data-i18n-content="meta-desc">
+<meta name="keywords" content="LLM,大模型,大语言模型,large language model,AI model selection,模型选型,模型对比,model comparison,模型选择指南,scenario guide,场景指南,OpenAI,GPT,ChatGPT,Qwen,通义千问,Alibaba Qwen,Google Gemini,Z.ai,Zhipu,智谱,GLM,context window,上下文长度,model pricing,模型价格">
+<link rel="canonical" href="https://muse.cloudproduct.top/">
+<!-- Open Graph：社交分享卡片（静态英文为主，声明 zh_CN 备用区域） -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="LLM Selection &amp; Scenario Guide">
+<meta property="og:title" content="LLM Selection &amp; Scenario Guide — OpenAI / Qwen / Gemini / Z.ai">
+<meta property="og:description" content="Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare capabilities, context windows and pricing by scenario.">
+<meta property="og:url" content="https://muse.cloudproduct.top/">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<!-- Twitter 分享卡片 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LLM Selection &amp; Scenario Guide">
+<meta name="twitter:description" content="Compare 340+ LLMs from OpenAI, Qwen, Gemini and Z.ai by scenario — capabilities, context, pricing. 中英双语大模型选型指南。">
+<!-- 结构化数据：声明双语站点，利于搜索引擎理解 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "LLM Selection & Scenario Guide",
+  "alternateName": "大模型选型与场景指南",
+  "url": "https://muse.cloudproduct.top/",
+  "inLanguage": ["en", "zh-CN"],
+  "description": "Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai."
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
@@ -172,12 +200,34 @@
     background: var(--bg-tint);
   }
 
+  /* 首页链接：页面右上角，返回主站 */
+  .home-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    align-self: center;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 6px 11px;
+    font-family: var(--font-mono);
+    font-size: 10.5px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-dim);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: color 0.15s, border-color 0.15s, background 0.15s;
+  }
+  .home-link:hover { color: var(--accent-bright); border-color: var(--accent-border); background: var(--bg-hover); }
+  .home-link .ic { font-size: 12px; }
+
   /* 全局语言切换器：页面右上角（hero 顶部） 中 / EN，样式与各厂商页面内切换器一致 */
   .lang-switch {
     display: inline-flex;
     align-items: center;
     gap: 2px;
-    margin-left: auto;
+    margin-left: 8px;
     align-self: center;
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -224,7 +274,7 @@
   .tab-panel.active { display: flex; flex-direction: column; flex: 1; min-height: 0; }
   /* iframe 加载完成前的占位提示（加载后由 JS 移除） */
   .tab-panel::after {
-    content: '加载中…';
+    content: 'Loading…';
     position: absolute;
     inset: 0;
     display: flex;
@@ -239,6 +289,8 @@
     z-index: 2;
   }
   .tab-panel.loaded::after { display: none; }
+  /* 中文模式下占位文案跟随切换（html lang 由 JS 同步） */
+  html[lang="zh-CN"] .tab-panel::after { content: '加载中…'; }
   .tab-panel iframe {
     flex: 1;
     min-height: 0;
@@ -255,6 +307,9 @@
     .tabs { padding: 0 16px; }
     .tab-btn { padding: 11px 12px; font-size: 12px; }
     .tab-panels { min-height: 68vh; }
+    /* 小屏下首页链接只留图标，避免右上角拥挤 */
+    .home-link { padding: 6px 8px; }
+    .home-link span { display: none; }
   }
 </style>
 </head>
@@ -265,6 +320,7 @@
     <symbol id="i-models" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></g></symbol>
     <symbol id="i-modes" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/></g></symbol>
     <symbol id="i-ruler" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M7 7h2M7 12h4M7 17h6M12 7h5M12 12h5"/></g></symbol>
+    <symbol id="i-home" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/><path d="M9.5 21v-6h5v6"/></g></symbol>
     <!-- 品牌 logo（官方单色版，fill 继承 tab 状态色：默认灰 / 悬停·激活青） -->
     <symbol id="i-brand-openai" viewBox="0 0 24 24"><path fill="currentColor" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.5974 1.4997-2.6067-1.4997Z"/></symbol>
     <symbol id="i-brand-qwen" viewBox="0 0 24 24"><path fill="currentColor" d="M23.919 14.545 20.817 9.17l1.47-2.544a.56.56 0 0 0 0-.566l-1.633-2.83a.57.57 0 0 0-.49-.283h-6.207L12.487.402a.57.57 0 0 0-.49-.284H8.732a.56.56 0 0 0-.49.284L5.139 5.775h-2.94a.56.56 0 0 0-.49.284L.077 8.887a.56.56 0 0 0 0 .567L3.18 14.83l-1.47 2.545a.56.56 0 0 0 0 .566l1.634 2.83a.57.57 0 0 0 .49.283h6.205l1.47 2.545a.57.57 0 0 0 .49.284h3.266a.57.57 0 0 0 .49-.284l3.104-5.375h2.94a.57.57 0 0 0 .49-.283l1.634-2.828a.55.55 0 0 0-.004-.568M8.733.686l1.634 2.828-1.634 2.828H21.8L20.164 9.17H7.425L5.63 6.06Zm1.306 19.801-6.205-.002 1.634-2.83h3.265L2.201 6.344h3.267q3.182 5.517 6.367 11.032zm10.124-5.66L18.53 12l-6.532 11.315-1.634-2.83c2.129-3.673 4.25-7.351 6.373-11.028h3.592l3.102 5.374z"/></symbol>
@@ -287,51 +343,53 @@
         <rect x="8.5" y="8.5" width="13" height="13" rx="2.5" fill="url(#logoGrad)"/>
       </svg>
       <div class="hero-eyebrow">Scenario-Driven Model Guide · 2026</div>
+      <a class="home-link" href="https://www.cloudproduct.top/"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span data-i18n="home">Home</span></a>
       <div class="lang-switch" role="group" aria-label="language">
-        <button class="lang-opt on" type="button" data-lang="zh" aria-current="true">中</button>
-        <button class="lang-opt" type="button" data-lang="en">EN</button>
+        <button class="lang-opt" type="button" data-lang="zh">中</button>
+        <button class="lang-opt on" type="button" data-lang="en" aria-current="true">EN</button>
       </div>
     </div>
-    <h1 data-i18n="h1">大模型选型与场景指南</h1>
-    <p class="hero-desc" data-i18n="hero-desc">面对 OpenAI、阿里 Qwen、Google Gemini、智谱 Z.ai 众多模型不知如何下手？本指南从实际场景出发，帮你快速理解各模型能力边界，选对模型、用对场景。</p>
+    <h1 data-i18n="h1">LLM Selection &amp; Scenario Guide</h1>
+    <p class="hero-desc" data-i18n="hero-desc">Overwhelmed by OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai models? This guide starts from real scenarios to help you quickly understand each model’s capabilities and pick the right model for the right scenario.</p>
     <div class="stat-strip">
-      <div class="stat"><span class="stat-num">340+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span data-i18n="stat-models">收录模型</span></span></div>
+      <div class="stat"><span class="stat-num">340+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span data-i18n="stat-models">Models</span></span></div>
       <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">4</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span data-i18n="stat-vendors">厂商选型</span></span></div>
+      <div class="stat"><span class="stat-num">4</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span data-i18n="stat-vendors">Vendors</span></span></div>
       <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">10M</span><span class="stat-label"><svg class="ic"><use href="#i-ruler"/></svg><span data-i18n="stat-context">最大上下文</span></span></div>
+      <div class="stat"><span class="stat-num">10M</span><span class="stat-label"><svg class="ic"><use href="#i-ruler"/></svg><span data-i18n="stat-context">Max context</span></span></div>
     </div>
   </div>
 </header>
 
 <nav class="tabs">
-  <div class="tabs-inner" role="tablist" aria-label="厂商指南切换" data-i18n-aria="tablist">
+  <div class="tabs-inner" role="tablist" aria-label="Vendor guides" data-i18n-aria="tablist">
     <button class="tab-btn active" data-tab="openai" role="tab" id="tab-openai" aria-selected="true" aria-controls="panel-openai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-openai"/></svg><span data-i18n="tab-openai">OpenAI</span></button>
     <button class="tab-btn" data-tab="gemini" role="tab" id="tab-gemini" aria-selected="false" aria-controls="panel-gemini"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-gemini"/></svg><span data-i18n="tab-gemini">Google Gemini</span></button>
-    <button class="tab-btn" data-tab="qwen" role="tab" id="tab-qwen" aria-selected="false" aria-controls="panel-qwen"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-qwen"/></svg><span data-i18n="tab-qwen">阿里 Qwen</span></button>
-    <button class="tab-btn" data-tab="zai" role="tab" id="tab-zai" aria-selected="false" aria-controls="panel-zai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-zai"/></svg><span data-i18n="tab-zai">智谱 Z.ai</span></button>
+    <button class="tab-btn" data-tab="qwen" role="tab" id="tab-qwen" aria-selected="false" aria-controls="panel-qwen"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-qwen"/></svg><span data-i18n="tab-qwen">Qwen</span></button>
+    <button class="tab-btn" data-tab="zai" role="tab" id="tab-zai" aria-selected="false" aria-controls="panel-zai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-zai"/></svg><span data-i18n="tab-zai">Z.ai</span></button>
   </div>
 </nav>
 
 <div class="tab-panels">
-  <div class="tab-panel active" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai"><iframe src="openai-model-userguide.html?embed=1" data-zh-src="openai-model-userguide.html?embed=1" data-en-src="openai-model-userguide-en.html?embed=1" data-zh-title="OpenAI 模型选择指南" data-en-title="OpenAI Model Selection Guide" title="OpenAI 模型选择指南" loading="eager"></iframe></div>
-  <div class="tab-panel" id="panel-gemini" role="tabpanel" aria-labelledby="tab-gemini"><iframe src="gemini-model-userguide.html?embed=1" data-zh-src="gemini-model-userguide.html?embed=1" data-en-src="gemini-model-userguide-en.html?embed=1" data-zh-title="Google Gemini 模型选择指南" data-en-title="Google Gemini Model Selection Guide" title="Google Gemini 模型选择指南" loading="lazy"></iframe></div>
-  <div class="tab-panel" id="panel-qwen" role="tabpanel" aria-labelledby="tab-qwen"><iframe src="qwen-model-userguide.html?embed=1" data-zh-src="qwen-model-userguide.html?embed=1" data-en-src="qwen-model-userguide-en.html?embed=1" data-zh-title="通义千问模型选择指南" data-en-title="Tongyi Qwen Model Selection Guide" title="通义千问模型选择指南" loading="lazy"></iframe></div>
-  <div class="tab-panel" id="panel-zai" role="tabpanel" aria-labelledby="tab-zai"><iframe src="zai-model-userguide.html?embed=1" data-zh-src="zai-model-userguide.html?embed=1" data-en-src="zai-model-userguide-en.html?embed=1" data-zh-title="智谱 Z.ai 模型选择指南" data-en-title="Z.ai Model Selection Guide" title="智谱 Z.ai 模型选择指南" loading="lazy"></iframe></div>
+  <div class="tab-panel active" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai"><iframe src="openai-model-userguide-en.html?embed=1" data-zh-src="openai-model-userguide.html?embed=1" data-en-src="openai-model-userguide-en.html?embed=1" data-zh-title="OpenAI 模型选择指南" data-en-title="OpenAI Model Selection Guide" title="OpenAI Model Selection Guide" loading="eager"></iframe></div>
+  <div class="tab-panel" id="panel-gemini" role="tabpanel" aria-labelledby="tab-gemini"><iframe src="gemini-model-userguide-en.html?embed=1" data-zh-src="gemini-model-userguide.html?embed=1" data-en-src="gemini-model-userguide-en.html?embed=1" data-zh-title="Google Gemini 模型选择指南" data-en-title="Google Gemini Model Selection Guide" title="Google Gemini Model Selection Guide" loading="lazy"></iframe></div>
+  <div class="tab-panel" id="panel-qwen" role="tabpanel" aria-labelledby="tab-qwen"><iframe src="qwen-model-userguide-en.html?embed=1" data-zh-src="qwen-model-userguide.html?embed=1" data-en-src="qwen-model-userguide-en.html?embed=1" data-zh-title="通义千问模型选择指南" data-en-title="Tongyi Qwen Model Selection Guide" title="Tongyi Qwen Model Selection Guide" loading="lazy"></iframe></div>
+  <div class="tab-panel" id="panel-zai" role="tabpanel" aria-labelledby="tab-zai"><iframe src="zai-model-userguide-en.html?embed=1" data-zh-src="zai-model-userguide.html?embed=1" data-en-src="zai-model-userguide-en.html?embed=1" data-zh-title="智谱 Z.ai 模型选择指南" data-en-title="Z.ai Model Selection Guide" title="Z.ai Model Selection Guide" loading="lazy"></iframe></div>
 </div>
 
 <script>
+  function activateTab(target) {
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      const on = b.dataset.tab === target;
+      b.classList.toggle('active', on);
+      b.setAttribute('aria-selected', on ? 'true' : 'false');
+    });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.toggle('active', p.id === 'panel-' + target));
+  }
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-      document.querySelectorAll('.tab-btn').forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-      document.getElementById('panel-' + target).classList.add('active');
+      activateTab(btn.dataset.tab);
+      try { localStorage.setItem('model-guide-tab', btn.dataset.tab); } catch (e) {} // 记忆选中的 tab，刷新后恢复
     });
   });
   // iframe 加载完成后移除"加载中"占位
@@ -352,6 +410,9 @@
     'tab-qwen':     { zh: '阿里 Qwen', en: 'Qwen' },
     'tab-zai':      { zh: '智谱 Z.ai', en: 'Z.ai' },
     'tablist':      { zh: '厂商指南切换', en: 'Vendor guides' },
+    'home':         { zh: '首页', en: 'Home' },
+    'meta-desc':    { zh: '面向实际场景的大模型选型指南：收录 OpenAI、阿里通义千问、Google Gemini、智谱 Z.ai 共 340+ 模型，对比能力边界、上下文长度与价格，帮你选对模型、用对场景。',
+                      en: 'Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare model capabilities, context windows and pricing by real-world scenario.' },
   };
   function applyShell(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -362,7 +423,13 @@
       const t = I18N[el.dataset.i18nAria];
       if (t) el.setAttribute('aria-label', t[lang]);
     });
+    // meta description 等 content 属性跟随语言切换
+    document.querySelectorAll('[data-i18n-content]').forEach(el => {
+      const t = I18N[el.dataset.i18nContent];
+      if (t) el.setAttribute('content', t[lang]);
+    });
     document.title = I18N.title[lang];
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en'; // 同步 html lang，占位文案等样式跟随语言
   }
   const langBtns = Array.prototype.slice.call(document.querySelectorAll('.lang-switch .lang-opt'));
   function setLang(lang) {
@@ -384,8 +451,13 @@
     try { localStorage.setItem('model-guide-lang', lang); } catch (e) {}
   }
   langBtns.forEach(btn => btn.addEventListener('click', () => setLang(btn.dataset.lang)));
+  // 初始化：默认英文，localStorage 中的语言记忆优先；随后恢复上次选中的厂商 tab
+  let initLang = 'en';
+  try { initLang = localStorage.getItem('model-guide-lang') === 'zh' ? 'zh' : 'en'; } catch (e) {}
+  setLang(initLang);
   try {
-    if (localStorage.getItem('model-guide-lang') === 'en') setLang('en');
+    const savedTab = localStorage.getItem('model-guide-tab');
+    if (savedTab && document.querySelector('.tab-btn[data-tab="' + savedTab + '"]')) activateTab(savedTab);
   } catch (e) {}
 </script>
 
