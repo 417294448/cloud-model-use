@@ -19,8 +19,8 @@ TRANSLATE = {
     # ---- meta ----
     'OpenAI 模型选择指南 2026': 'OpenAI Model Selection Guide 2026',
     'OpenAI 模型选择指南': 'OpenAI Model Selection Guide',
-    '70+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-08-30 同步）':
-        '75+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-08-30)',
+    '78+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-08-30 同步）':
+        '78+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-08-30)',
     '返回模型价格对比工具': 'Back to model comparison tool',
     '对比工具': 'Compare',
     '收录模型': 'Models',
@@ -123,6 +123,13 @@ TRANSLATE = {
     'GPT-5.6 系列（代号 Terra），支持多智能体编排(预览)': 'GPT-5.6 family (codename Terra), multi-agent orchestration (preview)',
     'GPT-5.6 系列（代号 Luna），支持多智能体编排(预览)': 'GPT-5.6 family (codename Luna), multi-agent orchestration (preview)',
     'GPT-5.6 系列（代号 Cyber），$12.5/$75': 'GPT-5.6 family (codename Cyber), $12.5/$75',
+    'gpt-5.6-cyber 别名，攻防研究专用（Daybreak 计划），需单独申请访问':
+        'Alias of gpt-5.6-cyber for offensive security research (Daybreak program); separate approval required',
+    'gpt-5.6-sol 别名，防御型安全专用（Daybreak 计划），需单独申请访问':
+        'Alias of gpt-5.6-sol for defensive security work (Daybreak program); separate approval required',
+    '推理增强版，Responses API 专用（含 Batch），无缓存折扣':
+        'Enhanced reasoning, Responses API only (incl. Batch); no cached-input discount',
+    '已宣布弃用，2026-12-15 退役': 'Deprecated, retires 2026-12-15',
     '持续更新的对话模型（即 GPT-5.5 Instant），固定推理强度不可配置':
         'Continuously updated chat model (i.e. GPT-5.5 Instant); fixed reasoning effort',
     'Responses API 有效预算约 922K token': '~922K token effective budget via Responses API',
@@ -188,6 +195,7 @@ TRANSLATE = {
     '性价比图像生成': 'Budget image model',
     '最先进视频生成，同步音频': 'Most advanced video model, with synchronized audio',
     '旗舰视频生成': 'Flagship video generation',
+    '旧版视频生成（官方已标 Legacy），仍可用': 'Legacy video model (officially marked Legacy); still usable',
 
     # ---- audio flow / plain / mdesc ----
     '实时听录': 'Live transcription',
@@ -243,12 +251,14 @@ TRANSLATE = {
     '直接替换，API 兼容': 'Drop-in replacement, API-compatible',
     '最早 4o 版本，尽早迁移': 'Earliest 4o version; migrate early',
     '官方未列替代，可评估 gpt-5.4-mini': 'No official replacement listed; consider gpt-5.4-mini',
+    '官方未列替代，可评估 gpt-realtime-2.1-mini': 'No official replacement listed; consider gpt-realtime-2.1-mini',
     '官方推荐替代，推理更强': 'Official recommendation, stronger reasoning',
     '迁移至 gpt-5.1-codex-mini': 'Migrate to gpt-5.1-codex-mini',
     '计划内迁移': 'Planned migration',
     '迁移至 gpt-5-mini 或 gpt-5.4-mini': 'Migrate to gpt-5-mini or gpt-5.4-mini',
     '仍可用，新项目建议 GPT-5.1': 'Still usable; GPT-5.1 recommended for new projects',
     '仍可用，新项目建议 GPT-5.4 系列': 'Still usable; GPT-5.4 family recommended for new projects',
+    '仍可用，官方已标记 Legacy，请规划迁移': 'Still usable; officially marked Legacy, plan migration',
 
     # ---- matrix ----
     '超长文档处理': 'Long-document processing',

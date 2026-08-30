@@ -14,10 +14,10 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-29 同步）",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-30 同步）",
     "stats": [
       {
-        "num": "52",
+        "num": "55",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-08-29",
+    "footer_updated": "2026-08-30",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-29 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-08-30 同步）"
   },
   "sections": [
     {
@@ -104,7 +104,7 @@
         {
           "icon": "i-search",
           "task": "语义搜索 / RAG",
-          "model": "gemini-embedding-2-preview"
+          "model": "gemini-embedding-2"
         },
         {
           "icon": "i-monitor",
@@ -305,11 +305,11 @@
           5,
           3,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "当前最强推理，Agentic 与复杂编程，$2/$12"
         ],
         [
@@ -332,11 +332,11 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "最新最强 Flash（Stable），复杂编程与多步执行，$0.75/$3.75"
         ],
         [
@@ -356,11 +356,11 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "上代 Flash（Stable），搜索与 Grounding 增强，$0.75/$3.75"
         ],
         [
@@ -380,11 +380,11 @@
           3,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "基础版 Flash（Stable），高吞吐常规任务，$1.5/$9"
         ],
         [
@@ -404,11 +404,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "3.5 最快最省（Stable），$0.3/$2.5"
         ],
         [
@@ -428,11 +428,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "前沿级廉价（Stable），$0.25/$1.5；已宣布 2027-05 退役"
         ],
         [
@@ -452,12 +452,64 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "早期预览版，$0.5/$3；建议迁移 gemini-3.6-flash"
+        ],
+        [
+          {
+            "id": "gemini-3-pro-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "Gemini 3 Pro 预览版，已关停（2026-03-09），迁移 gemini-3.1-pro-preview"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "3.1 Lite 预览版，已关停（2026-05-25），迁移 gemini-3.1-flash-lite"
         ]
       ]
     },
@@ -512,11 +564,11 @@
           5,
           3,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "2.5 代最强，复杂任务与编程首选，$1.25/$10"
         ],
         [
@@ -538,11 +590,11 @@
           3,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "最佳性价比，低延迟高吞吐，$0.3/$2.5"
         ],
         [
@@ -562,11 +614,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "2.5 代最省，大规模调用，$0.1/$0.4"
         ],
         [
@@ -603,8 +655,8 @@
           4,
           2,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10"
         ]
       ]
@@ -1284,8 +1336,8 @@
           4,
           4,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "最新具身推理：视频理解/空间推理/多步工具编排/多机协作，$2/$10"
         ],
         [
@@ -1306,9 +1358,31 @@
           4,
           4,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "上代 ER，2026-08-31 退役，迁移 ER 2，$1/$5"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.5-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          4,
+          4,
+          "128K",
+          "128K",
+          "64K",
+          "上代 ER，已关停（2026-04-30），迁移 gemini-robotics-er-1.6-preview"
         ]
       ]
     },
@@ -1342,7 +1416,7 @@
       "rows": [
         [
           {
-            "id": "gemini-embedding-2-preview",
+            "id": "gemini-embedding-2",
             "badges": [
               "NEW",
               "推荐"
@@ -1646,11 +1720,11 @@
           3,
           4,
           "1M",
-          "8K",
           {
             "v": "1M",
             "hi": true
           },
+          "8K",
           "已关停（2026-06-01），迁移 gemini-3.6-flash"
         ],
         [
@@ -1670,11 +1744,11 @@
           2,
           5,
           "1M",
-          "8K",
           {
             "v": "1M",
             "hi": true
           },
+          "8K",
           "已关停（2026-06-01），迁移 gemini-3.1-flash-lite"
         ]
       ]
@@ -1685,7 +1759,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-08-29 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-08-30 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -1702,6 +1776,42 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "gemini-3-pro-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-03-09",
+          "gemini-3.1-pro-preview",
+          "已关停，直接替换"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.5-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-04-30",
+          "gemini-robotics-er-1.6-preview",
+          "已关停，直接替换"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite-preview",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-05-25",
+          "gemini-3.1-flash-lite",
+          "已关停，直接替换"
+        ],
         [
           {
             "id": "gemini-2.0-flash",
@@ -1773,6 +1883,16 @@
           "2026-09-30",
           "gemini-omni-1.1-flash",
           "预览版按期退役"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-image",
+            "badges": []
+          },
+          "deprecated",
+          "2026-10-02",
+          "gemini-3.1-flash-image",
+          "已宣布退役，规划迁移"
         ],
         [
           {
@@ -1939,7 +2059,7 @@
             "icon": "i-search",
             "text": "语义搜索 / RAG"
           },
-          "gemini-embedding-2-preview",
+          "gemini-embedding-2",
           "gemini-embedding-001",
           "<span class=\"mono-dim\">多模态统一向量空间</span>"
         ],

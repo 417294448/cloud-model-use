@@ -19,10 +19,10 @@ TRANSLATE = {
     # ---- meta ----
     'Google Gemini 模型选择指南 2026': 'Google Gemini Model Selection Guide 2026',
     'Google Gemini 模型选择指南': 'Google Gemini Model Selection Guide',
-    'Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-08-29 同步）':
-        'Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-08-29)',
-    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-08-29 同步）':
-        'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-08-29)',
+    'Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-08-30 同步）':
+        'Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-08-30)',
+    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-08-30 同步）':
+        'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-08-30)',
     'pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览':
         'pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview',
     '收录模型': 'Models',
@@ -78,8 +78,8 @@ TRANSLATE = {
         'All shut down 2026-06-01; migrate to the corresponding Gemini 3.x replacements; all support PDF input',
     '已弃用与关停计划': 'Deprecated & Shutdown Schedule',
     '已弃用': 'Deprecated',
-    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-08-29 同步）':
-        'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-08-29)',
+    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-08-30 同步）':
+        'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-08-30)',
     '能力矩阵速查': 'Capability Matrix',
     '能力矩阵': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Match the best model to your needs quickly',
@@ -264,9 +264,16 @@ TRANSLATE = {
     '已关停，直接替换': 'Shut down; drop-in replacement',
     '已关停，迁移 Nano Banana 2': 'Shut down; migrate to Nano Banana 2',
     '即将退役，尽快迁移': 'Retiring soon; migrate promptly',
+    '已宣布退役，规划迁移': 'Retirement announced; plan migration',
     '预览版按期退役': 'Preview; retires on schedule',
     'Stable 但已宣布退役，规划迁移': 'Stable but announced retirement; plan migration',
     '仍可用（至 2028），新项目建议 Embedding 2': 'Still usable (until 2028); Embedding 2 recommended for new projects',
+    'Gemini 3 Pro 预览版，已关停（2026-03-09），迁移 gemini-3.1-pro-preview':
+        'Gemini 3 Pro preview, shut down (2026-03-09); migrate to gemini-3.1-pro-preview',
+    '3.1 Lite 预览版，已关停（2026-05-25），迁移 gemini-3.1-flash-lite':
+        '3.1 Lite preview, shut down (2026-05-25); migrate to gemini-3.1-flash-lite',
+    '上代 ER，已关停（2026-04-30），迁移 gemini-robotics-er-1.6-preview':
+        'Previous ER, shut down (2026-04-30); migrate to gemini-robotics-er-1.6-preview',
 
     # ---- matrix ----
     '复杂推理 / 数学': 'Complex reasoning / Math',

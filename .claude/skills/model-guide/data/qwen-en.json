@@ -1,12 +1,23 @@
 {
   "meta": {
+    "lang": "en",
+    "lang_switch": {
+      "zh": {
+        "href": "qwen-model-userguide.html",
+        "label": "中"
+      },
+      "en": {
+        "href": "qwen-model-userguide-en.html",
+        "label": "EN"
+      }
+    },
     "title": "Tongyi Qwen Model Selection Guide 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "Tongyi Qwen Model Selection Guide",
-    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-29)",
+    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-30)",
     "stats": [
       {
-        "num": "135",
+        "num": "138",
         "icon": "i-models",
         "label": "Models"
       },
@@ -22,20 +33,9 @@
       }
     ],
     "footer_title": "Tongyi Qwen Model Selection Guide",
-    "footer_updated": "2026-08-29",
+    "footer_updated": "2026-08-30",
     "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
-    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-29)",
-    "lang": "en",
-    "lang_switch": {
-      "zh": {
-        "href": "qwen-model-userguide.html",
-        "label": "中"
-      },
-      "en": {
-        "href": "qwen-model-userguide-en.html",
-        "label": "EN"
-      }
-    }
+    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-08-30)"
   },
   "legend_overrides": {
     "ranges": {
@@ -388,7 +388,7 @@
             "hi": true
           },
           "64k",
-          "Flagship balanced choice, ¥2/¥8, built-in tools + web"
+          "Flagship balanced choice, ¥2/¥8 (20% off, limited time), built-in tools + web"
         ],
         [
           {
@@ -1008,7 +1008,7 @@
           },
           "budget",
           {
-            "raw": "<span class=\"mono-dim\">Audio ¥64/1M</span>"
+            "raw": "<span class=\"mono-dim\">Audio ¥10/1M</span>"
           },
           [
             "audio",
@@ -1134,7 +1134,7 @@
             "badges": []
           },
           "balanced",
-          "mid",
+          "expensive",
           [
             "text",
             "image"
@@ -1152,7 +1152,7 @@
             "badges": []
           },
           "budget",
-          "low",
+          "high",
           [
             "text",
             "image"
@@ -1523,7 +1523,7 @@
           },
           "flagship",
           "Image-to-video",
-          "Per-second billing",
+          "¥0.45-1.2/sec",
           "1080P",
           "Image-driven video"
         ],
@@ -1536,9 +1536,22 @@
           },
           "flagship",
           "Reference-to-video",
-          "Per-second billing",
+          "¥0.45-1.2/sec",
           "1080P",
           "Reference image/character driven"
+        ],
+        [
+          {
+            "id": "happyhorse-1.0-video-edit",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "Video editing",
+          "¥0.9-1.6/sec",
+          "1080P",
+          "20% off for a limited time; input + output both billed"
         ],
         [
           {
@@ -2241,6 +2254,18 @@
         ],
         [
           {
+            "id": "qwen2.5-vl-embedding",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          "Multimodal embedding",
+          "512~2048",
+          "32,000",
+          "Image-text hybrid retrieval (fused vectors only)"
+        ],
+        [
+          {
             "id": "tongyi-embedding-vision-plus",
             "badges": []
           },
@@ -2351,7 +2376,7 @@
             "badges": []
           },
           "flagship",
-          "high",
+          "sky",
           "Deep research",
           "Web search + multi-step reasoning + long reports, ¥54/¥163"
         ],
@@ -2503,6 +2528,19 @@
           4,
           "256K",
           "Open-source balanced (MoE 35B-A3B)"
+        ],
+        [
+          {
+            "id": "qwen3.6-27b",
+            "badges": [
+              "OSS"
+            ]
+          },
+          "balanced",
+          "high",
+          4,
+          "—",
+          "Open-source dense 27B (Qwen3.6-gen), ¥3/¥18"
         ],
         [
           {
@@ -2663,7 +2701,7 @@
             ]
           },
           "balanced",
-          "mid",
+          "expensive",
           1,
           "—",
           "Open-source omni-modal video captioning/description"
@@ -2676,7 +2714,7 @@
       "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
       "nav": "Legacy",
-      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-08-29)",
+      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-08-30)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",

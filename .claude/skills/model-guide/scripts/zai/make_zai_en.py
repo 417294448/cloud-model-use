@@ -125,6 +125,10 @@ TRANSLATE = {
         'Excels at advanced coding, complex reasoning and tool calling; pay-as-you-go pricing not public; deployable via private instances',
     '轻量模型，推理、编码与智能体任务表现稳定':
         'Lightweight model; stable on reasoning, coding and agent tasks',
+    '轻量高速 Flash 增强版，推理速度快，适合高并发调用；输入 ¥0.5/输出 ¥3':
+        'Lightweight high-speed Flash; fast reasoning; ideal for high-concurrency calls; ¥0.5 in / ¥3 out',
+    '原生多模态普惠模型，原生理解图片/视频/文件；原价 ¥0.8/¥2.8，限时 5 折（¥0.4/¥1.4）':
+        'Native multimodal budget model; natively understands images/videos/files; list price ¥0.8/¥2.8, limited-time 50% off (¥0.4/¥1.4)',
     '极速版本，适合低延迟、高响应要求的业务场景':
         'Ultra-fast version for low-latency, high-response business scenarios',
     '专为超长文本和记忆型任务设计': 'Designed for ultra-long text and memory-intensive tasks',
@@ -165,6 +169,13 @@ TRANSLATE = {
     'GLM-4 0520 历史版本': 'GLM-4 0520 legacy version',
     'GLM-4V Plus 历史版本': 'GLM-4V Plus legacy version',
     'GLM-4 基础历史版本': 'GLM-4 base legacy version',
+    'GLM-4V 历史版本': 'GLM-4V legacy version',
+    'GLM-4-Air 历史版本': 'GLM-4-Air legacy version',
+    'GLM-4-Flash 历史版本，免费': 'GLM-4-Flash legacy version, free',
+    '按量 API 已下架，仅提供微调与私有化部署':
+        'Pay-as-you-go API retired; available via fine-tuning and private deployment',
+    '按量 API 已下架，仅支持私有化部署；历史按量 ¥0.06/次':
+        'Pay-as-you-go API retired; private deployment only; historical price ¥0.06/request',
 
     # ---- image / video 价格 raw HTML 与 mdesc ----
     '<span class="tag t-green">¥0.1 / 次</span>': '<span class="tag t-green">¥0.1 / request</span>',
@@ -227,6 +238,7 @@ TRANSLATE = {
         '3rd-gen text embedding model (V3) for semantic retrieval, clustering, topic modeling and classification',
     '第二代文本向量化模型（V2）': '2nd-gen text embedding model (V2)',
     '文本重排序模型': 'Text reranking model',
+    '文本重排序模型，输入 ¥0.8/百万 tokens': 'Text reranking model, ¥0.8/1M input tokens',
     '代码补全模型': 'Code completion model',
     '拟人对话模型': 'Humanlike chat model',
     '心理情感支持模型': 'Emotional support model',

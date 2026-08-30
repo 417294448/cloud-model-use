@@ -20,10 +20,10 @@ TRANSLATE = {
     # ---- meta ----
     '通义千问模型选择指南 2026': 'Tongyi Qwen Model Selection Guide 2026',
     '通义千问模型选择指南': 'Tongyi Qwen Model Selection Guide',
-    '通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-08-29 同步）':
-        'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-29)',
-    '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-08-29 同步）':
-        'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-29)',
+    '通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-08-30 同步）':
+        'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-30)',
+    '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-08-30 同步）':
+        'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-30)',
     'max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时':
         'max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime',
     '收录模型': 'Models',
@@ -79,8 +79,8 @@ TRANSLATE = {
     '开源权重，可自行部署，无 API 调用限制，仅需硬件成本；百炼同时提供开源版托管调用':
         'Open weights, self-deployable, no API call limits, only hardware costs; Bailian also offers hosted calling of the open-source versions',
     '旧版与即将下线模型': 'Legacy & Retiring Models',
-    '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-08-29 同步）':
-        '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-08-29)''',
+    '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-08-30 同步）':
+        '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-08-30)''',
     '能力矩阵速查': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Quickly match the best model to your needs',
     '能力矩阵': 'Capability Matrix',
@@ -173,6 +173,7 @@ TRANSLATE = {
     '最新旗舰，混合思考默认开启，¥12/¥36': 'Latest flagship, hybrid thinking on by default, ¥12/¥36',
     '上代旗舰，限时 5 折': 'Previous-gen flagship, 50% off for a limited time',
     '旗舰平衡之选，¥2/¥8，内置工具+联网': 'Flagship balanced choice, ¥2/¥8, built-in tools + web',
+    '旗舰平衡之选，¥2/¥8（限时 8 折），内置工具+联网': 'Flagship balanced choice, ¥2/¥8 (20% off, limited time), built-in tools + web',
     '稠密 27B 版（1M 上下文），¥3/¥12': 'Dense 27B (1M context), ¥3/¥12',
     '上代均衡版': 'Previous-gen balanced',
     '上代轻量版，¥0.2 起': 'Previous-gen lightweight, from ¥0.2',
@@ -201,6 +202,7 @@ TRANSLATE = {
     '<span class="mono-dim">音频 ¥40/1M</span>': '<span class="mono-dim">Audio ¥40/1M</span>',
     '<span class="mono-dim">音频 ¥64/1M</span>': '<span class="mono-dim">Audio ¥64/1M</span>',
     '实时同传首选，29 种语音+31 种文本输出': 'Top choice for realtime interpreting; 29 speech + 31 text outputs',
+    '<span class="mono-dim">音频 ¥10/1M</span>': '<span class="mono-dim">Audio ¥10/1M</span>',
     '音视频文件翻译': 'Audio/video file translation',
     '上代实时版，含 5 种中文方言': 'Previous-gen realtime, incl. 5 Chinese dialects',
     '文件模式，视频上下文感知': 'File mode, video-context aware',
@@ -242,6 +244,8 @@ TRANSLATE = {
     '图生视频（有声）': 'Image-to-video (with audio)',
     '参考生视频（有声）': 'Reference-to-video (with audio)',
     '0.45-1.2元/秒': '¥0.45-1.2/sec',
+    '0.9-1.6元/秒': '¥0.9-1.6/sec',
+    '限时 8 折，输入+输出均计费': '20% off for a limited time; input + output both billed',
     '限时 6 折，最新第三方视频生成': '60% off for a limited time, latest third-party video generation',
     '图生视频': 'Image-to-video',
     '按秒计费': 'Per-second billing',
@@ -313,6 +317,7 @@ TRANSLATE = {
     '已有 v3 索引迁移': 'Migrate existing v3 indexes',
     '多模态 Embedding': 'Multimodal embedding',
     '图文混合检索（融合+独立向量）': 'Image-text hybrid retrieval (fused + independent vectors)',
+    '图文混合检索（仅融合向量）': 'Image-text hybrid retrieval (fused vectors only)',
     '跨模态搜索（独立向量）': 'Cross-modal search (independent vectors)',
     '低成本跨模态': 'Low-cost cross-modal',
     '重排序': 'Rerank',
@@ -350,6 +355,7 @@ TRANSLATE = {
         '<span class="tag t-green"><svg class="ic"><use href="#i-home"/></svg>Self-hosted</span>',
     '最新开源旗舰，混合思考默认开启': 'Latest open-source flagship, hybrid thinking on by default',
     '开源均衡版（MoE 35B-A3B）': 'Open-source balanced (MoE 35B-A3B)',
+    '开源稠密 27B（Qwen3.6 代），¥3/¥18': 'Open-source dense 27B (Qwen3.6-gen), ¥3/¥18',
     '开源旗舰（MoE 397B-A17B）': 'Open-source flagship (MoE 397B-A17B)',
     '开源中杯（MoE 122B-A10B）': 'Open-source mid-size (MoE 122B-A10B)',
     '开源小杯（MoE 35B-A3B）': 'Open-source small (MoE 35B-A3B)',

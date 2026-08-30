@@ -8,13 +8,13 @@
     "title": "OpenAI 模型选择指南 2026",
     "eyebrow": "OPENAI MODEL SELECTION GUIDE · 2026",
     "h1": "OpenAI 模型选择指南",
-    "hero_desc": "70+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-08-30 同步）",
+    "hero_desc": "78+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-08-30 同步）",
     "home_href": "./index.html",
     "home_title": "返回模型价格对比工具",
     "home_label": "对比工具",
     "stats": [
       {
-        "num": "75",
+        "num": "78",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -316,13 +316,53 @@
           ],
           5,
           4,
+          "400K",
+          "272K",
+          "128K",
+          "GPT-5.6 系列（代号 Cyber），$12.5/$75"
+        ],
+        [
+          {
+            "id": "gpt-daybreak-red-latest",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          "400K",
+          "272K",
+          "128K",
+          "gpt-5.6-cyber 别名，攻防研究专用（Daybreak 计划），需单独申请访问"
+        ],
+        [
+          {
+            "id": "gpt-daybreak-blue-latest",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
           {
             "v": "1.05M",
             "hi": true
           },
           "922K",
           "128K",
-          "GPT-5.6 系列（代号 Cyber），$12.5/$75"
+          "gpt-5.6-sol 别名，防御型安全专用（Daybreak 计划），需单独申请访问"
         ],
         [
           {
@@ -365,6 +405,29 @@
           "922K",
           "128K",
           "Responses API 有效预算约 922K token"
+        ],
+        [
+          {
+            "id": "gpt-5.5-pro",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          1,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "推理增强版，Responses API 专用（含 Batch），无缓存折扣"
         ],
         [
           {
@@ -925,7 +988,9 @@
         [
           {
             "id": "o1-pro",
-            "badges": []
+            "badges": [
+              "弃用"
+            ]
           },
           "flagship",
           "sky",
@@ -937,7 +1002,7 @@
           "200K",
           "200K",
           "100K",
-          "最强推理，无上限算力"
+          "已宣布弃用，2026-10-21 退役，官方推荐 <span class=\"mono-dim\">gpt-5.6-sol</span>"
         ],
         [
           {
@@ -947,7 +1012,7 @@
             ]
           },
           "flagship",
-          "sky",
+          "expensive",
           [
             "text"
           ],
@@ -1001,7 +1066,9 @@
         [
           {
             "id": "o3",
-            "badges": []
+            "badges": [
+              "弃用"
+            ]
           },
           "flagship",
           "high",
@@ -1014,7 +1081,7 @@
           "200K",
           "200K",
           "100K",
-          "复杂任务推理模型"
+          "已宣布弃用，2026-10-21 退役，官方推荐 <span class=\"mono-dim\">gpt-5.6-sol</span>"
         ],
         [
           {
@@ -1190,9 +1257,7 @@
         [
           {
             "id": "sora-2-pro",
-            "badges": [
-              "PRO"
-            ]
+            "badges": []
           },
           "flagship",
           "expensive",
@@ -1209,14 +1274,12 @@
           },
           1,
           "最高 4K 60fps",
-          "最先进视频生成，同步音频"
+          "旧版视频生成（官方已标 Legacy），仍可用"
         ],
         [
           {
             "id": "sora-2",
-            "badges": [
-              "推荐"
-            ]
+            "badges": []
           },
           "flagship",
           "mid",
@@ -1233,7 +1296,7 @@
           },
           2,
           "最高 1080p",
-          "旗舰视频生成"
+          "旧版视频生成（官方已标 Legacy），仍可用"
         ]
       ],
       "nav": "图像·视频"
@@ -1347,7 +1410,7 @@
             ],
             "cls": "t-teal"
           },
-          4,
+          5,
           {
             "t": "plain",
             "v": "按时长计费"
@@ -1615,7 +1678,9 @@
         [
           {
             "id": "gpt-realtime-mini",
-            "badges": []
+            "badges": [
+              "弃用"
+            ]
           },
           "mid",
           {
@@ -1638,7 +1703,7 @@
             "t": "ctx",
             "v": "32K/4K"
           },
-          "轻量版实时音频"
+          "已宣布弃用，2026-12-15 退役"
         ],
         [
           {
@@ -2288,12 +2353,73 @@
         ],
         [
           {
+            "id": "sora-2",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-12-08",
+          "legacy",
+          "2026-10-15",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "仍可用，官方已标记 Legacy，请规划迁移"
+        ],
+        [
+          {
+            "id": "sora-2-pro",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-10-06",
+          "legacy",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "仍可用，官方已标记 Legacy，请规划迁移"
+        ],
+        [
+          {
             "id": "o1",
             "badges": [
               "弃用"
             ]
           },
           "2024-12-17",
+          "deprecated",
+          "2026-10-21",
+          "gpt-5.6-sol",
+          "官方推荐替代，推理更强"
+        ],
+        [
+          {
+            "id": "o1-pro",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-03-19",
+          "deprecated",
+          "2026-10-21",
+          "gpt-5.6-sol",
+          "官方推荐替代，推理更强"
+        ],
+        [
+          {
+            "id": "o3",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-04-16",
           "deprecated",
           "2026-10-21",
           "gpt-5.6-sol",
@@ -2314,6 +2440,22 @@
             "v": "—"
           },
           "迁移至 gpt-5.1-codex-mini"
+        ],
+        [
+          {
+            "id": "gpt-realtime-mini",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "2025-12-15",
+          "deprecated",
+          "2026-12-15",
+          {
+            "t": "mono",
+            "v": "—"
+          },
+          "官方未列替代，可评估 gpt-realtime-2.1-mini"
         ],
         [
           {

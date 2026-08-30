@@ -14,10 +14,10 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-08-29)",
+    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-08-30)",
     "stats": [
       {
-        "num": "52",
+        "num": "55",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-08-29",
+    "footer_updated": "2026-08-30",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-08-29)"
+    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-08-30)"
   },
   "sections": [
     {
@@ -104,7 +104,7 @@
         {
           "icon": "i-search",
           "task": "Semantic search / RAG",
-          "model": "gemini-embedding-2-preview"
+          "model": "gemini-embedding-2"
         },
         {
           "icon": "i-monitor",
@@ -305,11 +305,11 @@
           5,
           3,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Current top reasoning, agentic & complex coding, $2/$12"
         ],
         [
@@ -332,11 +332,11 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Newest, strongest Flash (Stable), complex coding & multi-step execution, $0.75/$3.75"
         ],
         [
@@ -356,11 +356,11 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Previous Flash (Stable), enhanced search & grounding, $0.75/$3.75"
         ],
         [
@@ -380,11 +380,11 @@
           3,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Base Flash (Stable), high-throughput general tasks, $1.5/$9"
         ],
         [
@@ -404,11 +404,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Fastest, cheapest 3.5 (Stable), $0.3/$2.5"
         ],
         [
@@ -428,11 +428,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Frontier-grade at budget price (Stable), $0.25/$1.5; announced retirement 2027-05"
         ],
         [
@@ -452,12 +452,64 @@
           4,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Early preview, $0.5/$3; migrating to gemini-3.6-flash recommended"
+        ],
+        [
+          {
+            "id": "gemini-3-pro-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "Gemini 3 Pro preview, shut down (2026-03-09); migrate to gemini-3.1-pro-preview"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "budget",
+          "low",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          2,
+          5,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "3.1 Lite preview, shut down (2026-05-25); migrate to gemini-3.1-flash-lite"
         ]
       ]
     },
@@ -512,11 +564,11 @@
           5,
           3,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Strongest of the 2.5 generation, top choice for complex tasks & coding, $1.25/$10"
         ],
         [
@@ -538,11 +590,11 @@
           3,
           4,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Best value, low latency high throughput, $0.3/$2.5"
         ],
         [
@@ -562,11 +614,11 @@
           2,
           5,
           "1M",
-          "64K",
           {
             "v": "1M",
             "hi": true
           },
+          "64K",
           "Cheapest of the 2.5 generation, large-scale calls, $0.1/$0.4"
         ],
         [
@@ -603,8 +655,8 @@
           4,
           2,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "Dedicated computer use: watch screen, click/type/navigate, $1.25/$10"
         ]
       ]
@@ -1284,8 +1336,8 @@
           4,
           4,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "Latest embodied reasoning: video understanding/spatial reasoning/multi-step tool orchestration/multi-robot collaboration, $2/$10"
         ],
         [
@@ -1306,9 +1358,31 @@
           4,
           4,
           "128K",
-          "64K",
           "128K",
+          "64K",
           "Previous ER, retires 2026-08-31, migrate to ER 2, $1/$5"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.5-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          4,
+          4,
+          "128K",
+          "128K",
+          "64K",
+          "Previous ER, shut down (2026-04-30); migrate to gemini-robotics-er-1.6-preview"
         ]
       ]
     },
@@ -1342,7 +1416,7 @@
       "rows": [
         [
           {
-            "id": "gemini-embedding-2-preview",
+            "id": "gemini-embedding-2",
             "badges": [
               "NEW",
               "Rec"
@@ -1646,11 +1720,11 @@
           3,
           4,
           "1M",
-          "8K",
           {
             "v": "1M",
             "hi": true
           },
+          "8K",
           "Shut down (2026-06-01); migrate to gemini-3.6-flash"
         ],
         [
@@ -1670,11 +1744,11 @@
           2,
           5,
           "1M",
-          "8K",
           {
             "v": "1M",
             "hi": true
           },
+          "8K",
           "Shut down (2026-06-01); migrate to gemini-3.1-flash-lite"
         ]
       ]
@@ -1685,7 +1759,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-08-29)",
+      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-08-30)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -1702,6 +1776,42 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "gemini-3-pro-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "retired",
+          "2026-03-09",
+          "gemini-3.1-pro-preview",
+          "Shut down; drop-in replacement"
+        ],
+        [
+          {
+            "id": "gemini-robotics-er-1.5-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "retired",
+          "2026-04-30",
+          "gemini-robotics-er-1.6-preview",
+          "Shut down; drop-in replacement"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-lite-preview",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "retired",
+          "2026-05-25",
+          "gemini-3.1-flash-lite",
+          "Shut down; drop-in replacement"
+        ],
         [
           {
             "id": "gemini-2.0-flash",
@@ -1773,6 +1883,16 @@
           "2026-09-30",
           "gemini-omni-1.1-flash",
           "Preview; retires on schedule"
+        ],
+        [
+          {
+            "id": "gemini-2.5-flash-image",
+            "badges": []
+          },
+          "deprecated",
+          "2026-10-02",
+          "gemini-3.1-flash-image",
+          "Retirement announced; plan migration"
         ],
         [
           {
@@ -1939,7 +2059,7 @@
             "icon": "i-search",
             "text": "Semantic search / RAG"
           },
-          "gemini-embedding-2-preview",
+          "gemini-embedding-2",
           "gemini-embedding-001",
           "<span class=\"mono-dim\">Multimodal unified vector space</span>"
         ],
