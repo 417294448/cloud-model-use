@@ -34,3 +34,16 @@ _wb_*.html
 _compare*.html
 _jina.txt
 _retire.html
+
+# Skill model-guide 临时抓取/测试文件
+_tmp_*.py
+_test_*.html
+_test_*.md
+_test_*.txt
+_g_allo_*.html
+_g_cors*.html
+_g_corsio_*.html
+_g_direct_*.html
+_g_jina_*.txt
+_openai_*.log
+_gemini_*.log

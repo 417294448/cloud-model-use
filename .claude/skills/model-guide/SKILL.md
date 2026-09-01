@@ -1,6 +1,6 @@
 ---
 name: model-guide
-description: 生成或更新大模型选择指南 HTML 页面（model userguide / 模型对比指南 / 模型选择速查页）。当用户要求"参考 index.html 风格"制作模型指南页、或要求"从官方文档更新模型信息/校准模型数据"时使用。覆盖两类任务：(1) 以统一设计体系新建模型指南页（如 openai/gemini/qwen/deepseek 等厂商）；(2) 从 OpenAI 官网 / Azure AI Foundry 等官方来源抓取最新模型数据（型号、推理、速度、价格、上下文/输入/输出）并更新到现有指南页。即使用户只说"更新一下这个模型页面""做个 xx 模型的指南"也应触发。
+description: 生成或更新大模型选择指南 HTML 页面（model userguide / 模型对比指南 / 模型选择速查页 / index 页面）。当用户要求"参考 index.html 风格"制作模型指南页、或要求"从官方文档更新模型信息/校准模型数据"时使用。覆盖两类任务：(1) 以统一设计体系新建模型指南页（如 openai/gemini/qwen/deepseek 等厂商）；(2) 从 OpenAI 官网 / Azure AI Foundry 等官方来源抓取最新模型数据（型号、推理、速度、价格、上下文/输入/输出）并更新到现有指南页。重要触发约定：只要用户输入"更新""重新生成""刷新""同步""重做"等词汇（如"更新模型指南""重新生成一下页面"），一律代表按模板完整重新生成一个新的 index 页面——执行完整流水线（官方抓取 → 数据回填 → 双语同步 → 渲染校验），除非抓取到的数据与上一次没有任何变化（此时仅报告"数据无变化"即可，无需重渲染）。即使用户只说"更新一下这个模型页面""做个 xx 模型的指南"也应触发。
 ---
 
 # Model Guide 页面生成与更新技能
@@ -43,10 +43,12 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 
 ## 先判断任务类型
 
+**触发语义约定（重要）**：当用户输入"更新""重新生成""刷新""同步""重做"等词汇（例如"更新模型指南""重新生成一下页面"），默认代表**按模板完整重新生成一个新的 index 页面**——执行完整流水线（官方抓取 → 数据回填/审补 → 双语同步 → 渲染 + 校验），而非局部修补。**唯一例外**：抓取到的数据与上一次相比没有任何变化（模型清单、字段、价格、日期均一致）时，只需报告"数据与上次一致，无需重新渲染"，不产出新页面。判断是否变化以本次抓取的官方数据与 `data/<厂商>.json` 的实际 diff 为准，而不是凭印象。
+
 | 用户意图 | 工作流 |
 |---|---|
 | 新做一个模型指南页（"参考 index.html 风格做 xx 的指南"） | A. 生成页面 |
-| 更新现有页面的模型信息（"从官方文档获取最新信息更新"） | B. 更新数据 |
+| 更新/重新生成现有页面（"更新""重新生成""刷新""同步""重做"等词汇，含"从官方文档获取最新信息更新"） | B. 更新数据（完整重新生成；数据无变化时仅报告） |
 | 调整页面局部展示（改列、改图标、改档位划分） | C. 局部调整（改 data JSON + 渲染器，遵守设计体系） |
 
 ## 工作流 A：生成新页面
@@ -58,13 +60,15 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 
 ## 工作流 B：更新数据
 
-1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。**各厂商脚本的代理通道可能整体失效**（实测 2026-08-30：OpenAI 的 `api.allorigins.win` 全部 52x、Gemini 的 `proxy.cors.sh`/`corsproxy.org` 全部失效）——此时用 IDE 的 **WebFetch 工具直连官方页面兜底**（实测 `developers.openai.com`、`ai.google.dev` 直连成功），再按 providers 文档的解析规则人工解析；数据以官方页面为准，代理与直连结果矛盾时以直连核对。OpenAI 侧要点：
+> **本工作流对应"更新/重新生成"触发语义**：按完整流水线重新生成新页面（抓官方数据 → 回填 → 双语同步 → 渲染 → 校验 → 写 diff）。执行第 1 步抓到官方数据后，先与 `data/<厂商>.json` 对比：若模型清单与全部字段（型号、推理/速度/价格档位、上下文/输入/输出、日期）均无变化，则**停止后续步骤**，向用户报告"数据与上次一致，无需重新渲染"，不重渲染、不写 diff 记录。有任何变化才继续完整流水线。
+
+1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。**各厂商脚本的代理通道可能整体失效**（实测 2026-08-30：OpenAI 的 `api.allorigins.win` 全部 52x、Gemini 的 `proxy.cors.sh`/`corsproxy.org` 全部失效）——此时用 IDE 的 **WebFetch 工具直连官方页面兜底**（实测 `developers.openai.com`、`ai.google.dev` 直连成功），再按 providers 文档的解析规则人工解析；数据以官方页面为准，代理与直连结果矛盾时以直连核对。**通道经验（2026-09-01 实测）**：OpenAI 的 `developers.openai.com` 已被 Cloudflare 全面拦截（allorigins 全 52x、curl_cffi 各浏览器指纹 403、Playwright 403），**首选 Azure Learn 三页直连**（模型清单/退役计划/定价，均稳定直连成功）作为 OpenAI 数据主力；Gemini 的 `api.allorigins.win` **间歇可用**（约 1/9 成功率），用间隔 8 秒 + 最多 20 次重试的脚本可拿到 models/pricing/deprecations 三页（判定成功 = HTTP 200 且 >100KB，防广告页误判）。OpenAI 侧要点：
    - Azure 文档（模型清单、退役计划）用 `scripts/openai/fetch_azure_docs.py` 直连抓取，可 `--section "Azure OpenAI"` 只取所需章节；`developers.openai.com` / `platform.openai.com` 被 Cloudflare 拦截，须用 `scripts/openai/fetch_models.py`（走 `api.allorigins.win` 代理 + 重试，失败率约 70%，每页重试 6-8 次）。
    - 抓完 OpenAI 详情页后用 `scripts/openai/parse_cards.py` 解析为 JSON。
    - 模型详情页追加 `.md` 可拿到 Markdown 版本（含价格表、上下文/输入/输出 token 数），比解析 HTML 更可靠。
 2. **映射为页面档位**：严格按 `references/page-style.md` 的映射表——推理 5 档（官方图标格数 1:1）、速度 5 档、价格 6 档、模态图标。**官方标 Intelligence 的模型是非推理模型，归入"快速"档，不要标推理点。**
-3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；**统计数字同步改——`meta.stats` 首个数字「收录模型」= 各模型表行数之和（排除 `naming`/`matrix` 等辅助表与 `deprecated`/`historical` 区；Z.ai 的 `69+` 含 historical 为既有口径），更新后应核对与页面实际一致**；更新日期用 `sync_dates.py --write` 统一（只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性）；**每次更新必须在 `diff/` 目录生成日期命名（如 `diff/2026-08-30.md`）的变更记录，同一天所有提供商的变更写入同一文件，按 `## 提供商` 分节**，且只记录模型数据变更（新增/删除/字段变更），每行一条。
-4. **双语同步（必做）**：`<厂商>.json` 改完后必须同步英文数据与页面——先跑对应 `make_<厂商>_en.py`（新中文文案会漏翻告警，补翻译表后重跑，直至输出「全部中文已翻译」），再 `render_guide.py` 渲染。渲染器会自动检测同目录的 `<厂商>-en.json` 并**一并渲染英文页 + 自动跑 `check_bilingual.py` 中英文语义一致性校验**（结构镜像 / 语言中立档位值 / 模型 ID 集合 / en 无中文残留），任一项不一致即失败退出；只需中文页时加 `--zh-only`。
+3. **批量更新**：`fill_objective_fields.py --write` 自动回填客观字段；新增模型在 data JSON 对应 section 插行（objective 字段可先留空再自动填）；**统计数字同步改——`meta.stats` 首个数字「收录模型」= 各模型表行数之和（排除 `naming`/`matrix` 等辅助表与 `deprecated`/`historical` 区；Z.ai 的 `69+` 含 historical 为既有口径），更新后应核对与页面实际一致**；更新日期用 `sync_dates.py --write --date YYYY-MM-DD` 统一——**务必显式传 `--date` 指定本次实际更新日期**（本次踩坑：不带 `--date` 会取文件内旧日期，导致页面显示过期同步日期；且 zh/en 全部 8 份数据文件都要跑，保持两语言一致）——只动「（YYYY-MM-DD 同步）」括注与 `footer_updated`，表格行内的官方退役日期不受影响；不带参数运行可只报告一致性；**每次更新必须在 `diff/` 目录生成日期命名（如 `diff/2026-08-30.md`）的变更记录，同一天所有提供商的变更写入同一文件，按 `## 提供商` 分节**，且只记录模型数据变更（新增/删除/字段变更），每行一条。
+4. **双语同步（必做）**：`<厂商>.json` 改完后必须同步英文数据与页面——先跑对应 `make_<厂商>_en.py`（新中文文案会漏翻告警，补翻译表后重跑，直至输出「全部中文已翻译」），再 `render_guide.py` 渲染。渲染器会自动检测同目录的 `<厂商>-en.json` 并**一并渲染英文页 + 自动跑 `check_bilingual.py` 中英文语义一致性校验**（结构镜像 / 语言中立档位值 / 模型 ID 集合 / en 无中文残留），任一项不一致即失败退出；只需中文页时加 `--zh-only`。**渲染输出路径是本次踩坑点（2026-09-01）：`render_guide.py` 的 `-o` 是相对当前工作目录的——必须在项目根目录 `d:/github-code/cloud-model-use` 执行命令（`python .claude/skills/model-guide/scripts/render_guide.py .claude/skills/model-guide/data/<厂商>.json -o <厂商>-model-userguide.html`），否则会把页面输出到技能目录内，而根目录的实际页面不会被更新（表现为"页面底部 Last updated 还是旧日期"）。渲染后务必核对根目录页面的同步日期与本次一致。**
 5. **校验**：渲染器自动调用 check_html.py（zh/en 两页都会跑）。列结构变更（增删列/增删行类型）后重点检查结构不一致的表。
 6. **清理临时文件**：任务结束后删除本次产生的临时抓取文件（`_gemini_*.html`、`_aliyun_*.html`、`_azure_tmp.html`、`_rt*.html/json` 等）。`_model_pages/`、`_model_md/` 是可复用缓存，可保留或按需清理；所有临时/缓存路径必须已在 `.gitignore` 中声明。
 
@@ -82,11 +86,13 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 按「提供商索引」找到对应厂商脚本，执行该厂商工作流后**先同步英文数据、再渲染（渲染器自动渲染 zh+en 两页）**：
 
 ```bash
-# 示例：仅更新 Z.ai
+# 示例：仅更新 Z.ai（以下命令在项目根目录执行）
 python scripts/zai/update_data.py --fetch --apply
 python scripts/zai/make_zai_en.py                      # 同步英文数据（漏翻会告警）
 python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
 ```
+
+**按量 API 下架模型的迁移（2026-09-01 实测）**：Z.ai 官方 pricing 页的**按量 API 区**是"哪些模型还在卖"的权威来源；某模型若只出现在「模型微调/私有实例」区（LoRA/全参微调、算力单元）而不再出现在按量价格表，说明其**按量 API 已下架**。此时应从主表（text/vision/image/video 等）移入 `historical` 区，说明列标注「按量 API 已下架，仅提供微调与私有化部署」；价格列置 `null` 或保留既有值并注明。本次据此将 `GLM-4-9B`、`ChatGLM3-6B` 移入 historical（update_data.py 会以「可能下架」报告此类模型，人工核对 pricing 页后确认迁移）。**迁移后主表行数减少但总数不变（historical 行数增加），`meta.stats` 收录数无需改动。**
 
 ```bash
 # 示例：仅更新 OpenAI
@@ -122,8 +128,8 @@ python scripts/zai/update_data.py --apply
 python scripts/zai/make_zai_en.py
 python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
 
-# 3. 统一同步日期（zh/en 两份数据文件都要跑，保持两语言日期一致）
-python scripts/sync_dates.py --write \
+# 3. 统一同步日期（zh/en 两份数据文件都要跑，保持两语言日期一致；--date 显式指定本次实际更新日期）
+python scripts/sync_dates.py --write --date 2026-09-01 \
   .claude/skills/model-guide/data/openai.json .claude/skills/model-guide/data/openai-en.json \
   .claude/skills/model-guide/data/gemini.json .claude/skills/model-guide/data/gemini-en.json \
   .claude/skills/model-guide/data/qwen.json .claude/skills/model-guide/data/qwen-en.json \
@@ -142,8 +148,8 @@ python scripts/sync_dates.py --write \
 ## 四条硬性约定
 
 - **样式不即兴**：所有颜色/字体/组件从 index.html 的 CSS 变量复制，不新造色值。
-- **数据可溯源**：每个模型行的关键指标（推理、速度、价格、上下文）必须能对应到官方页面；官方查不到的（如 Azure-only 的 chat 变体）沿用现有值并在总结中注明"未能验证"。
-- **改动后必校验**：`scripts/check_html.py` 全绿才算完成。
+- **数据可溯源**：每个模型行的关键指标（推理、速度、价格、上下文）必须能对应到官方页面；官方查不到的（如 Azure-only 的 chat 变体）沿用现有值并在总结中注明"未能验证"。**核对结论要落文档**：更新时先用官方数据与 data JSON 做差异核对（模型清单 / 档位 / 价格 / 上下文 / 关停日期），无变化的厂商在 diff 记录里写明「数据核对一致，无变更」，只有真实变化才改数据。
+- **改动后必校验**：`scripts/check_html.py` 全绿才算完成。**渲染后必核根目录页面**：确认根目录 `<厂商>-model-userguide.html`（及 -en）的同步日期与本次一致（`render_guide.py` 的 `-o` 相对当前工作目录，必须在项目根目录执行，否则页面输出到技能目录内、根目录页面不更新）。
 - **更新必同步双语**：任何对 `<厂商>.json` 的模型/文案修改，都必须跑对应 `make_<厂商>_en.py`（漏翻会告警，补翻译表重跑至无告警）并渲染两页（渲染器自动同步 en 页并跑 `check_bilingual.py` 语义校验）；中英文两版缺一、或 `check_bilingual.py` 不一致即视为未完成。
 - **任务结束清场**：skill 执行完毕后清理本次产生的临时抓取文件；缓存目录（如 `_model_pages/`、`_model_md/`）可保留但必须在 `.gitignore` 中声明，避免污染版本控制。
 

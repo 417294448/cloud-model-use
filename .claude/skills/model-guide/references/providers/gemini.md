@@ -38,6 +38,8 @@
 
 **备用通道（2026-08-30 实测）**：代理通道可能**全部失效**（cors.sh 400/302、corsproxy.org 广告页、corsproxy.io 401、allorigins 522，`fetch_docs.py` 输出为广告垃圾页需弃用），此时可用 IDE 的 **WebFetch 工具直连 `ai.google.dev/gemini-api/docs/{models,pricing,deprecations}`**（实测直连成功，三页均含 Last updated 日期），再按本文件解析规则人工解析。
 
+**allorigins 间歇可用（2026-09-01 实测）**：`api.allorigins.win` 对 `ai.google.dev` 的成功率约为 **1/9**（其余返回 520/522/16 字节），但**高重试可以拿到全部三页**——models 147KB、pricing 240KB、deprecations 115KB 均成功。抓取时用**间隔 8 秒 + 最多 20 次重试**的脚本（见 SKILL.md 工作流 B 说明），判定成功标准是 HTTP 200 且 size > 100KB（防止限流页/广告页误判）；`corsproxy.org` 本轮对 Google 源站返回 VPN 广告页（92KB），`proxy.cors.sh` 302，均不可用。
+
 ## 各页面内容与用途
 
 | 页面 | 提供的关键字段 |

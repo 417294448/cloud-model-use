@@ -6,6 +6,8 @@
 
 更新 OpenAI 模型数据时，两个官方来源各有抓取门道。核心结论：**Azure 直连可用；OpenAI 官网被 Cloudflare 拦截，必须走公共代理 + 重试**。
 
+> **通道优先级（2026-09-01 实测更新）**：`developers.openai.com` 的 allorigins 代理在本轮**全部 52x 失效**（重试 6-8 次零成功）；curl_cffi（chrome/edge/safari 指纹）与 Playwright 真实浏览器也均被 Cloudflare 挑战页 403 拦截。**唯一稳定通道是 Azure Learn 直连**——`models-sold-directly-by-azure`（模型清单+上下文/输入/输出）、`model-retirement-schedule`（退役计划）、`azure.microsoft.com/pricing/details/azure-openai`（定价）三页全部直连成功。因此 OpenAI 数据更新应以 **Azure 三页直连为主力**：用模型清单核对模型存在性与 token 数、用退役计划核对弃用表、用定价页核对价格；`developers.openai.com` 的推理/速度格数仅在做细粒度校验时再用代理高重试（>9 次）兜底。OpenAI 主表模型绝大多数在 Azure 清单中可见（除 gpt-5.6-cyber、daybreak-*、o1-pro、sora-2-pro、tts-1/whisper-1 等 Azure 不收录的变体，这些沿用现有值并注明来源）。
+
 ## 目录
 
 - 来源优先级
