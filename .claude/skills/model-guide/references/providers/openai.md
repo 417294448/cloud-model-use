@@ -4,9 +4,9 @@
 > 通用流水线（模板/渲染/提取/校验）见 SKILL.md；其他提供商的方法将分别沉淀为
 > `references/providers/<厂商>.md`（Gemini、Qwen、DeepSeek 等待补充）。
 
-更新 OpenAI 模型数据时，两个官方来源各有抓取门道。核心结论：**Azure 直连可用；OpenAI 官网被 Cloudflare 拦截，必须走公共代理 + 重试**。
+更新 OpenAI 模型数据时，两个官方来源各有抓取门道。核心结论：**`developers.openai.com` 现可直连抓取（参照 openai-scratch 方法，requests + 浏览器 UA + 重试，无需代理）；Azure Learn 直连作补充**。
 
-> **通道优先级（2026-09-01 实测更新）**：`developers.openai.com` 的 allorigins 代理在本轮**全部 52x 失效**（重试 6-8 次零成功）；curl_cffi（chrome/edge/safari 指纹）与 Playwright 真实浏览器也均被 Cloudflare 挑战页 403 拦截。**唯一稳定通道是 Azure Learn 直连**——`models-sold-directly-by-azure`（模型清单+上下文/输入/输出）、`model-retirement-schedule`（退役计划）、`azure.microsoft.com/pricing/details/azure-openai`（定价）三页全部直连成功。因此 OpenAI 数据更新应以 **Azure 三页直连为主力**：用模型清单核对模型存在性与 token 数、用退役计划核对弃用表、用定价页核对价格；`developers.openai.com` 的推理/速度格数仅在做细粒度校验时再用代理高重试（>9 次）兜底。OpenAI 主表模型绝大多数在 Azure 清单中可见（除 gpt-5.6-cyber、daybreak-*、o1-pro、sora-2-pro、tts-1/whisper-1 等 Azure 不收录的变体，这些沿用现有值并注明来源）。
+> **通道优先级（2026-09-01 最新实测）**：`developers.openai.com` **直连成功**（列表页 `/api/docs/models/all` 200、约 370KB；详情页 200、约 300-420KB；`.md` Markdown 版本 200、约 3-4KB）——用 `requests.get()` + 浏览器 UA + 指数退避重试即可，**无需 allorigins 代理**。列表页可自动发现全量 slug（当前 96 个），抓取方法已沉淀进 `scripts/openai/fetch_models.py`（列表页解析 + UA 轮换 + 重试 + HTML 有效性校验 + 缓存断点续跑）。此前的历史结论（allorigins 代理失效、curl_cffi/Playwright 被 403 拦截、只能靠 Azure 三页直连）已过时；若未来再次被 Cloudflare 拦截，可回退 Azure 三页直连（见下文"来源 1"）与公共代理方案。**编码坑（2026-09-01 实测）**：详情页响应头不带 charset，`requests` 默认按 ISO-8859-1 解码会把 UTF-8 的 `•`（0xE2 0x80 0xA2）误读成 `â€¢`，导致价格正则匹配失败——必须用 `r.content.decode('utf-8')` 解码。
 
 ## 目录
 
@@ -40,20 +40,29 @@ curl -sL --max-time 60 -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit
 
 注意：该页**不含已弃用模型**；价格不在此页（价格看 OpenAI 详情页指标卡或定价页）。
 
-## 来源 2：developers.openai.com（代理 + 重试）
+## 来源 2：developers.openai.com（直连 + 重试，主通道）
 
-直连、WebFetch、llms.txt 均被 Cloudflare 403。**可行通道：`api.allorigins.win` 公共代理**：
+**当前可直连**（2026-09-01 实测：列表页、详情页、`.md` 全部 200），无需代理：
 
-```bash
-curl -sL --max-time 40 --tlsv1.2 -A "Mozilla/5.0" \
-  "https://api.allorigins.win/raw?url=developers.openai.com/api/docs/models/<slug>"
+```python
+import requests
+r = requests.get(url, headers={"User-Agent": UA}, timeout=30)
+text = r.content.decode("utf-8")   # 必须 content.decode：响应无 charset 时 requests 按 ISO-8859-1 解码会把 • 变成 â€¢
 ```
 
-代理对源站约 70% 概率返回 52x 错误（响应体 16 字节 `error code: 52x`），**必须重试 6-8 次**，成功标志是响应 >100KB（正常页面约 300-420KB）。其他代理（codetabs 522、corsproxy 要 key、r.jina.ai 不通、wayback 超时）在本项目网络下均不可用，不必再试。
+已沉淀进 `scripts/openai/fetch_models.py`（参照 openai-scratch 方法）：
+- **列表页 `/api/docs/models/all` 自动发现全量 slug**（当前 96 个，按 8 大分类区块解析），不再维护硬编码清单；`--list` 可单独打印分类清单（**发现新模型的途径**）
+- UA 轮换（4 个浏览器指纹）+ 指数退避重试（最多 5 次）+ 请求间隔 0.3s + HTML 有效性校验（>100KB 才视为成功，防验证页/错误页）
+- 详情页 HTML 缓存到 `_model_pages/<slug>.html`（slug 中 `.`→`_`），**断点续跑**：已存在且 >100KB 的文件自动跳过
+- `--md` 追加抓 `.md` 版本到 `_model_md/<slug>.md`（优先用其拿价格与 token 数）
+- 失败项不中断，结束列出可重跑补漏
 
-**备用通道（2026-08-30 实测）**：代理通道可能**整体失效**（`api.allorigins.win` 全部 52x 时 `fetch_models.py` 无法产出有效页），此时可用 IDE 的 **WebFetch 工具直连 `developers.openai.com` 详情页**（`/api/docs/models/<slug>`，实测直连成功），逐页核对指标卡与价格；配合 Azure 文档（直连）核对 token 数与退役计划。直连页面结构同「两种指标卡 DOM 结构」，`.md` Markdown 版本同样适用。
+**备用通道（仅当直连再次被 Cloudflare 拦截时）**：
+1. `api.allorigins.win` 公共代理：`https://api.allorigins.win/raw?url=developers.openai.com/api/docs/models/<slug>`——对源站约 70% 概率返回 52x 错误（16 字节），必须重试 6-8 次，成功标志 >100KB
+2. IDE **WebFetch 工具直连详情页**逐页核对指标卡与价格
+3. Azure Learn 三页直连（见「来源 1」）核对 token 数与退役计划
 
-模型 slug 与 API 模型 ID 一致（`gpt-5.4`、`gpt-5.2-codex`、`o3-pro`、`gpt-realtime-2.1` 等）。索引页 `/api/docs/models` 可列出当前全部有效 slug——**发现新模型的途径**（本会话中发现了 gpt-5.6-cyber、daybreak-red/blue-latest）。
+模型 slug 与 API 模型 ID 一致（`gpt-5.4`、`gpt-5.2-codex`、`o3-pro`、`gpt-realtime-2.1` 等）。索引页 `/api/docs/models` 可列出当前全部有效 slug。
 
 ## 模型详情页的两种指标卡 DOM 结构
 
@@ -70,13 +79,13 @@ curl -sL --max-time 40 --tlsv1.2 -A "Mozilla/5.0" \
 
 ## .md Markdown 版本（最省事）
 
-详情页 URL 追加 `.md` 返回 Markdown（页面自己也声明了这一点），同样经代理抓取：
+详情页 URL 追加 `.md` 返回 Markdown（页面自己也声明了这一点），当前可直连：
 
 ```
-https://api.allorigins.win/raw?url=developers.openai.com/api/docs/models/gpt-5.6-sol.md
+https://developers.openai.com/api/docs/models/gpt-5.6-sol.md
 ```
 
-含一句话定位、Model ID、模态、上下文/最大输入/最大输出 token、知识截止、**完整价格表**（Input/Cached input/Output 及促销说明）、端点支持矩阵。解析 Markdown 比解析 HTML 指标卡可靠得多，**优先用 .md 拿价格与 token 数，用 HTML 指标卡拿推理/速度格数**。
+含一句话定位、Model ID、模态、上下文/最大输入/最大输出 token、知识截止、**完整价格表**（Input/Cached input/Output 及促销说明）、端点支持矩阵。解析 Markdown 比解析 HTML 指标卡可靠得多，**优先用 .md 拿价格与 token 数，用 HTML 指标卡拿推理/速度格数**。`fetch_models.py --md` 会批量抓取全部模型的 `.md` 到 `_model_md/`。
 
 ## 404 与回退策略
 
@@ -90,13 +99,22 @@ https://api.allorigins.win/raw?url=developers.openai.com/api/docs/models/gpt-5.6
 ## 批量抓取脚本用法
 
 ```bash
-# 抓取（slug 列表内置，可按需增删；已存在的文件自动跳过）
-python scripts/openai/fetch_models.py gpt-5.4 o3-pro gpt-realtime-2.1
-# 输出到 _model_pages/<slug>.html
+# 1. 全量抓取（列表页自动发现 96 个 slug；已缓存自动跳过，可反复运行补漏）
+python scripts/openai/fetch_models.py
+# 输出到 _model_pages/<slug>.html（直连快，96 页约 1-2 分钟）
 
-# 解析为 JSON（推理/速度格数+文字、价格、模态）
+# 1b. 同时抓 .md Markdown 版本（价格表/token 数，最可靠）
+python scripts/openai/fetch_models.py --md
+# 输出到 _model_md/<slug>.md
+
+# 1c. 联调/按需：只抓指定 slug / 前 N 个 / 只看 slug 分类清单
+python scripts/openai/fetch_models.py gpt-5.4 o3-pro gpt-realtime-2.1
+python scripts/openai/fetch_models.py --limit 5
+python scripts/openai/fetch_models.py --list
+
+# 2. 解析为 JSON（推理/速度格数+文字、价格、模态）
 python scripts/openai/parse_cards.py _model_pages
 # stdout 输出 JSON，可重定向保存
 ```
 
-代理不稳，批量抓 30+ 页面需 10-20 分钟，建议放后台运行。抓完先剔掉 <100KB 的失败页再解析。
+直连下 96 页约 1-2 分钟即可抓完；若网络退化变慢，可放后台运行。抓完先剔掉 <100KB 的失败页再解析（`parse_cards.py` 会自动跳过 <100KB 的文件）。

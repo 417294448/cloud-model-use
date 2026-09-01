@@ -62,8 +62,9 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 
 > **本工作流对应"更新/重新生成"触发语义**：按完整流水线重新生成新页面（抓官方数据 → 回填 → 双语同步 → 渲染 → 校验 → 写 diff）。执行第 1 步抓到官方数据后，先与 `data/<厂商>.json` 对比：若模型清单与全部字段（型号、推理/速度/价格档位、上下文/输入/输出、日期）均无变化，则**停止后续步骤**，向用户报告"数据与上次一致，无需重新渲染"，不重渲染、不写 diff 记录。有任何变化才继续完整流水线。
 
-1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。**各厂商脚本的代理通道可能整体失效**（实测 2026-08-30：OpenAI 的 `api.allorigins.win` 全部 52x、Gemini 的 `proxy.cors.sh`/`corsproxy.org` 全部失效）——此时用 IDE 的 **WebFetch 工具直连官方页面兜底**（实测 `developers.openai.com`、`ai.google.dev` 直连成功），再按 providers 文档的解析规则人工解析；数据以官方页面为准，代理与直连结果矛盾时以直连核对。**通道经验（2026-09-01 实测）**：OpenAI 的 `developers.openai.com` 已被 Cloudflare 全面拦截（allorigins 全 52x、curl_cffi 各浏览器指纹 403、Playwright 403），**首选 Azure Learn 三页直连**（模型清单/退役计划/定价，均稳定直连成功）作为 OpenAI 数据主力；Gemini 的 `api.allorigins.win` **间歇可用**（约 1/9 成功率），用间隔 8 秒 + 最多 20 次重试的脚本可拿到 models/pricing/deprecations 三页（判定成功 = HTTP 200 且 >100KB，防广告页误判）。OpenAI 侧要点：
-   - Azure 文档（模型清单、退役计划）用 `scripts/openai/fetch_azure_docs.py` 直连抓取，可 `--section "Azure OpenAI"` 只取所需章节；`developers.openai.com` / `platform.openai.com` 被 Cloudflare 拦截，须用 `scripts/openai/fetch_models.py`（走 `api.allorigins.win` 代理 + 重试，失败率约 70%，每页重试 6-8 次）。
+1. **抓官方数据**：按 `references/providers/<厂商>.md` 的方法抓取（OpenAI 见 `references/providers/openai.md`）。**通道经验（2026-09-01 最新实测）**：OpenAI 的 `developers.openai.com` **现可直连**（requests + 浏览器 UA + 重试，列表页/详情页/`.md` 全部 200），用 `scripts/openai/fetch_models.py`（参照 openai-scratch 方法：列表页 `/api/docs/models/all` 自动发现全量 slug + UA 轮换 + 指数退避重试 + HTML 有效性校验 + 缓存断点续跑）即可完成主抓取；历史结论（2026-08-30 曾 allorigins 全 52x、curl_cffi/Playwright 403、只能靠 Azure 三页直连）已过时，仅作回退预案。Gemini 的 `api.allorigins.win` **间歇可用**（约 1/9 成功率），用间隔 8 秒 + 最多 20 次重试的脚本可拿到 models/pricing/deprecations 三页（判定成功 = HTTP 200 且 >100KB，防广告页误判）。OpenAI 侧要点：
+   - `developers.openai.com` 主抓取：`python scripts/openai/fetch_models.py`（直连，全量 96 slug，自动跳过缓存）；`--md` 追加抓 Markdown 版本（价格表/token 数最可靠）；`--list` 打印 slug 分类清单（发现新模型）；`--limit N` 联调。**编码坑**：详情页响应无 charset，必须用 `r.content.decode('utf-8')`，否则 `•` 会变 `â€¢` 导致价格解析失败（新脚本已内置）。
+   - Azure 文档（模型清单、退役计划）用 `scripts/openai/fetch_azure_docs.py` 直连抓取，可 `--section "Azure OpenAI"` 只取所需章节，用于核对 token 数与退役计划。
    - 抓完 OpenAI 详情页后用 `scripts/openai/parse_cards.py` 解析为 JSON。
    - 模型详情页追加 `.md` 可拿到 Markdown 版本（含价格表、上下文/输入/输出 token 数），比解析 HTML 更可靠。
 2. **映射为页面档位**：严格按 `references/page-style.md` 的映射表——推理 5 档（官方图标格数 1:1）、速度 5 档、价格 6 档、模态图标。**官方标 Intelligence 的模型是非推理模型，归入"快速"档，不要标推理点。**
@@ -96,8 +97,8 @@ python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-m
 
 ```bash
 # 示例：仅更新 OpenAI
-python scripts/openai/fetch_models.py
-python scripts/openai/parse_cards.py
+python scripts/openai/fetch_models.py                 # 直连抓全量（列表页自动发现 slug；可加 --md 抓 Markdown 价格表）
+python scripts/openai/parse_cards.py _model_pages -o _openai_cards.json
 python scripts/fill_objective_fields.py .claude/skills/model-guide/data/openai.json _openai_cards.json --write
 python scripts/openai/make_openai_en.py                # 同步英文数据（漏翻会告警）
 python scripts/sync_dates.py --write .claude/skills/model-guide/data/openai.json
@@ -199,8 +200,8 @@ data/<厂商>-en.json（en 副本）────────render_guide.py --la
 **OpenAI 专用**
 - `data/openai.json` — OpenAI 页面数据（唯一事实源，也是新厂商的参照样例）
 - `data/openai-en.json` — 英文版页面数据（`make_openai_en.py` 生成，双语试点）
-- `references/providers/openai.md` — OpenAI 官方数据源抓取方法（代理、重试、解析结构、404 回退）
-- `scripts/openai/fetch_models.py` — 批量抓取 OpenAI 模型详情页（代理 + 重试）
+- `references/providers/openai.md` — OpenAI 官方数据源抓取方法（直连、重试、解析结构、404 回退、回退代理）
+- `scripts/openai/fetch_models.py` — 批量抓取 OpenAI 模型详情页（直连；列表页自动发现 slug + UA 轮换 + 重试 + 缓存断点续跑；`--md` 抓 Markdown 价格表、`--list` 打印分类清单、`--limit` 联调）
 - `scripts/openai/parse_cards.py` — 解析 OpenAI 详情页指标卡为 JSON
 - `scripts/openai/make_openai_en.py` — 由 openai.json 生成 openai-en.json（翻译表精确替换 + 漏翻告警）
 - `scripts/openai/fetch_azure_docs.py` — 抓取 Azure Learn 文档页转结构化文本（可 --section 截取章节；退役计划/模型清单均用此脚本）

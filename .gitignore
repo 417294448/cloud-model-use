@@ -19,6 +19,8 @@ _aliyun_*.html
 _azure_tmp.html
 _model_pages/
 _model_md/
+raw_models_all.html
+_openai_models_list.json
 _rt.json
 _rt.html
 _rt2.json
