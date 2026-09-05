@@ -620,8 +620,8 @@
       <div class="hero-eyebrow">OPENAI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="openai-model-userguide-en.html" data-lang-href="openai-model-userguide-en.html">EN</a></div>
     </div>
     <h1>OpenAI 模型选择指南</h1>
-    <p class="hero-desc">83+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-01 同步）</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">83</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+    <p class="hero-desc">84+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-05 同步）</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">84</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">9</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>模型分类</span></span></div>
       <div class="stat-divider"></div>
@@ -753,13 +753,25 @@
 <!-- ===== Frontier 前沿模型 ===== -->
 <section class="sec" id="frontier">
 <div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Frontier 前沿模型</h2></div>
-<p class="sec-desc">OpenAI 最先进的模型，推荐用于大多数任务。GPT-5.6 系列为当前最新一代（2026-07 发布），支持多智能体编排（预览）与计算机使用；其工具调用请通过 <span class="mono">Responses API</span>（Chat Completions 与函数工具不能同时使用，除非 <span class="mono">reasoning_effort=none</span>）</p>
+<p class="sec-desc">OpenAI 最先进的模型，推荐用于大多数任务。GPT-6 Astra 为最新旗舰，同时支持 Chat Completions 与 Responses API；GPT-5.6 系列（2026-07 发布）支持多智能体编排（预览）与计算机使用，其工具调用请通过 <span class="mono">Responses API</span>（Chat Completions 与函数工具不能同时使用，除非 <span class="mono">reasoning_effort=none</span>）</p>
 <div class="table-panel">
 <table>
 <thead>
 <tr><th>模型 ID</th><th>定位</th><th>价格</th><th>模态</th><th>推理</th><th>速度</th><th>上下文</th><th>输入</th><th>输出</th><th>说明</th></tr>
 </thead>
 <tbody>
+<tr>
+<td><span class="model-id">gpt-6-astra</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">旗舰</span></td>
+<td><span class="tag t-orange price-ico" title="昂贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>最强</span></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>快速</span></td>
+<td><span class="ctx hi">1.05M</span></td>
+<td><span class="ctx">922K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GPT-6 系列旗舰（代号 Astra），面向复杂端到端任务：深度推理、编码、计算机使用与研究，$10/$50</td>
+</tr>
 <tr>
 <td><span class="model-id">gpt-5.6-sol</span><span class="badge b-new">NEW</span></td>
 <td><span class="tier-tag t-flag">旗舰</span></td>
@@ -2096,9 +2108,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>OpenAI 模型选择指南</b> · 最后更新 2026-09-01</p>
+  <p><b>OpenAI 模型选择指南</b> · 最后更新 2026-09-05</p>
   <p class="rules">版本号越大越新 · mini = 省钱 · pro = 增强 · codex = 编程 · nano = 极速 · o 系列 = 推理 · realtime = 实时音频</p>
-  <p>数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-01 同步）</p>
+  <p>数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-05 同步）</p>
 </footer>
 
 <script>
