@@ -14,10 +14,10 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-01 同步）",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-05 同步）",
     "stats": [
       {
-        "num": "55",
+        "num": "57",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-09-01",
+    "footer_updated": "2026-09-05",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-01 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-05 同步）"
   },
   "sections": [
     {
@@ -314,7 +314,7 @@
         ],
         [
           {
-            "id": "gemini-3.7-flash",
+            "id": "gemini-3.8-flash",
             "badges": [
               "NEW",
               "推荐"
@@ -337,7 +337,31 @@
             "hi": true
           },
           "64K",
-          "最新最强 Flash（Stable），复杂编程与多步执行，$0.75/$3.75"
+          "最新最强 Flash（Stable），长程软件工程与自主 Agent，$0.75/$3.75"
+        ],
+        [
+          {
+            "id": "gemini-3.7-flash",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          4,
+          4,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "上代 Flash（Stable），复杂编程与多步执行，$0.75/$3.75"
         ],
         [
           {
@@ -1187,7 +1211,7 @@
       "rows": [
         [
           {
-            "id": "lyria-3-pro-preview",
+            "id": "lyria-3.5",
             "badges": [
               "NEW",
               "推荐"
@@ -1197,7 +1221,18 @@
           "完整歌曲",
           "$0.08/首",
           "完整曲目",
-          "旗舰音乐生成，复杂结构完整性"
+          "最新旗舰（2026-09 发布），全曲音乐生成与结构连贯性"
+        ],
+        [
+          {
+            "id": "lyria-3-pro-preview",
+            "badges": []
+          },
+          "flagship",
+          "完整歌曲",
+          "$0.08/首",
+          "完整曲目",
+          "上一代旗舰（Full Song），建议迁移 lyria-3.5"
         ],
         [
           {
@@ -1360,7 +1395,7 @@
           "128K",
           "128K",
           "64K",
-          "上代 ER，2026-08-31 退役，迁移 ER 2，$1/$5"
+          "上代 ER，已关停（2026-08-31），迁移 ER 2，$1/$5"
         ],
         [
           {
@@ -1759,7 +1794,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-01 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-05 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -1867,10 +1902,10 @@
               "弃用"
             ]
           },
-          "deprecated",
+          "retired",
           "2026-08-31",
           "gemini-robotics-er-2-preview",
-          "即将退役，尽快迁移"
+          "已关停（2026-08-31），迁移 ER 2"
         ],
         [
           {
@@ -1941,7 +1976,7 @@
             "icon": "i-chat",
             "text": "日常对话 / 写作"
           },
-          "gemini-3.7-flash",
+          "gemini-3.8-flash",
           "gemini-3.6-flash",
           "<span class=\"ctx hi\">1M 上下文</span> <span class=\"plain\">$0.75/$3.75</span>"
         ],
@@ -1959,7 +1994,7 @@
             "icon": "i-code",
             "text": "Agentic 编程工作流"
           },
-          "gemini-3.7-flash",
+          "gemini-3.8-flash",
           "gemini-2.5-pro",
           "<span class=\"tag mod-ico\" title=\"代码\"><svg class=\"ic\"><use href=\"#i-code\"/></svg></span> <span class=\"plain\">+ 多步执行</span>"
         ],
@@ -1987,7 +2022,7 @@
             "icon": "i-eye",
             "text": "多模态理解（图+音+视）"
           },
-          "gemini-3.7-flash",
+          "gemini-3.8-flash",
           "gemini-2.5-flash",
           "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"图像\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"音频\"><svg class=\"ic\"><use href=\"#i-audio\"/></svg></span><span class=\"tag mod-ico\" title=\"视频\"><svg class=\"ic\"><use href=\"#i-video\"/></svg></span><span class=\"tag mod-ico\" title=\"文本\"><svg class=\"ic\"><use href=\"#i-text\"/></svg></span></div>"
         ],
@@ -2050,7 +2085,7 @@
             "icon": "i-audio",
             "text": "音乐创作"
           },
-          "lyria-3-pro-preview",
+          "lyria-3.5",
           "lyria-3-clip-preview",
           "<span class=\"ctx\">$0.04-0.08/首</span>"
         ],
