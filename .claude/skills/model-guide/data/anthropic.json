@@ -1,0 +1,616 @@
+{
+  "meta": {
+    "lang": "zh",
+    "lang_switch": {
+      "zh": {
+        "href": "anthropic-model-userguide.html",
+        "label": "中"
+      },
+      "en": {
+        "href": "anthropic-model-userguide-en.html",
+        "label": "EN"
+      }
+    },
+    "title": "Anthropic Claude 模型选择指南 2026",
+    "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
+    "h1": "Anthropic Claude 模型选择指南",
+    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5 超旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）",
+    "stats": [
+      {
+        "num": "9",
+        "icon": "i-models",
+        "label": "收录模型"
+      },
+      {
+        "num": "4",
+        "icon": "i-modes",
+        "label": "模型系列"
+      },
+      {
+        "num": "1M",
+        "icon": "i-ruler",
+        "label": "最大上下文"
+      }
+    ],
+    "footer_title": "Anthropic Claude 模型选择指南",
+    "footer_updated": "2026-09-08",
+    "footer_rules": "opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折",
+    "footer_sources": "数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）"
+  },
+  "legend": "default",
+  "legend_overrides": {
+    "modalities": [
+      "text",
+      "image",
+      "pdf"
+    ]
+  },
+  "sections": [
+    {
+      "id": "quick",
+      "kind": "quick",
+      "title": "快速选型",
+      "icon": "i-bolt",
+      "nav": "快速选型",
+      "desc": "按任务类型直达推荐模型（价格均为 USD / 1M tokens，输入/输出）",
+      "cards": [
+        {
+          "icon": "i-chat",
+          "task": "日常对话 / 写作",
+          "model": "claude-sonnet-5"
+        },
+        {
+          "icon": "i-brain",
+          "task": "最难推理 / 复杂数学",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-spark",
+          "task": "极限长程自主任务",
+          "model": "claude-fable-5"
+        },
+        {
+          "icon": "i-code",
+          "task": "专业编程 / Agentic",
+          "model": "claude-sonnet-5"
+        },
+        {
+          "icon": "i-target",
+          "task": "复杂 Agent / 工具调用",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-doc",
+          "task": "超长文档理解",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-eye",
+          "task": "图像 / PDF 理解",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-coin",
+          "task": "高吞吐批量 / 省钱",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-search",
+          "task": "分类 / 抽取 / 摘要",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-bolt",
+          "task": "低延迟实时助手",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-monitor",
+          "task": "长输出 / 内容生成",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-share",
+          "task": "批量离线任务",
+          "model": "claude-sonnet-5"
+        }
+      ]
+    },
+    {
+      "id": "naming",
+      "kind": "table",
+      "title": "命名规律速查",
+      "icon": "i-ruler",
+      "nav": "命名规律",
+      "desc": "掌握这些规律，看到任何 Claude 模型名都能秒懂其定位",
+      "table_class": "rules",
+      "columns": [
+        "命名元素",
+        "含义",
+        "示例"
+      ],
+      "row_types": [
+        "raw",
+        "plain",
+        "mono_td"
+      ],
+      "rows": [
+        [
+          "Opus / Sonnet / Haiku",
+          "三大系列名：旗舰最强 / 均衡性价比 / 快速经济",
+          "claude-opus-4-8, claude-sonnet-5, claude-haiku-4-5"
+        ],
+        [
+          "claude- 前缀",
+          "Claude API 模型统一前缀",
+          "claude-opus-…, claude-sonnet-…"
+        ],
+        [
+          "Fable 5",
+          "2026 超旗舰代号，强于 Opus，定价更高",
+          "claude-fable-5"
+        ],
+        [
+          "Mythos 5",
+          "与 Fable 5 同能力同价，仅 Glasswing 邀请制组织可调用",
+          "claude-mythos-5"
+        ],
+        [
+          "版本号演进",
+          "3 → 4 → 4.1 → 4.5 → 4.6 → 4.7 → 4.8 → 5，越大越新",
+          "claude-opus-4-6 → claude-opus-4-7 → claude-opus-4-8"
+        ],
+        [
+          "-YYYYMMDD 快照",
+          "老式命名以发版日作版本（新代推荐用无日期 alias）",
+          "claude-opus-4-5-20251101, claude-3-7-sonnet-20250219"
+        ],
+        [
+          "无日期 alias",
+          "新一代推荐写法，自动指向最新快照",
+          "claude-opus-4-8（勿手动追加日期后缀）"
+        ],
+        [
+          "4.5+ 思考机制",
+          "自适应思考 + effort；Fable 深度思考常开",
+          "opus-4.6+/sonnet-5/sonnet-4.6 → adaptive"
+        ]
+      ]
+    },
+    {
+      "id": "current",
+      "kind": "table",
+      "title": "Claude 现役模型（Fable / Opus / Sonnet / Haiku）",
+      "icon": "i-models",
+      "nav": "现役模型",
+      "desc": "当前 API 在售模型全谱：Fable 5 为 2026 超旗舰，Opus 为旗舰最强，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "claude-fable-5",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          5,
+          2,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Anthropic 迄今最强（2026）：最难深度推理与长程自主 Agentic；深度思考常开（不可关）+ effort low→max；需 30 天数据留存；$10/$50"
+        ],
+        [
+          {
+            "id": "claude-opus-4-8",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "现役 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus；自适应思考 + effort；可选 Fast 模式；$5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-7",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "上代 Opus，与 4.8 同请求面；仍可生产，新项目建议升级 4.8；$5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-6",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "4.6 系 Opus，仍可用；自适应思考；$5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-5",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          4,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "2025 末 Opus，仍可用；200K 上下文（1M 需 beta）；思考预算制过渡；$5/$25"
+        ],
+        [
+          {
+            "id": "claude-sonnet-5",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "balanced",
+          "high",
+          4,
+          4,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Sonnet 新代：编码与 Agentic 逼近 Opus、价格更低；自适应思考默认开 + xhigh；$3/$15（2026-09-01 起常规价，此前 intro $2/$10）"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-6",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          4,
+          4,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "上代 Sonnet，仍可用；1M 上下文；$3/$15"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-5",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          3,
+          4,
+          "200K",
+          "200K",
+          "128K",
+          "旧代均衡模型，仍可用（200K 上下文）；新项目选 Sonnet 5；$3/$15"
+        ],
+        [
+          {
+            "id": "claude-haiku-4-5",
+            "badges": [
+              "推荐"
+            ]
+          },
+          "budget",
+          "mid",
+          2,
+          5,
+          "200K",
+          "200K",
+          "64K",
+          "最快最省：高频分类/抽取/摘要/客服；输出上限 64K；$1/$5"
+        ]
+      ]
+    },
+    {
+      "id": "deprecated",
+      "kind": "table",
+      "title": "已退役模型与迁移指引",
+      "icon": "i-circle-off",
+      "nav": "已退役",
+      "desc": "以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-08 同步）",
+      "table_class": "deprecated",
+      "columns": [
+        "模型 ID",
+        "生命周期",
+        "退役日期",
+        "替代方案",
+        "迁移建议"
+      ],
+      "row_types": [
+        "model_id",
+        "lifecycle",
+        "mono",
+        "replacement",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "claude-opus-4-1-20250805",
+            "badges": []
+          },
+          "retired",
+          "2026-08-05",
+          "claude-opus-4-8",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-opus-4-20250514",
+            "badges": []
+          },
+          "retired",
+          "2026-06-15",
+          "claude-opus-4-8",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-20250514",
+            "badges": []
+          },
+          "retired",
+          "2026-06-15",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-haiku-20240307",
+            "badges": []
+          },
+          "retired",
+          "2026-04-19",
+          "claude-haiku-4-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-7-sonnet-20250219",
+            "badges": []
+          },
+          "retired",
+          "2026-02-19",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-5-haiku-20241022",
+            "badges": []
+          },
+          "retired",
+          "2026-02-19",
+          "claude-haiku-4-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-opus-20240229",
+            "badges": []
+          },
+          "retired",
+          "2026-01-05",
+          "claude-opus-4-8",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-5-sonnet-20241022",
+            "badges": []
+          },
+          "retired",
+          "2025-10-28",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-5-sonnet-20240620",
+            "badges": []
+          },
+          "retired",
+          "2025-10-28",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-3-sonnet-20240229",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-2.1",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ],
+        [
+          {
+            "id": "claude-2.0",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "已退役，直接迁移"
+        ]
+      ]
+    },
+    {
+      "id": "matrix",
+      "kind": "table",
+      "title": "能力矩阵速查",
+      "icon": "i-target",
+      "nav": "能力矩阵",
+      "desc": "根据需求快速匹配最佳模型",
+      "columns": [
+        "需求场景",
+        "推荐模型",
+        "备选模型",
+        "关键能力"
+      ],
+      "row_types": [
+        "scene",
+        "model_id",
+        "mono",
+        "raw"
+      ],
+      "rows": [
+        [
+          {
+            "icon": "i-chat",
+            "text": "日常对话 / 写作"
+          },
+          "claude-sonnet-5",
+          "claude-opus-4-8",
+          "<span class=\"plain\">$3/$15 · 均衡性价比</span>"
+        ],
+        [
+          {
+            "icon": "i-brain",
+            "text": "复杂推理 / 数学"
+          },
+          "claude-opus-4-8",
+          "claude-fable-5",
+          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>最强</span>"
+        ],
+        [
+          {
+            "icon": "i-code",
+            "text": "专业编程 / Agentic"
+          },
+          "claude-sonnet-5",
+          "claude-opus-4-8",
+          "<span class=\"mono-dim\">Sonnet 逼近 Opus · 高性价比</span>"
+        ],
+        [
+          {
+            "icon": "i-spark",
+            "text": "极限长程自主任务"
+          },
+          "claude-fable-5",
+          "claude-opus-4-8",
+          "<span class=\"mono-dim\">thinking 常开 · effort 至 max</span>"
+        ],
+        [
+          {
+            "icon": "i-doc",
+            "text": "超长文档理解",
+            "note": "~100万 token"
+          },
+          "claude-opus-4-8",
+          "claude-sonnet-5",
+          "<span class=\"ctx hi\">1M 上下文</span>"
+        ],
+        [
+          {
+            "icon": "i-eye",
+            "text": "图像 / PDF 理解"
+          },
+          "claude-opus-4-8",
+          "claude-sonnet-5",
+          "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"图像\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"PDF\"><svg class=\"ic\"><use href=\"#i-doc\"/></svg></span></div> 全系支持"
+        ],
+        [
+          {
+            "icon": "i-coin",
+            "text": "高吞吐低成本"
+          },
+          "claude-haiku-4-5",
+          "claude-sonnet-5",
+          "<span class=\"plain\">$1/$5 · 最快</span>"
+        ],
+        [
+          {
+            "icon": "i-bolt",
+            "text": "低延迟实时助手"
+          },
+          "claude-haiku-4-5",
+          "claude-sonnet-4-6",
+          "<span class=\"mono-dim\">Haiku 快速响应</span>"
+        ],
+        [
+          {
+            "icon": "i-share",
+            "text": "批量离线任务"
+          },
+          "claude-sonnet-5",
+          "claude-haiku-4-5",
+          "<span class=\"mono-dim\">Batch API 半价</span>"
+        ]
+      ]
+    }
+  ]
+}

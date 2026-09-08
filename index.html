@@ -5,21 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LLM Selection &amp; Scenario Guide</title>
 <!-- SEO：description 随语言切换动态更新（data-i18n-content），keywords 中英合并覆盖百度等仍读取 keywords 的引擎 -->
-<meta name="description" content="Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare model capabilities, context windows and pricing by real-world scenario." data-i18n-content="meta-desc">
-<meta name="keywords" content="LLM,大模型,大语言模型,large language model,AI model selection,模型选型,模型对比,model comparison,模型选择指南,scenario guide,场景指南,OpenAI,GPT,ChatGPT,Qwen,通义千问,Alibaba Qwen,Google Gemini,Z.ai,Zhipu,智谱,GLM,context window,上下文长度,model pricing,模型价格">
+<meta name="description" content="Data-driven bilingual guide to 350+ LLMs from OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic — compare model capabilities, context windows and pricing by real-world scenario." data-i18n-content="meta-desc">
+<meta name="keywords" content="LLM,大模型,大语言模型,large language model,AI model selection,模型选型,模型对比,model comparison,模型选择指南,scenario guide,场景指南,OpenAI,GPT,ChatGPT,Qwen,通义千问,Alibaba Qwen,Google Gemini,Z.ai,Zhipu,智谱,GLM,Anthropic,Claude,Opus,Sonnet,Haiku,context window,上下文长度,model pricing,模型价格">
 <link rel="canonical" href="https://muse.cloudproduct.top/">
 <!-- Open Graph：社交分享卡片（静态英文为主，声明 zh_CN 备用区域） -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="LLM Selection &amp; Scenario Guide">
-<meta property="og:title" content="LLM Selection &amp; Scenario Guide — OpenAI / Qwen / Gemini / Z.ai">
-<meta property="og:description" content="Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare capabilities, context windows and pricing by scenario.">
+<meta property="og:title" content="LLM Selection &amp; Scenario Guide — OpenAI / Anthropic / Gemini / Qwen / Z.ai">
+<meta property="og:description" content="Data-driven bilingual guide to 350+ LLMs from OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic — compare capabilities, context windows and pricing by scenario.">
 <meta property="og:url" content="https://muse.cloudproduct.top/">
 <meta property="og:locale" content="en_US">
 <meta property="og:locale:alternate" content="zh_CN">
 <!-- Twitter 分享卡片 -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LLM Selection &amp; Scenario Guide">
-<meta name="twitter:description" content="Compare 340+ LLMs from OpenAI, Qwen, Gemini and Z.ai by scenario — capabilities, context, pricing. 中英双语大模型选型指南。">
+<meta name="twitter:description" content="Compare 350+ LLMs from OpenAI, Qwen, Gemini, Z.ai and Anthropic by scenario — capabilities, context, pricing. 中英双语大模型选型指南。">
 <!-- 结构化数据：声明双语站点，利于搜索引擎理解 -->
 <script type="application/ld+json">
 {
@@ -29,7 +29,7 @@
   "alternateName": "大模型选型与场景指南",
   "url": "https://muse.cloudproduct.top/",
   "inLanguage": ["en", "zh-CN"],
-  "description": "Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai."
+  "description": "Data-driven bilingual guide to 350+ LLMs from OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic."
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -326,6 +326,7 @@
     <symbol id="i-brand-qwen" viewBox="0 0 24 24"><path fill="currentColor" d="M23.919 14.545 20.817 9.17l1.47-2.544a.56.56 0 0 0 0-.566l-1.633-2.83a.57.57 0 0 0-.49-.283h-6.207L12.487.402a.57.57 0 0 0-.49-.284H8.732a.56.56 0 0 0-.49.284L5.139 5.775h-2.94a.56.56 0 0 0-.49.284L.077 8.887a.56.56 0 0 0 0 .567L3.18 14.83l-1.47 2.545a.56.56 0 0 0 0 .566l1.634 2.83a.57.57 0 0 0 .49.283h6.205l1.47 2.545a.57.57 0 0 0 .49.284h3.266a.57.57 0 0 0 .49-.284l3.104-5.375h2.94a.57.57 0 0 0 .49-.283l1.634-2.828a.55.55 0 0 0-.004-.568M8.733.686l1.634 2.828-1.634 2.828H21.8L20.164 9.17H7.425L5.63 6.06Zm1.306 19.801-6.205-.002 1.634-2.83h3.265L2.201 6.344h3.267q3.182 5.517 6.367 11.032zm10.124-5.66L18.53 12l-6.532 11.315-1.634-2.83c2.129-3.673 4.25-7.351 6.373-11.028h3.592l3.102 5.374z"/></symbol>
     <symbol id="i-brand-gemini" viewBox="0 0 24 24"><path fill="currentColor" d="M11.04 19.32Q12 21.51 12 24q0-2.49.93-4.68.96-2.19 2.58-3.81t3.81-2.55Q21.51 12 24 12q-2.49 0-4.68-.93a12.3 12.3 0 0 1-3.81-2.58 12.3 12.3 0 0 1-2.58-3.81Q12 2.49 12 0q0 2.49-.96 4.68-.93 2.19-2.55 3.81a12.3 12.3 0 0 1-3.81 2.58Q2.49 12 0 12q2.49 0 4.68.96 2.19.93 3.81 2.55t2.55 3.81"/></symbol>
     <symbol id="i-brand-zai" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2 2 7v10l10 5 10-5V7L12 2Zm0 2.3L19.1 8 12 11.7 4.9 8 12 4.3ZM4 9.5l7 3.5v7.4l-7-3.5V9.5Zm9 10.9v-7.4l7-3.5v7.4l-7 3.5Z"/></symbol>
+    <symbol id="i-brand-anthropic" viewBox="0 0 24 24"><path fill="currentColor" d="M17.3041 3.541h-3.6718l6.696 16.918H24Zm-10.6082 0L0 20.459h3.7442l1.3693-3.5527h7.0052l1.3693 3.5528h3.7442L10.5363 3.5409Zm-.3712 10.2232 2.2914-5.9456 2.2914 5.9456Z"/></symbol>
   </defs>
 </svg>
 
@@ -350,11 +351,11 @@
       </div>
     </div>
     <h1 data-i18n="h1">LLM Selection &amp; Scenario Guide</h1>
-    <p class="hero-desc" data-i18n="hero-desc">Overwhelmed by OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai models? This guide starts from real scenarios to help you quickly understand each model’s capabilities and pick the right model for the right scenario.</p>
+    <p class="hero-desc" data-i18n="hero-desc">Overwhelmed by OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic Claude models? This guide starts from real scenarios to help you quickly understand each model’s capabilities and pick the right model for the right scenario.</p>
     <div class="stat-strip">
-      <div class="stat"><span class="stat-num">340+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span data-i18n="stat-models">Models</span></span></div>
+      <div class="stat"><span class="stat-num">350+</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span data-i18n="stat-models">Models</span></span></div>
       <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num">4</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span data-i18n="stat-vendors">Vendors</span></span></div>
+      <div class="stat"><span class="stat-num">5</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span data-i18n="stat-vendors">Vendors</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">10M</span><span class="stat-label"><svg class="ic"><use href="#i-ruler"/></svg><span data-i18n="stat-context">Max context</span></span></div>
     </div>
@@ -364,6 +365,7 @@
 <nav class="tabs">
   <div class="tabs-inner" role="tablist" aria-label="Vendor guides" data-i18n-aria="tablist">
     <button class="tab-btn active" data-tab="openai" role="tab" id="tab-openai" aria-selected="true" aria-controls="panel-openai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-openai"/></svg><span data-i18n="tab-openai">OpenAI</span></button>
+    <button class="tab-btn" data-tab="anthropic" role="tab" id="tab-anthropic" aria-selected="false" aria-controls="panel-anthropic"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-anthropic"/></svg><span data-i18n="tab-anthropic">Anthropic</span></button>
     <button class="tab-btn" data-tab="gemini" role="tab" id="tab-gemini" aria-selected="false" aria-controls="panel-gemini"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-gemini"/></svg><span data-i18n="tab-gemini">Google Gemini</span></button>
     <button class="tab-btn" data-tab="qwen" role="tab" id="tab-qwen" aria-selected="false" aria-controls="panel-qwen"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-qwen"/></svg><span data-i18n="tab-qwen">Qwen</span></button>
     <button class="tab-btn" data-tab="zai" role="tab" id="tab-zai" aria-selected="false" aria-controls="panel-zai"><svg class="ic tab-logo" aria-hidden="true"><use href="#i-brand-zai"/></svg><span data-i18n="tab-zai">Z.ai</span></button>
@@ -372,6 +374,7 @@
 
 <div class="tab-panels">
   <div class="tab-panel active" id="panel-openai" role="tabpanel" aria-labelledby="tab-openai"><iframe src="openai-model-userguide-en.html?embed=1" data-zh-src="openai-model-userguide.html?embed=1" data-en-src="openai-model-userguide-en.html?embed=1" data-zh-title="OpenAI 模型选择指南" data-en-title="OpenAI Model Selection Guide" title="OpenAI Model Selection Guide" loading="eager"></iframe></div>
+  <div class="tab-panel" id="panel-anthropic" role="tabpanel" aria-labelledby="tab-anthropic"><iframe src="anthropic-model-userguide-en.html?embed=1" data-zh-src="anthropic-model-userguide.html?embed=1" data-en-src="anthropic-model-userguide-en.html?embed=1" data-zh-title="Anthropic Claude 模型选择指南" data-en-title="Anthropic Claude Model Selection Guide" title="Anthropic Claude Model Selection Guide" loading="lazy"></iframe></div>
   <div class="tab-panel" id="panel-gemini" role="tabpanel" aria-labelledby="tab-gemini"><iframe src="gemini-model-userguide-en.html?embed=1" data-zh-src="gemini-model-userguide.html?embed=1" data-en-src="gemini-model-userguide-en.html?embed=1" data-zh-title="Google Gemini 模型选择指南" data-en-title="Google Gemini Model Selection Guide" title="Google Gemini Model Selection Guide" loading="lazy"></iframe></div>
   <div class="tab-panel" id="panel-qwen" role="tabpanel" aria-labelledby="tab-qwen"><iframe src="qwen-model-userguide-en.html?embed=1" data-zh-src="qwen-model-userguide.html?embed=1" data-en-src="qwen-model-userguide-en.html?embed=1" data-zh-title="通义千问模型选择指南" data-en-title="Tongyi Qwen Model Selection Guide" title="Tongyi Qwen Model Selection Guide" loading="lazy"></iframe></div>
   <div class="tab-panel" id="panel-zai" role="tabpanel" aria-labelledby="tab-zai"><iframe src="zai-model-userguide-en.html?embed=1" data-zh-src="zai-model-userguide.html?embed=1" data-en-src="zai-model-userguide-en.html?embed=1" data-zh-title="智谱 Z.ai 模型选择指南" data-en-title="Z.ai Model Selection Guide" title="Z.ai Model Selection Guide" loading="lazy"></iframe></div>
@@ -400,8 +403,8 @@
   const I18N = {
     'title':        { zh: '大模型选型与场景指南', en: 'LLM Selection & Scenario Guide' },
     'h1':           { zh: '大模型选型与场景指南', en: 'LLM Selection & Scenario Guide' },
-    'hero-desc':    { zh: '面对 OpenAI、阿里 Qwen、Google Gemini、智谱 Z.ai 众多模型不知如何下手？本指南从实际场景出发，帮你快速理解各模型能力边界，选对模型、用对场景。',
-                      en: 'Overwhelmed by OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai models? This guide starts from real scenarios to help you quickly understand each model\u2019s capabilities and pick the right model for the right scenario.' },
+    'hero-desc':    { zh: '面对 OpenAI、阿里 Qwen、Google Gemini、智谱 Z.ai、Anthropic Claude 众多模型不知如何下手？本指南从实际场景出发，帮你快速理解各模型能力边界，选对模型、用对场景。',
+                      en: 'Overwhelmed by OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic Claude models? This guide starts from real scenarios to help you quickly understand each model\u2019s capabilities and pick the right model for the right scenario.' },
     'stat-models':  { zh: '收录模型', en: 'Models' },
     'stat-vendors': { zh: '厂商选型', en: 'Vendors' },
     'stat-context': { zh: '最大上下文', en: 'Max context' },
@@ -409,10 +412,11 @@
     'tab-gemini':   { zh: 'Google Gemini', en: 'Google Gemini' },
     'tab-qwen':     { zh: '阿里 Qwen', en: 'Qwen' },
     'tab-zai':      { zh: '智谱 Z.ai', en: 'Z.ai' },
+    'tab-anthropic':{ zh: 'Anthropic', en: 'Anthropic' },
     'tablist':      { zh: '厂商指南切换', en: 'Vendor guides' },
     'home':         { zh: '首页', en: 'Home' },
-    'meta-desc':    { zh: '面向实际场景的大模型选型指南：收录 OpenAI、阿里通义千问、Google Gemini、智谱 Z.ai 共 340+ 模型，对比能力边界、上下文长度与价格，帮你选对模型、用对场景。',
-                      en: 'Data-driven bilingual guide to 340+ LLMs from OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — compare model capabilities, context windows and pricing by real-world scenario.' },
+    'meta-desc':    { zh: '面向实际场景的大模型选型指南：收录 OpenAI、阿里通义千问、Google Gemini、智谱 Z.ai、Anthropic Claude 共 350+ 模型，对比能力边界、上下文长度与价格，帮你选对模型、用对场景。',
+                      en: 'Data-driven bilingual guide to 350+ LLMs from OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic — compare model capabilities, context windows and pricing by real-world scenario.' },
   };
   function applyShell(lang) {
     document.querySelectorAll('[data-i18n]').forEach(el => {

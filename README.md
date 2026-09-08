@@ -1,13 +1,13 @@
 # cloud-model-use
 
-[![Pages: 8](https://img.shields.io/badge/pages-8-0e7490)](#project-structure)
-[![Models: 340+](https://img.shields.io/badge/models-340%2B-0d9463)](#project-structure)
-[![Vendors: 4](https://img.shields.io/badge/vendors-4-2563eb)](#project-structure)
+[![Pages: 10](https://img.shields.io/badge/pages-10-0e7490)](#project-structure)
+[![Models: 350+](https://img.shields.io/badge/models-350%2B-0d9463)](#project-structure)
+[![Vendors: 5](https://img.shields.io/badge/vendors-5-2563eb)](#project-structure)
 [![Languages: zh / en](https://img.shields.io/badge/languages-zh%20%2F%20en-f4f6f8)](#internationalization)
 
-Data-driven, bilingual **model selection guides** for OpenAI, Alibaba Qwen, Google Gemini and Zhipu Z.ai — rendered from a single source of truth (`data/<vendor>.json`) into lightweight, dependency-free static HTML pages, aggregated by a language-switchable landing page (`index.html`).
+Data-driven, bilingual **model selection guides** for OpenAI, Alibaba Qwen, Google Gemini, Zhipu Z.ai and Anthropic Claude — rendered from a single source of truth (`data/<vendor>.json`) into lightweight, dependency-free static HTML pages, aggregated by a language-switchable landing page (`index.html`).
 
-> 简体中文简介：面向 OpenAI / 阿里 Qwen / Google Gemini / 智谱 Z.ai 的模型选型指南。每厂商一套「官方数据 → JSON 事实源 → 模板渲染」流水线，产出中英双语静态页面，由 index.html 统一聚合并支持全局中英切换。模型数据以官方文档为唯一基准，通过脚本自动同步并校验。
+> 简体中文简介：面向 OpenAI / 阿里 Qwen / Google Gemini / 智谱 Z.ai / Anthropic Claude 的模型选型指南。每厂商一套「官方数据 → JSON 事实源 → 模板渲染」流水线，产出中英双语静态页面，由 index.html 统一聚合并支持全局中英切换。模型数据以官方文档为唯一基准，通过脚本自动同步并校验。
 
 ---
 
@@ -27,10 +27,10 @@ Data-driven, bilingual **model selection guides** for OpenAI, Alibaba Qwen, Goog
 
 ## Features
 
-- **8 static pages** — 4 vendors × 2 languages (`<vendor>-model-userguide[|-en].html`), no build step, no runtime dependencies.
+- **10 static pages** — 5 vendors × 2 languages (`<vendor>-model-userguide[|-en].html`), no build step, no runtime dependencies.
 - **Single source of truth** — every page is rendered from `data/<vendor>.json` via a shared template; never hand-edit HTML.
 - **Global language switching** — a `中 / EN` switcher in the top-right corner of `index.html` flips both the landing-page shell (title, description, stats, tabs) and all embedded vendor pages at once; preference is persisted in `localStorage`.
-- **Official-data-driven updates** — per-vendor fetch/parse scripts pull from official sources (Azure AI Foundry, Aliyun Bailian, ai.google.dev, BigModel), with documented proxy fallbacks and retry strategies.
+- **Official-data-driven updates** — per-vendor fetch/parse scripts pull from official sources (Azure AI Foundry, Aliyun Bailian, ai.google.dev, BigModel, Anthropic Claude Platform), with documented proxy fallbacks and retry strategies.
 - **Mandatory bilingual sync** — any change to the Chinese data must be mirrored to the English data (via `make_<vendor>_en.py`, which warns on any untranslated string) before rendering.
 - **Semantic parity check** — `check_bilingual.py` verifies that the Chinese and English data are structurally mirrored, share identical language-neutral values (model IDs, tiers, token counts), and contain no untranslated leftovers.
 - **Change log** — every model-data change is recorded in `diff/YYYY-MM-DD.md`, one line per change, grouped by vendor section.
@@ -40,7 +40,7 @@ Data-driven, bilingual **model selection guides** for OpenAI, Alibaba Qwen, Goog
 ```
 .
 ├── index.html                          # Landing page: vendor tabs + global language switcher
-├── <vendor>-model-userguide.html       # Rendered Chinese guide (openai / gemini / qwen / zai)
+├── <vendor>-model-userguide.html       # Rendered Chinese guide (openai / gemini / qwen / zai / anthropic)
 ├── <vendor>-model-userguide-en.html    # Rendered English guide
 ├── diff/
 │   └── YYYY-MM-DD.md                   # Model-data change log (one shared file per day)
@@ -88,7 +88,7 @@ You can also open any vendor page standalone, e.g. `openai-model-userguide.html`
 - **Renderer labels** are switched by `--lang en` (reasoning/speed/price/tier/modality/lifecycle labels, legend titles, footer "Last updated").
 - **Switching UX**:
   - Standalone pages: a static `中 / EN` switcher in the page header (`meta.lang_switch`), preserving the `?embed=1` query when embedded.
-  - `index.html`: the top-right global switcher toggles the shell text (`data-i18n` + JS dictionary) and all four embedded iframes together, remembering the choice in `localStorage['model-guide-lang']`.
+  - `index.html`: the top-right global switcher toggles the shell text (`data-i18n` + JS dictionary) and all five embedded iframes together, remembering the choice in `localStorage['model-guide-lang']`.
 
 ## Updating Model Data
 

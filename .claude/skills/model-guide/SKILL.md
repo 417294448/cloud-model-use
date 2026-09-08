@@ -17,9 +17,10 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 | **阿里 Qwen** | `qwen-model-userguide.html` / `qwen-model-userguide-en.html` | `data/qwen.json` + `data/qwen-en.json` | `references/providers/qwen.md` | `qwen/fetch_docs.py` / `qwen/make_qwen_en.py` | ✅ 已沉淀（全链路验证通过；**中英双语**） |
 | **Google Gemini** | `gemini-model-userguide.html` / `gemini-model-userguide-en.html` | `data/gemini.json` + `data/gemini-en.json` | `references/providers/gemini.md` | `gemini/fetch_docs.py` / `gemini/make_gemini_en.py` | ✅ 已沉淀（全链路验证通过；**中英双语**） |
 | **智谱 Z.ai** | `zai-model-userguide.html` / `zai-model-userguide-en.html` | `data/zai.json` + `data/zai-en.json` | `references/providers/zai.md` | `scripts/zai/fetch_docs.py` / `zai/make_zai_en.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过；**中英双语**） |
+| **Anthropic** | `anthropic-model-userguide.html` / `anthropic-model-userguide-en.html` | `data/anthropic.json` + `data/anthropic-en.json` | `references/providers/anthropic.md` | `scripts/anthropic/make_anthropic_en.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过；**中英双语**） |
 | DeepSeek / 其他 | — | — | 待沉淀 | — | ⬜ 待做 |
 
-**OpenAI、Qwen、Gemini、Z.ai 已完成模板化全链路（官方抓取 → 数据文件 → 渲染页面）。四个独立页面通过根目录 `index.html` 以 Tab 形式聚合（iframe 切换，各页独立维护）。用户提到 DeepSeek 等页面时，通用工作流（提取/渲染/校验/设计规范）直接适用，但官方数据源方法尚未沉淀——按「新增提供商指南」补做后再大规模更新。
+**OpenAI、Qwen、Gemini、Z.ai、Anthropic 已完成模板化全链路（官方抓取 → 数据文件 → 渲染页面）。五个独立页面通过根目录 `index.html` 以 Tab 形式聚合（iframe 切换，各页独立维护），当前 Tab 顺序为 OpenAI → Anthropic → Gemini → Qwen → Z.ai。新增厂商接入 index.html 的 Tab 需按「接入 index.html 厂商 Tab」小节维护。用户提到 DeepSeek 等页面时，通用工作流（提取/渲染/校验/设计规范）直接适用，但官方数据源方法尚未沉淀——按「新增提供商指南」补做后再大规模更新。
 
 ## 新增提供商指南
 
@@ -75,11 +76,11 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 
 ## 按提供商独立更新
 
-四个已沉淀厂商在数据、脚本、页面上**完全独立**：
+五个已沉淀厂商在数据、脚本、页面上**完全独立**：
 - 各厂商有独立的 `data/<厂商>.json` 事实源；
 - 各厂商有独立的官方数据源方法、抓取/解析脚本；
 - 渲染生成独立的 `<厂商>-model-userguide.html`；
-- 根目录 `index.html` 只通过 iframe Tab 聚合四个页面，不依赖页面内容，仅在**总收录模型数**变化时才需要更新其统计数字。
+- 根目录 `index.html` 只通过 iframe Tab 聚合五个页面，不依赖页面内容，仅在其**统计数字**（Vendors / Models / Max context）与厂商清单变化时才需要更新——用 `scripts/sync_index_stats.py` 汇总同步统计数字（见「接入 index.html 厂商 Tab」）。
 
 因此可以**单独更新任一厂商**，也可以**批量更新全部厂商**，互不影响。
 
@@ -129,18 +130,42 @@ python scripts/zai/update_data.py --apply
 python scripts/zai/make_zai_en.py
 python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
 
+python scripts/anthropic/make_anthropic_en.py
+python scripts/render_guide.py .claude/skills/model-guide/data/anthropic.json -o anthropic-model-userguide.html
+
 # 3. 统一同步日期（zh/en 两份数据文件都要跑，保持两语言日期一致；--date 显式指定本次实际更新日期）
 python scripts/sync_dates.py --write --date 2026-09-01 \
   .claude/skills/model-guide/data/openai.json .claude/skills/model-guide/data/openai-en.json \
   .claude/skills/model-guide/data/gemini.json .claude/skills/model-guide/data/gemini-en.json \
   .claude/skills/model-guide/data/qwen.json .claude/skills/model-guide/data/qwen-en.json \
-  .claude/skills/model-guide/data/zai.json .claude/skills/model-guide/data/zai-en.json
+  .claude/skills/model-guide/data/zai.json .claude/skills/model-guide/data/zai-en.json \
+  .claude/skills/model-guide/data/anthropic.json .claude/skills/model-guide/data/anthropic-en.json
 
-# 4. 如总收录模型数变化，更新 index.html 统计数字
+# 4. 汇总同步 index.html 统计数字（Vendors/Models/Max context，--write 写回；只读运行可核对）
+python scripts/sync_index_stats.py --write
+
 # 5. 日期同步涉及翻译表日期时，同步更新 make_<厂商>_en.py 中的日期并重跑 en 数据
 ```
 
 无论单独还是批量更新，模型数据变更都按日期写入同一个 `diff/YYYY-MM-DD.md` 文件，以 `## 提供商` 分节追加。
+
+## 接入 index.html 厂商 Tab
+
+根目录 `index.html` 用 iframe Tab 聚合各厂商指南页（当前顺序：OpenAI → Anthropic → Gemini → Qwen → Z.ai）。**新增厂商接入 Tab 时**，以下四处必须手工同步（统计数字除外，用脚本）：
+
+1. **品牌 logo symbol**：在 `<svg><defs>` 的 `i-brand-*` 系列旁加 `i-brand-<厂商>`（单色 path，取官方/开源单色标识，如 simple-icons 的 anthropic）。Tab 按钮与 `tab-logo` 图标 `<use href="#i-brand-<厂商>">`。
+2. **Tab 按钮 + iframe 面板**：`<button class="tab-btn" data-tab="<厂商>"…>` 与其 `<div class="tab-panel" id="panel-<厂商>"…><iframe src="<厂商>-model-userguide-en.html?embed=1" data-zh-src="…-userguide.html?embed=1" data-en-src="…-userguide-en.html?embed=1" data-zh-title/en-title=…>`；**按钮与面板顺序必须一致**（一处排头一处排尾会造成 Tab 与内容错位）。
+3. **I18N 文案**：JS `I18N` 字典加 `'tab-<厂商>'`（当前英文品牌名即可）；如厂商收录模型显著改变总量，同步更新 `hero-desc`/`meta-desc` 里的厂商枚举与 `N+` 计数（英文侧 `'N+ LLMs'`）。
+4. **meta 厂商枚举**：`keywords`、静态 `og:title`/`twitter:description`/`ld+json` 等若要收录该厂商需一并加入。
+
+**统计数字（Vendors / Models / Max context 及 meta 的 `N+` 计数）**：用 `scripts/sync_index_stats.py` 从各 `data/<厂商>.json` 汇总并写回，不要手工改：
+
+```bash
+python scripts/sync_index_stats.py             # 只读报告，无差异退出 0
+python scripts/sync_index_stats.py --write     # 差异写回 index.html
+```
+
+汇总口径：Vendors = data 中文 JSON 数；Models = Σ 各厂商 meta.stats「收录模型」num 向下取整到 10（如 354→`350+`）；Max context = max 各厂商「最大上下文」num（1.05M/10M 等按数值比较取最大，显示原始串）。README 徽章与简介如同步维护，计数口径一致（当时手工漏改 Vendors=4，脚本沉淀即源于此）。
 
 ## 工作流 C：局部调整
 
@@ -180,7 +205,7 @@ data/<厂商>-en.json（en 副本）────────render_guide.py --la
 
 ## 已评估暂缓事项
 
-- ~~**中英文切换**~~ → 已落地，见上文「中英文切换（全部提供商已落地）」。四厂商双语页均通过 `check_html` 全绿；新厂商按同一模式复制数据文件 + 翻译编辑字段即可。
+- ~~**中英文切换**~~ → 已落地，见上文「中英文切换（全部提供商已落地）」。五厂商双语页均通过 `check_html` 全绿；新厂商按同一模式复制数据文件 + 翻译编辑字段即可。
 
 ## 资源索引
 
@@ -196,6 +221,7 @@ data/<厂商>-en.json（en 副本）────────render_guide.py --la
 - `scripts/check_bilingual.py` — 中英文语义一致性校验（结构镜像 / 语言中立值 / 模型 ID 集合 / en 无中文残留；渲染 zh 时自动执行）
 - `scripts/verify_official.py` — 官方交叉校验（模型存在性、价格声称、遗漏差集归因）
 - `scripts/compare_html.py` — HTML 语义对比（回归验证：忽略注释/空白找差异）
+- `scripts/sync_index_stats.py` — 从各 data JSON 汇总 Vendors/Models/Max context 同步 index.html（只读报告 + `--write` 写回；见「接入 index.html 厂商 Tab」）
 
 **OpenAI 专用**
 - `data/openai.json` — OpenAI 页面数据（唯一事实源，也是新厂商的参照样例）
@@ -228,6 +254,12 @@ data/<厂商>-en.json（en 副本）────────render_guide.py --la
 - `scripts/zai/patch_zai_data.py` — 根据 pricing 缺失模型清单批量补充新模型，并自动插入 `historical` 历史模型区；变更记录默认追加到 `diff/YYYY-MM-DD.md` 的 `## Z.ai（补丁）` 分节
 - `data/zai-en.json` — 英文版页面数据（`make_zai_en.py` 生成）
 - `scripts/zai/make_zai_en.py` — 由 zai.json 生成 zai-en.json（翻译表 + 漏翻告警）
+
+**Anthropic 专用**
+- `data/anthropic.json` — Anthropic 页面数据（唯一事实源；USD 计价；现役模型全谱 + 全量退役 3.x/4.0/4.1 表；Claude 无官方推理/速度格数，两列按定位为编辑性估计；全系同模态故主表不设模态列，图例经 legend_overrides.modalities 收窄）
+- `data/anthropic-en.json` — 英文版页面数据（`make_anthropic_en.py` 生成）
+- `references/providers/anthropic.md` — Anthropic 数据源方法（**文档站直连不可用**：302 到 app-unavailable-in-region + WebFetch 域名被拦；用 claude-api skill 官方缓存基线 + WebSearch 多源交叉核验）
+- `scripts/anthropic/make_anthropic_en.py` — 由 anthropic.json 生成 anthropic-en.json（翻译表 + 漏翻告警）
 
 **其他提供商**：待按「新增提供商指南」沉淀（DeepSeek…）
 

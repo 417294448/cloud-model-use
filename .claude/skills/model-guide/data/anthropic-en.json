@@ -1,0 +1,616 @@
+{
+  "meta": {
+    "lang": "en",
+    "lang_switch": {
+      "zh": {
+        "href": "anthropic-model-userguide.html",
+        "label": "中"
+      },
+      "en": {
+        "href": "anthropic-model-userguide-en.html",
+        "label": "EN"
+      }
+    },
+    "title": "Anthropic Claude Model Selection Guide 2026",
+    "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
+    "h1": "Anthropic Claude Model Selection Guide",
+    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5 super-flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-08)",
+    "stats": [
+      {
+        "num": "9",
+        "icon": "i-models",
+        "label": "Models"
+      },
+      {
+        "num": "4",
+        "icon": "i-modes",
+        "label": "Series"
+      },
+      {
+        "num": "1M",
+        "icon": "i-ruler",
+        "label": "Max context"
+      }
+    ],
+    "footer_title": "Anthropic Claude Model Selection Guide",
+    "footer_updated": "2026-09-08",
+    "footer_rules": "opus = flagship & strongest · sonnet = balanced value · haiku = fast & budget · fable = super-flagship · higher version = newer · Batch at half price · cached input ~1/10",
+    "footer_sources": "Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-08)"
+  },
+  "legend": "default",
+  "legend_overrides": {
+    "modalities": [
+      "text",
+      "image",
+      "pdf"
+    ]
+  },
+  "sections": [
+    {
+      "id": "quick",
+      "kind": "quick",
+      "title": "Quick Picks",
+      "icon": "i-bolt",
+      "nav": "Quick Picks",
+      "desc": "Direct recommendation by task type (prices in USD / 1M tokens, input/output)",
+      "cards": [
+        {
+          "icon": "i-chat",
+          "task": "Chat / Writing",
+          "model": "claude-sonnet-5"
+        },
+        {
+          "icon": "i-brain",
+          "task": "Hardest reasoning / Complex math",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-spark",
+          "task": "Extreme long-horizon autonomous tasks",
+          "model": "claude-fable-5"
+        },
+        {
+          "icon": "i-code",
+          "task": "Coding / Agentic",
+          "model": "claude-sonnet-5"
+        },
+        {
+          "icon": "i-target",
+          "task": "Complex agents / Tool use",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-doc",
+          "task": "Long-document understanding",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-eye",
+          "task": "Image / PDF understanding",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-coin",
+          "task": "High-throughput batch / cost saving",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-search",
+          "task": "Classification / Extraction / Summarization",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-bolt",
+          "task": "Low-latency realtime assistant",
+          "model": "claude-haiku-4-5"
+        },
+        {
+          "icon": "i-monitor",
+          "task": "Long output / Content generation",
+          "model": "claude-opus-4-8"
+        },
+        {
+          "icon": "i-share",
+          "task": "Batch offline jobs",
+          "model": "claude-sonnet-5"
+        }
+      ]
+    },
+    {
+      "id": "naming",
+      "kind": "table",
+      "title": "Naming Conventions",
+      "icon": "i-ruler",
+      "nav": "Naming",
+      "desc": "Understand these patterns and instantly grasp any Claude model name",
+      "table_class": "rules",
+      "columns": [
+        "Element",
+        "Meaning",
+        "Example"
+      ],
+      "row_types": [
+        "raw",
+        "plain",
+        "mono_td"
+      ],
+      "rows": [
+        [
+          "Opus / Sonnet / Haiku",
+          "Three series: flagship strongest / balanced value / fast & budget",
+          "claude-opus-4-8, claude-sonnet-5, claude-haiku-4-5"
+        ],
+        [
+          "claude- prefix",
+          "Unified prefix for Claude API models",
+          "claude-opus-…, claude-sonnet-…"
+        ],
+        [
+          "Fable 5",
+          "2026 super-flagship codename, stronger than Opus, priced higher",
+          "claude-fable-5"
+        ],
+        [
+          "Mythos 5",
+          "Same capability & price as Fable 5; accessible only to invite-only Project Glasswing organizations",
+          "claude-mythos-5"
+        ],
+        [
+          "Version progression",
+          "3 → 4 → 4.1 → 4.5 → 4.6 → 4.7 → 4.8 → 5; higher = newer",
+          "claude-opus-4-6 → claude-opus-4-7 → claude-opus-4-8"
+        ],
+        [
+          "-YYYYMMDD snapshot",
+          "Legacy naming uses release date as version (use the dateless alias for new models)",
+          "claude-opus-4-5-20251101, claude-3-7-sonnet-20250219"
+        ],
+        [
+          "Dateless alias",
+          "Recommended for new models; auto-points to the latest snapshot",
+          "claude-opus-4-8 (do not append a date suffix manually)"
+        ],
+        [
+          "4.5+ thinking",
+          "Adaptive thinking + effort; Fable deep thinking always on",
+          "opus-4.6+/sonnet-5/sonnet-4.6 → adaptive"
+        ]
+      ]
+    },
+    {
+      "id": "current",
+      "kind": "table",
+      "title": "Claude Current Models (Fable / Opus / Sonnet / Haiku)",
+      "icon": "i-models",
+      "nav": "Current models",
+      "desc": "Full spectrum of models currently on the API: Fable 5 is the 2026 super-flagship, Opus the flagship & strongest, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens",
+      "columns": [
+        "Model ID",
+        "Tier",
+        "Price",
+        "Reasoning",
+        "Speed",
+        "Context",
+        "Input",
+        "Output",
+        "Notes"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "claude-fable-5",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          5,
+          2,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Anthropic's strongest to date (2026): hardest deep reasoning & long-horizon autonomous Agentic; deep thinking always on (cannot disable) + effort low→max; requires 30-day data retention; $10/$50"
+        ],
+        [
+          {
+            "id": "claude-opus-4-8",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Current Opus flagship (released 2026-05-28): strongest Opus for long-horizon autonomous Agentic / knowledge work / memory; adaptive thinking + effort; optional Fast mode; $5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-7",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Previous-generation Opus, same request surface as 4.8; production-ready, upgrade to 4.8 for new projects; $5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-6",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Opus of the 4.6 line, still available; adaptive thinking; $5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-5",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          4,
+          3,
+          "200K",
+          "200K",
+          "128K",
+          "Late-2025 Opus, still available; 200K context (1M via beta); thinking-budget transitional; $5/$25"
+        ],
+        [
+          {
+            "id": "claude-sonnet-5",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "balanced",
+          "high",
+          4,
+          4,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "New Sonnet: coding & Agentic near Opus at a lower price; adaptive thinking on by default + xhigh; $3/$15 (standard since 2026-09-01, intro $2/$10 before)"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-6",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          4,
+          4,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Previous Sonnet, still available; 1M context; $3/$15"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-5",
+            "badges": []
+          },
+          "balanced",
+          "high",
+          3,
+          4,
+          "200K",
+          "200K",
+          "128K",
+          "Older balanced model, still available (200K context); choose Sonnet 5 for new projects; $3/$15"
+        ],
+        [
+          {
+            "id": "claude-haiku-4-5",
+            "badges": [
+              "Rec"
+            ]
+          },
+          "budget",
+          "mid",
+          2,
+          5,
+          "200K",
+          "200K",
+          "64K",
+          "Fastest & cheapest: high-frequency classification/extraction/summarization/customer service; 64K output cap; $1/$5"
+        ]
+      ]
+    },
+    {
+      "id": "deprecated",
+      "kind": "table",
+      "title": "Retired Models & Migration Guide",
+      "icon": "i-circle-off",
+      "nav": "Retired",
+      "desc": "All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-08)",
+      "table_class": "deprecated",
+      "columns": [
+        "Model ID",
+        "Lifecycle",
+        "Retirement date",
+        "Replacement",
+        "Migration advice"
+      ],
+      "row_types": [
+        "model_id",
+        "lifecycle",
+        "mono",
+        "replacement",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "claude-opus-4-1-20250805",
+            "badges": []
+          },
+          "retired",
+          "2026-08-05",
+          "claude-opus-4-8",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-opus-4-20250514",
+            "badges": []
+          },
+          "retired",
+          "2026-06-15",
+          "claude-opus-4-8",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-sonnet-4-20250514",
+            "badges": []
+          },
+          "retired",
+          "2026-06-15",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-haiku-20240307",
+            "badges": []
+          },
+          "retired",
+          "2026-04-19",
+          "claude-haiku-4-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-7-sonnet-20250219",
+            "badges": []
+          },
+          "retired",
+          "2026-02-19",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-5-haiku-20241022",
+            "badges": []
+          },
+          "retired",
+          "2026-02-19",
+          "claude-haiku-4-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-opus-20240229",
+            "badges": []
+          },
+          "retired",
+          "2026-01-05",
+          "claude-opus-4-8",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-5-sonnet-20241022",
+            "badges": []
+          },
+          "retired",
+          "2025-10-28",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-5-sonnet-20240620",
+            "badges": []
+          },
+          "retired",
+          "2025-10-28",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-3-sonnet-20240229",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-2.1",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ],
+        [
+          {
+            "id": "claude-2.0",
+            "badges": []
+          },
+          "retired",
+          "2025-07-21",
+          "claude-sonnet-5",
+          "Retired; migrate directly"
+        ]
+      ]
+    },
+    {
+      "id": "matrix",
+      "kind": "table",
+      "title": "Capability Matrix",
+      "icon": "i-target",
+      "nav": "Capability Matrix",
+      "desc": "Match the best model to your needs quickly",
+      "columns": [
+        "Scenario",
+        "Recommended",
+        "Alternatives",
+        "Key capability"
+      ],
+      "row_types": [
+        "scene",
+        "model_id",
+        "mono",
+        "raw"
+      ],
+      "rows": [
+        [
+          {
+            "icon": "i-chat",
+            "text": "Chat / Writing"
+          },
+          "claude-sonnet-5",
+          "claude-opus-4-8",
+          "<span class=\"plain\">$3/$15 · balanced value</span>"
+        ],
+        [
+          {
+            "icon": "i-brain",
+            "text": "Complex reasoning / Math"
+          },
+          "claude-opus-4-8",
+          "claude-fable-5",
+          "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>Top</span>"
+        ],
+        [
+          {
+            "icon": "i-code",
+            "text": "Coding / Agentic"
+          },
+          "claude-sonnet-5",
+          "claude-opus-4-8",
+          "<span class=\"mono-dim\">Sonnet near Opus · great value</span>"
+        ],
+        [
+          {
+            "icon": "i-spark",
+            "text": "Extreme long-horizon autonomous tasks"
+          },
+          "claude-fable-5",
+          "claude-opus-4-8",
+          "<span class=\"mono-dim\">thinking always on · effort to max</span>"
+        ],
+        [
+          {
+            "icon": "i-doc",
+            "text": "Long-document understanding",
+            "note": "~1M tokens"
+          },
+          "claude-opus-4-8",
+          "claude-sonnet-5",
+          "<span class=\"ctx hi\">1M context</span>"
+        ],
+        [
+          {
+            "icon": "i-eye",
+            "text": "Image / PDF understanding"
+          },
+          "claude-opus-4-8",
+          "claude-sonnet-5",
+          "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"Image\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"PDF\"><svg class=\"ic\"><use href=\"#i-doc\"/></svg></span></div> all models"
+        ],
+        [
+          {
+            "icon": "i-coin",
+            "text": "High-throughput, low cost"
+          },
+          "claude-haiku-4-5",
+          "claude-sonnet-5",
+          "<span class=\"plain\">$1/$5 · fastest</span>"
+        ],
+        [
+          {
+            "icon": "i-bolt",
+            "text": "Low-latency realtime assistant"
+          },
+          "claude-haiku-4-5",
+          "claude-sonnet-4-6",
+          "<span class=\"mono-dim\">Haiku fast response</span>"
+        ],
+        [
+          {
+            "icon": "i-share",
+            "text": "Batch offline jobs"
+          },
+          "claude-sonnet-5",
+          "claude-haiku-4-5",
+          "<span class=\"mono-dim\">Batch API at half price</span>"
+        ]
+      ]
+    }
+  ]
+}
