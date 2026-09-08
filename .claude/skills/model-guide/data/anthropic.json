@@ -14,10 +14,10 @@
     "title": "Anthropic Claude 模型选择指南 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude 模型选择指南",
-    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5 超旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）",
+    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）",
     "stats": [
       {
-        "num": "9",
+        "num": "11",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -62,32 +62,32 @@
         {
           "icon": "i-brain",
           "task": "最难推理 / 复杂数学",
-          "model": "claude-opus-4-8"
+          "model": "claude-fable-5-1"
         },
         {
           "icon": "i-spark",
           "task": "极限长程自主任务",
-          "model": "claude-fable-5"
+          "model": "claude-fable-5-1"
         },
         {
           "icon": "i-code",
           "task": "专业编程 / Agentic",
-          "model": "claude-sonnet-5"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-target",
           "task": "复杂 Agent / 工具调用",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-doc",
           "task": "超长文档理解",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-eye",
           "task": "图像 / PDF 理解",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-coin",
@@ -107,7 +107,7 @@
         {
           "icon": "i-monitor",
           "task": "长输出 / 内容生成",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-share",
@@ -146,19 +146,19 @@
           "claude-opus-…, claude-sonnet-…"
         ],
         [
-          "Fable 5",
-          "2026 超旗舰代号，强于 Opus，定价更高",
-          "claude-fable-5"
+          "Fable 5 / 5.1",
+          "2026 超旗舰代号，强于 Opus，定价更高；5.1 为最新一代（2026-09-01）",
+          "claude-fable-5, claude-fable-5-1"
         ],
         [
-          "Mythos 5",
-          "与 Fable 5 同能力同价，仅 Glasswing 邀请制组织可调用",
-          "claude-mythos-5"
+          "Mythos 5 / 5.1",
+          "与 Fable 同能力同价，仅 Project Glasswing 邀请制组织可调用（防御性安全用例）",
+          "claude-mythos-5, claude-mythos-5-1"
         ],
         [
           "版本号演进",
-          "3 → 4 → 4.1 → 4.5 → 4.6 → 4.7 → 4.8 → 5，越大越新",
-          "claude-opus-4-6 → claude-opus-4-7 → claude-opus-4-8"
+          "Opus / Sonnet：4.5 → 4.6 → 4.7 → 4.8 → 5；Fable：5 → 5.1，越大越新",
+          "claude-opus-4-8 → claude-opus-5，claude-fable-5 → claude-fable-5-1"
         ],
         [
           "-YYYYMMDD 快照",
@@ -183,7 +183,7 @@
       "title": "Claude 现役模型（Fable / Opus / Sonnet / Haiku）",
       "icon": "i-models",
       "nav": "现役模型",
-      "desc": "当前 API 在售模型全谱：Fable 5 为 2026 超旗舰，Opus 为旗舰最强，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens",
+      "desc": "当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5 评测不足时的终局选择），Opus 5 为现役旗舰，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens",
       "columns": [
         "模型 ID",
         "定位",
@@ -209,7 +209,7 @@
       "rows": [
         [
           {
-            "id": "claude-fable-5",
+            "id": "claude-fable-5-1",
             "badges": [
               "NEW"
             ]
@@ -224,11 +224,28 @@
             "hi": true
           },
           "128K",
-          "Anthropic 迄今最强（2026）：最难深度推理与长程自主 Agentic；深度思考常开（不可关）+ effort low→max；需 30 天数据留存；$10/$50"
+          "Claude 超旗舰 Fable 5.1（2026-09-01 发布）：最难深度推理 / 长程自主 Agentic 的终局选择；深度思考常开 + effort（默认 high）；缓存读低至 $0.25/MTok；$10/$50"
         ],
         [
           {
-            "id": "claude-opus-4-8",
+            "id": "claude-fable-5",
+            "badges": []
+          },
+          "flagship",
+          "expensive",
+          5,
+          2,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "上代超旗舰 Fable 5（2026-06-09 发布，Legacy）：仍可用；能力/价格被 5.1 平替，新项目迁移至 Fable 5.1；$10/$50"
+        ],
+        [
+          {
+            "id": "claude-opus-5",
             "badges": [
               "NEW",
               "推荐"
@@ -244,7 +261,24 @@
             "hi": true
           },
           "128K",
-          "现役 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus；自适应思考 + effort；可选 Fast 模式；$5/$25"
+          "Opus 5（2026-07-24 发布）：对 4.8 代差级升级——深度推理 / 长程 Agentic / 测试时扩展最强 Opus；自适应思考默认开（effort high 及以下可关）+ 可选 Fast 模式；$5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-8",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "上代 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus，仍可生产并支持 Fast 模式；新项目建议升级 Opus 5；$5/$25"
         ],
         [
           {
@@ -261,7 +295,7 @@
             "hi": true
           },
           "128K",
-          "上代 Opus，与 4.8 同请求面；仍可生产，新项目建议升级 4.8；$5/$25"
+          "上代 Opus，与 4.8 同请求面；仍可生产，新项目建议升级 Opus 5；$5/$25"
         ],
         [
           {
@@ -312,7 +346,7 @@
             "hi": true
           },
           "128K",
-          "Sonnet 新代：编码与 Agentic 逼近 Opus、价格更低；自适应思考默认开 + xhigh；$3/$15（2026-09-01 起常规价，此前 intro $2/$10）"
+          "Sonnet 新代：编码与 Agentic 逼近 Opus、价格更低；自适应思考默认开 + effort（默认 high）；$2/$10（intro 价转正——原定 2026-09-01 涨至 $3/$15 已取消）"
         ],
         [
           {
@@ -422,7 +456,7 @@
             "badges": []
           },
           "retired",
-          "2026-04-19",
+          "2026-04-20",
           "claude-haiku-4-5",
           "已退役，直接迁移"
         ],
@@ -534,16 +568,16 @@
             "text": "日常对话 / 写作"
           },
           "claude-sonnet-5",
-          "claude-opus-4-8",
-          "<span class=\"plain\">$3/$15 · 均衡性价比</span>"
+          "claude-opus-5",
+          "<span class=\"plain\">$2/$10 · 均衡性价比</span>"
         ],
         [
           {
             "icon": "i-brain",
             "text": "复杂推理 / 数学"
           },
-          "claude-opus-4-8",
-          "claude-fable-5",
+          "claude-fable-5-1",
+          "claude-opus-5",
           "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>最强</span>"
         ],
         [
@@ -552,7 +586,7 @@
             "text": "专业编程 / Agentic"
           },
           "claude-sonnet-5",
-          "claude-opus-4-8",
+          "claude-opus-5",
           "<span class=\"mono-dim\">Sonnet 逼近 Opus · 高性价比</span>"
         ],
         [
@@ -560,9 +594,9 @@
             "icon": "i-spark",
             "text": "极限长程自主任务"
           },
-          "claude-fable-5",
-          "claude-opus-4-8",
-          "<span class=\"mono-dim\">thinking 常开 · effort 至 max</span>"
+          "claude-fable-5-1",
+          "claude-opus-5",
+          "<span class=\"mono-dim\">thinking 常开 · effort 默认 high</span>"
         ],
         [
           {
@@ -570,7 +604,7 @@
             "text": "超长文档理解",
             "note": "~100万 token"
           },
-          "claude-opus-4-8",
+          "claude-opus-5",
           "claude-sonnet-5",
           "<span class=\"ctx hi\">1M 上下文</span>"
         ],
@@ -579,7 +613,7 @@
             "icon": "i-eye",
             "text": "图像 / PDF 理解"
           },
-          "claude-opus-4-8",
+          "claude-opus-5",
           "claude-sonnet-5",
           "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"图像\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"PDF\"><svg class=\"ic\"><use href=\"#i-doc\"/></svg></span></div> 全系支持"
         ],
@@ -598,7 +632,7 @@
             "text": "低延迟实时助手"
           },
           "claude-haiku-4-5",
-          "claude-sonnet-4-6",
+          "claude-sonnet-5",
           "<span class=\"mono-dim\">Haiku 快速响应</span>"
         ],
         [

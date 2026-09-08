@@ -14,10 +14,10 @@
     "title": "Anthropic Claude Model Selection Guide 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude Model Selection Guide",
-    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5 super-flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-08)",
+    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-08)",
     "stats": [
       {
-        "num": "9",
+        "num": "11",
         "icon": "i-models",
         "label": "Models"
       },
@@ -62,32 +62,32 @@
         {
           "icon": "i-brain",
           "task": "Hardest reasoning / Complex math",
-          "model": "claude-opus-4-8"
+          "model": "claude-fable-5-1"
         },
         {
           "icon": "i-spark",
           "task": "Extreme long-horizon autonomous tasks",
-          "model": "claude-fable-5"
+          "model": "claude-fable-5-1"
         },
         {
           "icon": "i-code",
           "task": "Coding / Agentic",
-          "model": "claude-sonnet-5"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-target",
           "task": "Complex agents / Tool use",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-doc",
           "task": "Long-document understanding",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-eye",
           "task": "Image / PDF understanding",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-coin",
@@ -107,7 +107,7 @@
         {
           "icon": "i-monitor",
           "task": "Long output / Content generation",
-          "model": "claude-opus-4-8"
+          "model": "claude-opus-5"
         },
         {
           "icon": "i-share",
@@ -146,19 +146,19 @@
           "claude-opus-…, claude-sonnet-…"
         ],
         [
-          "Fable 5",
-          "2026 super-flagship codename, stronger than Opus, priced higher",
-          "claude-fable-5"
+          "Fable 5 / 5.1",
+          "2026 super-flagship codename, stronger than Opus, priced higher; 5.1 is the newest generation (2026-09-01)",
+          "claude-fable-5, claude-fable-5-1"
         ],
         [
-          "Mythos 5",
-          "Same capability & price as Fable 5; accessible only to invite-only Project Glasswing organizations",
-          "claude-mythos-5"
+          "Mythos 5 / 5.1",
+          "Same capability & price as Fable; accessible only to invite-only Project Glasswing organizations (defensive security use cases)",
+          "claude-mythos-5, claude-mythos-5-1"
         ],
         [
           "Version progression",
-          "3 → 4 → 4.1 → 4.5 → 4.6 → 4.7 → 4.8 → 5; higher = newer",
-          "claude-opus-4-6 → claude-opus-4-7 → claude-opus-4-8"
+          "Opus / Sonnet: 4.5 → 4.6 → 4.7 → 4.8 → 5; Fable: 5 → 5.1; higher = newer",
+          "claude-opus-4-8 → claude-opus-5，claude-fable-5 → claude-fable-5-1"
         ],
         [
           "-YYYYMMDD snapshot",
@@ -183,7 +183,7 @@
       "title": "Claude Current Models (Fable / Opus / Sonnet / Haiku)",
       "icon": "i-models",
       "nav": "Current models",
-      "desc": "Full spectrum of models currently on the API: Fable 5 is the 2026 super-flagship, Opus the flagship & strongest, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens",
+      "desc": "Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5 evals fall short), Opus 5 the current flagship, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens",
       "columns": [
         "Model ID",
         "Tier",
@@ -209,7 +209,7 @@
       "rows": [
         [
           {
-            "id": "claude-fable-5",
+            "id": "claude-fable-5-1",
             "badges": [
               "NEW"
             ]
@@ -224,11 +224,28 @@
             "hi": true
           },
           "128K",
-          "Anthropic's strongest to date (2026): hardest deep reasoning & long-horizon autonomous Agentic; deep thinking always on (cannot disable) + effort low→max; requires 30-day data retention; $10/$50"
+          "Claude super-flagship Fable 5.1 (released 2026-09-01): the endgame pick for hardest deep reasoning / long-horizon autonomous Agentic; deep thinking always on + effort (default high); cache reads as low as $0.25/MTok; $10/$50"
         ],
         [
           {
-            "id": "claude-opus-4-8",
+            "id": "claude-fable-5",
+            "badges": []
+          },
+          "flagship",
+          "expensive",
+          5,
+          2,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Previous super-flagship Fable 5 (released 2026-06-09, Legacy): still available; superseded by 5.1 at the same price, migrate new projects to Fable 5.1; $10/$50"
+        ],
+        [
+          {
+            "id": "claude-opus-5",
             "badges": [
               "NEW",
               "Rec"
@@ -244,7 +261,24 @@
             "hi": true
           },
           "128K",
-          "Current Opus flagship (released 2026-05-28): strongest Opus for long-horizon autonomous Agentic / knowledge work / memory; adaptive thinking + effort; optional Fast mode; $5/$25"
+          "Opus 5 (released 2026-07-24): a generational leap over 4.8 — the strongest Opus for deep reasoning / long-horizon Agentic / test-time compute scaling; adaptive thinking on by default (can disable at effort high or below) + optional Fast mode; $5/$25"
+        ],
+        [
+          {
+            "id": "claude-opus-4-8",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Previous Opus flagship (released 2026-05-28): strongest Opus for long-horizon autonomous Agentic / knowledge work / memory; still production-ready and supports Fast mode; upgrade to Opus 5 for new projects; $5/$25"
         ],
         [
           {
@@ -261,7 +295,7 @@
             "hi": true
           },
           "128K",
-          "Previous-generation Opus, same request surface as 4.8; production-ready, upgrade to 4.8 for new projects; $5/$25"
+          "Previous-generation Opus, same request surface as 4.8; production-ready, upgrade to Opus 5 for new projects; $5/$25"
         ],
         [
           {
@@ -312,7 +346,7 @@
             "hi": true
           },
           "128K",
-          "New Sonnet: coding & Agentic near Opus at a lower price; adaptive thinking on by default + xhigh; $3/$15 (standard since 2026-09-01, intro $2/$10 before)"
+          "New Sonnet: coding & Agentic near Opus at a lower price; adaptive thinking on by default + effort (default high); $2/$10 (intro price made permanent — the scheduled 2026-09-01 increase to $3/$15 was cancelled)"
         ],
         [
           {
@@ -422,7 +456,7 @@
             "badges": []
           },
           "retired",
-          "2026-04-19",
+          "2026-04-20",
           "claude-haiku-4-5",
           "Retired; migrate directly"
         ],
@@ -534,16 +568,16 @@
             "text": "Chat / Writing"
           },
           "claude-sonnet-5",
-          "claude-opus-4-8",
-          "<span class=\"plain\">$3/$15 · balanced value</span>"
+          "claude-opus-5",
+          "<span class=\"plain\">$2/$10 · balanced value</span>"
         ],
         [
           {
             "icon": "i-brain",
             "text": "Complex reasoning / Math"
           },
-          "claude-opus-4-8",
-          "claude-fable-5",
+          "claude-fable-5-1",
+          "claude-opus-5",
           "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>Top</span>"
         ],
         [
@@ -552,7 +586,7 @@
             "text": "Coding / Agentic"
           },
           "claude-sonnet-5",
-          "claude-opus-4-8",
+          "claude-opus-5",
           "<span class=\"mono-dim\">Sonnet near Opus · great value</span>"
         ],
         [
@@ -560,9 +594,9 @@
             "icon": "i-spark",
             "text": "Extreme long-horizon autonomous tasks"
           },
-          "claude-fable-5",
-          "claude-opus-4-8",
-          "<span class=\"mono-dim\">thinking always on · effort to max</span>"
+          "claude-fable-5-1",
+          "claude-opus-5",
+          "<span class=\"mono-dim\">thinking always on · effort default high</span>"
         ],
         [
           {
@@ -570,7 +604,7 @@
             "text": "Long-document understanding",
             "note": "~1M tokens"
           },
-          "claude-opus-4-8",
+          "claude-opus-5",
           "claude-sonnet-5",
           "<span class=\"ctx hi\">1M context</span>"
         ],
@@ -579,7 +613,7 @@
             "icon": "i-eye",
             "text": "Image / PDF understanding"
           },
-          "claude-opus-4-8",
+          "claude-opus-5",
           "claude-sonnet-5",
           "<div class=\"mods\"><span class=\"tag mod-ico\" title=\"Image\"><svg class=\"ic\"><use href=\"#i-image\"/></svg></span><span class=\"tag mod-ico\" title=\"PDF\"><svg class=\"ic\"><use href=\"#i-doc\"/></svg></span></div> all models"
         ],
@@ -598,7 +632,7 @@
             "text": "Low-latency realtime assistant"
           },
           "claude-haiku-4-5",
-          "claude-sonnet-4-6",
+          "claude-sonnet-5",
           "<span class=\"mono-dim\">Haiku fast response</span>"
         ],
         [

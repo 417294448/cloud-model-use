@@ -19,8 +19,8 @@ TRANSLATE = {
     # ---- meta ----
     'Anthropic Claude 模型选择指南 2026': 'Anthropic Claude Model Selection Guide 2026',
     'Anthropic Claude 模型选择指南': 'Anthropic Claude Model Selection Guide',
-    'Claude Opus / Sonnet / Haiku 全系 · Fable 5 超旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-08 同步）':
-        'Claude Opus / Sonnet / Haiku family · Fable 5 super-flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-08)',
+    'Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-08 同步）':
+        'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-08)',
     '数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-08 同步）':
         'Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-08)',
     'opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折':
@@ -39,8 +39,8 @@ TRANSLATE = {
         'Understand these patterns and instantly grasp any Claude model name',
     'Claude 现役模型（Fable / Opus / Sonnet / Haiku）': 'Claude Current Models (Fable / Opus / Sonnet / Haiku)',
     '现役模型': 'Current models',
-    '当前 API 在售模型全谱：Fable 5 为 2026 超旗舰，Opus 为旗舰最强，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
-        'Full spectrum of models currently on the API: Fable 5 is the 2026 super-flagship, Opus the flagship & strongest, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
+    '当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5 评测不足时的终局选择），Opus 5 为现役旗舰，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
+        'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5 evals fall short), Opus 5 the current flagship, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
     '已退役模型与迁移指引': 'Retired Models & Migration Guide',
     '已退役': 'Retired',
     '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-08 同步）':
@@ -95,20 +95,30 @@ TRANSLATE = {
     '4.5+ 思考机制': '4.5+ thinking',
     '自适应思考 + effort；Fable 深度思考常开':
         'Adaptive thinking + effort; Fable deep thinking always on',
+    '2026 超旗舰代号，强于 Opus，定价更高；5.1 为最新一代（2026-09-01）':
+        '2026 super-flagship codename, stronger than Opus, priced higher; 5.1 is the newest generation (2026-09-01)',
+    '与 Fable 同能力同价，仅 Project Glasswing 邀请制组织可调用（防御性安全用例）':
+        'Same capability & price as Fable; accessible only to invite-only Project Glasswing organizations (defensive security use cases)',
+    'Opus / Sonnet：4.5 → 4.6 → 4.7 → 4.8 → 5；Fable：5 → 5.1，越大越新':
+        'Opus / Sonnet: 4.5 → 4.6 → 4.7 → 4.8 → 5; Fable: 5 → 5.1; higher = newer',
 
     # ---- current mdesc ----
-    'Anthropic 迄今最强（2026）：最难深度推理与长程自主 Agentic；深度思考常开（不可关）+ effort low→max；需 30 天数据留存；$10/$50':
-        "Anthropic's strongest to date (2026): hardest deep reasoning & long-horizon autonomous Agentic; deep thinking always on (cannot disable) + effort low→max; requires 30-day data retention; $10/$50",
-    '现役 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus；自适应思考 + effort；可选 Fast 模式；$5/$25':
-        'Current Opus flagship (released 2026-05-28): strongest Opus for long-horizon autonomous Agentic / knowledge work / memory; adaptive thinking + effort; optional Fast mode; $5/$25',
-    '上代 Opus，与 4.8 同请求面；仍可生产，新项目建议升级 4.8；$5/$25':
-        'Previous-generation Opus, same request surface as 4.8; production-ready, upgrade to 4.8 for new projects; $5/$25',
+    'Claude 超旗舰 Fable 5.1（2026-09-01 发布）：最难深度推理 / 长程自主 Agentic 的终局选择；深度思考常开 + effort（默认 high）；缓存读低至 $0.25/MTok；$10/$50':
+        'Claude super-flagship Fable 5.1 (released 2026-09-01): the endgame pick for hardest deep reasoning / long-horizon autonomous Agentic; deep thinking always on + effort (default high); cache reads as low as $0.25/MTok; $10/$50',
+    '上代超旗舰 Fable 5（2026-06-09 发布，Legacy）：仍可用；能力/价格被 5.1 平替，新项目迁移至 Fable 5.1；$10/$50':
+        'Previous super-flagship Fable 5 (released 2026-06-09, Legacy): still available; superseded by 5.1 at the same price, migrate new projects to Fable 5.1; $10/$50',
+    'Opus 5（2026-07-24 发布）：对 4.8 代差级升级——深度推理 / 长程 Agentic / 测试时扩展最强 Opus；自适应思考默认开（effort high 及以下可关）+ 可选 Fast 模式；$5/$25':
+        'Opus 5 (released 2026-07-24): a generational leap over 4.8 — the strongest Opus for deep reasoning / long-horizon Agentic / test-time compute scaling; adaptive thinking on by default (can disable at effort high or below) + optional Fast mode; $5/$25',
+    '上代 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus，仍可生产并支持 Fast 模式；新项目建议升级 Opus 5；$5/$25':
+        'Previous Opus flagship (released 2026-05-28): strongest Opus for long-horizon autonomous Agentic / knowledge work / memory; still production-ready and supports Fast mode; upgrade to Opus 5 for new projects; $5/$25',
+    '上代 Opus，与 4.8 同请求面；仍可生产，新项目建议升级 Opus 5；$5/$25':
+        'Previous-generation Opus, same request surface as 4.8; production-ready, upgrade to Opus 5 for new projects; $5/$25',
     '4.6 系 Opus，仍可用；自适应思考；$5/$25':
         'Opus of the 4.6 line, still available; adaptive thinking; $5/$25',
     '2025 末 Opus，仍可用；200K 上下文（1M 需 beta）；思考预算制过渡；$5/$25':
         'Late-2025 Opus, still available; 200K context (1M via beta); thinking-budget transitional; $5/$25',
-    'Sonnet 新代：编码与 Agentic 逼近 Opus、价格更低；自适应思考默认开 + xhigh；$3/$15（2026-09-01 起常规价，此前 intro $2/$10）':
-        'New Sonnet: coding & Agentic near Opus at a lower price; adaptive thinking on by default + xhigh; $3/$15 (standard since 2026-09-01, intro $2/$10 before)',
+    'Sonnet 新代：编码与 Agentic 逼近 Opus、价格更低；自适应思考默认开 + effort（默认 high）；$2/$10（intro 价转正——原定 2026-09-01 涨至 $3/$15 已取消）':
+        'New Sonnet: coding & Agentic near Opus at a lower price; adaptive thinking on by default + effort (default high); $2/$10 (intro price made permanent — the scheduled 2026-09-01 increase to $3/$15 was cancelled)',
     '上代 Sonnet，仍可用；1M 上下文；$3/$15':
         'Previous Sonnet, still available; 1M context; $3/$15',
     '旧代均衡模型，仍可用（200K 上下文）；新项目选 Sonnet 5；$3/$15':
@@ -123,14 +133,14 @@ TRANSLATE = {
     '复杂推理 / 数学': 'Complex reasoning / Math',
     '高吞吐低成本': 'High-throughput, low cost',
     '~100万 token': '~1M tokens',
-    '<span class="plain">$3/$15 · 均衡性价比</span>':
-        '<span class="plain">$3/$15 · balanced value</span>',
+    '<span class="plain">$2/$10 · 均衡性价比</span>':
+        '<span class="plain">$2/$10 · balanced value</span>',
     '<span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>最强</span>':
         '<span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top</span>',
     '<span class="mono-dim">Sonnet 逼近 Opus · 高性价比</span>':
         '<span class="mono-dim">Sonnet near Opus · great value</span>',
-    '<span class="mono-dim">thinking 常开 · effort 至 max</span>':
-        '<span class="mono-dim">thinking always on · effort to max</span>',
+    '<span class="mono-dim">thinking 常开 · effort 默认 high</span>':
+        '<span class="mono-dim">thinking always on · effort default high</span>',
     '<span class="ctx hi">1M 上下文</span>': '<span class="ctx hi">1M context</span>',
     '<div class="mods"><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div> 全系支持':
         '<div class="mods"><span class="tag mod-ico" title="Image"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div> all models',

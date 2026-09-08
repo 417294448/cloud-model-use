@@ -310,10 +310,19 @@ TRANSLATE = {
     '声音设计服务': 'Voice design service',
     '文字描述创建新音色，按个计费': 'Creates new voices from text descriptions, billed per voice',
 
+    # ---- 含日期的数据来源串（日期由 sync_dates 维护，翻译表随日期对齐） ----
+    '通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-01 同步）':
+        'Qwen (Tongyi Qianwen) full-family model guide · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Category docs</a> (synced 2026-09-01)',
+    '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-01 同步）':
+        'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Category docs</a> (synced 2026-09-01)',
+    '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-01 同步）':
+        'The following are legacy/sunset models already covered on this page; migrate per the suggestions and do not use in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-01)',
+
     # ---- embed ----
     '文本 Embedding': 'Text embedding',
     '最新文本向量，维度兼容 v3，MTEB 领先': 'Latest text embedding, v3-compatible dimensions, MTEB leader',
-    '新一代文本向量（Qwen3.7 代），¥0.5': 'New-gen text embedding (Qwen3.7), ¥0.5',
+    '新一代文本向量（Qwen3.7 代），默认 1024 维，¥0.5': 'New-gen text embedding (Qwen3.7), 1024-dim default, ¥0.5',
+    'Qwen3.7 代轻量文本向量：成本与吞吐优先，默认 1024 维，¥0.125': 'Qwen3.7 lightweight text embedding: cost- and throughput-first, 1024-dim default, ¥0.125',
     '已有 v3 索引迁移': 'Migrate existing v3 indexes',
     '多模态 Embedding': 'Multimodal embedding',
     '图文混合检索（融合+独立向量）': 'Image-text hybrid retrieval (fused + independent vectors)',
@@ -322,7 +331,9 @@ TRANSLATE = {
     '低成本跨模态': 'Low-cost cross-modal',
     '重排序': 'Rerank',
     '4,000/条': '4,000/passage',
-    '100+ 语言，最多 500 文档': '100+ languages, up to 500 docs',
+    '新一代文本重排序（Qwen3.7 代）：单次候选上限大幅提升': 'New-gen text rerank (Qwen3.7): much higher candidate limit per request',
+    '30,000/条': '30,000/passage',
+    '上代文本重排序，100+ 语言，最多 500 文档': 'Previous-gen text rerank, 100+ languages, up to 500 docs',
     '多模态重排序': 'Multimodal rerank',
     '8,000/条': '8,000/passage',
     '文本/图片/视频混合排序': 'Text/image/video hybrid ranking',

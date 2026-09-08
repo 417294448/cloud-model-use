@@ -1,7 +1,7 @@
 # cloud-model-use
 
 [![Pages: 10](https://img.shields.io/badge/pages-10-0e7490)](#project-structure)
-[![Models: 350+](https://img.shields.io/badge/models-350%2B-0d9463)](#project-structure)
+[![Models: 360+](https://img.shields.io/badge/models-360%2B-0d9463)](#project-structure)
 [![Vendors: 5](https://img.shields.io/badge/vendors-5-2563eb)](#project-structure)
 [![Languages: zh / en](https://img.shields.io/badge/languages-zh%20%2F%20en-f4f6f8)](#internationalization)
 

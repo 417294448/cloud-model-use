@@ -623,8 +623,8 @@
       <div class="hero-eyebrow">QWEN MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><a class="lang-opt" href="qwen-model-userguide.html" data-lang-href="qwen-model-userguide.html">中</a><span class="lang-opt on" aria-current="true">EN</span></div>
     </div>
     <h1>Tongyi Qwen Model Selection Guide</h1>
-    <p class="hero-desc">All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-30)</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">138</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
+    <p class="hero-desc">Qwen (Tongyi Qianwen) full-family model guide · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Category docs</a> (synced 2026-09-08)</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">140</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">12</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>Categories</span></span></div>
       <div class="stat-divider"></div>
@@ -1969,9 +1969,18 @@
 <td><span class="tier-tag t-flag">Flagship</span></td>
 <td><span class="tag price-ico" title="Moderate"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
 <td class="plain">Text embedding</td>
-<td><span class="mono-dim">64~2048</span></td>
-<td><span class="mono-dim">8,192</span></td>
-<td class="mdesc">New-gen text embedding (Qwen3.7), ¥0.5</td>
+<td><span class="mono-dim">256~2560</span></td>
+<td><span class="mono-dim">131,072</span></td>
+<td class="mdesc">New-gen text embedding (Qwen3.7), 1024-dim default, ¥0.5</td>
+</tr>
+<tr>
+<td><span class="model-id">qwen3.7-text-embedding-flash</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-bud">Budget</span></td>
+<td><span class="tag t-green price-ico" title="Affordable"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td class="plain">Text embedding</td>
+<td><span class="mono-dim">256~1024</span></td>
+<td><span class="mono-dim">131,072</span></td>
+<td class="mdesc">Qwen3.7 lightweight text embedding: cost- and throughput-first, 1024-dim default, ¥0.125</td>
 </tr>
 <tr>
 <td><span class="model-id">text-embedding-v3</span></td>
@@ -2019,13 +2028,22 @@
 <td class="mdesc">Low-cost cross-modal</td>
 </tr>
 <tr>
-<td><span class="model-id">qwen3-rerank</span><span class="badge b-rec">Rec</span></td>
+<td><span class="model-id">qwen3.7-text-rerank</span><span class="badge b-new">NEW</span><span class="badge b-rec">Rec</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="tag price-ico" title="Moderate"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td class="plain">Rerank</td>
+<td><span class="mono-dim">—</span></td>
+<td><span class="mono-dim">30,000/passage</span></td>
+<td class="mdesc">New-gen text rerank (Qwen3.7): much higher candidate limit per request</td>
+</tr>
+<tr>
+<td><span class="model-id">qwen3-rerank</span></td>
 <td><span class="tier-tag t-flag">Flagship</span></td>
 <td><span class="tag price-ico" title="Moderate"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
 <td class="plain">Rerank</td>
 <td><span class="mono-dim">—</span></td>
 <td><span class="mono-dim">4,000/passage</span></td>
-<td class="mdesc">100+ languages, up to 500 docs</td>
+<td class="mdesc">Previous-gen text rerank, 100+ languages, up to 500 docs</td>
 </tr>
 <tr>
 <td><span class="model-id">qwen3-vl-rerank</span></td>
@@ -2287,7 +2305,7 @@
 <!-- ===== Legacy & Retiring Models ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">Legacy & Retiring Models</h2></div>
-<p class="sec-desc">Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-08-30)</p>
+<p class="sec-desc">The following are legacy/sunset models already covered on this page; migrate per the suggestions and do not use in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-08)</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -2485,9 +2503,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Tongyi Qwen Model Selection Guide</b> · Last updated 2026-09-01</p>
+  <p><b>Tongyi Qwen Model Selection Guide</b> · Last updated 2026-09-08</p>
   <p class="rules">max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime</p>
-  <p>Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-08-30)</p>
+  <p>Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Category docs</a> (synced 2026-09-08)</p>
 </footer>
 
 <script>

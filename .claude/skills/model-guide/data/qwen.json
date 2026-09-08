@@ -14,10 +14,10 @@
     "title": "通义千问模型选择指南 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "通义千问模型选择指南",
-    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-01 同步）",
+    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-08 同步）",
     "stats": [
       {
-        "num": "138",
+        "num": "140",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "通义千问模型选择指南",
-    "footer_updated": "2026-09-01",
+    "footer_updated": "2026-09-08",
     "footer_rules": "max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时",
-    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-01 同步）"
+    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-08 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -2224,9 +2224,23 @@
           "flagship",
           "mid",
           "文本 Embedding",
-          "64~2048",
-          "8,192",
-          "新一代文本向量（Qwen3.7 代），¥0.5"
+          "256~2560",
+          "131,072",
+          "新一代文本向量（Qwen3.7 代），默认 1024 维，¥0.5"
+        ],
+        [
+          {
+            "id": "qwen3.7-text-embedding-flash",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          "low",
+          "文本 Embedding",
+          "256~1024",
+          "131,072",
+          "Qwen3.7 代轻量文本向量：成本与吞吐优先，默认 1024 维，¥0.125"
         ],
         [
           {
@@ -2290,8 +2304,9 @@
         ],
         [
           {
-            "id": "qwen3-rerank",
+            "id": "qwen3.7-text-rerank",
             "badges": [
+              "NEW",
               "推荐"
             ]
           },
@@ -2299,8 +2314,20 @@
           "mid",
           "重排序",
           "—",
+          "30,000/条",
+          "新一代文本重排序（Qwen3.7 代）：单次候选上限大幅提升"
+        ],
+        [
+          {
+            "id": "qwen3-rerank",
+            "badges": []
+          },
+          "flagship",
+          "mid",
+          "重排序",
+          "—",
           "4,000/条",
-          "100+ 语言，最多 500 文档"
+          "上代文本重排序，100+ 语言，最多 500 文档"
         ],
         [
           {
@@ -2712,7 +2739,7 @@
       "title": "旧版与即将下线模型",
       "icon": "i-circle-off",
       "nav": "旧版",
-      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-09-01 同步）",
+      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-09-08 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",

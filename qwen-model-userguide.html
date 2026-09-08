@@ -623,8 +623,8 @@
       <div class="hero-eyebrow">QWEN MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="qwen-model-userguide-en.html" data-lang-href="qwen-model-userguide-en.html">EN</a></div>
     </div>
     <h1>通义千问模型选择指南</h1>
-    <p class="hero-desc">通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-01 同步）</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">138</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+    <p class="hero-desc">通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-08 同步）</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">140</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">12</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>模型分类</span></span></div>
       <div class="stat-divider"></div>
@@ -1969,9 +1969,18 @@
 <td><span class="tier-tag t-flag">旗舰</span></td>
 <td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
 <td class="plain">文本 Embedding</td>
-<td><span class="mono-dim">64~2048</span></td>
-<td><span class="mono-dim">8,192</span></td>
-<td class="mdesc">新一代文本向量（Qwen3.7 代），¥0.5</td>
+<td><span class="mono-dim">256~2560</span></td>
+<td><span class="mono-dim">131,072</span></td>
+<td class="mdesc">新一代文本向量（Qwen3.7 代），默认 1024 维，¥0.5</td>
+</tr>
+<tr>
+<td><span class="model-id">qwen3.7-text-embedding-flash</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-bud">经济</span></td>
+<td><span class="tag t-green price-ico" title="实惠"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td class="plain">文本 Embedding</td>
+<td><span class="mono-dim">256~1024</span></td>
+<td><span class="mono-dim">131,072</span></td>
+<td class="mdesc">Qwen3.7 代轻量文本向量：成本与吞吐优先，默认 1024 维，¥0.125</td>
 </tr>
 <tr>
 <td><span class="model-id">text-embedding-v3</span></td>
@@ -2019,13 +2028,22 @@
 <td class="mdesc">低成本跨模态</td>
 </tr>
 <tr>
-<td><span class="model-id">qwen3-rerank</span><span class="badge b-rec">推荐</span></td>
+<td><span class="model-id">qwen3.7-text-rerank</span><span class="badge b-new">NEW</span><span class="badge b-rec">推荐</span></td>
+<td><span class="tier-tag t-flag">旗舰</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td class="plain">重排序</td>
+<td><span class="mono-dim">—</span></td>
+<td><span class="mono-dim">30,000/条</span></td>
+<td class="mdesc">新一代文本重排序（Qwen3.7 代）：单次候选上限大幅提升</td>
+</tr>
+<tr>
+<td><span class="model-id">qwen3-rerank</span></td>
 <td><span class="tier-tag t-flag">旗舰</span></td>
 <td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
 <td class="plain">重排序</td>
 <td><span class="mono-dim">—</span></td>
 <td><span class="mono-dim">4,000/条</span></td>
-<td class="mdesc">100+ 语言，最多 500 文档</td>
+<td class="mdesc">上代文本重排序，100+ 语言，最多 500 文档</td>
 </tr>
 <tr>
 <td><span class="model-id">qwen3-vl-rerank</span></td>
@@ -2287,7 +2305,7 @@
 <!-- ===== 旧版与即将下线模型 ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">旧版与即将下线模型</h2></div>
-<p class="sec-desc">以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-01 同步）</p>
+<p class="sec-desc">以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-08 同步）</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -2485,9 +2503,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>通义千问模型选择指南</b> · 最后更新 2026-09-01</p>
+  <p><b>通义千问模型选择指南</b> · 最后更新 2026-09-08</p>
   <p class="rules">max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时</p>
-  <p>数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-01 同步）</p>
+  <p>数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-08 同步）</p>
 </footer>
 
 <script>
