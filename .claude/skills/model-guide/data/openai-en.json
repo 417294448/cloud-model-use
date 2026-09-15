@@ -14,13 +14,13 @@
     "title": "OpenAI Model Selection Guide 2026",
     "eyebrow": "OPENAI MODEL SELECTION GUIDE · 2026",
     "h1": "OpenAI Model Selection Guide",
-    "hero_desc": "84+ models · multimodal · reasoning · context window · price tiers — Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-09-05)",
+    "hero_desc": "87+ models · multimodal · reasoning · context window · price tiers — Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-09-15)",
     "home_href": "./index.html",
     "home_title": "Back to model comparison tool",
     "home_label": "Compare",
     "stats": [
       {
-        "num": "84",
+        "num": "87",
         "icon": "i-models",
         "label": "Models"
       },
@@ -36,9 +36,9 @@
       }
     ],
     "footer_title": "OpenAI Model Selection Guide",
-    "footer_updated": "2026-09-05",
+    "footer_updated": "2026-09-15",
     "footer_rules": "Higher version = newer · mini = budget · pro = enhanced · codex = coding · nano = fastest · o-series = reasoning · realtime = live audio",
-    "footer_sources": "Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-09-05)"
+    "footer_sources": "Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-09-15)"
   },
   "sections": [
     {
@@ -61,7 +61,7 @@
         {
           "icon": "i-image",
           "task": "Image generation",
-          "model": "gpt-image-2"
+          "model": "gpt-image-2.5-sunburst"
         },
         {
           "icon": "i-video",
@@ -1255,10 +1255,55 @@
       "rows": [
         [
           {
-            "id": "gpt-image-2",
+            "id": "gpt-image-2.5-sunburst",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "up to 4K",
+          "Image 2.5 flagship with the best editing precision"
+        ],
+        [
+          {
+            "id": "gpt-image-2.5-flare",
             "badges": [
               "NEW"
             ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "up to 4K",
+          "Image 2.5 fast variant for everyday high-quality generation"
+        ],
+        [
+          {
+            "id": "gpt-image-2",
+            "badges": []
           },
           "flagship",
           "high",
@@ -1412,6 +1457,36 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "gpt-live-1",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "high",
+          {
+            "label": "Realtime chat",
+            "icon": "i-audio"
+          },
+          [
+            "text",
+            "audio"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          {
+            "t": "plain",
+            "v": "$0.05/min"
+          },
+          "Full-duplex voice conversation (Live API): listens and speaks at once, delegating reasoning and tool use to a backend model"
+        ],
         [
           {
             "id": "gpt-live-transcribe",
@@ -2794,10 +2869,10 @@
             "text": "High-quality image generation"
           },
           {
-            "id": "gpt-image-2",
+            "id": "gpt-image-2.5-sunburst",
             "badges": []
           },
-          "gpt-image-1.5",
+          "gpt-image-2.5-flare, gpt-image-2",
           {
             "t": "ctx",
             "v": "up to 4K resolution"

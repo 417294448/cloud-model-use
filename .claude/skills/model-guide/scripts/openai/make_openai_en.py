@@ -22,6 +22,8 @@ TRANSLATE = {
     '84+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-01 同步）': '84+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-01)',
     'OpenAI 最先进的模型，推荐用于大多数任务。GPT-6 Astra 为最新旗舰，同时支持 Chat Completions 与 Responses API；GPT-5.6 系列（2026-07 发布）支持多智能体编排（预览）与计算机使用，其工具调用请通过 <span class="mono">Responses API</span>（Chat Completions 与函数工具不能同时使用，除非 <span class="mono">reasoning_effort=none</span>）': 'OpenAI\'s most advanced models, recommended for most tasks. GPT-6 Astra is the newest flagship, supporting both Chat Completions and the Responses API; the GPT-5.6 series (released 2026-07) supports multi-agent orchestration (preview) and computer use, and its tool calls must go through the <span class="mono">Responses API</span> (Chat Completions and function tools cannot be combined unless <span class="mono">reasoning_effort=none</span>)',
     # ---- meta ----
+    '87+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-15 同步）': '87+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-15)',
+    '数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-09-15 同步）': 'Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-15)',
     'OpenAI 模型选择指南 2026': 'OpenAI Model Selection Guide 2026',
     'OpenAI 模型选择指南': 'OpenAI Model Selection Guide',
     '78+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI 官方文档</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry 文档</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure 模型退役计划</a>（2026-08-30 同步）':
@@ -204,6 +206,8 @@ TRANSLATE = {
     '最高 4K 60fps': 'up to 4K 60fps',
     '最高 1080p': 'up to 1080p',
     '最新一代图像生成模型': 'Latest-generation image model',
+    '图像 2.5 旗舰，编辑精度最高': 'Image 2.5 flagship with the best editing precision',
+    '图像 2.5 快速版，日常高质量生成': 'Image 2.5 fast variant for everyday high-quality generation',
     '最先进的图像生成模型': 'Most advanced image model',
     '上一代图像生成': 'Previous-generation image model',
     '性价比图像生成': 'Budget image model',
@@ -212,6 +216,9 @@ TRANSLATE = {
     '旧版视频生成（官方已标 Legacy），仍可用': 'Legacy video model (officially marked Legacy); still usable',
 
     # ---- audio flow / plain / mdesc ----
+    '$0.05/分钟': '$0.05/min',
+    '全双工语音对话（Live API），边听边说，推理与工具调用交由后端模型':
+        'Full-duplex voice conversation (Live API): listens and speaks at once, delegating reasoning and tool use to a backend model',
     '实时听录': 'Live transcription',
     '实时翻译': 'Realtime translation',
     '语音转文字': 'Speech to text',
