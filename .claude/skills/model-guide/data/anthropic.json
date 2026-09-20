@@ -14,7 +14,7 @@
     "title": "Anthropic Claude 模型选择指南 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude 模型选择指南",
-    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）",
+    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-20 同步）",
     "stats": [
       {
         "num": "11",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Anthropic Claude 模型选择指南",
-    "footer_updated": "2026-09-08",
+    "footer_updated": "2026-09-20",
     "footer_rules": "opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折",
-    "footer_sources": "数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-08 同步）"
+    "footer_sources": "数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-20 同步）"
   },
   "legend": "default",
   "legend_overrides": {
@@ -403,7 +403,7 @@
       "title": "已退役模型与迁移指引",
       "icon": "i-circle-off",
       "nav": "已退役",
-      "desc": "以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-08 同步）",
+      "desc": "以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-20 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -447,7 +447,7 @@
           },
           "retired",
           "2026-06-15",
-          "claude-sonnet-5",
+          "claude-sonnet-4-6",
           "已退役，直接迁移"
         ],
         [
@@ -467,7 +467,7 @@
           },
           "retired",
           "2026-02-19",
-          "claude-sonnet-5",
+          "claude-sonnet-4-6",
           "已退役，直接迁移"
         ],
         [
@@ -497,7 +497,7 @@
           },
           "retired",
           "2025-10-28",
-          "claude-sonnet-5",
+          "claude-sonnet-4-6",
           "已退役，直接迁移"
         ],
         [
@@ -507,7 +507,7 @@
           },
           "retired",
           "2025-10-28",
-          "claude-sonnet-5",
+          "claude-sonnet-4-6",
           "已退役，直接迁移"
         ],
         [
@@ -517,7 +517,7 @@
           },
           "retired",
           "2025-07-21",
-          "claude-sonnet-5",
+          "claude-sonnet-4-6",
           "已退役，直接迁移"
         ],
         [
@@ -527,7 +527,7 @@
           },
           "retired",
           "2025-07-21",
-          "claude-sonnet-5",
+          "claude-opus-4-8",
           "已退役，直接迁移"
         ],
         [
@@ -537,7 +537,7 @@
           },
           "retired",
           "2025-07-21",
-          "claude-sonnet-5",
+          "claude-opus-4-8",
           "已退役，直接迁移"
         ]
       ]

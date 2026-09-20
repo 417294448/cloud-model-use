@@ -105,3 +105,5 @@ Z.ai 价格为 **元 CNY / 1M tokens**（华北区原价），映射到页面 6 
 | 2026-08-30 | 按定价修正档位：`GLM-5.3-Flash`→mid（原价 ¥0.8）、`GLM-4V-Plus-0111`→high、`GLM-4-Air-250414`/`GLM-Z1-Air`→low、`GLM-Z1-FlashX`→cheap、`Rerank`→mid | pricing 页面单价（输入原价定档） |
 | 2026-08-30 | `GLM-4V` / `GLM-4-Air` / `GLM-4-Flash` 移入 `historical`（官方定价页历史模型区）；`GLM-4.5` / `CogView-3` 按量 API 已下架（仅微调/私有化）移入 `historical` | pricing 页面历史模型区/模型推理区 |
 | 2026-08-30 | 历史区价格按官方更新：`GLM-4-0520`/`GLM-4`→sky(¥100)、`GLM-4V`→sky(¥50)、`GLM-4V-Plus`→high(¥4)、`GLM-4-Air`→low(¥0.5) | pricing 页面历史模型区单价 |
+| 2026-09-20 | 新增 `GLM-5.3-FlashX`（frontier 区）：官方模型概览页推荐表明列，ctx 1M / 输出 128K / 推理速度 200 tokens/s；价格页未列出按量单价，价格列留空 | 模型概览页 |
+| 2026-09-20 | **pricing 通道退化**：新版 `open.bigmodel.cn/pricing` 仅渲染 5 个模型卡片（GLM-5.3 / GLM-5.3-Flash / GLM-5.2 / GLM-OCR / GLM-TTS），`update_data.py` 报出的 34 条「可能下架」全部为误报，**未删任何模型**；建议给抓取加"渲染模型数下限"校验后再跑 diff | pricing 页面实测 |

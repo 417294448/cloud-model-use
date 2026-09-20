@@ -20,10 +20,10 @@ TRANSLATE = {
     # ---- meta ----
     'Z.ai 模型选择指南 2026': 'Z.ai Model Selection Guide 2026',
     'Z.ai 模型选择指南': 'Z.ai Model Selection Guide',
-    '智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-30 同步）':
-        'Zhipu Z.ai full lineup · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-08-30)',
-    '数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-08-30 同步）':
-        'Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-08-30)',
+    '智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-09-20 同步）':
+        'Zhipu Z.ai full lineup · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-09-20)',
+    '数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-09-20 同步）':
+        'Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-09-20)',
     '收录模型': 'Models',
     '模型分类': 'Categories',
     '最大上下文': 'Max context',
@@ -129,6 +129,8 @@ TRANSLATE = {
         'Lightweight high-speed Flash; fast reasoning; ideal for high-concurrency calls; ¥0.5 in / ¥3 out',
     '原生多模态普惠模型，原生理解图片/视频/文件；原价 ¥0.8/¥2.8，限时 5 折（¥0.4/¥1.4）':
         'Native multimodal budget model; natively understands images/videos/files; list price ¥0.8/¥2.8, limited-time 50% off (¥0.4/¥1.4)',
+    'GLM-5.3-Flash 高速版，推理速度达 200 tokens/s；官方价格页暂未公布按量单价':
+        'High-speed edition of GLM-5.3-Flash; reasoning speed up to 200 tokens/s; pay-as-you-go price not yet published on the official pricing page',
     '极速版本，适合低延迟、高响应要求的业务场景':
         'Ultra-fast version for low-latency, high-response business scenarios',
     '专为超长文本和记忆型任务设计': 'Designed for ultra-long text and memory-intensive tasks',

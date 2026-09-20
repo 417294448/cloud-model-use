@@ -8,10 +8,10 @@
     "title": "Z.ai 模型选择指南 2026",
     "eyebrow": "Z.AI MODEL SELECTION GUIDE · 2026",
     "h1": "Z.ai 模型选择指南",
-    "hero_desc": "智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-09-01 同步）",
+    "hero_desc": "智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-09-20 同步）",
     "stats": [
       {
-        "num": "69+",
+        "num": "70+",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -27,9 +27,9 @@
       }
     ],
     "footer_title": "Z.ai 模型选择指南",
-    "footer_updated": "2026-09-01",
+    "footer_updated": "2026-09-20",
     "footer_rules": "GLM = 智谱大模型 · 数字越大越新 · 5.x = 最新一代 · Flash = 省钱快速 · Turbo = 速度优化 · Air = 轻量均衡 · V = 视觉 · Cog = 生成模型",
-    "footer_sources": "数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-09-01 同步）"
+    "footer_sources": "数据来源：<a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel 模型概览</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">产品价格</a>（2026-09-20 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -308,6 +308,34 @@
           },
           "128K",
           "原生多模态普惠模型，原生理解图片/视频/文件；原价 ¥0.8/¥2.8，限时 5 折（¥0.4/¥1.4）"
+        ],
+        [
+          {
+            "id": "GLM-5.3-FlashX",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          null,
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          4,
+          5,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "GLM-5.3-Flash 高速版，推理速度达 200 tokens/s；官方价格页暂未公布按量单价"
         ],
         [
           "GLM-5.2",

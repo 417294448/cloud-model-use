@@ -75,3 +75,6 @@ window.__ICE_PAGE_PROPS__={"docDetailData":{"storeData":{"data":{"content":"<div
 - **第三方模型**：MiniMax/speech、happyhorse、z-image、kimi、GLM、DeepSeek 等百炼托管三方模型可收录，模型 ID 含 `/` 属正常（check_data 会有形式警告，可忽略）
 - **日期快照**：`-latest` 与 `-YYYYMMDD` 快照一般不单列（主版本行已注明"当前能力等同于某快照"），保持表格简洁；开源模型的 `-2507` 快照例外——它就是当前代本体（如 qwen3-235b-a22b-instruct-2507）
 - **交叉校验流程**：更新数据后跑 `scripts/verify_official.py data/qwen.json --docs <model-pricing.txt> <speech-recognition.txt>`——校验存在性、价格声称、遗漏差集（归因：候选补充/旧代/第三方/工具API/快照别名）。注意 sensevoice/gummy 等下线模型只在 speech-recognition 页出现、不在价格页，校验时两份文档都要给，否则会误报"不存在"
+- **speech-recognition 页抓取退化（2026-09-15 起持续）**：`/zh/model-studio/speech-recognition` 抓取仅返回目录空壳（约 39 字符、0 行），正文因页面结构变化未能提取；`sensevoice-v1`、`gummy-realtime-v1`、`gummy-chat-v1` 的「即将下线」状态无法复核，沿用既有记录，勿因校验脚本的存在性报错而删除这 3 行
+- **2026-09-20 新增收录**：`qwen3.8-omni-flash`（全模态，输入 text/image/audio/video、仅输出 text，1M ctx，混合思考默认开启，¥0.8/¥2.7）、`qwen3.8-livetranslate-flash-realtime`（实时同传，60 源语言 / 29 语音输出，音频入 ¥40/1M）、`qwen-audio-3.1-tts-flash`（¥1/万字符）、`wan2.7-videoedit` / `wan2.6-i2v-flash` / `wan2.6-r2v-flash`（按秒计费）、`qwen-mt-uni`（统一多模态翻译，文本 ¥65/1M·文档 ¥20/1M·图片 ¥32/1M·音频 ¥400/1M）
+- **未收录待确认**：官方总览新增「世界模型」类 `happyoyster-1.0-adventure/directing/acting`，归属（百炼自研或托管第三方）无法从现有官方页确认，暂不收录

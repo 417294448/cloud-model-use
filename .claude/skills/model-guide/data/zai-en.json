@@ -14,10 +14,10 @@
     "title": "Z.ai Model Selection Guide 2026",
     "eyebrow": "Z.AI MODEL SELECTION GUIDE · 2026",
     "h1": "Z.ai Model Selection Guide",
-    "hero_desc": "Zhipu Z.ai full lineup · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-08-30)",
+    "hero_desc": "Zhipu Z.ai full lineup · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-09-20)",
     "stats": [
       {
-        "num": "69+",
+        "num": "70+",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Z.ai Model Selection Guide",
-    "footer_updated": "2026-09-01",
+    "footer_updated": "2026-09-20",
     "footer_rules": "GLM = Zhipu LLM · higher number = newer · 5.x = latest gen · Flash = budget & fast · Turbo = speed-optimized · Air = lightweight & balanced · V = vision · Cog = generative models",
-    "footer_sources": "Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-08-30)"
+    "footer_sources": "Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-09-20)"
   },
   "legend_overrides": {
     "ranges": {
@@ -314,6 +314,34 @@
           },
           "128K",
           "Native multimodal budget model; natively understands images/videos/files; list price ¥0.8/¥2.8, limited-time 50% off (¥0.4/¥1.4)"
+        ],
+        [
+          {
+            "id": "GLM-5.3-FlashX",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "balanced",
+          null,
+          [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          4,
+          5,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "High-speed edition of GLM-5.3-Flash; reasoning speed up to 200 tokens/s; pay-as-you-go price not yet published on the official pricing page"
         ],
         [
           "GLM-5.2",
