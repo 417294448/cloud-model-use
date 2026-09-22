@@ -40,6 +40,8 @@
 
 **allorigins 间歇可用（2026-09-01 实测）**：`api.allorigins.win` 对 `ai.google.dev` 的成功率约为 **1/9**（其余返回 520/522/16 字节），但**高重试可以拿到全部三页**——models 147KB、pricing 240KB、deprecations 115KB 均成功。抓取时用**间隔 8 秒 + 最多 20 次重试**的脚本（见 SKILL.md 工作流 B 说明），判定成功标准是 HTTP 200 且 size > 100KB（防止限流页/广告页误判）；`corsproxy.org` 本轮对 Google 源站返回 VPN 广告页（92KB），`proxy.cors.sh` 302，均不可用。
 
+**allorigins 关键用法（2026-09-22 实测，必读）**：`api.allorigins.win/raw?url=` 的 **url 参数必须对目标 URL 整体 URL-encode**（`urllib.parse.quote(url, safe='')`）——不编码时直接 522，编码后首次或数次重试即 200。实测 models 页 151KB（try2 成功）、pricing 页 243KB（给目标追加 `?v=1` 换缓存键后在 try2 成功）。脚本内建议：目标 URL 池轮换（`pricing` / `pricing?v=1` / `pricing?hl=en`）+ 编码 + 间隔 5-6 秒重试 80 次内必成。**WebFetch 回退亦需加缓存破坏参数**（`?v=fresh1`）——不加会返回数月前的旧快照（曾返回 2026-06 版本）；加了即返回当日最新（可与页面 `Last updated` 核对）。
+
 ## 各页面内容与用途
 
 | 页面 | 提供的关键字段 |

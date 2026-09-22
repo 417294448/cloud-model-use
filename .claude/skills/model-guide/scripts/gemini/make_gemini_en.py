@@ -16,9 +16,9 @@ CJK = re.compile(r'[\u4e00-\u9fff]')
 
 # ===== 翻译表（完整枚举 gemini.json 中的可译编辑字段）=====
 TRANSLATE = {
-    'Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-05 同步）': 'Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-05)',
-    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-05 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-05)',
-    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-05 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-05)',
+    'Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-22 同步）': 'Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-22)',
+    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-22 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-22)',
+    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-22 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-22)',
     '最新最强 Flash（Stable），长程软件工程与自主 Agent，$0.75/$3.75': 'Newest, strongest Flash (Stable), long-horizon software engineering & autonomous agents, $0.75/$3.75',
     '上代 Flash（Stable），复杂编程与多步执行，$0.75/$3.75': 'Previous Flash (Stable), complex coding & multi-step execution, $0.75/$3.75',
     '最新旗舰（2026-09 发布），全曲音乐生成与结构连贯性': 'Newest flagship (released 2026-09) for full-song music generation with structural coherence',
@@ -192,6 +192,14 @@ TRANSLATE = {
     '实时语音对话旗舰，$0.75/$4.5': 'Realtime voice chat flagship, $0.75/$4.5',
     'Live API 上代，$0.5/$2': 'Previous Live API model, $0.5/$2',
     '语音到语音实时翻译，$3.5/$21': 'Speech-to-speech realtime translation, $3.5/$21',
+    '异步工具调用': 'Async tool calling',
+    '默认 Live 模型，工具调用后台执行，$0.75/$4.5':
+        'Default Live model; tool calls run in the background, $0.75/$4.5',
+    '后台推理': 'Background reasoning',
+    '边说话边推理，多步任务不打断，$0.75/$4.5':
+        'Reasons while speaking; multi-step tasks without interruption, $0.75/$4.5',
+    '上代 Live 模型，官方建议迁移 3.8 Live，$0.75/$4.5':
+        'Previous Live model; Google recommends migrating to 3.8 Live, $0.75/$4.5',
 
     # ---- image ----
     '最高 4K': 'up to 4K',
