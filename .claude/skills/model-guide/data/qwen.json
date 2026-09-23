@@ -14,10 +14,10 @@
     "title": "通义千问模型选择指南 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "通义千问模型选择指南",
-    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-20 同步）",
+    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-22 同步）",
     "stats": [
       {
-        "num": "147",
+        "num": "152",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "通义千问模型选择指南",
-    "footer_updated": "2026-09-20",
+    "footer_updated": "2026-09-22",
     "footer_rules": "max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时",
-    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-20 同步）"
+    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-09-22 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -100,12 +100,12 @@
         {
           "icon": "i-audio",
           "task": "实时语音对话",
-          "model": "qwen-audio-3.0-realtime-plus"
+          "model": "qwen-audio-3.1-realtime-plus"
         },
         {
           "icon": "i-mic",
           "task": "语音听录",
-          "model": "qwen-audio-3.0-asr-flash-filetrans"
+          "model": "qwen-audio-3.1-asr-flash-filetrans"
         },
         {
           "icon": "i-speaker",
@@ -216,7 +216,7 @@
         [
           "-asr / -tts",
           "语音识别 / 语音合成",
-          "qwen-audio-3.0-asr-flash"
+          "qwen-audio-3.1-asr-flash"
         ],
         [
           "-realtime",
@@ -226,7 +226,7 @@
         [
           "-filetrans / -streaming",
           "文件转写 / 流式实时",
-          "qwen-audio-3.0-asr-flash-filetrans"
+          "qwen-audio-3.1-asr-flash-filetrans"
         ],
         [
           "-livetranslate",
@@ -727,6 +727,34 @@
         ],
         [
           {
+            "id": "qwen3.8-omni-flash-realtime",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "balanced",
+          "mid",
+          [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          "WebSocket / WebRTC",
+          1,
+          "FC+联网+MCP",
+          "全模态实时版，实时音视频对话；支持声音复刻"
+        ],
+        [
+          {
             "id": "qwen3.5-omni-plus",
             "badges": []
           },
@@ -876,9 +904,10 @@
         ],
         [
           {
-            "id": "qwen-audio-3.0-realtime-plus",
+            "id": "qwen-audio-3.1-realtime-plus",
             "badges": [
-              "NEW"
+              "NEW",
+              "推荐"
             ]
           },
           "flagship",
@@ -897,7 +926,30 @@
           "WebSocket",
           1,
           "语义VAD+FC",
-          "S2S 语音对话旗舰，无意义附和声不打断"
+          "新一代 S2S 语音对话旗舰，无意义附和声不打断"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.0-realtime-plus",
+            "badges": []
+          },
+          "flagship",
+          "high",
+          [
+            "audio",
+            "text"
+          ],
+          {
+            "items": [
+              "audio",
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          "WebSocket",
+          1,
+          "语义VAD+FC",
+          "上代 S2S 语音对话旗舰，无意义附和声不打断"
         ],
         [
           {
@@ -1790,7 +1842,7 @@
       "title": "语音识别模型（ASR）",
       "icon": "i-mic",
       "nav": "ASR",
-      "desc": "实时（WebSocket 流式）与非实时（HTTP 文件转写）两大路线；Qwen-Audio-3.0 系列支持热词与 Prompt 上下文注入",
+      "desc": "实时（WebSocket 流式）与非实时（HTTP 文件转写）两大路线；Qwen-Audio-3.1 系列支持热词与 Prompt 上下文注入",
       "columns": [
         "模型 ID",
         "定位",
@@ -1814,7 +1866,7 @@
       "rows": [
         [
           {
-            "id": "qwen-audio-3.0-asr-flash-streaming",
+            "id": "qwen-audio-3.1-asr-flash-streaming",
             "badges": [
               "NEW",
               "推荐"
@@ -1826,11 +1878,11 @@
           "热词+Prompt",
           "—",
           "无限制",
-          "实时识别旗舰，多语种及方言"
+          "新一代实时识别旗舰，30 语种 + 10 种方言"
         ],
         [
           {
-            "id": "qwen-audio-3.0-asr-flash-filetrans",
+            "id": "qwen-audio-3.1-asr-flash-filetrans",
             "badges": [
               "NEW",
               "推荐"
@@ -1842,11 +1894,11 @@
           "热词+Prompt",
           "支持",
           "12小时/2GB",
-          "文件转写旗舰，支持说话人分离"
+          "新一代文件转写旗舰，支持说话人分离"
         ],
         [
           {
-            "id": "qwen-audio-3.0-asr-flash",
+            "id": "qwen-audio-3.1-asr-flash",
             "badges": [
               "NEW"
             ]
@@ -1855,9 +1907,48 @@
           "非实时",
           "HTTP",
           "热词+Prompt",
+          "支持",
+          "5分钟/2GB",
+          "短音频转写，支持说话人分离"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.0-asr-flash-streaming",
+            "badges": []
+          },
+          "flagship",
+          "实时",
+          "WebSocket",
+          "热词+Prompt",
+          "—",
+          "无限制",
+          "上代实时识别旗舰，多语种及方言"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.0-asr-flash-filetrans",
+            "badges": []
+          },
+          "flagship",
+          "非实时",
+          "HTTP",
+          "热词+Prompt",
+          "支持",
+          "12小时/2GB",
+          "上代文件转写旗舰，支持说话人分离"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.0-asr-flash",
+            "badges": []
+          },
+          "balanced",
+          "非实时",
+          "HTTP",
+          "热词+Prompt",
           "—",
           "5分钟/2GB",
-          "短音频快速转写"
+          "上代短音频快速转写"
         ],
         [
           {
@@ -2855,7 +2946,7 @@
       "title": "旧版与即将下线模型",
       "icon": "i-circle-off",
       "nav": "旧版",
-      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-09-20 同步）",
+      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-09-22 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -3084,8 +3175,8 @@
             "icon": "i-audio",
             "text": "实时语音对话"
           },
-          "qwen-audio-3.0-realtime-plus",
-          "qwen3.5-omni-plus-realtime",
+          "qwen-audio-3.1-realtime-plus",
+          "qwen3.8-omni-flash-realtime",
           "<span class=\"mono-dim\">语义 VAD + WebSocket</span>"
         ],
         [
@@ -3093,7 +3184,7 @@
             "icon": "i-mic",
             "text": "语音听录 / 转写"
           },
-          "qwen-audio-3.0-asr-flash-filetrans",
+          "qwen-audio-3.1-asr-flash-filetrans",
           "fun-asr",
           "<span class=\"mono-dim\">12 小时 + 说话人分离</span>"
         ],

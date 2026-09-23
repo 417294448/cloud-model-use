@@ -14,10 +14,10 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-05)",
+    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-22)",
     "stats": [
       {
-        "num": "57",
+        "num": "59",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-09-05",
+    "footer_updated": "2026-09-22",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-05)"
+    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-22)"
   },
   "sections": [
     {
@@ -84,7 +84,7 @@
         {
           "icon": "i-mic",
           "task": "Realtime voice chat",
-          "model": "gemini-3.1-flash-live-preview"
+          "model": "gemini-3.8-live"
         },
         {
           "icon": "i-doc",
@@ -185,7 +185,7 @@
         [
           "-live",
           "Live API realtime audio/video chat",
-          "gemini-3.1-flash-live-preview"
+          "gemini-3.8-live"
         ],
         [
           "-native-audio",
@@ -853,9 +853,10 @@
         ],
         [
           {
-            "id": "gemini-3.1-flash-live-preview",
+            "id": "gemini-3.8-live",
             "badges": [
-              "NEW"
+              "NEW",
+              "Rec"
             ]
           },
           "balanced",
@@ -877,8 +878,64 @@
             "cls": "t-teal"
           },
           5,
+          "Async tool calling",
+          "Default Live model; tool calls run in the background, $0.75/$4.5"
+        ],
+        [
+          {
+            "id": "gemini-3.8-live-extended-thinking",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "Realtime chat"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "Background reasoning",
+          "Reasons while speaking; multi-step tasks without interruption, $0.75/$4.5"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-live-preview",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "Realtime chat"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
           "Live API",
-          "Realtime voice chat flagship, $0.75/$4.5"
+          "Previous Live model; Google recommends migrating to 3.8 Live, $0.75/$4.5"
         ],
         [
           {
@@ -1794,7 +1851,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-05)",
+      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-22)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -2031,8 +2088,8 @@
             "icon": "i-mic",
             "text": "Realtime voice chat"
           },
-          "gemini-3.1-flash-live-preview",
-          "gemini-2.5-flash-native-audio-preview-12-2025",
+          "gemini-3.8-live",
+          "gemini-3.8-live-extended-thinking",
           "<span class=\"mono-dim\">Live API two-way streaming</span>"
         ],
         [

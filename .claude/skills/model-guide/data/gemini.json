@@ -14,10 +14,10 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-05 同步）",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-22 同步）",
     "stats": [
       {
-        "num": "57",
+        "num": "59",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-09-05",
+    "footer_updated": "2026-09-22",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-05 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-22 同步）"
   },
   "sections": [
     {
@@ -84,7 +84,7 @@
         {
           "icon": "i-mic",
           "task": "实时语音对话",
-          "model": "gemini-3.1-flash-live-preview"
+          "model": "gemini-3.8-live"
         },
         {
           "icon": "i-doc",
@@ -185,7 +185,7 @@
         [
           "-live",
           "Live API 实时音视频对话",
-          "gemini-3.1-flash-live-preview"
+          "gemini-3.8-live"
         ],
         [
           "-native-audio",
@@ -853,9 +853,10 @@
         ],
         [
           {
-            "id": "gemini-3.1-flash-live-preview",
+            "id": "gemini-3.8-live",
             "badges": [
-              "NEW"
+              "NEW",
+              "推荐"
             ]
           },
           "balanced",
@@ -877,8 +878,64 @@
             "cls": "t-teal"
           },
           5,
+          "异步工具调用",
+          "默认 Live 模型，工具调用后台执行，$0.75/$4.5"
+        ],
+        [
+          {
+            "id": "gemini-3.8-live-extended-thinking",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "实时对话"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "后台推理",
+          "边说话边推理，多步任务不打断，$0.75/$4.5"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-live-preview",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          {
+            "icon": "i-audio",
+            "label": "实时对话"
+          },
+          [
+            "text",
+            "audio",
+            "video"
+          ],
+          {
+            "items": [
+              "text",
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          5,
           "Live API",
-          "实时语音对话旗舰，$0.75/$4.5"
+          "上代 Live 模型，官方建议迁移 3.8 Live，$0.75/$4.5"
         ],
         [
           {
@@ -1794,7 +1851,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-05 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-22 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -2031,8 +2088,8 @@
             "icon": "i-mic",
             "text": "实时语音对话"
           },
-          "gemini-3.1-flash-live-preview",
-          "gemini-2.5-flash-native-audio-preview-12-2025",
+          "gemini-3.8-live",
+          "gemini-3.8-live-extended-thinking",
           "<span class=\"mono-dim\">Live API 双向流</span>"
         ],
         [
