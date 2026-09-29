@@ -24,6 +24,10 @@ TRANSLATE = {
         'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-22)',
     '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-22 同步）':
         'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-22)',
+    '通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-29 同步）':
+        'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)',
+    '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-29 同步）':
+        'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)',
     'max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时':
         'max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime',
     '收录模型': 'Models',
@@ -81,6 +85,8 @@ TRANSLATE = {
     '旧版与即将下线模型': 'Legacy & Retiring Models',
     '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-22 同步）':
         '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-22)''',
+    '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-29 同步）':
+        '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-29)''',
     '能力矩阵速查': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Quickly match the best model to your needs',
     '能力矩阵': 'Capability Matrix',
@@ -360,6 +366,33 @@ TRANSLATE = {
     '<span class="mono-dim">0.002元/秒</span>': '<span class="mono-dim">¥0.002/sec</span>',
     '音乐生成': 'Music generation',
     '按歌词/提示词生成音乐，按秒计费': 'Generates music from lyrics/prompts, billed per second',
+
+    # ---- 2026-09-29 新增模型（决策模型 / 世界模型 HappyOyster / 3D 生成 Tripo）----
+    '翻译、文档解析、深度研究、文本分析、世界模型、3D 生成与决策等垂直场景专用模型':
+        'Vertical-use models for translation, document parsing, deep research, text analysis, world models, 3D generation and decision-making',
+    '决策分析': 'Decision analysis',
+    '面向高频业务判断的结构化决策模型：一次前向完成分类、是非判断与评分，返回概率分布与置信度；华北2限时免费':
+        'Structured decision model for high-frequency business judgments: classification, yes/no and scoring in a single forward pass, returning a probability distribution and confidence; free for a limited time in Beijing (cn-north-2)',
+    '世界探索': 'World exploration',
+    '实时交互的开放式世界模型：世界创建 0.05元/次，480P 世界体验 0.2元/秒':
+        'Real-time interactive open-world model: world creation ¥0.05/call, 480P world experience ¥0.2/sec',
+    '实时导演': 'Realtime directing',
+    '实时导演世界模型：世界创建（无参考图）2元/次、有参考图 0.05元/次，指令注入 0.1元/次，世界体验 480P 0.35元/秒、720P 0.55元/秒':
+        'Realtime-directing world model: world creation ¥2/call (without reference image) or ¥0.05/call (with reference image), instruction injection ¥0.1/call, world experience ¥0.35/sec at 480P and ¥0.55/sec at 720P',
+    '角色演绎': 'Character acting',
+    '角色演绎世界模型（邀测中）：世界创建 0.05元/次、指令注入 0.05元/次，世界体验 480P 0.2元/秒、720P 0.3元/秒':
+        'Character-acting world model (invite-only beta): world creation ¥0.05/call, instruction injection ¥0.05/call, world experience ¥0.2/sec at 480P and ¥0.3/sec at 720P',
+    '3D 生成': '3D generation',
+    '第三方 3D 生成模型（文生3D/图生3D）：按次计费，标准/超清版+贴图 0.7-3.5元/次':
+        'Third-party 3D generation model (text/image-to-3D): billed per call, standard/ultra + texture ¥0.7-3.5/call',
+    '第三方 3D 生成模型：按次计费，文生3D/图生3D 无贴图/带贴图 2.1-4.2元/次':
+        'Third-party 3D generation model: billed per call, text/image-to-3D without/with texture ¥2.1-4.2/call',
+    '<span class="mono-dim">限时免费</span>': '<span class="mono-dim">Free for a limited time</span>',
+    '<span class="mono-dim">0.05元/次 + 0.2元/秒</span>': '<span class="mono-dim">¥0.05/call + ¥0.2/sec</span>',
+    '<span class="mono-dim">2元/次 + 0.35-0.55元/秒</span>': '<span class="mono-dim">¥2/call + ¥0.35-0.55/sec</span>',
+    '<span class="mono-dim">0.05元/次 + 0.2-0.3元/秒</span>': '<span class="mono-dim">¥0.05/call + ¥0.2-0.3/sec</span>',
+    '<span class="mono-dim">0.7-3.5元/次</span>': '<span class="mono-dim">¥0.7-3.5/call</span>',
+    '<span class="mono-dim">2.1-4.2元/次</span>': '<span class="mono-dim">¥2.1-4.2/call</span>',
 
     # ---- 2026-09-20 新增模型（qwen3.8-omni-flash / 3.8-livetranslate / audio-3.1-tts / wan 极速版与视频编辑 / qwen-mt-uni）----
     '隐式缓存': 'Implicit caching',

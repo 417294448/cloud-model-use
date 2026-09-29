@@ -14,10 +14,10 @@
     "title": "Tongyi Qwen Model Selection Guide 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "Tongyi Qwen Model Selection Guide",
-    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-22)",
+    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-29)",
     "stats": [
       {
-        "num": "152",
+        "num": "158",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Tongyi Qwen Model Selection Guide",
-    "footer_updated": "2026-09-22",
+    "footer_updated": "2026-09-29",
     "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
-    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-22)"
+    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-29)"
   },
   "legend_overrides": {
     "ranges": {
@@ -2554,7 +2554,7 @@
       "title": "Specialized Models",
       "icon": "i-target",
       "nav": "Specialized",
-      "desc": "Vertical-use models for translation, document parsing, deep research and text analysis",
+      "desc": "Vertical-use models for translation, document parsing, deep research, text analysis, world models, 3D generation and decision-making",
       "columns": [
         "Model ID",
         "Tier",
@@ -2705,6 +2705,90 @@
           },
           "Music generation",
           "Generates music from lyrics/prompts, billed per second"
+        ],
+        [
+          {
+            "id": "decision-model-preview",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"mono-dim\">Free for a limited time</span>"
+          },
+          "Decision analysis",
+          "Structured decision model for high-frequency business judgments: classification, yes/no and scoring in a single forward pass, returning a probability distribution and confidence; free for a limited time in Beijing (cn-north-2)"
+        ],
+        [
+          {
+            "id": "happyoyster-1.0-adventure",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          {
+            "raw": "<span class=\"mono-dim\">¥0.05/call + ¥0.2/sec</span>"
+          },
+          "World exploration",
+          "Real-time interactive open-world model: world creation ¥0.05/call, 480P world experience ¥0.2/sec"
+        ],
+        [
+          {
+            "id": "happyoyster-1.0-directing",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          {
+            "raw": "<span class=\"mono-dim\">¥2/call + ¥0.35-0.55/sec</span>"
+          },
+          "Realtime directing",
+          "Realtime-directing world model: world creation ¥2/call (without reference image) or ¥0.05/call (with reference image), instruction injection ¥0.1/call, world experience ¥0.35/sec at 480P and ¥0.55/sec at 720P"
+        ],
+        [
+          {
+            "id": "happyoyster-1.0-acting",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          {
+            "raw": "<span class=\"mono-dim\">¥0.05/call + ¥0.2-0.3/sec</span>"
+          },
+          "Character acting",
+          "Character-acting world model (invite-only beta): world creation ¥0.05/call, instruction injection ¥0.05/call, world experience ¥0.2/sec at 480P and ¥0.3/sec at 720P"
+        ],
+        [
+          {
+            "id": "Tripo/Tripo-H3.1",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          {
+            "raw": "<span class=\"mono-dim\">¥0.7-3.5/call</span>"
+          },
+          "3D generation",
+          "Third-party 3D generation model (text/image-to-3D): billed per call, standard/ultra + texture ¥0.7-3.5/call"
+        ],
+        [
+          {
+            "id": "Tripo/Tripo-P1.0",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          {
+            "raw": "<span class=\"mono-dim\">¥2.1-4.2/call</span>"
+          },
+          "3D generation",
+          "Third-party 3D generation model: billed per call, text/image-to-3D without/with texture ¥2.1-4.2/call"
         ]
       ]
     },
@@ -2948,7 +3032,7 @@
       "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
       "nav": "Legacy",
-      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-09-22)",
+      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-09-29)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",

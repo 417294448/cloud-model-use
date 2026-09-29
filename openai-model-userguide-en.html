@@ -620,8 +620,8 @@
       <div class="hero-eyebrow">OPENAI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><a class="lang-opt" href="openai-model-userguide.html" data-lang-href="openai-model-userguide.html">中</a><span class="lang-opt on" aria-current="true">EN</span></div>
     </div>
     <h1>OpenAI Model Selection Guide</h1>
-    <p class="hero-desc">87+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-15)</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">87</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
+    <p class="hero-desc">89+ models · multimodal · reasoning · context window · price tiers — Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-29)</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">89</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">9</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>Categories</span></span></div>
       <div class="stat-divider"></div>
@@ -676,9 +676,9 @@
 <td class="mono-dim">gpt-4 → gpt-5 → gpt-5.6</td>
 </tr>
 <tr>
-<td>Codename (-sol/-terra/-luna)</td>
-<td class="plain">Variant codename within the same generation (e.g. GPT-5.6 family)</td>
-<td class="mono-dim">gpt-5.6-sol, gpt-5.6-cyber</td>
+<td>Codename (-astra/-sol/-terra/-luna)</td>
+<td class="plain">Variant codename within the same generation (e.g. GPT-6 / GPT-5.6 family)</td>
+<td class="mono-dim">gpt-6-astra, gpt-6-sol, gpt-6-luna</td>
 </tr>
 <tr>
 <td>-mini</td>
@@ -753,7 +753,7 @@
 <!-- ===== Frontier Models ===== -->
 <section class="sec" id="frontier">
 <div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Frontier Models</h2></div>
-<p class="sec-desc">OpenAI's most advanced models, recommended for most tasks. GPT-6 Astra is the newest flagship, supporting both Chat Completions and the Responses API; the GPT-5.6 series (released 2026-07) supports multi-agent orchestration (preview) and computer use, and its tool calls must go through the <span class="mono">Responses API</span> (Chat Completions and function tools cannot be combined unless <span class="mono">reasoning_effort=none</span>)</p>
+<p class="sec-desc">OpenAI's most advanced models, recommended for most tasks. The GPT-6 series (Astra / Sol / Luna) is the newest flagship, supporting both Chat Completions and the Responses API; the GPT-5.6 series (released 2026-07) supports multi-agent orchestration (preview) and computer use, and its tool calls must go through the <span class="mono">Responses API</span> (Chat Completions and function tools cannot be combined unless <span class="mono">reasoning_effort=none</span>)</p>
 <div class="table-panel">
 <table>
 <thead>
@@ -771,6 +771,30 @@
 <td><span class="ctx">922K</span></td>
 <td><span class="ctx">128K</span></td>
 <td class="mdesc">GPT-6 series flagship (codenamed Astra) for complex end-to-end tasks: deep reasoning, coding, computer use and research, $10/$50</td>
+</tr>
+<tr>
+<td><span class="model-id">gpt-6-sol</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="tag t-amber price-ico" title="Costly"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="Text"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="Image"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Best</span></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>Fast</span></td>
+<td><span class="ctx hi">1.05M</span></td>
+<td><span class="ctx">922K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GPT-6 family (codename Sol) for complex coding and agentic workflows; $2/$10</td>
+</tr>
+<tr>
+<td><span class="model-id">gpt-6-luna</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="tag t-green price-ico" title="Affordable"><span class="bars"><i class="on"></i><i class="on"></i><i></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="Text"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="Image"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span>Standard</span></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>Fast</span></td>
+<td><span class="ctx hi">1.05M</span></td>
+<td><span class="ctx">922K</span></td>
+<td><span class="ctx">128K</span></td>
+<td class="mdesc">GPT-6 family (codename Luna) for focused, high-volume tasks; the cheapest GPT-6; $0.1/$0.5</td>
 </tr>
 <tr>
 <td><span class="model-id">gpt-5.6-sol</span><span class="badge b-new">NEW</span></td>
@@ -2138,9 +2162,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>OpenAI Model Selection Guide</b> · Last updated 2026-09-15</p>
+  <p><b>OpenAI Model Selection Guide</b> · Last updated 2026-09-29</p>
   <p class="rules">Higher version = newer · mini = budget · pro = enhanced · codex = coding · nano = fastest · o-series = reasoning · realtime = live audio</p>
-  <p>Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-15)</p>
+  <p>Sources: <a href="https://platform.openai.com/docs/models" target="_blank" rel="noopener noreferrer">OpenAI official docs</a> · <a href="https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure" target="_blank" rel="noopener noreferrer">Azure AI Foundry docs</a> · <a href="https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule" target="_blank" rel="noopener noreferrer">Azure model retirement</a> (synced 2026-09-29)</p>
 </footer>
 
 <script>

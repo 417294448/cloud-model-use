@@ -14,10 +14,10 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-22)",
+    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-29)",
     "stats": [
       {
-        "num": "59",
+        "num": "61",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-09-22",
+    "footer_updated": "2026-09-29",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-22)"
+    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-29)"
   },
   "sections": [
     {
@@ -94,7 +94,7 @@
         {
           "icon": "i-speaker",
           "task": "Text to speech",
-          "model": "gemini-3.1-flash-tts-preview"
+          "model": "gemini-3.8-flash-tts"
         },
         {
           "icon": "i-globe",
@@ -772,7 +772,35 @@
         ],
         [
           {
-            "id": "gemini-3.1-flash-tts-preview",
+            "id": "gemini-3.8-flash-tts",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "mid",
+          {
+            "from": "i-text",
+            "to": "i-speaker",
+            "label": "Text to speech"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
+          4,
+          "Voice design / replication",
+          "Flagship creative TTS: studio-grade fidelity and expressiveness, with voice design and replication, $0.5/$9"
+        ],
+        [
+          {
+            "id": "gemini-3.8-flash-lite-tts",
             "badges": [
               "NEW"
             ]
@@ -793,9 +821,34 @@
             ],
             "cls": "t-teal"
           },
+          5,
+          "High throughput / low latency",
+          "Lightweight TTS for high-throughput, real-time voice pipelines, with voice replication, $0.5/$6"
+        ],
+        [
+          {
+            "id": "gemini-3.1-flash-tts-preview",
+            "badges": []
+          },
+          "balanced",
+          "mid",
+          {
+            "from": "i-text",
+            "to": "i-speaker",
+            "label": "Text to speech"
+          },
+          [
+            "text"
+          ],
+          {
+            "items": [
+              "audio"
+            ],
+            "cls": "t-teal"
+          },
           4,
           "Fine-grained audio tags control",
-          "Latest TTS, $1/$20"
+          "Preview (Legacy); Google recommends migrating to 3.8 Flash TTS, $1/$20"
         ],
         [
           {
@@ -1851,7 +1904,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-22)",
+      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-29)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -2106,9 +2159,9 @@
             "icon": "i-speaker",
             "text": "Text to speech"
           },
-          "gemini-3.1-flash-tts-preview",
-          "gemini-2.5-pro-preview-tts",
-          "<span class=\"mono-dim\">Fine-grained audio tags control</span>"
+          "gemini-3.8-flash-tts",
+          "gemini-3.8-flash-lite-tts",
+          "<span class=\"mono-dim\">Flagship fidelity / lightweight high-throughput</span>"
         ],
         [
           {

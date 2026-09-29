@@ -19,10 +19,14 @@ TRANSLATE = {
     # ---- meta ----
     'Anthropic Claude 模型选择指南 2026': 'Anthropic Claude Model Selection Guide 2026',
     'Anthropic Claude 模型选择指南': 'Anthropic Claude Model Selection Guide',
-    'Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-20 同步）':
-        'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-20)',
+    'Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5.5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-20 同步）':
+        'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-20)',
     '数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-20 同步）':
         'Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-20)',
+    'Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5.5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-29 同步）':
+        'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-29)',
+    '数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-29 同步）':
+        'Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-29)',
     'opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折':
         'opus = flagship & strongest · sonnet = balanced value · haiku = fast & budget · fable = super-flagship · higher version = newer · Batch at half price · cached input ~1/10',
     '收录模型': 'Models',
@@ -41,10 +45,14 @@ TRANSLATE = {
     '现役模型': 'Current models',
     '当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5 评测不足时的终局选择），Opus 5 为现役旗舰，Sonnet 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
         'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5 evals fall short), Opus 5 the current flagship, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
+    '当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5.5 评测不足时的终局选择），Opus 5.5 为官方推荐的现役旗舰，Sonnet 5.5 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
+        'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5.5 evals fall short), Opus 5.5 the officially recommended current flagship, Sonnet 5.5 balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
     '已退役模型与迁移指引': 'Retired Models & Migration Guide',
     '已退役': 'Retired',
     '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-20 同步）':
         'All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-20)',
+    '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-29 同步）':
+        'All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-29)',
     '能力矩阵速查': 'Capability Matrix',
     '能力矩阵': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Match the best model to your needs quickly',
@@ -101,12 +109,18 @@ TRANSLATE = {
         'Same capability & price as Fable; accessible only to invite-only Project Glasswing organizations (defensive security use cases)',
     'Opus / Sonnet：4.5 → 4.6 → 4.7 → 4.8 → 5；Fable：5 → 5.1，越大越新':
         'Opus / Sonnet: 4.5 → 4.6 → 4.7 → 4.8 → 5; Fable: 5 → 5.1; higher = newer',
+    'Opus：4.5 → 4.6 → 4.7 → 4.8 → 5 → 5.5；Sonnet：4.5 → 4.6 → 5 → 5.5；Fable：5 → 5.1，越大越新':
+        'Opus: 4.5 → 4.6 → 4.7 → 4.8 → 5 → 5.5; Sonnet: 4.5 → 4.6 → 5 → 5.5; Fable: 5 → 5.1; higher = newer',
 
     # ---- current mdesc ----
     'Claude 超旗舰 Fable 5.1（2026-09-01 发布）：最难深度推理 / 长程自主 Agentic 的终局选择；深度思考常开 + effort（默认 high）；缓存读低至 $0.25/MTok；$10/$50':
         'Claude super-flagship Fable 5.1 (released 2026-09-01): the endgame pick for hardest deep reasoning / long-horizon autonomous Agentic; deep thinking always on + effort (default high); cache reads as low as $0.25/MTok; $10/$50',
     '上代超旗舰 Fable 5（2026-06-09 发布，Legacy）：仍可用；能力/价格被 5.1 平替，新项目迁移至 Fable 5.1；$10/$50':
         'Previous super-flagship Fable 5 (released 2026-06-09, Legacy): still available; superseded by 5.1 at the same price, migrate new projects to Fable 5.1; $10/$50',
+    '官方推荐的默认旗舰（Opus 5 的代差升级）——长程 Agentic 编码与知识工作最强；自适应思考常开（effort 默认 medium）；缓存命中 $0.20/MTok；$4/$20':
+        'Officially recommended default flagship (a generational upgrade over Opus 5) — the strongest for long-horizon agentic coding and knowledge work; adaptive thinking always on (effort default medium); cache hits $0.20/MTok; $4/$20',
+    '速度与智能最佳结合：编码/Agentic 高性价比；自适应思考（effort 默认 high）；$2/$10':
+        'The best combination of speed and intelligence: high value for coding / agentic; adaptive thinking (effort default high); $2/$10',
     'Opus 5（2026-07-24 发布）：对 4.8 代差级升级——深度推理 / 长程 Agentic / 测试时扩展最强 Opus；自适应思考默认开（effort high 及以下可关）+ 可选 Fast 模式；$5/$25':
         'Opus 5 (released 2026-07-24): a generational leap over 4.8 — the strongest Opus for deep reasoning / long-horizon Agentic / test-time compute scaling; adaptive thinking on by default (can disable at effort high or below) + optional Fast mode; $5/$25',
     '上代 Opus 旗舰（2026-05-28 发布）：长程自主 Agentic / 知识工作 / 记忆最强 Opus，仍可生产并支持 Fast 模式；新项目建议升级 Opus 5；$5/$25':

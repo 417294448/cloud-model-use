@@ -623,8 +623,8 @@
       <div class="hero-eyebrow">QWEN MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><a class="lang-opt" href="qwen-model-userguide.html" data-lang-href="qwen-model-userguide.html">中</a><span class="lang-opt on" aria-current="true">EN</span></div>
     </div>
     <h1>Tongyi Qwen Model Selection Guide</h1>
-    <p class="hero-desc">All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-22)</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">152</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
+    <p class="hero-desc">All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">158</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">12</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>Categories</span></span></div>
       <div class="stat-divider"></div>
@@ -2178,7 +2178,7 @@
 <!-- ===== Specialized Models ===== -->
 <section class="sec" id="special">
 <div class="sec-head"><svg class="ic"><use href="#i-target"/></svg><h2 class="sec-title">Specialized Models</h2></div>
-<p class="sec-desc">Vertical-use models for translation, document parsing, deep research and text analysis</p>
+<p class="sec-desc">Vertical-use models for translation, document parsing, deep research, text analysis, world models, 3D generation and decision-making</p>
 <div class="table-panel">
 <table>
 <thead>
@@ -2275,6 +2275,48 @@
 <td><span class="mono-dim">¥0.002/sec</span></td>
 <td class="plain">Music generation</td>
 <td class="mdesc">Generates music from lyrics/prompts, billed per second</td>
+</tr>
+<tr>
+<td><span class="model-id">decision-model-preview</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-bud">Budget</span></td>
+<td><span class="mono-dim">Free for a limited time</span></td>
+<td class="plain">Decision analysis</td>
+<td class="mdesc">Structured decision model for high-frequency business judgments: classification, yes/no and scoring in a single forward pass, returning a probability distribution and confidence; free for a limited time in Beijing (cn-north-2)</td>
+</tr>
+<tr>
+<td><span class="model-id">happyoyster-1.0-adventure</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="mono-dim">¥0.05/call + ¥0.2/sec</span></td>
+<td class="plain">World exploration</td>
+<td class="mdesc">Real-time interactive open-world model: world creation ¥0.05/call, 480P world experience ¥0.2/sec</td>
+</tr>
+<tr>
+<td><span class="model-id">happyoyster-1.0-directing</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="mono-dim">¥2/call + ¥0.35-0.55/sec</span></td>
+<td class="plain">Realtime directing</td>
+<td class="mdesc">Realtime-directing world model: world creation ¥2/call (without reference image) or ¥0.05/call (with reference image), instruction injection ¥0.1/call, world experience ¥0.35/sec at 480P and ¥0.55/sec at 720P</td>
+</tr>
+<tr>
+<td><span class="model-id">happyoyster-1.0-acting</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-bud">Budget</span></td>
+<td><span class="mono-dim">¥0.05/call + ¥0.2-0.3/sec</span></td>
+<td class="plain">Character acting</td>
+<td class="mdesc">Character-acting world model (invite-only beta): world creation ¥0.05/call, instruction injection ¥0.05/call, world experience ¥0.2/sec at 480P and ¥0.3/sec at 720P</td>
+</tr>
+<tr>
+<td><span class="model-id">Tripo/Tripo-H3.1</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="mono-dim">¥0.7-3.5/call</span></td>
+<td class="plain">3D generation</td>
+<td class="mdesc">Third-party 3D generation model (text/image-to-3D): billed per call, standard/ultra + texture ¥0.7-3.5/call</td>
+</tr>
+<tr>
+<td><span class="model-id">Tripo/Tripo-P1.0</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="mono-dim">¥2.1-4.2/call</span></td>
+<td class="plain">3D generation</td>
+<td class="mdesc">Third-party 3D generation model: billed per call, text/image-to-3D without/with texture ¥2.1-4.2/call</td>
 </tr>
 </tbody>
 </table>
@@ -2419,7 +2461,7 @@
 <!-- ===== Legacy & Retiring Models ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">Legacy & Retiring Models</h2></div>
-<p class="sec-desc">Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-22)</p>
+<p class="sec-desc">Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-29)</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -2617,9 +2659,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Tongyi Qwen Model Selection Guide</b> · Last updated 2026-09-22</p>
+  <p><b>Tongyi Qwen Model Selection Guide</b> · Last updated 2026-09-29</p>
   <p class="rules">max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime</p>
-  <p>Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-22)</p>
+  <p>Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)</p>
 </footer>
 
 <script>
