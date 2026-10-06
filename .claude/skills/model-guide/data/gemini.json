@@ -14,10 +14,10 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-29 同步）",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-06 同步）",
     "stats": [
       {
-        "num": "61",
+        "num": "62",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-09-29",
+    "footer_updated": "2026-10-06",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-09-29 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-06 同步）"
   },
   "sections": [
     {
@@ -109,7 +109,7 @@
         {
           "icon": "i-monitor",
           "task": "计算机操控",
-          "model": "gemini-2.5-computer-use-preview-10-2025"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-target",
@@ -667,7 +667,7 @@
           {
             "id": "gemini-2.5-computer-use-preview-10-2025",
             "badges": [
-              "预览"
+              "弃用"
             ]
           },
           "balanced",
@@ -681,7 +681,7 @@
           "128K",
           "128K",
           "64K",
-          "计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10"
+          "计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10；已于 2026-07-28 关停，迁移 gemini-3.8-flash"
         ]
       ]
     },
@@ -1420,13 +1420,25 @@
           {
             "id": "antigravity-preview-05-2026",
             "badges": [
+              "弃用"
+            ]
+          },
+          "flagship",
+          null,
+          "通用智能体",
+          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页；已于 2026-10-05 关停，迁移 09-2026 版"
+        ],
+        [
+          {
+            "id": "antigravity-preview-09-2026",
+            "badges": [
               "预览"
             ]
           },
           "flagship",
           null,
           "通用智能体",
-          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页"
+          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页（2026-09-17 发布，接替 05-2026 版）"
         ]
       ]
     },
@@ -1904,7 +1916,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-29 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-06 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -2007,6 +2019,18 @@
         ],
         [
           {
+            "id": "gemini-2.5-computer-use-preview-10-2025",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-07-28",
+          "gemini-3.8-flash",
+          "已关停，迁移 3.8 Flash"
+        ],
+        [
+          {
             "id": "gemini-robotics-er-1.6-preview",
             "badges": [
               "弃用"
@@ -2038,6 +2062,18 @@
           "2026-10-02",
           "gemini-3.1-flash-image",
           "已宣布退役，规划迁移"
+        ],
+        [
+          {
+            "id": "antigravity-preview-05-2026",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "retired",
+          "2026-10-05",
+          "antigravity-preview-09-2026",
+          "已关停，迁移 09-2026 版"
         ],
         [
           {

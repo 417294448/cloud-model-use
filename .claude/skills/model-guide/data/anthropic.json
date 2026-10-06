@@ -14,7 +14,7 @@
     "title": "Anthropic Claude 模型选择指南 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude 模型选择指南",
-    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5.5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-29 同步）",
+    "hero_desc": "Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5.5 新旗舰 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-10-06 同步）",
     "stats": [
       {
         "num": "13",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Anthropic Claude 模型选择指南",
-    "footer_updated": "2026-09-29",
+    "footer_updated": "2026-10-06",
     "footer_rules": "opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折",
-    "footer_sources": "数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-09-29 同步）"
+    "footer_sources": "数据来源：Anthropic Claude Platform 官方文档 <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">模型弃用</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">模型总览</a>（2026-10-06 同步）"
   },
   "legend": "default",
   "legend_overrides": {
@@ -406,7 +406,9 @@
         [
           {
             "id": "claude-sonnet-4-5",
-            "badges": []
+            "badges": [
+              "弃用"
+            ]
           },
           "balanced",
           "high",
@@ -415,7 +417,7 @@
           "200K",
           "200K",
           "128K",
-          "旧代均衡模型，仍可用（200K 上下文）；新项目选 Sonnet 5；$3/$15"
+          "旧代均衡模型，200K 上下文；2026-09-30 公告弃用，2026-11-30 退役，迁移 Sonnet 5.5；$3/$15"
         ],
         [
           {
@@ -438,10 +440,10 @@
     {
       "id": "deprecated",
       "kind": "table",
-      "title": "已退役模型与迁移指引",
+      "title": "已弃用与退役模型",
       "icon": "i-circle-off",
-      "nav": "已退役",
-      "desc": "以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-29 同步）",
+      "nav": "已弃用",
+      "desc": "包含已公告弃用（仍可用至退役日）与已退役（退役后请求返回 404，无宽限期）的 Claude API 模型，请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-10-06 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -458,6 +460,18 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "claude-sonnet-4-5-20250929",
+            "badges": [
+              "弃用"
+            ]
+          },
+          "deprecated",
+          "2026-11-30",
+          "claude-sonnet-5-5",
+          "2026-09-30 公告弃用，尽快迁移 Sonnet 5.5"
+        ],
         [
           {
             "id": "claude-opus-4-1-20250805",

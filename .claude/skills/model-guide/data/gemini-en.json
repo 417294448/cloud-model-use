@@ -14,10 +14,10 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-29)",
+    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-06 同步）",
     "stats": [
       {
-        "num": "61",
+        "num": "62",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-09-29",
+    "footer_updated": "2026-10-06",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-09-29)"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-06 同步）"
   },
   "sections": [
     {
@@ -109,7 +109,7 @@
         {
           "icon": "i-monitor",
           "task": "Computer use",
-          "model": "gemini-2.5-computer-use-preview-10-2025"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-target",
@@ -667,7 +667,7 @@
           {
             "id": "gemini-2.5-computer-use-preview-10-2025",
             "badges": [
-              "Preview"
+              "Deprecated"
             ]
           },
           "balanced",
@@ -681,7 +681,7 @@
           "128K",
           "128K",
           "64K",
-          "Dedicated computer use: watch screen, click/type/navigate, $1.25/$10"
+          "计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10；已于 2026-07-28 关停，迁移 gemini-3.8-flash"
         ]
       ]
     },
@@ -1420,13 +1420,25 @@
           {
             "id": "antigravity-preview-05-2026",
             "badges": [
+              "Deprecated"
+            ]
+          },
+          "flagship",
+          null,
+          "General agent",
+          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页；已于 2026-10-05 关停，迁移 09-2026 版"
+        ],
+        [
+          {
+            "id": "antigravity-preview-09-2026",
+            "badges": [
               "Preview"
             ]
           },
           "flagship",
           null,
           "General agent",
-          "Autonomous planning/reasoning/code execution/file management/web browsing in an isolated Linux sandbox"
+          "隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页（2026-09-17 发布，接替 05-2026 版）"
         ]
       ]
     },
@@ -1904,7 +1916,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-29)",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-06 同步）",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -2007,6 +2019,18 @@
         ],
         [
           {
+            "id": "gemini-2.5-computer-use-preview-10-2025",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "retired",
+          "2026-07-28",
+          "gemini-3.8-flash",
+          "已关停，迁移 3.8 Flash"
+        ],
+        [
+          {
             "id": "gemini-robotics-er-1.6-preview",
             "badges": [
               "Deprecated"
@@ -2038,6 +2062,18 @@
           "2026-10-02",
           "gemini-3.1-flash-image",
           "Retirement announced; plan migration"
+        ],
+        [
+          {
+            "id": "antigravity-preview-05-2026",
+            "badges": [
+              "Deprecated"
+            ]
+          },
+          "retired",
+          "2026-10-05",
+          "antigravity-preview-09-2026",
+          "已关停，迁移 09-2026 版"
         ],
         [
           {
