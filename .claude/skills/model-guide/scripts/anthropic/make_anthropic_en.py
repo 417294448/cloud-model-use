@@ -27,6 +27,10 @@ TRANSLATE = {
         'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-29)',
     '数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-09-29 同步）':
         'Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-09-29)',
+    'Claude Opus / Sonnet / Haiku 全系 · Fable 5.1 超旗舰 · Opus 5.5 / Sonnet 5.5 / Haiku 5.5 · 1M 上下文 · 中英双语 — 数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-10-09 同步）':
+        'Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 / Sonnet 5.5 / Haiku 5.5 · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-10-09)',
+    '数据来源：Anthropic Claude Platform 官方文档 <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">模型弃用</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">模型总览</a>（2026-10-09 同步）':
+        'Sources: Anthropic Claude Platform official docs <a href="https://platform.claude.com/docs/en/about-claude/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://platform.claude.com/docs/en/about-claude/model-deprecations" target="_blank" rel="noopener noreferrer">Model deprecations</a> · <a href="https://platform.claude.com/docs/en/about-claude/models/overview" target="_blank" rel="noopener noreferrer">Models overview</a> (synced 2026-10-09)',
     'opus = 旗舰最强 · sonnet = 均衡性价比 · haiku = 快速经济 · fable = 超旗舰 · 版本号越大越新 · Batch 半价 · 缓存输入约 1 折':
         'opus = flagship & strongest · sonnet = balanced value · haiku = fast & budget · fable = super-flagship · higher version = newer · Batch at half price · cached input ~1/10',
     '收录模型': 'Models',
@@ -47,12 +51,16 @@ TRANSLATE = {
         'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5 evals fall short), Opus 5 the current flagship, Sonnet balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
     '当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5.5 评测不足时的终局选择），Opus 5.5 为官方推荐的现役旗舰，Sonnet 5.5 为均衡性价比，Haiku 为快速经济。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
         'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5.5 evals fall short), Opus 5.5 the officially recommended current flagship, Sonnet 5.5 balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
+    '当前 API 在售模型全谱：Fable 5.1 为 2026 超旗舰（Opus 5.5 评测不足时的终局选择），Opus 5.5 为官方推荐的现役旗舰，Sonnet 5.5 为均衡性价比，Haiku 5.5 为快速经济新一代。均支持文本/图像输入与 PDF/长文档；输出价约输入价 5 倍；Batch 半价，缓存输入约 1 折。价格为 USD / 1M tokens':
+        'Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5.5 evals fall short), Opus 5.5 the officially recommended current flagship, Sonnet 5.5 balanced value, Haiku 5.5 the new fast & budget generation. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens',
     '已退役模型与迁移指引': 'Retired Models & Migration Guide',
     '已退役': 'Retired',
     '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-20 同步）':
         'All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-20)',
     '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-09-29 同步）':
         'All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-29)',
+    '以下 Claude API 模型均已退役（退役后请求返回 404，无宽限期），请按官方推荐迁移。数据来源：Anthropic 官方模型弃用页（2026-10-09 同步）':
+        'All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-10-09)',
     '能力矩阵速查': 'Capability Matrix',
     '能力矩阵': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Match the best model to your needs quickly',
@@ -139,6 +147,12 @@ TRANSLATE = {
         'Older balanced model, still available (200K context); choose Sonnet 5 for new projects; $3/$15',
     '最快最省：高频分类/抽取/摘要/客服；输出上限 64K；$1/$5':
         'Fastest & cheapest: high-frequency classification/extraction/summarization/customer service; 64K output cap; $1/$5',
+    '新一代最快最省 Haiku（2026-10-07 发布）：超低延迟，面向高频分类 / 抽取 / 路由 / 摘要；上下文升至 1M，按 prompt 长度分档计价（≤100K $0.10/$0.50，>100K $0.50/$2.50）；输出上限 128K；自适应思考（effort 默认 medium）':
+        'New-generation fastest & cheapest Haiku (released 2026-10-07): ultra-low latency for high-frequency classification / extraction / routing / summarization; context up to 1M, priced by prompt length (≤100K $0.10/$0.50, >100K $0.50/$2.50); 128K output cap; adaptive thinking (effort default medium)',
+    '上代快速经济 Haiku，仍可用（200K 上下文）；高频分类 / 抽取 / 摘要 / 客服；输出上限 64K；$1/$5':
+        'Previous-generation fast & budget Haiku, still available (200K context); high-frequency classification / extraction / summarization / customer service; 64K output cap; $1/$5',
+    '已弃用（2026-09-30 官方公告，2026-11-30 退役）：请迁移至 claude-sonnet-5-5；200K 上下文；$3/$15':
+        'Deprecated (announced 2026-09-30, retires 2026-11-30): migrate to claude-sonnet-5-5; 200K context; $3/$15',
 
     # ---- deprecated 迁移建议 ----
     '已退役，直接迁移': 'Retired; migrate directly',
@@ -159,11 +173,13 @@ TRANSLATE = {
     '<div class="mods"><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div> 全系支持':
         '<div class="mods"><span class="tag mod-ico" title="Image"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div> all models',
     '<span class="plain">$1/$5 · 最快</span>': '<span class="plain">$1/$5 · fastest</span>',
+    '<span class="plain">$0.10/$0.50 · 最快</span>': '<span class="plain">$0.10/$0.50 · fastest</span>',
     '<span class="mono-dim">Haiku 快速响应</span>': '<span class="mono-dim">Haiku fast response</span>',
     '<span class="mono-dim">Batch API 半价</span>': '<span class="mono-dim">Batch API at half price</span>',
 
     # ---- 徽章 ----
     '推荐': 'Rec',
+    '弃用': 'Deprecated',
 }
 
 MISSING = []

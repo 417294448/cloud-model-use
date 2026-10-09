@@ -14,10 +14,10 @@
     "title": "Anthropic Claude Model Selection Guide 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude Model Selection Guide",
-    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 new flagship · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-29)",
+    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5.1 super-flagship · Opus 5.5 / Sonnet 5.5 / Haiku 5.5 · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-10-09)",
     "stats": [
       {
-        "num": "13",
+        "num": "14",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Anthropic Claude Model Selection Guide",
-    "footer_updated": "2026-09-29",
+    "footer_updated": "2026-10-09",
     "footer_rules": "opus = flagship & strongest · sonnet = balanced value · haiku = fast & budget · fable = super-flagship · higher version = newer · Batch at half price · cached input ~1/10",
-    "footer_sources": "Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-09-29)"
+    "footer_sources": "Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Model deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-10-09)"
   },
   "legend": "default",
   "legend_overrides": {
@@ -92,17 +92,17 @@
         {
           "icon": "i-coin",
           "task": "High-throughput batch / cost saving",
-          "model": "claude-haiku-4-5"
+          "model": "claude-haiku-5-5"
         },
         {
           "icon": "i-search",
           "task": "Classification / Extraction / Summarization",
-          "model": "claude-haiku-4-5"
+          "model": "claude-haiku-5-5"
         },
         {
           "icon": "i-bolt",
           "task": "Low-latency realtime assistant",
-          "model": "claude-haiku-4-5"
+          "model": "claude-haiku-5-5"
         },
         {
           "icon": "i-monitor",
@@ -138,7 +138,7 @@
         [
           "Opus / Sonnet / Haiku",
           "Three series: flagship strongest / balanced value / fast & budget",
-          "claude-opus-5-5, claude-sonnet-5-5, claude-haiku-4-5"
+          "claude-opus-5-5, claude-sonnet-5-5, claude-haiku-5-5"
         ],
         [
           "claude- prefix",
@@ -183,7 +183,7 @@
       "title": "Claude Current Models (Fable / Opus / Sonnet / Haiku)",
       "icon": "i-models",
       "nav": "Current models",
-      "desc": "Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5.5 evals fall short), Opus 5.5 the officially recommended current flagship, Sonnet 5.5 balanced value, Haiku fast & budget. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens",
+      "desc": "Full spectrum of models currently on the API: Fable 5.1 is the 2026 super-flagship (the endgame pick when Opus 5.5 evals fall short), Opus 5.5 the officially recommended current flagship, Sonnet 5.5 balanced value, Haiku 5.5 the new fast & budget generation. All support text/image input plus PDF/long documents; output costs ~5x input; Batch at half price, cached input ~1/10. Prices in USD / 1M tokens",
       "columns": [
         "Model ID",
         "Tier",
@@ -406,7 +406,9 @@
         [
           {
             "id": "claude-sonnet-4-5",
-            "badges": []
+            "badges": [
+              "Deprecated"
+            ]
           },
           "balanced",
           "high",
@@ -415,14 +417,32 @@
           "200K",
           "200K",
           "128K",
-          "Older balanced model, still available (200K context); choose Sonnet 5 for new projects; $3/$15"
+          "Deprecated (announced 2026-09-30, retires 2026-11-30): migrate to claude-sonnet-5-5; 200K context; $3/$15"
+        ],
+        [
+          {
+            "id": "claude-haiku-5-5",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "budget",
+          "low",
+          2,
+          5,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "New-generation fastest & cheapest Haiku (released 2026-10-07): ultra-low latency for high-frequency classification / extraction / routing / summarization; context up to 1M, priced by prompt length (≤100K $0.10/$0.50, >100K $0.50/$2.50); 128K output cap; adaptive thinking (effort default medium)"
         ],
         [
           {
             "id": "claude-haiku-4-5",
-            "badges": [
-              "Rec"
-            ]
+            "badges": []
           },
           "budget",
           "mid",
@@ -431,7 +451,7 @@
           "200K",
           "200K",
           "64K",
-          "Fastest & cheapest: high-frequency classification/extraction/summarization/customer service; 64K output cap; $1/$5"
+          "Previous-generation fast & budget Haiku, still available (200K context); high-frequency classification / extraction / summarization / customer service; 64K output cap; $1/$5"
         ]
       ]
     },
@@ -441,7 +461,7 @@
       "title": "Retired Models & Migration Guide",
       "icon": "i-circle-off",
       "nav": "Retired",
-      "desc": "All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-09-29)",
+      "desc": "All of these Claude API models are retired (requests return 404, no grace period); migrate per official recommendation. Source: Anthropic official model deprecations page (synced 2026-10-09)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -660,16 +680,16 @@
             "icon": "i-coin",
             "text": "High-throughput, low cost"
           },
-          "claude-haiku-4-5",
+          "claude-haiku-5-5",
           "claude-sonnet-5-5",
-          "<span class=\"plain\">$1/$5 · fastest</span>"
+          "<span class=\"plain\">$0.10/$0.50 · fastest</span>"
         ],
         [
           {
             "icon": "i-bolt",
             "text": "Low-latency realtime assistant"
           },
-          "claude-haiku-4-5",
+          "claude-haiku-5-5",
           "claude-sonnet-5-5",
           "<span class=\"mono-dim\">Haiku fast response</span>"
         ],
@@ -679,7 +699,7 @@
             "text": "Batch offline jobs"
           },
           "claude-sonnet-5-5",
-          "claude-haiku-4-5",
+          "claude-haiku-5-5",
           "<span class=\"mono-dim\">Batch API at half price</span>"
         ]
       ]

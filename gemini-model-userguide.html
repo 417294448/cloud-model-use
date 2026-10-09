@@ -622,8 +622,8 @@
       <div class="hero-eyebrow">GOOGLE GEMINI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="gemini-model-userguide-en.html" data-lang-href="gemini-model-userguide-en.html">EN</a></div>
     </div>
     <h1>Google Gemini 模型选择指南</h1>
-    <p class="hero-desc">Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-29 同步）</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">61</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+    <p class="hero-desc">Gemini 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">62</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">11</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>模型分类</span></span></div>
       <div class="stat-divider"></div>
@@ -981,7 +981,7 @@
 <td class="mdesc">Nano Banana（🍌）上代图像生成，$0.3 输入；已宣布 2026-10 退役</td>
 </tr>
 <tr>
-<td><span class="model-id">gemini-2.5-computer-use-preview-10-2025</span><span class="badge b-prev">预览</span></td>
+<td><span class="model-id">gemini-2.5-computer-use-preview-10-2025</span><span class="badge b-dep">弃用</span></td>
 <td><span class="tier-tag t-bal">均衡</span></td>
 <td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
 <td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
@@ -990,7 +990,7 @@
 <td><span class="ctx">128K</span></td>
 <td><span class="ctx">128K</span></td>
 <td><span class="ctx">64K</span></td>
-<td class="mdesc">计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10</td>
+<td class="mdesc">看屏幕执行点击/输入/导航；已于 2026-07-28 关停，迁移 gemini-3.8-flash，$1.25/$10</td>
 </tr>
 </tbody>
 </table>
@@ -1165,6 +1165,16 @@
 <td class="mdesc">Nano Banana Pro：SOTA 图像生成与编辑，复杂排版/文字渲染，$2/$12</td>
 </tr>
 <tr>
+<td><span class="model-id">gemini-nano-banana-2.1</span><span class="badge b-new">NEW</span></td>
+<td><span class="tier-tag t-bal">均衡</span></td>
+<td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span></div></td>
+<td><div class="mods"><span class="tag t-teal mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>快速</span></td>
+<td><span class="ctx">最高 4K</span></td>
+<td class="mdesc">Nano Banana 2.1：Nano Banana 2 升级版，画质/排版/多轮一致性提升，支持 1K/2K/4K 与搜索接地，$1.5 输入 / 图像 $0.034-0.113</td>
+</tr>
+<tr>
 <td><span class="model-id">gemini-3.1-flash-image</span></td>
 <td><span class="tier-tag t-bal">均衡</span></td>
 <td><span class="tag price-ico" title="适中"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><i></i></span></span></td>
@@ -1172,7 +1182,7 @@
 <td><div class="mods"><span class="tag t-teal mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span></div></td>
 <td><span class="tag t-teal"><svg class="ic"><use href="#i-bolt"/></svg>快速</span></td>
 <td><span class="ctx">2K</span></td>
-<td class="mdesc">Nano Banana 2：高效量产，$0.5/$3</td>
+<td class="mdesc">Nano Banana 2：高效量产，官方建议迁移至 Nano Banana 2.1；$0.5/$3</td>
 </tr>
 <tr>
 <td><span class="model-id">gemini-3.1-flash-lite-image</span></td>
@@ -1350,11 +1360,11 @@
 <td class="mdesc">自主规划执行多步研究任务</td>
 </tr>
 <tr>
-<td><span class="model-id">antigravity-preview-05-2026</span><span class="badge b-prev">预览</span></td>
+<td><span class="model-id">antigravity-preview-09-2026</span><span class="badge b-prev">预览</span></td>
 <td><span class="tier-tag t-flag">旗舰</span></td>
 <td><span class="mono-dim">—</span></td>
 <td class="plain">通用智能体</td>
-<td class="mdesc">隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页</td>
+<td class="mdesc">隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页（上代 antigravity-preview-05-2026 已于 2026-10-05 关停）</td>
 </tr>
 </tbody>
 </table>
@@ -1594,7 +1604,7 @@
 <!-- ===== 已弃用与关停计划 ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">已弃用与关停计划</h2></div>
-<p class="sec-desc">以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-29 同步）</p>
+<p class="sec-desc">以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-09 同步）</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -1660,16 +1670,79 @@
 <tr>
 <td><span class="model-id">gemini-omni-flash-preview</span><span class="badge b-dep">弃用</span></td>
 <td><span class="tag t-red">Deprecated</span></td>
-<td><span class="mono-dim">2026-09-30</span></td>
+<td><span class="mono-dim">2026-10-22</span></td>
 <td><span class="arrow-sep">→</span><span class="mono-dim">gemini-omni-1.1-flash</span></td>
 <td class="mdesc">预览版按期退役</td>
 </tr>
 <tr>
 <td><span class="model-id">gemini-2.5-flash-image</span></td>
 <td><span class="tag t-red">Deprecated</span></td>
-<td><span class="mono-dim">2026-10-02</span></td>
-<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.1-flash-image</span></td>
+<td><span class="mono-dim">2027-03-15</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.1-flash-lite-image</span></td>
 <td class="mdesc">已宣布退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-2.5-computer-use-preview-10-2025</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Retired</span></td>
+<td><span class="mono-dim">2026-07-28</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-flash</span></td>
+<td class="mdesc">已关停，直接替换</td>
+</tr>
+<tr>
+<td><span class="model-id">veo-3.1-generate-preview</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-10-22</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-omni-1.1-flash</span></td>
+<td class="mdesc">已宣布退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">veo-3.1-fast-generate-preview</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-10-22</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-omni-1.1-flash</span></td>
+<td class="mdesc">已宣布退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">veo-3.1-lite-generate-preview</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-10-22</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-omni-1.1-flash</span></td>
+<td class="mdesc">已宣布退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-3.1-flash-live-preview</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-11-17</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-live</span></td>
+<td class="mdesc">预览版按期退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-2.5-flash-native-audio-preview-12-2025</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-11-17</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-live</span></td>
+<td class="mdesc">预览版按期退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-3.1-flash-tts-preview</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-11-17</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-flash-tts</span></td>
+<td class="mdesc">预览版按期退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-2.5-flash-preview-tts</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-11-17</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-flash-tts</span></td>
+<td class="mdesc">预览版按期退役，规划迁移</td>
+</tr>
+<tr>
+<td><span class="model-id">gemini-2.5-pro-preview-tts</span><span class="badge b-dep">弃用</span></td>
+<td><span class="tag t-red">Deprecated</span></td>
+<td><span class="mono-dim">2026-11-17</span></td>
+<td><span class="arrow-sep">→</span><span class="mono-dim">gemini-3.8-flash-tts</span></td>
+<td class="mdesc">预览版按期退役，规划迁移</td>
 </tr>
 <tr>
 <td><span class="model-id">gemini-3.1-flash-lite</span></td>
@@ -1810,9 +1883,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Google Gemini 模型选择指南</b> · 最后更新 2026-09-29</p>
+  <p><b>Google Gemini 模型选择指南</b> · 最后更新 2026-10-09</p>
   <p class="rules">pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览</p>
-  <p>数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-29 同步）</p>
+  <p>数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）</p>
 </footer>
 
 <script>

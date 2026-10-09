@@ -22,6 +22,9 @@ TRANSLATE = {
     'Gemini 3 / 2.5 全系 · Nano Banana 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-29 同步）': 'Gemini 3 / 2.5 family · Nano Banana image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-29)',
     '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-09-29 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-09-29)',
     '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-09-29 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-09-29)',
+    'Gemini 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）': 'Gemini 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)',
+    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)',
+    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-09 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-09)',
     '最新最强 Flash（Stable），长程软件工程与自主 Agent，$0.75/$3.75': 'Newest, strongest Flash (Stable), long-horizon software engineering & autonomous agents, $0.75/$3.75',
     '上代 Flash（Stable），复杂编程与多步执行，$0.75/$3.75': 'Previous Flash (Stable), complex coding & multi-step execution, $0.75/$3.75',
     '最新旗舰（2026-09 发布），全曲音乐生成与结构连贯性': 'Newest flagship (released 2026-09) for full-song music generation with structural coherence',
@@ -175,6 +178,8 @@ TRANSLATE = {
         'Previous Nano Banana (🍌) image generation, $0.3 input; announced retirement 2026-10',
     '计算机操控专用，看屏幕执行点击/输入/导航，$1.25/$10':
         'Dedicated computer use: watch screen, click/type/navigate, $1.25/$10',
+    '看屏幕执行点击/输入/导航；已于 2026-07-28 关停，迁移 gemini-3.8-flash，$1.25/$10':
+        'Watch screen, click/type/navigate; shut down 2026-07-28, migrate to gemini-3.8-flash, $1.25/$10',
 
     # ---- audio flow / plain / mdesc ----
     '实时转写': 'Live transcription',
@@ -218,7 +223,8 @@ TRANSLATE = {
     '标准': 'Standard',
     'Nano Banana Pro：SOTA 图像生成与编辑，复杂排版/文字渲染，$2/$12':
         'Nano Banana Pro: SOTA image generation & editing, complex layouts/text rendering, $2/$12',
-    'Nano Banana 2：高效量产，$0.5/$3': 'Nano Banana 2: high-efficiency volume generation, $0.5/$3',
+    'Nano Banana 2：高效量产，官方建议迁移至 Nano Banana 2.1；$0.5/$3': 'Nano Banana 2: high-efficiency volume generation; migrate to Nano Banana 2.1 per official guidance; $0.5/$3',
+    'Nano Banana 2.1：Nano Banana 2 升级版，画质/排版/多轮一致性提升，支持 1K/2K/4K 与搜索接地，$1.5 输入 / 图像 $0.034-0.113': 'Nano Banana 2.1: an update to Nano Banana 2 with improved visual quality, typography and multi-turn consistency, supporting 1K/2K/4K and search grounding, $1.5 input / $0.034-0.113 per image',
     'Nano Banana 2 Lite：超低延迟低成本，$0.25/$1.5':
         'Nano Banana 2 Lite: ultra-low latency & cost, $0.25/$1.5',
     'Nano Banana 上代（🍌），$0.3 输入；已宣布 2026-10 退役':
@@ -263,6 +269,8 @@ TRANSLATE = {
     '自主规划执行多步研究任务': 'Autonomously plans and executes multi-step research',
     '隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页':
         'Autonomous planning/reasoning/code execution/file management/web browsing in an isolated Linux sandbox',
+    '隔离 Linux 沙箱内自主规划/推理/执行代码/管理文件/浏览网页（上代 antigravity-preview-05-2026 已于 2026-10-05 关停）':
+        'Autonomous planning/reasoning/code execution/file management/web browsing in an isolated Linux sandbox (previous antigravity-preview-05-2026 shut down 2026-10-05)',
 
     # ---- robotics ----
     '最新具身推理：视频理解/空间推理/多步工具编排/多机协作，$2/$10':
@@ -301,6 +309,7 @@ TRANSLATE = {
     '即将退役，尽快迁移': 'Retiring soon; migrate promptly',
     '已宣布退役，规划迁移': 'Retirement announced; plan migration',
     '预览版按期退役': 'Preview; retires on schedule',
+    '预览版按期退役，规划迁移': 'Preview; retires on schedule, plan migration',
     'Stable 但已宣布退役，规划迁移': 'Stable but announced retirement; plan migration',
     '仍可用（至 2028），新项目建议 Embedding 2': 'Still usable (until 2028); Embedding 2 recommended for new projects',
     'Gemini 3 Pro 预览版，已关停（2026-03-09），迁移 gemini-3.1-pro-preview':
