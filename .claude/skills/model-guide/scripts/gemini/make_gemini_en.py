@@ -229,7 +229,7 @@ TRANSLATE = {
         'Nano Banana 2 Lite: ultra-low latency & cost, $0.25/$1.5',
     'Nano Banana 上代（🍌），$0.3 输入；已宣布 2026-10 退役':
         'Previous Nano Banana (🍌), $0.3 input; announced retirement 2026-10',
-    '已于 2026-08-17 关停，迁移 Nano Banana': 'Shut down 2026-08-17; migrate to Nano Banana',
+    '已于 2026-08-17 关停，迁移 Nano Banana 2.1': 'Shut down 2026-08-17; migrate to Nano Banana 2.1',
 
     # ---- video ----
     '$0.4-0.6/秒': '$0.4-0.6/sec',
@@ -306,6 +306,7 @@ TRANSLATE = {
     # ---- deprecated 迁移建议 ----
     '已关停，直接替换': 'Shut down; drop-in replacement',
     '已关停，迁移 Nano Banana 2': 'Shut down; migrate to Nano Banana 2',
+    '已关停，迁移 Nano Banana 2.1': 'Shut down; migrate to Nano Banana 2.1',
     '即将退役，尽快迁移': 'Retiring soon; migrate promptly',
     '已宣布退役，规划迁移': 'Retirement announced; plan migration',
     '预览版按期退役': 'Preview; retires on schedule',
