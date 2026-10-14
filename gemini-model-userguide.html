@@ -242,6 +242,7 @@
   /* 当前锚点高亮（纯 CSS :has(:target)，点击导航后对应项显示 accent 下划线） */
   body:has(#quick:target) .nav a[href="#quick"],
   body:has(#naming:target) .nav a[href="#naming"],
+  body:has(#gemini4:target) .nav a[href="#gemini4"],
   body:has(#gemini3:target) .nav a[href="#gemini3"],
   body:has(#gemini25:target) .nav a[href="#gemini25"],
   body:has(#audio:target) .nav a[href="#audio"],
@@ -622,8 +623,8 @@
       <div class="hero-eyebrow">GOOGLE GEMINI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><span class="lang-opt on" aria-current="true">中</span><a class="lang-opt" href="gemini-model-userguide-en.html" data-lang-href="gemini-model-userguide-en.html">EN</a></div>
     </div>
     <h1>Google Gemini 模型选择指南</h1>
-    <p class="hero-desc">Gemini 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-13 同步）</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">62</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
+    <p class="hero-desc">Gemini 4 / 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-14 同步）</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">63</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>收录模型</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">11</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>模型分类</span></span></div>
       <div class="stat-divider"></div>
@@ -646,7 +647,7 @@
 
 <!-- ===== 锚点导航 ===== -->
 <nav class="nav">
-  <div class="nav-inner"><a href="#quick">快速选型</a><a href="#naming">命名规律</a><a href="#gemini3">Gemini 3</a><a href="#gemini25">Gemini 2.5</a><a href="#audio">音频</a><a href="#image">图像</a><a href="#video">视频</a><a href="#music">音乐</a><a href="#agents">智能体</a><a href="#robotics">机器人</a><a href="#embed">向量</a><a href="#gemma">开源</a><a href="#gemini20">Gemini 2.0</a><a href="#deprecated">已弃用</a><a href="#matrix">能力矩阵</a></div>
+  <div class="nav-inner"><a href="#quick">快速选型</a><a href="#naming">命名规律</a><a href="#gemini4">Gemini 4</a><a href="#gemini3">Gemini 3</a><a href="#gemini25">Gemini 2.5</a><a href="#audio">音频</a><a href="#image">图像</a><a href="#video">视频</a><a href="#music">音乐</a><a href="#agents">智能体</a><a href="#robotics">机器人</a><a href="#embed">向量</a><a href="#gemma">开源</a><a href="#gemini20">Gemini 2.0</a><a href="#deprecated">已弃用</a><a href="#matrix">能力矩阵</a></div>
 </nav>
 
 <div class="wrap">
@@ -659,7 +660,7 @@
 <section class="sec" id="quick">
 <div class="sec-head"><svg class="ic"><use href="#i-bolt"/></svg><h2 class="sec-title">快速选型</h2></div>
 <p class="sec-desc">按任务类型直达推荐模型</p>
-<div class="quick-grid"><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-chat"/></svg>日常对话 / 写作</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-brain"/></svg>深度推理</span><span class="quick-model">gemini-3.1-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-code"/></svg>专业编程 / Agentic</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-coin"/></svg>极致省钱</span><span class="quick-model">gemini-3.1-flash-lite</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-image"/></svg>图像生成</span><span class="quick-model">gemini-3-pro-image</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-video"/></svg>视频生成</span><span class="quick-model">veo-3.1-fast-generate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-audio"/></svg>音乐生成</span><span class="quick-model">lyria-3-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-mic"/></svg>实时语音对话</span><span class="quick-model">gemini-3.8-live</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-doc"/></svg>语音转文字</span><span class="quick-model">gemini-3.5-transcribe</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-speaker"/></svg>文字转语音</span><span class="quick-model">gemini-3.8-flash-tts</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-globe"/></svg>实时语音翻译</span><span class="quick-model">gemini-3.5-live-translate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-search"/></svg>语义搜索 / RAG</span><span class="quick-model">gemini-embedding-2</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-monitor"/></svg>计算机操控</span><span class="quick-model">gemini-2.5-computer-use-preview-10-2025</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-target"/></svg>机器人控制</span><span class="quick-model">gemini-robotics-er-2-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-home"/></svg>开源 / 边缘设备</span><span class="quick-model">gemma-4</span></div></div>
+<div class="quick-grid"><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-chat"/></svg>日常对话 / 写作</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-brain"/></svg>深度推理</span><span class="quick-model">gemini-4-argon</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-code"/></svg>专业编程 / Agentic</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-coin"/></svg>极致省钱</span><span class="quick-model">gemini-3.1-flash-lite</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-image"/></svg>图像生成</span><span class="quick-model">gemini-3-pro-image</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-video"/></svg>视频生成</span><span class="quick-model">veo-3.1-fast-generate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-audio"/></svg>音乐生成</span><span class="quick-model">lyria-3-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-mic"/></svg>实时语音对话</span><span class="quick-model">gemini-3.8-live</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-doc"/></svg>语音转文字</span><span class="quick-model">gemini-3.5-transcribe</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-speaker"/></svg>文字转语音</span><span class="quick-model">gemini-3.8-flash-tts</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-globe"/></svg>实时语音翻译</span><span class="quick-model">gemini-3.5-live-translate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-search"/></svg>语义搜索 / RAG</span><span class="quick-model">gemini-embedding-2</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-monitor"/></svg>计算机操控</span><span class="quick-model">gemini-2.5-computer-use-preview-10-2025</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-target"/></svg>机器人控制</span><span class="quick-model">gemini-robotics-er-2-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-home"/></svg>开源 / 边缘设备</span><span class="quick-model">gemma-4</span></div></div>
 </section>
 
 <!-- ===== 命名规律速查 ===== -->
@@ -675,7 +676,7 @@
 <tr>
 <td>gemini-X.Y 版本号</td>
 <td class="plain">数字越大，模型越新越强</td>
-<td class="mono-dim">gemini-2.0 → 2.5 → 3 → 3.1 → 3.7</td>
+<td class="mono-dim">gemini-2.0 → 2.5 → 3 → 3.1 → 3.7 → 4</td>
 </tr>
 <tr>
 <td>-pro</td>
@@ -787,10 +788,37 @@
 </div>
 </section>
 
+<!-- ===== Gemini 4 前沿模型 ===== -->
+<section class="sec" id="gemini4">
+<div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Gemini 4 前沿模型</h2></div>
+<p class="sec-desc">最新一代旗舰（2026-10 发布），支持思考与 1M 上下文；标注价格为 2026 促销价（2026-12-01 起恢复原价约 2 倍）；支持 PDF 文档输入</p>
+<div class="table-panel">
+<table>
+<thead>
+<tr><th>模型 ID</th><th>定位</th><th>价格</th><th>模态</th><th>推理</th><th>速度</th><th>上下文</th><th>输入</th><th>输出</th><th>说明</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="model-id">gemini-4-argon</span><span class="badge b-new">NEW</span><span class="badge b-rec">推荐</span></td>
+<td><span class="tier-tag t-flag">旗舰</span></td>
+<td><span class="tag t-amber price-ico" title="较贵"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="文本"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="图像"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="视频"><svg class="ic"><use href="#i-video"/></svg></span><span class="tag mod-ico" title="音频"><svg class="ic"><use href="#i-audio"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>最强</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>标准</span></td>
+<td><span class="ctx">1M</span></td>
+<td><span class="ctx hi">1M</span></td>
+<td><span class="ctx">64K</span></td>
+<td class="mdesc">Gemini 4 首代旗舰：复杂软件工程 / 深度数学与科学推理 / 自主多步 Agent，长解码最高 1M token；$2/$10（2026-12-01 起 $4/$20）</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
 <!-- ===== Gemini 3 前沿模型 ===== -->
 <section class="sec" id="gemini3">
 <div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Gemini 3 前沿模型</h2></div>
-<p class="sec-desc">最新一代，全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入</p>
+<p class="sec-desc">上一代旗舰（Gemini 3），全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入</p>
 <div class="table-panel">
 <table>
 <thead>
@@ -1604,7 +1632,7 @@
 <!-- ===== 已弃用与关停计划 ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">已弃用与关停计划</h2></div>
-<p class="sec-desc">以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-13 同步）</p>
+<p class="sec-desc">以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-14 同步）</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -1781,8 +1809,8 @@
 </tr>
 <tr>
 <td><span class="scene"><svg class="ic"><use href="#i-brain"/></svg>复杂推理 / 数学</span></td>
-<td><span class="model-id">gemini-3.1-pro-preview</span></td>
-<td><span class="mono-dim">gemini-2.5-pro</span></td>
+<td><span class="model-id">gemini-4-argon</span></td>
+<td><span class="mono-dim">gemini-3.1-pro-preview</span></td>
 <td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>最强</span></td>
 </tr>
 <tr>
@@ -1883,9 +1911,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Google Gemini 模型选择指南</b> · 最后更新 2026-10-13</p>
+  <p><b>Google Gemini 模型选择指南</b> · 最后更新 2026-10-14</p>
   <p class="rules">pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览</p>
-  <p>数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-13 同步）</p>
+  <p>数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-14 同步）</p>
 </footer>
 
 <script>

@@ -14,10 +14,10 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-09)",
+    "hero_desc": "Gemini 4 / 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-14)",
     "stats": [
       {
-        "num": "62",
+        "num": "63",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-10-13",
+    "footer_updated": "2026-10-14",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-09)"
+    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-14)"
   },
   "sections": [
     {
@@ -54,7 +54,7 @@
         {
           "icon": "i-brain",
           "task": "Deep reasoning",
-          "model": "gemini-3.1-pro-preview"
+          "model": "gemini-4-argon"
         },
         {
           "icon": "i-code",
@@ -145,7 +145,7 @@
         [
           "gemini-X.Y version number",
           "Higher number = newer and stronger",
-          "gemini-2.0 → 2.5 → 3 → 3.1 → 3.7"
+          "gemini-2.0 → 2.5 → 3 → 3.1 → 3.7 → 4"
         ],
         [
           "-pro",
@@ -255,12 +255,73 @@
       ]
     },
     {
+      "id": "gemini4",
+      "kind": "table",
+      "title": "Gemini 4 Frontier Models",
+      "icon": "i-spark",
+      "nav": "Gemini 4",
+      "desc": "Newest-generation flagship (released 2026-10), supports thinking and 1M context; listed prices are 2026 promotional rates (roughly 2x from 2026-12-01); supports PDF input",
+      "columns": [
+        "Model ID",
+        "Tier",
+        "Price",
+        "Modality",
+        "Reasoning",
+        "Speed",
+        "Context",
+        "Input",
+        "Output",
+        "Notes"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-4-argon",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "Gemini 4 first-generation flagship: complex software engineering, deep math & scientific reasoning, autonomous multi-step agents, long decode up to 1M tokens; $2/$10 ($4/$20 from 2026-12-01)"
+        ]
+      ]
+    },
+    {
       "id": "gemini3",
       "kind": "table",
       "title": "Gemini 3 Frontier Models",
       "icon": "i-spark",
       "nav": "Gemini 3",
-      "desc": "Latest generation; all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input",
+      "desc": "Previous-generation flagship (Gemini 3); all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input",
       "columns": [
         "Model ID",
         "Tier",
@@ -1926,7 +1987,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-09)",
+      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-14)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -2225,8 +2286,8 @@
             "icon": "i-brain",
             "text": "Complex reasoning / Math"
           },
+          "gemini-4-argon",
           "gemini-3.1-pro-preview",
-          "gemini-2.5-pro",
           "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>Top</span>"
         ],
         [

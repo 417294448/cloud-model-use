@@ -42,6 +42,8 @@
 
 **allorigins 关键用法（2026-09-22 实测，必读）**：`api.allorigins.win/raw?url=` 的 **url 参数必须对目标 URL 整体 URL-encode**（`urllib.parse.quote(url, safe='')`）——不编码时直接 522，编码后首次或数次重试即 200。实测 models 页 151KB（try2 成功）、pricing 页 243KB（给目标追加 `?v=1` 换缓存键后在 try2 成功）。脚本内建议：目标 URL 池轮换（`pricing` / `pricing?v=1` / `pricing?hl=en`）+ 编码 + 间隔 5-6 秒重试 80 次内必成。**WebFetch 回退亦需加缓存破坏参数**（`?v=fresh1`）——不加会返回数月前的旧快照（曾返回 2026-06 版本）；加了即返回当日最新（可与页面 `Last updated` 核对）。
 
+**r.jina.ai 通道可用（2026-10-14 实测，当前最稳回退）**：当 cors.sh / corsproxy.org / allorigins 全部失效时，`https://r.jina.ai/https://ai.google.dev/gemini-api/docs/<page>` 直连返回 Markdown 正文（含页面底部 `Last updated` 日期与全部表格），无需 API key。本轮即经此通道拿到 models（27KB，Last updated 2026-10-13）/ pricing（80KB）/ deprecations（19KB），比公共代理稳定。
+
 ## 各页面内容与用途
 
 | 页面 | 提供的关键字段 |

@@ -25,6 +25,9 @@ TRANSLATE = {
     'Gemini 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）': 'Gemini 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)',
     '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-09 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)',
     '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-09 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-09)',
+    'Gemini 4 / 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-14 同步）': 'Gemini 4 / 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-14)',
+    '数据来源：Google AI for Developers 官方文档 <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">模型清单</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">价格</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">关停计划</a>（2026-10-14 同步）': 'Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-14)',
+    '以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-14 同步）': 'Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-14)',
     '最新最强 Flash（Stable），长程软件工程与自主 Agent，$0.75/$3.75': 'Newest, strongest Flash (Stable), long-horizon software engineering & autonomous agents, $0.75/$3.75',
     '上代 Flash（Stable），复杂编程与多步执行，$0.75/$3.75': 'Previous Flash (Stable), complex coding & multi-step execution, $0.75/$3.75',
     '最新旗舰（2026-09 发布），全曲音乐生成与结构连贯性': 'Newest flagship (released 2026-09) for full-song music generation with structural coherence',
@@ -55,9 +58,14 @@ TRANSLATE = {
     '掌握这些规律，看到任何模型名都能秒懂其定位': 'Understand these patterns and instantly grasp any model name',
     '命名规律': 'Naming',
     '命名元素': 'Element', '含义': 'Meaning', '示例': 'Example',
+    'Gemini 4 前沿模型': 'Gemini 4 Frontier Models',
+    '最新一代旗舰（2026-10 发布），支持思考与 1M 上下文；标注价格为 2026 促销价（2026-12-01 起恢复原价约 2 倍）；支持 PDF 文档输入':
+        'Newest-generation flagship (released 2026-10), supports thinking and 1M context; listed prices are 2026 promotional rates (roughly 2x from 2026-12-01); supports PDF input',
     'Gemini 3 前沿模型': 'Gemini 3 Frontier Models',
     '最新一代，全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入':
         'Latest generation; all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input',
+    '上一代旗舰（Gemini 3），全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入':
+        'Previous-generation flagship (Gemini 3); all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input',
     'Gemini 2.5 主力模型': 'Gemini 2.5 Workhorses',
     '当前主力生产模型（Stable），1M 上下文，支持思考与 Function Calling；主力模型均支持 PDF 文档输入':
         'Current production workhorses (Stable), 1M context, thinking & Function Calling; all support PDF input',
@@ -157,7 +165,9 @@ TRANSLATE = {
     '开源轻量模型系列': 'Open-source lightweight family',
     '正式版本号 / 实验版': 'Stable version number / experimental',
 
-    # ---- gemini3 / gemini25 mdesc ----
+    # ---- gemini4 / gemini3 / gemini25 mdesc ----
+    'Gemini 4 首代旗舰：复杂软件工程 / 深度数学与科学推理 / 自主多步 Agent，长解码最高 1M token；$2/$10（2026-12-01 起 $4/$20）':
+        'Gemini 4 first-generation flagship: complex software engineering, deep math & scientific reasoning, autonomous multi-step agents, long decode up to 1M tokens; $2/$10 ($4/$20 from 2026-12-01)',
     '当前最强推理，Agentic 与复杂编程，$2/$12': 'Current top reasoning, agentic & complex coding, $2/$12',
     '最新最强 Flash（Stable），复杂编程与多步执行，$0.75/$3.75':
         'Newest, strongest Flash (Stable), complex coding & multi-step execution, $0.75/$3.75',

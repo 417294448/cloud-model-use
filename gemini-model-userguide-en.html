@@ -242,6 +242,7 @@
   /* 当前锚点高亮（纯 CSS :has(:target)，点击导航后对应项显示 accent 下划线） */
   body:has(#quick:target) .nav a[href="#quick"],
   body:has(#naming:target) .nav a[href="#naming"],
+  body:has(#gemini4:target) .nav a[href="#gemini4"],
   body:has(#gemini3:target) .nav a[href="#gemini3"],
   body:has(#gemini25:target) .nav a[href="#gemini25"],
   body:has(#audio:target) .nav a[href="#audio"],
@@ -622,8 +623,8 @@
       <div class="hero-eyebrow">GOOGLE GEMINI MODEL SELECTION GUIDE · 2026</div><div class="lang-switch" role="group" aria-label="language"><a class="lang-opt" href="gemini-model-userguide.html" data-lang-href="gemini-model-userguide.html">中</a><span class="lang-opt on" aria-current="true">EN</span></div>
     </div>
     <h1>Google Gemini Model Selection Guide</h1>
-    <p class="hero-desc">Gemini 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)</p>
-    <div class="stat-strip"><div class="stat"><span class="stat-num">62</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
+    <p class="hero-desc">Gemini 4 / 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-14)</p>
+    <div class="stat-strip"><div class="stat"><span class="stat-num">63</span><span class="stat-label"><svg class="ic"><use href="#i-models"/></svg><span>Models</span></span></div>
       <div class="stat-divider"></div>
       <div class="stat"><span class="stat-num">11</span><span class="stat-label"><svg class="ic"><use href="#i-modes"/></svg><span>Categories</span></span></div>
       <div class="stat-divider"></div>
@@ -646,7 +647,7 @@
 
 <!-- ===== 锚点导航 ===== -->
 <nav class="nav">
-  <div class="nav-inner"><a href="#quick">Quick Picks</a><a href="#naming">Naming</a><a href="#gemini3">Gemini 3</a><a href="#gemini25">Gemini 2.5</a><a href="#audio">Audio</a><a href="#image">Image</a><a href="#video">Video</a><a href="#music">Music</a><a href="#agents">Agents</a><a href="#robotics">Robotics</a><a href="#embed">Embedding</a><a href="#gemma">OSS</a><a href="#gemini20">Gemini 2.0</a><a href="#deprecated">Deprecated</a><a href="#matrix">Capability Matrix</a></div>
+  <div class="nav-inner"><a href="#quick">Quick Picks</a><a href="#naming">Naming</a><a href="#gemini4">Gemini 4</a><a href="#gemini3">Gemini 3</a><a href="#gemini25">Gemini 2.5</a><a href="#audio">Audio</a><a href="#image">Image</a><a href="#video">Video</a><a href="#music">Music</a><a href="#agents">Agents</a><a href="#robotics">Robotics</a><a href="#embed">Embedding</a><a href="#gemma">OSS</a><a href="#gemini20">Gemini 2.0</a><a href="#deprecated">Deprecated</a><a href="#matrix">Capability Matrix</a></div>
 </nav>
 
 <div class="wrap">
@@ -659,7 +660,7 @@
 <section class="sec" id="quick">
 <div class="sec-head"><svg class="ic"><use href="#i-bolt"/></svg><h2 class="sec-title">Quick Picks</h2></div>
 <p class="sec-desc">Direct recommendation by task type</p>
-<div class="quick-grid"><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-chat"/></svg>Chat / Writing</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-brain"/></svg>Deep reasoning</span><span class="quick-model">gemini-3.1-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-code"/></svg>Coding / Agentic</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-coin"/></svg>Cheapest</span><span class="quick-model">gemini-3.1-flash-lite</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-image"/></svg>Image generation</span><span class="quick-model">gemini-3-pro-image</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-video"/></svg>Video generation</span><span class="quick-model">veo-3.1-fast-generate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-audio"/></svg>Music generation</span><span class="quick-model">lyria-3-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-mic"/></svg>Realtime voice chat</span><span class="quick-model">gemini-3.8-live</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-doc"/></svg>Speech to text</span><span class="quick-model">gemini-3.5-transcribe</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-speaker"/></svg>Text to speech</span><span class="quick-model">gemini-3.8-flash-tts</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-globe"/></svg>Realtime speech translation</span><span class="quick-model">gemini-3.5-live-translate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-search"/></svg>Semantic search / RAG</span><span class="quick-model">gemini-embedding-2</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-monitor"/></svg>Computer use</span><span class="quick-model">gemini-2.5-computer-use-preview-10-2025</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-target"/></svg>Robotics control</span><span class="quick-model">gemini-robotics-er-2-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-home"/></svg>OSS / Edge devices</span><span class="quick-model">gemma-4</span></div></div>
+<div class="quick-grid"><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-chat"/></svg>Chat / Writing</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-brain"/></svg>Deep reasoning</span><span class="quick-model">gemini-4-argon</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-code"/></svg>Coding / Agentic</span><span class="quick-model">gemini-3.7-flash</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-coin"/></svg>Cheapest</span><span class="quick-model">gemini-3.1-flash-lite</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-image"/></svg>Image generation</span><span class="quick-model">gemini-3-pro-image</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-video"/></svg>Video generation</span><span class="quick-model">veo-3.1-fast-generate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-audio"/></svg>Music generation</span><span class="quick-model">lyria-3-pro-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-mic"/></svg>Realtime voice chat</span><span class="quick-model">gemini-3.8-live</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-doc"/></svg>Speech to text</span><span class="quick-model">gemini-3.5-transcribe</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-speaker"/></svg>Text to speech</span><span class="quick-model">gemini-3.8-flash-tts</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-globe"/></svg>Realtime speech translation</span><span class="quick-model">gemini-3.5-live-translate-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-search"/></svg>Semantic search / RAG</span><span class="quick-model">gemini-embedding-2</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-monitor"/></svg>Computer use</span><span class="quick-model">gemini-2.5-computer-use-preview-10-2025</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-target"/></svg>Robotics control</span><span class="quick-model">gemini-robotics-er-2-preview</span></div><div class="quick-card"><span class="quick-task"><svg class="ic"><use href="#i-home"/></svg>OSS / Edge devices</span><span class="quick-model">gemma-4</span></div></div>
 </section>
 
 <!-- ===== Naming Conventions ===== -->
@@ -675,7 +676,7 @@
 <tr>
 <td>gemini-X.Y version number</td>
 <td class="plain">Higher number = newer and stronger</td>
-<td class="mono-dim">gemini-2.0 → 2.5 → 3 → 3.1 → 3.7</td>
+<td class="mono-dim">gemini-2.0 → 2.5 → 3 → 3.1 → 3.7 → 4</td>
 </tr>
 <tr>
 <td>-pro</td>
@@ -787,10 +788,37 @@
 </div>
 </section>
 
+<!-- ===== Gemini 4 Frontier Models ===== -->
+<section class="sec" id="gemini4">
+<div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Gemini 4 Frontier Models</h2></div>
+<p class="sec-desc">Newest-generation flagship (released 2026-10), supports thinking and 1M context; listed prices are 2026 promotional rates (roughly 2x from 2026-12-01); supports PDF input</p>
+<div class="table-panel">
+<table>
+<thead>
+<tr><th>Model ID</th><th>Tier</th><th>Price</th><th>Modality</th><th>Reasoning</th><th>Speed</th><th>Context</th><th>Input</th><th>Output</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="model-id">gemini-4-argon</span><span class="badge b-new">NEW</span><span class="badge b-rec">Rec</span></td>
+<td><span class="tier-tag t-flag">Flagship</span></td>
+<td><span class="tag t-amber price-ico" title="Costly"><span class="bars"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></span></span></td>
+<td><div class="mods"><span class="tag mod-ico" title="Text"><svg class="ic"><use href="#i-text"/></svg></span><span class="tag mod-ico" title="Image"><svg class="ic"><use href="#i-image"/></svg></span><span class="tag mod-ico" title="Video"><svg class="ic"><use href="#i-video"/></svg></span><span class="tag mod-ico" title="Audio"><svg class="ic"><use href="#i-audio"/></svg></span><span class="tag mod-ico" title="PDF"><svg class="ic"><use href="#i-doc"/></svg></span></div></td>
+<td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Best</span></td>
+<td><span class="tag"><svg class="ic"><use href="#i-bolt"/></svg>Standard</span></td>
+<td><span class="ctx">1M</span></td>
+<td><span class="ctx hi">1M</span></td>
+<td><span class="ctx">64K</span></td>
+<td class="mdesc">Gemini 4 first-generation flagship: complex software engineering, deep math & scientific reasoning, autonomous multi-step agents, long decode up to 1M tokens; $2/$10 ($4/$20 from 2026-12-01)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+
 <!-- ===== Gemini 3 Frontier Models ===== -->
 <section class="sec" id="gemini3">
 <div class="sec-head"><svg class="ic"><use href="#i-spark"/></svg><h2 class="sec-title">Gemini 3 Frontier Models</h2></div>
-<p class="sec-desc">Latest generation; all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input</p>
+<p class="sec-desc">Previous-generation flagship (Gemini 3); all support thinking (output price includes thinking tokens) and 1M context; cached input saves up to 90%, Batch at half price; listed prices are 2026 promotional rates (roughly 2x from 2027-01-01); all support PDF input</p>
 <div class="table-panel">
 <table>
 <thead>
@@ -1604,7 +1632,7 @@
 <!-- ===== Deprecated & Shutdown Schedule ===== -->
 <section class="sec" id="deprecated">
 <div class="sec-head"><svg class="ic"><use href="#i-circle-off"/></svg><h2 class="sec-title">Deprecated & Shutdown Schedule</h2></div>
-<p class="sec-desc">Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-09)</p>
+<p class="sec-desc">Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-14)</p>
 <div class="table-panel">
 <table class="deprecated">
 <thead>
@@ -1781,8 +1809,8 @@
 </tr>
 <tr>
 <td><span class="scene"><svg class="ic"><use href="#i-brain"/></svg>Complex reasoning / Math</span></td>
-<td><span class="model-id">gemini-3.1-pro-preview</span></td>
-<td><span class="mono-dim">gemini-2.5-pro</span></td>
+<td><span class="model-id">gemini-4-argon</span></td>
+<td><span class="mono-dim">gemini-3.1-pro-preview</span></td>
 <td><span class="tag t-teal"><svg class="ic"><use href="#i-brain"/></svg><span class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span>Top</span></td>
 </tr>
 <tr>
@@ -1883,9 +1911,9 @@
 
 <!-- ===== 页脚 ===== -->
 <footer class="footer">
-  <p><b>Google Gemini Model Selection Guide</b> · Last updated 2026-10-13</p>
+  <p><b>Google Gemini Model Selection Guide</b> · Last updated 2026-10-14</p>
   <p class="rules">pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview</p>
-  <p>Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-09)</p>
+  <p>Sources: Google AI for Developers official docs <a href="https://ai.google.dev/gemini-api/docs/models" target="_blank" rel="noopener noreferrer">Model list</a> · <a href="https://ai.google.dev/gemini-api/docs/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> · <a href="https://ai.google.dev/gemini-api/docs/deprecations" target="_blank" rel="noopener noreferrer">Deprecations</a> (synced 2026-10-14)</p>
 </footer>
 
 <script>

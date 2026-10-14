@@ -14,10 +14,10 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-13 同步）",
+    "hero_desc": "Gemini 4 / 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-14 同步）",
     "stats": [
       {
-        "num": "62",
+        "num": "63",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-10-13",
+    "footer_updated": "2026-10-14",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-13 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-14 同步）"
   },
   "sections": [
     {
@@ -54,7 +54,7 @@
         {
           "icon": "i-brain",
           "task": "深度推理",
-          "model": "gemini-3.1-pro-preview"
+          "model": "gemini-4-argon"
         },
         {
           "icon": "i-code",
@@ -145,7 +145,7 @@
         [
           "gemini-X.Y 版本号",
           "数字越大，模型越新越强",
-          "gemini-2.0 → 2.5 → 3 → 3.1 → 3.7"
+          "gemini-2.0 → 2.5 → 3 → 3.1 → 3.7 → 4"
         ],
         [
           "-pro",
@@ -255,12 +255,73 @@
       ]
     },
     {
+      "id": "gemini4",
+      "kind": "table",
+      "title": "Gemini 4 前沿模型",
+      "icon": "i-spark",
+      "nav": "Gemini 4",
+      "desc": "最新一代旗舰（2026-10 发布），支持思考与 1M 上下文；标注价格为 2026 促销价（2026-12-01 起恢复原价约 2 倍）；支持 PDF 文档输入",
+      "columns": [
+        "模型 ID",
+        "定位",
+        "价格",
+        "模态",
+        "推理",
+        "速度",
+        "上下文",
+        "输入",
+        "输出",
+        "说明"
+      ],
+      "row_types": [
+        "model_id",
+        "tier",
+        "price",
+        "mods",
+        "reasoning",
+        "speed",
+        "ctx",
+        "ctx",
+        "ctx",
+        "mdesc"
+      ],
+      "rows": [
+        [
+          {
+            "id": "gemini-4-argon",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          5,
+          3,
+          "1M",
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "64K",
+          "Gemini 4 首代旗舰：复杂软件工程 / 深度数学与科学推理 / 自主多步 Agent，长解码最高 1M token；$2/$10（2026-12-01 起 $4/$20）"
+        ]
+      ]
+    },
+    {
       "id": "gemini3",
       "kind": "table",
       "title": "Gemini 3 前沿模型",
       "icon": "i-spark",
       "nav": "Gemini 3",
-      "desc": "最新一代，全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入",
+      "desc": "上一代旗舰（Gemini 3），全系支持思考（输出价含思考 token）与 1M 上下文；缓存输入最高省 90%，Batch 半价；标注价格为 2026 促销价（2027-01-01 起恢复原价约 2 倍）；均支持 PDF 文档输入",
       "columns": [
         "模型 ID",
         "定位",
@@ -1926,7 +1987,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-13 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-14 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -2225,8 +2286,8 @@
             "icon": "i-brain",
             "text": "复杂推理 / 数学"
           },
+          "gemini-4-argon",
           "gemini-3.1-pro-preview",
-          "gemini-2.5-pro",
           "<span class=\"tag t-teal\"><svg class=\"ic\"><use href=\"#i-brain\"/></svg><span class=\"dots\"><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i><i class=\"on\"></i></span>最强</span>"
         ],
         [
