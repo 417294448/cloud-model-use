@@ -28,6 +28,10 @@ TRANSLATE = {
         'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)',
     '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-09-29 同步）':
         'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-09-29)',
+    '通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-10-20 同步）':
+        'All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-10-20)',
+    '数据来源：阿里云百炼官方文档 <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">模型大全</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">模型价格</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">分类文档</a>（2026-10-20 同步）':
+        'Sources: Alibaba Cloud Bailian official docs <a href="https://help.aliyun.com/zh/model-studio/models" target="_blank" rel="noopener noreferrer">Model catalog</a> · <a href="https://help.aliyun.com/zh/model-studio/billing" target="_blank" rel="noopener noreferrer">Model pricing</a> · <a href="https://help.aliyun.com/zh/model-studio/vision-model" target="_blank" rel="noopener noreferrer">Classification docs</a> (synced 2026-10-20)',
     'max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时':
         'max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime',
     '收录模型': 'Models',
@@ -87,6 +91,8 @@ TRANSLATE = {
         '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-22)''',
     '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-09-29 同步）':
         '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-09-29)''',
+    '以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">阿里云百炼官方文档</a>（2026-10-20 同步）':
+        '''Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href="https://help.aliyun.com/zh/model-studio/speech-recognition" target="_blank" rel="noopener noreferrer">Alibaba Cloud Bailian official docs</a> (synced 2026-10-20)''',
     '能力矩阵速查': 'Capability Matrix',
     '根据需求快速匹配最佳模型': 'Quickly match the best model to your needs',
     '能力矩阵': 'Capability Matrix',
@@ -276,6 +282,7 @@ TRANSLATE = {
     # ---- asr ----
     '实时': 'Realtime',
     '热词+Prompt': 'Hotwords+Prompt',
+    '热词+上下文': 'Hotwords+context',
     '无限制': 'Unlimited',
     '实时识别旗舰，多语种及方言': 'Realtime recognition flagship, multilingual incl. dialects',
     '非实时': 'Non-realtime',
@@ -500,6 +507,8 @@ TRANSLATE = {
     '新一代文件转写旗舰，支持说话人分离':
         'New-gen file transcription flagship with speaker diarization',
     '短音频转写，支持说话人分离': 'Short-audio transcription with speaker diarization',
+    '输入法/语音消息短段语音识别，首字延迟更低，支持文本润色':
+        'Short-utterance recognition for IME and voice messages; lower first-token latency with text polishing',
     '上代实时识别旗舰，多语种及方言': 'Previous-gen realtime recognition flagship, multilingual incl. dialects',
     '上代文件转写旗舰，支持说话人分离': 'Previous-gen file transcription flagship, speaker diarization',
     '上代短音频快速转写': 'Previous-gen fast short-audio transcription',

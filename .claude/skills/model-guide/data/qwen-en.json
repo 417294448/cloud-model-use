@@ -14,10 +14,10 @@
     "title": "Tongyi Qwen Model Selection Guide 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "Tongyi Qwen Model Selection Guide",
-    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-29)",
+    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-20)",
     "stats": [
       {
-        "num": "158",
+        "num": "159",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Tongyi Qwen Model Selection Guide",
-    "footer_updated": "2026-09-29",
+    "footer_updated": "2026-10-20",
     "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
-    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-09-29)"
+    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-20)"
   },
   "legend_overrides": {
     "ranges": {
@@ -1866,6 +1866,22 @@
       "rows": [
         [
           {
+            "id": "qwen-audio-3.1-asr-flash-message",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "Realtime",
+          "WebSocket",
+          "Hotwords+context",
+          "—",
+          "—",
+          "Short-utterance recognition for IME and voice messages; lower first-token latency with text polishing"
+        ],
+        [
+          {
             "id": "qwen-audio-3.1-asr-flash-streaming",
             "badges": [
               "NEW",
@@ -3032,7 +3048,7 @@
       "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
       "nav": "Legacy",
-      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-09-29)",
+      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-10-20)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
