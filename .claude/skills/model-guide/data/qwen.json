@@ -14,10 +14,10 @@
     "title": "通义千问模型选择指南 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "通义千问模型选择指南",
-    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-20 同步）",
+    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-27 同步）",
     "stats": [
       {
-        "num": "159",
+        "num": "162",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "通义千问模型选择指南",
-    "footer_updated": "2026-10-20",
+    "footer_updated": "2026-10-27",
     "footer_rules": "max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时",
-    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-20 同步）"
+    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-27 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -110,7 +110,7 @@
         {
           "icon": "i-speaker",
           "task": "语音合成",
-          "model": "qwen-audio-3.0-tts-plus"
+          "model": "qwen-audio-3.1-tts-plus"
         },
         {
           "icon": "i-image",
@@ -927,6 +927,31 @@
           1,
           "语义VAD+FC",
           "新一代 S2S 语音对话旗舰，无意义附和声不打断"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-realtime-flash",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          "mid",
+          [
+            "audio",
+            "text"
+          ],
+          {
+            "items": [
+              "audio",
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          "WebSocket",
+          1,
+          "语义VAD+FC",
+          "新一代成本敏感版 S2S 语音对话，¥1.5/6 入、¥4.5/12 出（每百万 Token）"
         ],
         [
           {
@@ -2163,10 +2188,7 @@
         [
           {
             "id": "qwen-audio-3.0-tts-plus",
-            "badges": [
-              "NEW",
-              "推荐"
-            ]
+            "badges": []
           },
           "flagship",
           "high",
@@ -2208,6 +2230,39 @@
           "支持",
           "支持",
           "新一代轻量 TTS，1元/万字符"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-tts-plus",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          "Qwen-Audio-TTS",
+          "WS / HTTP",
+          "支持",
+          "支持",
+          "支持",
+          "新一代 TTS 旗舰，全能力，1.4元/万字符"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-tts-next",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          "Qwen-Audio-TTS-Next",
+          "HTTP",
+          "—",
+          "—",
+          "—",
+          "完整场景声音生成（音效/环境音），按 token 计费：6元/12元 每百万 Token"
         ],
         [
           {
@@ -3046,7 +3101,7 @@
       "title": "旧版与即将下线模型",
       "icon": "i-circle-off",
       "nav": "旧版",
-      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-10-20 同步）",
+      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-10-27 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",

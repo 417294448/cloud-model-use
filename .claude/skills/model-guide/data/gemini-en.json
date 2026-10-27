@@ -14,7 +14,7 @@
     "title": "Google Gemini Model Selection Guide 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini Model Selection Guide",
-    "hero_desc": "Gemini 4 / 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-14)",
+    "hero_desc": "Gemini 4 / 3 / 2.5 family · Nano Banana 2.1 image · Veo video · Lyria music · agents & robotics models — Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-27)",
     "stats": [
       {
         "num": "63",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini Model Selection Guide",
-    "footer_updated": "2026-10-14",
+    "footer_updated": "2026-10-27",
     "footer_rules": "pro = flagship · flash = fast & balanced · lite = budget · nano-banana = image · veo = video · live = realtime · preview = preview",
-    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-14)"
+    "footer_sources": "Sources: Google AI for Developers official docs <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model list</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> (synced 2026-10-27)"
   },
   "sections": [
     {
@@ -49,7 +49,7 @@
         {
           "icon": "i-chat",
           "task": "Chat / Writing",
-          "model": "gemini-3.7-flash"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-brain",
@@ -59,7 +59,7 @@
         {
           "icon": "i-code",
           "task": "Coding / Agentic",
-          "model": "gemini-3.7-flash"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-coin",
@@ -74,12 +74,12 @@
         {
           "icon": "i-video",
           "task": "Video generation",
-          "model": "veo-3.1-fast-generate-preview"
+          "model": "gemini-omni-1.1-flash"
         },
         {
           "icon": "i-audio",
           "task": "Music generation",
-          "model": "lyria-3-pro-preview"
+          "model": "lyria-3.5"
         },
         {
           "icon": "i-mic",
@@ -109,7 +109,7 @@
         {
           "icon": "i-monitor",
           "task": "Computer use",
-          "model": "gemini-2.5-computer-use-preview-10-2025"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-target",
@@ -422,7 +422,7 @@
             "hi": true
           },
           "64K",
-          "Previous Flash (Stable), complex coding & multi-step execution, $0.75/$3.75"
+          "Previous-generation Flash (Stable, official migration to 3.8 recommended); requests auto-route to gemini-3.8-flash; $0.75/$3.75"
         ],
         [
           {
@@ -470,7 +470,7 @@
             "hi": true
           },
           "64K",
-          "Base Flash (Stable), high-throughput general tasks, $1.5/$9"
+          "Older Flash (Stable, official migration to 3.6 recommended); requests auto-route to gemini-3.6-flash; $1.5/$9"
         ],
         [
           {
@@ -1240,7 +1240,7 @@
           },
           4,
           "Standard",
-          "Previous Nano Banana (🍌), $0.3 input; announced retirement 2026-10"
+          "Previous-generation Nano Banana (🍌), $0.3 input; announced shutdown on 2027-03-15"
         ],
         [
           {
@@ -1296,7 +1296,7 @@
           {
             "id": "veo-3.1-generate-preview",
             "badges": [
-              "Preview"
+              "Deprecated"
             ]
           },
           "flagship",
@@ -1304,13 +1304,13 @@
           "$0.4-0.6/sec",
           1,
           "1080p-4K",
-          "Cinematic quality + native synced audio"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
             "id": "veo-3.1-fast-generate-preview",
             "badges": [
-              "Rec"
+              "Deprecated"
             ]
           },
           "balanced",
@@ -1318,13 +1318,13 @@
           "$0.1-0.3/sec",
           3,
           "1080p-4K",
-          "Fast generation, best value"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
             "id": "veo-3.1-lite-generate-preview",
             "badges": [
-              "NEW"
+              "Deprecated"
             ]
           },
           "budget",
@@ -1332,7 +1332,7 @@
           "$0.05-0.08/sec",
           4,
           "1080p",
-          "Developer-friendly low-cost version (no 4K)"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
@@ -1374,7 +1374,7 @@
           "$1.5/$9 (token)",
           3,
           "—",
-          "Preview; retires 2026-09-30; migrate to gemini-omni-1.1-flash"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ]
       ]
     },
@@ -1987,7 +1987,7 @@
       "title": "Deprecated & Shutdown Schedule",
       "icon": "i-circle-off",
       "nav": "Deprecated",
-      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-14)",
+      "desc": "Retirement info for the models covered on this page (shutdown dates are the earliest official dates). Source: Gemini official deprecation schedule (synced 2026-10-27)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -2085,7 +2085,7 @@
           },
           "retired",
           "2026-06-30",
-          "veo-3.1-generate-preview",
+          "gemini-omni-1.1-flash",
           "Shut down; drop-in replacement"
         ],
         [
@@ -2108,9 +2108,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "Preview; retires on schedule"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2142,9 +2142,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "Retirement announced; plan migration"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2154,9 +2154,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "Retirement announced; plan migration"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2166,9 +2166,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "Retirement announced; plan migration"
+          "Shut down on 2026-10-22; migrate to gemini-omni-1.1-flash"
         ],
         [
           {

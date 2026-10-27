@@ -17,6 +17,9 @@ CJK = re.compile(r'[\u4e00-\u9fff]')
 
 # ===== 翻译表（完整枚举 zai.json 中的可译编辑字段）=====
 TRANSLATE = {
+    '数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-10-27 同步）': 'Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-10-27)',
+    '智谱 Z.ai 全系列模型解析 · 文本生成 · 多模态理解 · 图像/视频/语音 · 向量检索 — 数据来源：<a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel 模型概览</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">产品价格</a>（2026-10-27 同步）': 'Zhipu Z.ai full model family · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href="https://docs.bigmodel.cn/cn/guide/start/model-overview" target="_blank" rel="noopener noreferrer">BigModel model overview</a> · <a href="https://open.bigmodel.cn/pricing" target="_blank" rel="noopener noreferrer">Pricing</a> (synced 2026-10-27)',
+    '面向法律专业场景优化：法律检索、合同审查与文书起草；官方价格页暂未公布按量单价': 'Optimized for legal scenarios: legal research, contract review and document drafting; pay-as-you-go pricing not yet published on the official pricing page',
     # ---- meta ----
     'Z.ai 模型选择指南 2026': 'Z.ai Model Selection Guide 2026',
     'Z.ai 模型选择指南': 'Z.ai Model Selection Guide',

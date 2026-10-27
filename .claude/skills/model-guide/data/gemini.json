@@ -14,7 +14,7 @@
     "title": "Google Gemini 模型选择指南 2026",
     "eyebrow": "GOOGLE GEMINI MODEL SELECTION GUIDE · 2026",
     "h1": "Google Gemini 模型选择指南",
-    "hero_desc": "Gemini 4 / 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-14 同步）",
+    "hero_desc": "Gemini 4 / 3 / 2.5 全系 · Nano Banana 2.1 图像 · Veo 视频 · Lyria 音乐 · 智能体与机器人模型 — 数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-27 同步）",
     "stats": [
       {
         "num": "63",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Google Gemini 模型选择指南",
-    "footer_updated": "2026-10-14",
+    "footer_updated": "2026-10-27",
     "footer_rules": "pro = 旗舰 · flash = 快速均衡 · lite = 省钱 · nano-banana = 图像 · veo = 视频 · live = 实时 · preview = 预览",
-    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-14 同步）"
+    "footer_sources": "数据来源：Google AI for Developers 官方文档 <a href=\"https://ai.google.dev/gemini-api/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型清单</a> · <a href=\"https://ai.google.dev/gemini-api/docs/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">价格</a> · <a href=\"https://ai.google.dev/gemini-api/docs/deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">关停计划</a>（2026-10-27 同步）"
   },
   "sections": [
     {
@@ -49,7 +49,7 @@
         {
           "icon": "i-chat",
           "task": "日常对话 / 写作",
-          "model": "gemini-3.7-flash"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-brain",
@@ -59,7 +59,7 @@
         {
           "icon": "i-code",
           "task": "专业编程 / Agentic",
-          "model": "gemini-3.7-flash"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-coin",
@@ -74,12 +74,12 @@
         {
           "icon": "i-video",
           "task": "视频生成",
-          "model": "veo-3.1-fast-generate-preview"
+          "model": "gemini-omni-1.1-flash"
         },
         {
           "icon": "i-audio",
           "task": "音乐生成",
-          "model": "lyria-3-pro-preview"
+          "model": "lyria-3.5"
         },
         {
           "icon": "i-mic",
@@ -109,7 +109,7 @@
         {
           "icon": "i-monitor",
           "task": "计算机操控",
-          "model": "gemini-2.5-computer-use-preview-10-2025"
+          "model": "gemini-3.8-flash"
         },
         {
           "icon": "i-target",
@@ -422,7 +422,7 @@
             "hi": true
           },
           "64K",
-          "上代 Flash（Stable），复杂编程与多步执行，$0.75/$3.75"
+          "上代 Flash（Stable，官方已建议迁移 3.8）；请求自动路由至 gemini-3.8-flash；$0.75/$3.75"
         ],
         [
           {
@@ -470,7 +470,7 @@
             "hi": true
           },
           "64K",
-          "基础版 Flash（Stable），高吞吐常规任务，$1.5/$9"
+          "旧版 Flash（Stable，官方已建议迁移 3.6）；请求自动路由至 gemini-3.6-flash；$1.5/$9"
         ],
         [
           {
@@ -1240,7 +1240,7 @@
           },
           4,
           "标准",
-          "Nano Banana 上代（🍌），$0.3 输入；已宣布 2026-10 退役"
+          "Nano Banana 上代（🍌），$0.3 输入；已宣布 2027-03-15 关停"
         ],
         [
           {
@@ -1296,7 +1296,7 @@
           {
             "id": "veo-3.1-generate-preview",
             "badges": [
-              "预览"
+              "弃用"
             ]
           },
           "flagship",
@@ -1304,13 +1304,13 @@
           "$0.4-0.6/秒",
           1,
           "1080p-4K",
-          "电影级画质+原生同步音频"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
             "id": "veo-3.1-fast-generate-preview",
             "badges": [
-              "推荐"
+              "弃用"
             ]
           },
           "balanced",
@@ -1318,13 +1318,13 @@
           "$0.1-0.3/秒",
           3,
           "1080p-4K",
-          "快速生成，性价比首选"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
             "id": "veo-3.1-lite-generate-preview",
             "badges": [
-              "NEW"
+              "弃用"
             ]
           },
           "budget",
@@ -1332,7 +1332,7 @@
           "$0.05-0.08/秒",
           4,
           "1080p",
-          "开发者友好低成本版（无 4K）"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
@@ -1374,7 +1374,7 @@
           "$1.5/$9 (token)",
           3,
           "—",
-          "预览版，2026-09-30 退役，迁移 gemini-omni-1.1-flash"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ]
       ]
     },
@@ -1987,7 +1987,7 @@
       "title": "已弃用与关停计划",
       "icon": "i-circle-off",
       "nav": "已弃用",
-      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-14 同步）",
+      "desc": "以下为本页已收录模型中的弃用/关停信息（关停日期为官方公布的最早可能日期）。数据来源：Gemini 官方弃用计划（2026-10-27 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -2085,7 +2085,7 @@
           },
           "retired",
           "2026-06-30",
-          "veo-3.1-generate-preview",
+          "gemini-omni-1.1-flash",
           "已关停，直接替换"
         ],
         [
@@ -2108,9 +2108,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "预览版按期退役"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2142,9 +2142,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "已宣布退役，规划迁移"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2154,9 +2154,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "已宣布退役，规划迁移"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {
@@ -2166,9 +2166,9 @@
             ]
           },
           "deprecated",
-          "2026-10-22",
+          "retired",
           "gemini-omni-1.1-flash",
-          "已宣布退役，规划迁移"
+          "已于 2026-10-22 关停，迁移 gemini-omni-1.1-flash"
         ],
         [
           {

@@ -14,10 +14,10 @@
     "title": "Tongyi Qwen Model Selection Guide 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "Tongyi Qwen Model Selection Guide",
-    "hero_desc": "All Qwen models analyzed · hybrid thinking · omni-modal · visual generation · full speech pipeline · open-source deployment — Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-20)",
+    "hero_desc": "Tongyi Qwen (Qwen) full model family · hybrid thinking · omni-modal · visual generation · full voice pipeline · open-source deployment — Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-27)",
     "stats": [
       {
-        "num": "159",
+        "num": "162",
         "icon": "i-models",
         "label": "Models"
       },
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Tongyi Qwen Model Selection Guide",
-    "footer_updated": "2026-10-20",
+    "footer_updated": "2026-10-27",
     "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
-    "footer_sources": "Sources: Alibaba Cloud Bailian official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Model pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-20)"
+    "footer_sources": "Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-27)"
   },
   "legend_overrides": {
     "ranges": {
@@ -110,7 +110,7 @@
         {
           "icon": "i-speaker",
           "task": "Speech synthesis",
-          "model": "qwen-audio-3.0-tts-plus"
+          "model": "qwen-audio-3.1-tts-plus"
         },
         {
           "icon": "i-image",
@@ -927,6 +927,31 @@
           1,
           "Semantic VAD+FC",
           "New-gen S2S voice chat flagship; meaningless backchannels will not interrupt"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-realtime-flash",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "budget",
+          "mid",
+          [
+            "audio",
+            "text"
+          ],
+          {
+            "items": [
+              "audio",
+              "text"
+            ],
+            "cls": "t-teal"
+          },
+          "WebSocket",
+          1,
+          "Semantic VAD+FC",
+          "New cost-sensitive S2S voice chat, ¥1.5/6 input and ¥4.5/12 output (per 1M tokens)"
         ],
         [
           {
@@ -2163,10 +2188,7 @@
         [
           {
             "id": "qwen-audio-3.0-tts-plus",
-            "badges": [
-              "NEW",
-              "Rec"
-            ]
+            "badges": []
           },
           "flagship",
           "high",
@@ -2208,6 +2230,39 @@
           "Yes",
           "Yes",
           "New-gen lightweight TTS, ¥1/10K chars"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-tts-plus",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "high",
+          "Qwen-Audio-TTS",
+          "WS / HTTP",
+          "Yes",
+          "Yes",
+          "Yes",
+          "New-generation flagship TTS, full capabilities, ¥1.4 per 10K characters"
+        ],
+        [
+          {
+            "id": "qwen-audio-3.1-tts-next",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          "Qwen-Audio-TTS-Next",
+          "HTTP",
+          "—",
+          "—",
+          "—",
+          "Full-scene sound generation (SFX / ambience), token-billed: ¥6 / ¥12 per 1M tokens"
         ],
         [
           {
@@ -3048,7 +3103,7 @@
       "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
       "nav": "Legacy",
-      "desc": "Legacy/retiring info for the models covered on this page. Migrate as recommended and don't use them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Bailian official docs</a> (synced 2026-10-20)",
+      "desc": "Legacy / retired models covered on this page; migrate as recommended and avoid them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Model Studio official docs</a> (synced 2026-10-27)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
