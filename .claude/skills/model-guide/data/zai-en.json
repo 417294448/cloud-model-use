@@ -14,7 +14,7 @@
     "title": "Z.ai Model Selection Guide 2026",
     "eyebrow": "Z.AI MODEL SELECTION GUIDE · 2026",
     "h1": "Z.ai Model Selection Guide",
-    "hero_desc": "Zhipu Z.ai full model family · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-10-27)",
+    "hero_desc": "Zhipu Z.ai full model family · text generation · multimodal understanding · image/video/voice · vector retrieval — Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-11-17)",
     "stats": [
       {
         "num": "71+",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Z.ai Model Selection Guide",
-    "footer_updated": "2026-10-27",
+    "footer_updated": "2026-11-17",
     "footer_rules": "GLM = Zhipu LLM · higher number = newer · 5.x = latest gen · Flash = budget & fast · Turbo = speed-optimized · Air = lightweight & balanced · V = vision · Cog = generative models",
-    "footer_sources": "Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-10-27)"
+    "footer_sources": "Sources: <a href=\"https://docs.bigmodel.cn/cn/guide/start/model-overview\" target=\"_blank\" rel=\"noopener noreferrer\">BigModel model overview</a> · <a href=\"https://open.bigmodel.cn/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> (synced 2026-11-17)"
   },
   "legend_overrides": {
     "ranges": {
@@ -323,7 +323,7 @@
             ]
           },
           "balanced",
-          null,
+          "mid",
           [
             "text",
             "image",
@@ -341,7 +341,7 @@
             "hi": true
           },
           "128K",
-          "High-speed edition of GLM-5.3-Flash; reasoning speed up to 200 tokens/s; pay-as-you-go price not yet published on the official pricing page"
+          "Faster, smoother GLM-5.3-Flash with up to 200 tokens/s; ¥2/¥7"
         ],
         [
           {

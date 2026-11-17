@@ -14,7 +14,7 @@
     "title": "通义千问模型选择指南 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "通义千问模型选择指南",
-    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-27 同步）",
+    "hero_desc": "通义千问（Qwen）全系列模型解析 · 混合思考 · 全模态 · 视觉生成 · 语音全链路 · 开源部署 — 数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-11-17 同步）",
     "stats": [
       {
         "num": "162",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "通义千问模型选择指南",
-    "footer_updated": "2026-10-27",
+    "footer_updated": "2026-11-17",
     "footer_rules": "max = 旗舰 · prime = 优速 · plus = 均衡 · flash = 省钱 · qwq = 思考 · omni = 全模态 · vl = 视觉 · realtime = 实时",
-    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-10-27 同步）"
+    "footer_sources": "数据来源：阿里云百炼官方文档 <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">模型大全</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">模型价格</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">分类文档</a>（2026-11-17 同步）"
   },
   "legend_overrides": {
     "ranges": {
@@ -156,17 +156,17 @@
         [
           "qwen3.X 版本号",
           "数字越大，模型越新越强",
-          "qwen3 → qwen3.5 → qwen3.8"
+          "qwen3 → qwen3.5 → qwen3.8 → qwen4"
         ],
         [
           "-max",
           "旗舰版，最强能力",
-          "qwen3.8-max"
+          "qwen4-max"
         ],
         [
           "-prime",
           "优速模式，更快更强更贵",
-          "qwen3.8-max-prime"
+          "wan3.0-video-prime"
         ],
         [
           "-plus",
@@ -302,13 +302,14 @@
       "rows": [
         [
           {
-            "id": "qwen3.8-max-prime",
+            "id": "qwen4-max",
             "badges": [
-              "NEW"
+              "NEW",
+              "推荐"
             ]
           },
           "flagship",
-          "sky",
+          "expensive",
           [
             "text",
             "image",
@@ -320,8 +321,8 @@
             "v": "1M",
             "hi": true
           },
-          "64k",
-          "优速模式（Prime），当前最强，¥24/¥72"
+          "131k",
+          "新一代旗舰（Qwen4），效果优先；混合思考，1M 上下文，¥10/¥30，100 万免费 Token"
         ],
         [
           {
@@ -3101,7 +3102,7 @@
       "title": "旧版与即将下线模型",
       "icon": "i-circle-off",
       "nav": "旧版",
-      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-10-27 同步）",
+      "desc": "以下为本页已收录模型中的旧版/下线信息，请按建议迁移，勿在新项目中使用。数据来源：<a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">阿里云百炼官方文档</a>（2026-11-17 同步）",
       "table_class": "deprecated",
       "columns": [
         "模型 ID",
@@ -3229,6 +3230,15 @@
           "legacy",
           "qwen3-vl-flash",
           "旧版 VL"
+        ],
+        [
+          {
+            "id": "qwen3.8-max-prime",
+            "badges": []
+          },
+          "legacy",
+          "qwen4-max",
+          "官方价格页已不再收录，新项目请迁移 qwen4-max"
         ]
       ]
     },

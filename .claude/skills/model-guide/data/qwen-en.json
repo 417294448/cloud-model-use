@@ -14,7 +14,7 @@
     "title": "Tongyi Qwen Model Selection Guide 2026",
     "eyebrow": "QWEN MODEL SELECTION GUIDE · 2026",
     "h1": "Tongyi Qwen Model Selection Guide",
-    "hero_desc": "Tongyi Qwen (Qwen) full model family · hybrid thinking · omni-modal · visual generation · full voice pipeline · open-source deployment — Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-27)",
+    "hero_desc": "Tongyi Qwen (Qwen) full model family · hybrid thinking · omni-modal · visual generation · full voice pipeline · open-source deployment — Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-11-17)",
     "stats": [
       {
         "num": "162",
@@ -33,9 +33,9 @@
       }
     ],
     "footer_title": "Tongyi Qwen Model Selection Guide",
-    "footer_updated": "2026-10-27",
+    "footer_updated": "2026-11-17",
     "footer_rules": "max = flagship · prime = faster · plus = balanced · flash = budget · qwq = thinking · omni = omni-modal · vl = vision · realtime = realtime",
-    "footer_sources": "Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-10-27)"
+    "footer_sources": "Sources: Alibaba Cloud Model Studio official docs <a href=\"https://help.aliyun.com/zh/model-studio/models\" target=\"_blank\" rel=\"noopener noreferrer\">Model catalog</a> · <a href=\"https://help.aliyun.com/zh/model-studio/billing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://help.aliyun.com/zh/model-studio/vision-model\" target=\"_blank\" rel=\"noopener noreferrer\">Classification docs</a> (synced 2026-11-17)"
   },
   "legend_overrides": {
     "ranges": {
@@ -156,17 +156,17 @@
         [
           "qwen3.X version number",
           "Higher number = newer and stronger",
-          "qwen3 → qwen3.5 → qwen3.8"
+          "qwen3 → qwen3.5 → qwen3.8 → qwen4"
         ],
         [
           "-max",
           "Flagship, strongest capability",
-          "qwen3.8-max"
+          "qwen4-max"
         ],
         [
           "-prime",
           "Prime mode, faster, stronger and pricier",
-          "qwen3.8-max-prime"
+          "wan3.0-video-prime"
         ],
         [
           "-plus",
@@ -302,13 +302,14 @@
       "rows": [
         [
           {
-            "id": "qwen3.8-max-prime",
+            "id": "qwen4-max",
             "badges": [
-              "NEW"
+              "NEW",
+              "Rec"
             ]
           },
           "flagship",
-          "sky",
+          "expensive",
           [
             "text",
             "image",
@@ -320,8 +321,8 @@
             "v": "1M",
             "hi": true
           },
-          "64k",
-          "Prime mode, currently the strongest, ¥24/¥72"
+          "131k",
+          "New flagship (Qwen4) for best quality; hybrid thinking, 1M context, ¥10/¥30, 1M free tokens"
         ],
         [
           {
@@ -3103,7 +3104,7 @@
       "title": "Legacy & Retiring Models",
       "icon": "i-circle-off",
       "nav": "Legacy",
-      "desc": "Legacy / retired models covered on this page; migrate as recommended and avoid them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Model Studio official docs</a> (synced 2026-10-27)",
+      "desc": "Legacy / retired models covered on this page; migrate as recommended and avoid them in new projects. Source: <a href=\"https://help.aliyun.com/zh/model-studio/speech-recognition\" target=\"_blank\" rel=\"noopener noreferrer\">Alibaba Cloud Model Studio official docs</a> (synced 2026-11-17)",
       "table_class": "deprecated",
       "columns": [
         "Model ID",
@@ -3231,6 +3232,15 @@
           "legacy",
           "qwen3-vl-flash",
           "Legacy VL"
+        ],
+        [
+          {
+            "id": "qwen3.8-max-prime",
+            "badges": []
+          },
+          "legacy",
+          "qwen4-max",
+          "No longer listed on the official pricing page; new projects should migrate to qwen4-max"
         ]
       ]
     },

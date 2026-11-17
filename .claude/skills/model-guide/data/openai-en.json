@@ -14,13 +14,13 @@
     "title": "OpenAI Model Selection Guide 2026",
     "eyebrow": "OPENAI MODEL SELECTION GUIDE · 2026",
     "h1": "OpenAI Model Selection Guide",
-    "hero_desc": "91+ models · multimodal · reasoning · context window · price tiers — Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-10-27)",
+    "hero_desc": "96+ models · multimodal · reasoning · context window · price tiers — Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-11-17)",
     "home_href": "./index.html",
     "home_title": "Back to model comparison tool",
     "home_label": "Compare",
     "stats": [
       {
-        "num": "91",
+        "num": "96",
         "icon": "i-models",
         "label": "Models"
       },
@@ -36,9 +36,9 @@
       }
     ],
     "footer_title": "OpenAI Model Selection Guide",
-    "footer_updated": "2026-10-27",
+    "footer_updated": "2026-11-17",
     "footer_rules": "Higher version = newer · mini = budget · pro = enhanced · codex = coding · nano = fastest · o-series = reasoning · realtime = live audio",
-    "footer_sources": "Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-10-27)"
+    "footer_sources": "Sources: <a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI official docs</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry docs</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure model retirement</a> (synced 2026-11-17)"
   },
   "sections": [
     {
@@ -347,6 +347,75 @@
           "922K",
           "128K",
           "GPT-6 family (codename Luna) for focused, high-volume tasks; the cheapest GPT-6; $0.1/$0.5"
+        ],
+        [
+          {
+            "id": "gpt-6-cyber",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Cyber (Daybreak Red security research, access request required): vulnerability reproduction and fix verification; 1.05M context, 128K output, $20/$100 ($40/$150 for >272K input)"
+        ],
+        [
+          {
+            "id": "gpt-6-rosalind",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Rosalind (Life Sciences trusted access): specialized model for life sciences research; $15/$75"
+        ],
+        [
+          {
+            "id": "gpt-6-astra-law",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Astra for Law: legal research, contract review and document drafting; $10/$50 (promotional pricing at least through 2026-12-31)"
         ],
         [
           {
@@ -1340,6 +1409,53 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "gpt-image-2.6-sunburst",
+            "badges": [
+              "NEW",
+              "Rec"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "up to 4K",
+          "Image 2.6 flagship (Sunburst) with the highest editing precision; image input $8 / output $30, text input $5"
+        ],
+        [
+          {
+            "id": "gpt-image-2.6-flare",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "up to 4K",
+          "Image 2.6 fast variant (Flare) for everyday high-quality generation; image input $8 / output $30"
+        ],
         [
           {
             "id": "gpt-image-2.5-sunburst",

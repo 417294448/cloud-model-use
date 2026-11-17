@@ -14,13 +14,13 @@
     "title": "OpenAI 模型选择指南 2026",
     "eyebrow": "OPENAI MODEL SELECTION GUIDE · 2026",
     "h1": "OpenAI 模型选择指南",
-    "hero_desc": "91+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-10-27 同步）",
+    "hero_desc": "96+ 模型全解析 · 多模态能力 · 推理强度 · 上下文窗口 · 价格档位 — 数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-11-17 同步）",
     "home_href": "./index.html",
     "home_title": "返回模型价格对比工具",
     "home_label": "对比工具",
     "stats": [
       {
-        "num": "91",
+        "num": "96",
         "icon": "i-models",
         "label": "收录模型"
       },
@@ -36,9 +36,9 @@
       }
     ],
     "footer_title": "OpenAI 模型选择指南",
-    "footer_updated": "2026-10-27",
+    "footer_updated": "2026-11-17",
     "footer_rules": "版本号越大越新 · mini = 省钱 · pro = 增强 · codex = 编程 · nano = 极速 · o 系列 = 推理 · realtime = 实时音频",
-    "footer_sources": "数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-10-27 同步）"
+    "footer_sources": "数据来源：<a href=\"https://platform.openai.com/docs/models\" target=\"_blank\" rel=\"noopener noreferrer\">OpenAI 官方文档</a> · <a href=\"https://learn.microsoft.com/zh-cn/azure/ai-foundry/foundry-models/concepts/models-sold-directly-by-azure\" target=\"_blank\" rel=\"noopener noreferrer\">Azure AI Foundry 文档</a> · <a href=\"https://learn.microsoft.com/en-us/azure/foundry/openai/concepts/model-retirement-schedule\" target=\"_blank\" rel=\"noopener noreferrer\">Azure 模型退役计划</a>（2026-11-17 同步）"
   },
   "sections": [
     {
@@ -347,6 +347,75 @@
           "922K",
           "128K",
           "GPT-6 系列（代号 Luna），面向聚焦型高吞吐任务，最省钱的 GPT-6；$0.1/$0.5"
+        ],
+        [
+          {
+            "id": "gpt-6-cyber",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Cyber（Daybreak Red 攻防研究，需申请访问）：漏洞复现与修复验证；1.05M 上下文、128K 输出，$20/$100（>272K 输入 $40/$150）"
+        ],
+        [
+          {
+            "id": "gpt-6-rosalind",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Rosalind（生命科学可信访问）：面向生命科学研究的专业模型；$15/$75"
+        ],
+        [
+          {
+            "id": "gpt-6-astra-law",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "expensive",
+          [
+            "text",
+            "image"
+          ],
+          5,
+          4,
+          {
+            "v": "1.05M",
+            "hi": true
+          },
+          "922K",
+          "128K",
+          "GPT-6 Astra for Law（法律专用）：法律检索、合同审查与文书起草；$10/$50（促销至少至 2026-12-31）"
         ],
         [
           {
@@ -1340,6 +1409,53 @@
         "mdesc"
       ],
       "rows": [
+        [
+          {
+            "id": "gpt-image-2.6-sunburst",
+            "badges": [
+              "NEW",
+              "推荐"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          3,
+          "最高 4K",
+          "图像 2.6 旗舰（Sunburst），编辑精度最高；图像输入 $8 / 输出 $30，文本输入 $5"
+        ],
+        [
+          {
+            "id": "gpt-image-2.6-flare",
+            "badges": [
+              "NEW"
+            ]
+          },
+          "flagship",
+          "high",
+          [
+            "text",
+            "image"
+          ],
+          {
+            "items": [
+              "image"
+            ],
+            "cls": "t-teal"
+          },
+          5,
+          "最高 4K",
+          "图像 2.6 快速版（Flare），日常高质量生成；图像输入 $8 / 输出 $30"
+        ],
         [
           {
             "id": "gpt-image-2.5-sunburst",
