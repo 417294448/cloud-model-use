@@ -17,7 +17,7 @@ description: 生成或更新大模型选择指南 HTML 页面（model userguide 
 | **阿里 Qwen** | `qwen-model-userguide.html` / `qwen-model-userguide-en.html` | `data/qwen.json` + `data/qwen-en.json` | `references/providers/qwen.md` | `qwen/fetch_docs.py` / `qwen/make_qwen_en.py` | ✅ 已沉淀（全链路验证通过；**中英双语**） |
 | **Google Gemini** | `gemini-model-userguide.html` / `gemini-model-userguide-en.html` | `data/gemini.json` + `data/gemini-en.json` | `references/providers/gemini.md` | `gemini/fetch_docs.py` / `gemini/make_gemini_en.py` | ✅ 已沉淀（全链路验证通过；**中英双语**） |
 | **智谱 Z.ai** | `zai-model-userguide.html` / `zai-model-userguide-en.html` | `data/zai.json` + `data/zai-en.json` | `references/providers/zai.md` | `scripts/zai/fetch_docs.py` / `zai/make_zai_en.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过；**中英双语**） |
-| **Anthropic** | `anthropic-model-userguide.html` / `anthropic-model-userguide-en.html` | `data/anthropic.json` + `data/anthropic-en.json` | `references/providers/anthropic.md` | `scripts/anthropic/make_anthropic_en.py` | ✅ 已沉淀（模板生成 + 页面生成全链路验证通过；**中英双语**） |
+| **Anthropic** | `anthropic-model-userguide.html` / `anthropic-model-userguide-en.html` | `data/anthropic.json` + `data/anthropic-en.json` | `references/providers/anthropic.md` | `scripts/anthropic/fetch_models.py` / `scripts/anthropic/make_anthropic_en.py` | ✅ 已沉淀（系列页发现通道 + 模板生成全链路验证通过；**中英双语**） |
 | DeepSeek / 其他 | — | — | 待沉淀 | — | ⬜ 待做 |
 
 **OpenAI、Qwen、Gemini、Z.ai、Anthropic 已完成模板化全链路（官方抓取 → 数据文件 → 渲染页面）。五个独立页面通过根目录 `index.html` 以 Tab 形式聚合（iframe 切换，各页独立维护），当前 Tab 顺序为 OpenAI → Anthropic → Gemini → Qwen → Z.ai。新增厂商接入 index.html 的 Tab 需按「接入 index.html 厂商 Tab」小节维护。用户提到 DeepSeek 等页面时，通用工作流（提取/渲染/校验/设计规范）直接适用，但官方数据源方法尚未沉淀——按「新增提供商指南」补做后再大规模更新。
@@ -130,6 +130,7 @@ python scripts/zai/update_data.py --apply
 python scripts/zai/make_zai_en.py
 python scripts/render_guide.py .claude/skills/model-guide/data/zai.json -o zai-model-userguide.html
 
+python scripts/anthropic/fetch_models.py                     # 系列页发现最新版本，差异时 exit 1
 python scripts/anthropic/make_anthropic_en.py
 python scripts/render_guide.py .claude/skills/model-guide/data/anthropic.json -o anthropic-model-userguide.html
 
@@ -258,7 +259,8 @@ data/<厂商>-en.json（en 副本）────────render_guide.py --la
 **Anthropic 专用**
 - `data/anthropic.json` — Anthropic 页面数据（唯一事实源；USD 计价；现役模型全谱 + 全量退役 3.x/4.0/4.1 表；Claude 无官方推理/速度格数，两列按定位为编辑性估计；全系同模态故主表不设模态列，图例经 legend_overrides.modalities 收窄）
 - `data/anthropic-en.json` — 英文版页面数据（`make_anthropic_en.py` 生成）
-- `references/providers/anthropic.md` — Anthropic 数据源方法（**文档站直连不可用**：302 到 app-unavailable-in-region + WebFetch 域名被拦；用 claude-api skill 官方缓存基线 + WebSearch 多源交叉核验）
+- `references/providers/anthropic.md` — Anthropic 数据源方法（**文档站常被地域限制**：307 → app-unavailable-in-region；新版本发现走 `www.anthropic.com/claude/*` 系列页，规格/价格用 WebFetch 补；三页汇总会滞后，勿单独依赖）
+- `scripts/anthropic/fetch_models.py` — 从 anthropic.com 系列页（fable/opus/sonnet/haiku）发现各系列最新版本与价格，与 `data/anthropic.json` 比对并报告未收录模型（差异时 exit 1；支持 `--offline-dir` 离线解析）
 - `scripts/anthropic/make_anthropic_en.py` — 由 anthropic.json 生成 anthropic-en.json（翻译表 + 漏翻告警）
 
 **其他提供商**：待按「新增提供商指南」沉淀（DeepSeek…）

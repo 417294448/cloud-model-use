@@ -14,10 +14,10 @@
     "title": "Anthropic Claude Model Selection Guide 2026",
     "eyebrow": "ANTHROPIC CLAUDE MODEL SELECTION GUIDE · 2026",
     "h1": "Anthropic Claude Model Selection Guide",
-    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5.1 ultra-flagship · Opus 5.5 / Sonnet 5.5 / Haiku 5.5 · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-11-17)",
+    "hero_desc": "Claude Opus / Sonnet / Haiku family · Fable 5.2 ultra-flagship · Opus 5.5 / Sonnet 5.5 / Haiku 5.5 · 1M context · bilingual — Sources: Anthropic Claude Platform official docs <a href=\"https://platform.claude.com/docs/en/about-claude/pricing\" target=\"_blank\" rel=\"noopener noreferrer\">Pricing</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/model-deprecations\" target=\"_blank\" rel=\"noopener noreferrer\">Deprecations</a> · <a href=\"https://platform.claude.com/docs/en/about-claude/models/overview\" target=\"_blank\" rel=\"noopener noreferrer\">Models overview</a> (synced 2026-11-17)",
     "stats": [
       {
-        "num": "14",
+        "num": "15",
         "icon": "i-models",
         "label": "Models"
       },
@@ -209,10 +209,31 @@
       "rows": [
         [
           {
-            "id": "claude-fable-5-1",
+            "id": "claude-fable-5-2",
             "badges": [
-              "NEW"
+              "NEW",
+              "Rec"
             ]
+          },
+          "flagship",
+          "high",
+          5,
+          2,
+          {
+            "v": "1M",
+            "hi": true
+          },
+          {
+            "v": "1M",
+            "hi": true
+          },
+          "128K",
+          "Claude ultra-flagship Fable 5.2 (released 2026-11-09): the ultimate choice for the hardest deep reasoning and long-horizon agentic work; adaptive thinking always on (default effort high), ~30% faster output than 5.1, priced down to $8/$40, cache read $0.20/MTok"
+        ],
+        [
+          {
+            "id": "claude-fable-5-1",
+            "badges": []
           },
           "flagship",
           "expensive",
